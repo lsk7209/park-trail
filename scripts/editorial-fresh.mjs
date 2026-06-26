@@ -19,8 +19,8 @@ const sourceLibrary = {
   weather: ["NPS Weather Safety", "https://www.nps.gov/subjects/healthandsafety/severe-weather-safety.htm"],
   access: ["NPS Accessibility", "https://www.nps.gov/accessibility.htm"],
   plan: ["NPS Plan Your Visit", "https://www.nps.gov/planyourvisit/index.htm"],
-  leave: ["Leave No Trace Seven Principles", "https://lnt.org/why/7-principles/"],
-  usgs: ["USGS 3D Elevation Program", "https://www.usgs.gov/3d-elevation-program"],
+  leave: ["NPS Leave No Trace Seven Principles", "https://www.nps.gov/articles/leave-no-trace-seven-principles.htm"],
+  usgs: ["USGS 3DEP DEM Data Catalog", "https://data.usgs.gov/datacatalog/data/USGS%3A3a81321b-c153-416f-98b7-cc8e5f0e17c3"],
   noaa: ["NOAA Weather Safety", "https://www.weather.gov/safety/"],
   air: ["AirNow Fire and Smoke Map", "https://fire.airnow.gov/"],
   rec: ["Recreation.gov Trip Planning", "https://www.recreation.gov/"]

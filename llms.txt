@@ -2,12 +2,16 @@
 
 A local MVP for DEM-first national park trail planning.
 
+Canonical domain: https://gradienttrail.com
+Sitemap: https://gradienttrail.com/sitemap.xml
+RSS feed: https://gradienttrail.com/feed.xml
+
 Key pages:
-- /us-trails/trails.html
-- /us-trails/parks.html
-- /us-trails/calculator.html
-- /us-trails/compare.html
+- /us-trails/trails
+- /us-trails/parks
+- /us-trails/calculator
+- /us-trails/compare
 - /blog/
-- /us-trails/methodology.html
+- /us-trails/methodology
 
 Method: route-relation geometry, DEM elevation profile, deterministic gentleness/family/difficulty scores, conservative access language.

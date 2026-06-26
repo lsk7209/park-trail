@@ -3,19 +3,39 @@ import { join } from "node:path";
 import { editorialPosts } from "./editorial-posts.mjs";
 import { expansionPosts } from "./editorial-expansion.mjs";
 import { freshPosts } from "./editorial-fresh.mjs";
+import { next100Posts } from "./editorial-next100.mjs";
 
 const root = process.cwd();
 const site = JSON.parse(await readFile(join(root, "data/site-content.json"), "utf8"));
 const filterSlugs = ["easy-flat-trails", "trails-under-2-miles", "kid-friendly"];
-const ARTICLE_TARGET = 200;
+const ARTICLE_TARGET = 300;
 const FRESH_TARGET = 100;
-const approvalPosts = [...editorialPosts.slice(0, 10), ...expansionPosts, ...freshPosts].slice(0, ARTICLE_TARGET);
+const NEXT100_TARGET = 100;
+const approvalPosts = [...editorialPosts.slice(0, 10), ...expansionPosts, ...freshPosts, ...next100Posts].slice(0, ARTICLE_TARGET);
+const buildNow = new Date();
+const publishedApprovalPosts = approvalPosts.filter((post) => !post.publishAt || new Date(post.publishAt) <= buildNow);
 const approvalArticlePaths = approvalPosts.map((post) => `us-trails/articles/${post.slug}.html`);
+const publishedApprovalArticlePaths = publishedApprovalPosts.map((post) => `us-trails/articles/${post.slug}.html`);
+const origin = "https://gradienttrail.com";
+
+function cleanPublicPath(pathFromRoot) {
+  if (pathFromRoot === "index.html") return "";
+  if (pathFromRoot.endsWith("/index.html")) return pathFromRoot.slice(0, -"index.html".length);
+  if (pathFromRoot.endsWith(".html")) return pathFromRoot.slice(0, -".html".length);
+  return pathFromRoot;
+}
+
+function publicUrl(pathFromRoot = "") {
+  const cleanPath = cleanPublicPath(pathFromRoot).replace(/^\/+/, "");
+  return cleanPath ? `${origin}/${cleanPath}` : `${origin}/`;
+}
+
 const requiredFiles = [
   "favicon.svg",
   "ads.txt",
   "robots.txt",
   "sitemap.xml",
+  "feed.xml",
   "llms.txt",
   "data/site-content.json",
   "index.html",
@@ -58,11 +78,17 @@ const css = await readFile(join(root, "us-trails/assets/topo.css"), "utf8");
 const data = await readFile(join(root, "us-trails/assets/sample-data.js"), "utf8");
 const siteData = await readFile(join(root, "us-trails/assets/site-data.js"), "utf8");
 const sitemap = await readFile(join(root, "sitemap.xml"), "utf8");
+const feed = await readFile(join(root, "feed.xml"), "utf8");
 const robots = await readFile(join(root, "robots.txt"), "utf8");
 const generatedTrail = await readFile(join(root, `us-trails/parks/${site.trails[0].parkSlug}/trails/${site.trails[0].slug}.html`), "utf8");
 const generatedPark = await readFile(join(root, `us-trails/parks/${site.parks[0].slug}.html`), "utf8");
 const article = await readFile(join(root, "us-trails/articles/choose-gentle-national-park-trail.html"), "utf8");
+const about = await readFile(join(root, "about.html"), "utf8");
+const contact = await readFile(join(root, "contact.html"), "utf8");
 const privacy = await readFile(join(root, "privacy.html"), "utf8");
+const terms = await readFile(join(root, "terms.html"), "utf8");
+const editorialPolicy = await readFile(join(root, "editorial-policy.html"), "utf8");
+const disclaimer = await readFile(join(root, "disclaimer.html"), "utf8");
 const adsTxt = await readFile(join(root, "ads.txt"), "utf8");
 const blogIndex = await readFile(join(root, "blog/index.html"), "utf8");
 const articleDirFiles = (await readdir(join(root, "us-trails/articles"))).filter((file) => file.endsWith(".html"));
@@ -79,7 +105,8 @@ function uniqueCount(values) {
 }
 
 function hasKeywordCoverage(post) {
-  if (!post.mainKeyword) return !freshPosts.includes(post);
+  const keywordRequiredPosts = new Set([...freshPosts, ...next100Posts]);
+  if (!post.mainKeyword) return !keywordRequiredPosts.has(post);
   const title = normalize(post.title);
   const subtitle = normalize(post.subtitle);
   const main = normalize(post.mainKeyword);
@@ -90,18 +117,104 @@ function hasKeywordCoverage(post) {
     && extended.some((keyword) => title.includes(normalize(keyword)) || subtitle.includes(normalize(keyword)));
 }
 
-const scheduled = freshPosts.slice(0, FRESH_TARGET).map((post) => post.publishAt);
+function hasStrictTitleSubtitleCoverage(post) {
+  const title = normalize(post.title);
+  const subtitle = normalize(post.subtitle);
+  const main = normalize(post.mainKeyword);
+  const extended = post.extendedKeywords || [];
+  return main
+    && title.includes(main)
+    && subtitle.includes(main)
+    && extended.length >= 2
+    && extended.some((keyword) => title.includes(normalize(keyword)))
+    && extended.some((keyword) => subtitle.includes(normalize(keyword)));
+}
+
+function hasReadableVisualPalette(post) {
+  return Boolean(post.visual?.accent)
+    && Boolean(post.visual?.accentSoft)
+    && Boolean(post.visual?.accentAlt)
+    && Array.isArray(post.visual?.rows)
+    && post.visual.rows.length >= 3;
+}
+
+function hasEnhancedArticleTools(post) {
+  const faqText = (post.faq || []).map((item) => `${item.q} ${item.a}`).join(" ");
+  const verificationText = [
+    post.verificationChecklist?.title,
+    post.verificationChecklist?.intro,
+    ...(post.verificationChecklist?.rows || []).map((row) => row.join(" "))
+  ].join(" ");
+  return Boolean(post.answerBox?.title)
+    && Boolean(post.answerBox?.answer)
+    && Array.isArray(post.answerBox?.bullets)
+    && post.answerBox.bullets.length >= 3
+    && Boolean(post.fieldExample?.title)
+    && Boolean(post.fieldExample?.intro)
+    && Array.isArray(post.fieldExample?.rows)
+    && post.fieldExample.rows.length >= 3
+    && Boolean(post.verificationChecklist?.title)
+    && Boolean(post.verificationChecklist?.intro)
+    && Array.isArray(post.verificationChecklist?.rows)
+    && post.verificationChecklist.rows.length >= 4
+    && Array.isArray(post.faq)
+    && post.faq.length >= 3
+    && normalize(faqText).includes(normalize(post.mainKeyword))
+    && post.extendedKeywords.some((keyword) => normalize(faqText).includes(normalize(keyword)))
+    && normalize(verificationText).includes(normalize(post.mainKeyword))
+    && post.extendedKeywords.every((keyword) => normalize(verificationText).includes(normalize(keyword)));
+}
+
+function hasResearchEvidence(post) {
+  const evidence = post.researchEvidence;
+  const allowedRoles = new Set(["official", "primary_data", "expert_reference", "competitor", "context_only"]);
+  return Boolean(evidence)
+    && Array.isArray(evidence.research_runs)
+    && evidence.research_runs.length >= 3
+    && Array.isArray(evidence.sources)
+    && evidence.sources.length >= 5
+    && evidence.sources.every((source) => source.id && source.label && source.href && allowedRoles.has(source.source_role) && source.accessed && Array.isArray(source.data_points) && source.data_points.length >= 1)
+    && Boolean(evidence.source_interpretation_note)
+    && Array.isArray(evidence.article_specific_details)
+    && evidence.article_specific_details.length >= 2
+    && evidence.article_specific_details.every((detail) => detail.claim && detail.source_id && evidence.sources.some((source) => source.id === detail.source_id))
+    && evidence.fact_traceability_pass === true;
+}
+
+function sectionSignature(post) {
+  return (post.sections || []).map(([heading]) => normalize(heading).split(" ").slice(0, 4).join(" ")).join("|");
+}
+
+const generatedScheduledPosts = [
+  ...freshPosts.slice(0, FRESH_TARGET),
+  ...next100Posts.slice(0, NEXT100_TARGET)
+];
+const scheduled = generatedScheduledPosts.map((post) => post.publishAt);
 const scheduleIntervalOk = scheduled.every((value, index) => {
   if (!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$/.test(value)) return false;
   if (index === 0) return true;
   return new Date(value) - new Date(scheduled[index - 1]) === 5 * 60 * 60 * 1000;
 });
 
+const next100StrictQualityOk = next100Posts.length === NEXT100_TARGET
+  && next100Posts.every(hasStrictTitleSubtitleCoverage)
+  && next100Posts.every(hasReadableVisualPalette)
+  && next100Posts.every(hasEnhancedArticleTools)
+  && next100Posts.every(hasResearchEvidence)
+  && next100Posts.every((post) => Number(post.qualityScore) >= 90)
+  && uniqueCount(next100Posts.map((post) => post.mainKeyword)) === NEXT100_TARGET
+  && uniqueCount(next100Posts.map((post) => post.title)) === NEXT100_TARGET
+  && uniqueCount(next100Posts.map((post) => post.structureType)) >= 5
+  && uniqueCount(next100Posts.map((post) => post.visual?.type || "")) >= 6
+  && uniqueCount(next100Posts.map(sectionSignature)) >= 6
+  && uniqueCount(next100Posts.map((post) => (post.faq || []).map((item) => normalize(item.q)).join("|"))) >= 90;
+
 const sourceQualityOk = approvalPosts.length === ARTICLE_TARGET
   && freshPosts.length === FRESH_TARGET
+  && next100Posts.length === NEXT100_TARGET
   && uniqueCount(approvalPosts.map((post) => post.slug)) === ARTICLE_TARGET
   && uniqueCount(approvalPosts.map((post) => post.title)) === ARTICLE_TARGET
-  && uniqueCount(freshPosts.map((post) => post.mainKeyword)) === FRESH_TARGET
+  && uniqueCount(generatedScheduledPosts.map((post) => post.mainKeyword)) === FRESH_TARGET + NEXT100_TARGET
   && approvalPosts.every(hasKeywordCoverage)
   && scheduleIntervalOk;
 
@@ -125,18 +238,211 @@ const articleQualityFailures = approvalArticles
   })
   .map(([path]) => path);
 
+const next100Slugs = new Set(next100Posts.map((post) => post.slug));
+const approvalBySlug = new Map(approvalPosts.map((post) => [post.slug, post]));
+const next100RenderedEnhancementFailures = approvalArticles
+  .filter(([path, content]) => {
+    const slug = path.split("/").pop().replace(/\.html$/, "");
+    if (!next100Slugs.has(slug)) return false;
+    return !/answer-card/.test(content)
+      || !/example-box/.test(content)
+      || !/qa-panel/.test(content)
+      || !/verification-panel/.test(content)
+      || !/quick questions/.test(content)
+      || !/"@type":"FAQPage"/.test(content)
+      || !/"@type":"Question"/.test(content)
+      || !/research-evidence/.test(content)
+      || !/Research evidence used/.test(content)
+      || !/Article-specific details/.test(content)
+      || !/Research runs checked for this article/.test(content)
+      || !/--visual-alt:#[0-9a-f]{6}/i.test(content);
+  })
+  .map(([path]) => path);
+
+function postByArticlePath(path) {
+  return approvalBySlug.get(path.split("/").pop().replace(/\.html$/, ""));
+}
+
+function removePhrase(value, phrase) {
+  const source = ` ${normalize(value)} `;
+  const target = ` ${normalize(phrase)} `;
+  return target.trim() ? source.replaceAll(target, " ") : source;
+}
+
+function articleSpecificTerms(post) {
+  return [
+    post?.title,
+    post?.subtitle,
+    post?.mainKeyword,
+    ...(post?.extendedKeywords || []),
+    ...((post?.decisionTool?.rows || []).map((row) => row[0]))
+  ].filter(Boolean).sort((a, b) => normalize(b).length - normalize(a).length);
+}
+
+function faqPatternSignature(path, content) {
+  const post = postByArticlePath(path);
+  const panel = content.match(/<article class="panel qa-panel">([\s\S]*?)<\/article>/)?.[1] || "";
+  const questions = [...panel.matchAll(/<h3>([\s\S]*?)<\/h3>/g)].map((match) => {
+    let value = match[1].replace(/<[^>]+>/g, " ");
+    for (const term of articleSpecificTerms(post)) value = removePhrase(value, term);
+    return normalize(value)
+      .replace(/\b[a-z0-9]{9,}\b/g, "_")
+      .replace(/\b(route|trail|reader|article|planning|decision|source|official|conditions|group|signal|check)\b/g, "_")
+      .replace(/\s+/g, " ")
+      .trim();
+  });
+  return questions.join("|");
+}
+
+function verificationPatternSignature(path, content) {
+  const post = postByArticlePath(path);
+  const panel = content.match(/<aside class="panel verification-panel">([\s\S]*?)<\/aside>/)?.[1] || "";
+  const labels = [...panel.matchAll(/<b>([\s\S]*?)<\/b>/g)].map((match) => {
+    let value = match[1].replace(/<[^>]+>/g, " ");
+    for (const term of articleSpecificTerms(post)) value = removePhrase(value, term);
+    return normalize(value).replace(/\b[a-z0-9]{9,}\b/g, "_").trim();
+  });
+  return labels.join("|");
+}
+
+const approvalRenderedEnhancementFailures = approvalArticles
+  .filter(([, content]) => {
+    return !/answer-card/.test(content)
+      || !/example-box/.test(content)
+      || !/qa-panel/.test(content)
+      || !/verification-panel/.test(content)
+      || !/research-evidence/.test(content)
+      || !/Research evidence used/.test(content)
+      || !/Article-specific details/.test(content)
+      || !/Research runs checked for this article/.test(content)
+      || !/quick questions/.test(content)
+      || !/"@type":"FAQPage"/.test(content)
+      || !/"@type":"Question"/.test(content);
+  })
+  .map(([path]) => path);
+
+const approvalFaqPatternCount = uniqueCount(approvalArticles.map(([path, content]) => faqPatternSignature(path, content)));
+const approvalVerificationPatternCount = uniqueCount(approvalArticles.map(([path, content]) => verificationPatternSignature(path, content)));
+const approvalPatternDiversityOk = approvalFaqPatternCount >= 6 && approvalVerificationPatternCount >= 4;
+
+function visibleLength(content) {
+  return content
+    .replace(/<script[\s\S]*?<\/script>/g, "")
+    .replace(/<style[\s\S]*?<\/style>/g, "")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/\s+/g, " ")
+    .trim().length;
+}
+
+const trustPagesSubstantiveOk = [about, contact, privacy, terms, editorialPolicy, disclaimer]
+  .every((content) => visibleLength(content) >= 900 && /Reader safety first/.test(content) && /Editorial corrections accepted/.test(content));
+
+const adsenseLoaderCount = (content) => (content.match(/pagead2\.googlesyndication\.com\/pagead\/js\/adsbygoogle\.js/g) || []).length;
+const publicPagesHaveSingleLoader = [home, blogIndex, article, about, contact, privacy, terms, editorialPolicy, disclaimer]
+  .every((content) => adsenseLoaderCount(content) === 1);
+const publicPagesHaveRssDiscovery = [home, blogIndex, article, about, contact, privacy, terms, editorialPolicy, disclaimer]
+  .every((content) => /rel="alternate" type="application\/rss\+xml"[^>]+href="https:\/\/gradienttrail\.com\/feed\.xml"/.test(content));
+const publicPagesHaveVerificationMeta = [home, blogIndex, article, about, contact, privacy, terms, editorialPolicy, disclaimer]
+  .every((content) => /name="google-site-verification" content="EWaJY7dnYLETiLKgkZp6yXSfY-b0EQJfDkKcr5OubcM"/.test(content)
+    && /name="naver-site-verification" content="1d1e74be2fc392a80a09240a8bbda0a3145084a8"/.test(content));
+const ga4LoaderCount = (content) => (content.match(/googletagmanager\.com\/gtag\/js\?id=G-JXKB19KWYF/g) || []).length;
+const publicPagesHaveSingleGa4 = [home, blogIndex, article, about, contact, privacy, terms, editorialPolicy, disclaimer]
+  .every((content) => ga4LoaderCount(content) === 1 && /gtag\("config","G-JXKB19KWYF"\)/.test(content));
+const cleanSitemapOk = /<loc>https:\/\/gradienttrail\.com\/<\/loc>/.test(sitemap)
+  && /<loc>https:\/\/gradienttrail\.com\/blog\/<\/loc>/.test(sitemap)
+  && publishedApprovalArticlePaths.every((path) => sitemap.includes(`<loc>${publicUrl(path)}</loc>`))
+  && approvalArticlePaths.filter((path) => !publishedApprovalArticlePaths.includes(path)).every((path) => !sitemap.includes(`<loc>${publicUrl(path)}</loc>`))
+  && !/\.html<\/loc>/.test(sitemap)
+  && !/127\.0\.0\.1/.test(sitemap)
+  && !/easy-flat-trails/.test(sitemap)
+  && (sitemap.match(/us-trails\/articles\//g) || []).length === publishedApprovalPosts.length;
+const feedOk = /<rss version="2\.0"/.test(feed)
+  && /<atom:link href="https:\/\/gradienttrail\.com\/feed\.xml" rel="self" type="application\/rss\+xml"/.test(feed)
+  && /<channel>/.test(feed)
+  && /<item>/.test(feed)
+  && /<guid isPermaLink="true">https:\/\/gradienttrail\.com\/us-trails\/articles\//.test(feed)
+  && !/127\.0\.0\.1/.test(feed);
+
+function getCanonical(content) {
+  return content.match(/<link rel="canonical" href="([^"]+)"/)?.[1] || "";
+}
+
+function getTitle(content) {
+  return content.match(/<title>([\s\S]*?)<\/title>/)?.[1] || "";
+}
+
+function getDescription(content) {
+  return content.match(/<meta name="description" content="([^"]+)"/)?.[1] || "";
+}
+
+function hLevelSequence(content) {
+  return [...content.matchAll(/<h([1-6])\b/g)].map((match) => Number(match[1]));
+}
+
+function hasOrderedHeadings(content) {
+  const levels = hLevelSequence(content);
+  return levels.length > 0
+    && levels[0] === 1
+    && levels.filter((level) => level === 1).length === 1
+    && levels.every((level, index) => index === 0 || level - levels[index - 1] <= 1);
+}
+
+const sitemapLocs = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
+const indexablePublicPages = [
+  ["index.html", home],
+  ["blog/index.html", blogIndex],
+  ["us-trails/articles/choose-gentle-national-park-trail.html", article],
+  ["about.html", about],
+  ["contact.html", contact],
+  ["privacy.html", privacy],
+  ["terms.html", terms],
+  ["editorial-policy.html", editorialPolicy],
+  ["disclaimer.html", disclaimer]
+];
+
+const canonicalAndSitemapOk = indexablePublicPages.every(([path, content]) => {
+  const canonical = getCanonical(content);
+  return canonical === publicUrl(path)
+    && sitemap.includes(`<loc>${canonical}</loc>`)
+    && !canonical.includes("www.")
+    && !canonical.endsWith(".html");
+});
+
+const metaKeywordFrontOk = [
+  [home, "gentle national"],
+  [blogIndex, "gentle national park trail"],
+  [article, normalize(postByArticlePath("choose-gentle-national-park-trail.html")?.mainKeyword || "gentle national park trail")]
+].every(([content, keyword]) => normalize(`${getTitle(content)} ${getDescription(content)}`).includes(normalize(keyword).split(" ").slice(0, 2).join(" ")));
+
+const articleLinkStructureOk = /route-planning-next-step/.test(article)
+  && /Open Trail Finder/.test(article)
+  && (article.match(/href="\.\.\/\.\.\/us-trails\//g) || []).length >= 2
+  && (article.match(/href="https:\/\/www\.nps\.gov\//g) || []).length >= 3;
+
+const legacyBlogOk = /noindex,follow/.test(html)
+  && getCanonical(html) === "https://gradienttrail.com/blog/"
+  && !sitemap.includes("https://gradienttrail.com/us-trails/Blog")
+  && !/www\.gradienttrail\.com/.test(html);
+
+const headingStructureOk = indexablePublicPages.every(([, content]) => hasOrderedHeadings(content));
+const sitemapMetadataOk = sitemapLocs.length === 13 + publishedApprovalPosts.length
+  && (sitemap.match(/<lastmod>\d{4}-\d{2}-\d{2}<\/lastmod>/g) || []).length === sitemapLocs.length
+  && (sitemap.match(/<changefreq>/g) || []).length === sitemapLocs.length
+  && (sitemap.match(/<priority>/g) || []).length === sitemapLocs.length;
+
 const expectations = [
   ["home page", /Gradient Trail/.test(home) && /Find gentle trails/.test(home)],
   ["home navigation", /us-trails\/trails\.html/.test(home) && /blog\/index\.html/.test(home)],
-  ["blog index", /Gentle trail planning guides/.test(blogIndex) && (blogIndex.match(/class="site-card post-index-card"/g) || []).length === approvalPosts.length],
+  ["open graph metadata", /property="og:title"/.test(home) && /property="og:description"/.test(article) && /name="twitter:card"/.test(blogIndex)],
+  ["blog index", /Gentle trail planning guides/.test(blogIndex) && (blogIndex.match(/class="site-card post-index-card"/g) || []).length === publishedApprovalPosts.length],
+  ["canonical and sitemap consistency", canonicalAndSitemapOk],
+  ["meta keyword coverage", metaKeywordFrontOk],
+  ["ordered heading structure", headingStructureOk],
   ["article source quality", sourceQualityOk],
+  ["next100 strict title subtitle quality", next100StrictQualityOk],
   ["article file count", articleDirFiles.length === ARTICLE_TARGET],
-  ["title", /The Gradient Field Notes/.test(html)],
-  ["filter bar", /id="filterBar"/.test(html)],
-  ["featured card", /id="featuredCard"/.test(html)],
-  ["newsletter behavior", /newsletterForm/.test(html) && /You're on the list/.test(html)],
-  ["trust strip", /OpenStreetMap/.test(html) && /USGS 3DEP/.test(html)],
-  ["responsive grid", /grid-template-columns:\s*repeat\(3/.test(html)],
+  ["legacy blog canonical redirect", legacyBlogOk],
+  ["responsive grid", /grid-template-columns:\s*repeat\(3/.test(css) && /@media \(max-width: 720px\)/.test(css)],
   ["trails page", /trailList/.test(trails) && /parkFilter/.test(trails)],
   ["parks page", /parkGrid/.test(parks) && /Official alert check/.test(parks)],
   ["calculator page", /calcForm/.test(calculator) && /Estimated moving time/.test(calculator)],
@@ -145,16 +451,27 @@ const expectations = [
   ["generated trail detail", /Trail detail/.test(generatedTrail) && /Access caution/.test(generatedTrail)],
   ["generated park hub", /Long-tail filters/.test(generatedPark) && /Top candidates/.test(generatedPark)],
   ["generated pages noindex", /noindex,follow/.test(generatedTrail) && /noindex,follow/.test(generatedPark)],
-  ["sitemap approval URLs", /blog\/index\.html/.test(sitemap) && /us-trails\/articles\/choose-gentle-national-park-trail\.html/.test(sitemap) && approvalArticlePaths.every((path) => sitemap.includes(path)) && (sitemap.match(/us-trails\/articles\//g) || []).length === ARTICLE_TARGET && !/127\.0\.0\.1/.test(sitemap) && !/easy-flat-trails/.test(sitemap)],
+  ["noindex pages omit adsense loader", adsenseLoaderCount(generatedTrail) === 0 && adsenseLoaderCount(generatedPark) === 0],
+  ["sitemap clean approval URLs", cleanSitemapOk],
+  ["sitemap metadata", sitemapMetadataOk],
   ["robots sitemap", /Sitemap:/.test(robots)],
+  ["rss feed", feedOk],
+  ["rss discovery", publicPagesHaveRssDiscovery],
+  ["site verification meta", publicPagesHaveVerificationMeta],
+  ["ga4 tag", publicPagesHaveSingleGa4],
   ["ads txt", /google\.com, pub-3050601904412736, DIRECT, f08c47fec0942fa0/.test(adsTxt)],
-  ["adsense loader", /ca-pub-3050601904412736/.test(home) && /ca-pub-3050601904412736/.test(blogIndex) && /ca-pub-3050601904412736/.test(article)],
+  ["adsense loader", publicPagesHaveSingleLoader && /ca-pub-3050601904412736/.test(home) && /ca-pub-3050601904412736/.test(blogIndex) && /ca-pub-3050601904412736/.test(article)],
   ["privacy ads disclosure", /Google/.test(privacy) && /cookies/.test(privacy) && /personalized advertising/.test(privacy)],
+  ["trust pages substantive", trustPagesSubstantiveOk],
   ["article content", /Field takeaways/.test(article) && /Sources and verification notes/.test(article) && /Article/.test(article)],
+  ["article CTA and links", articleLinkStructureOk],
   ["article quality gates", articleQualityFailures.length === 0],
+  ["next100 rendered enhanced quality", next100RenderedEnhancementFailures.length === 0],
+  ["all approval articles enhanced quality", approvalRenderedEnhancementFailures.length === 0],
+  ["all approval article pattern diversity", approvalPatternDiversityOk],
   ["topo tokens", /--pine:/.test(css) && /--blaze:/.test(css)],
   ["shared layout css", /hero-shell/.test(css) && /list-row/.test(css)],
-  ["sample categories", /catOrder/.test(data) && /seasonal/.test(data) && (data.match(/"href": "articles\//g) || []).length === approvalPosts.length],
+  ["sample categories", /catOrder/.test(data) && /seasonal/.test(data) && (data.match(/"href": "articles\//g) || []).length === publishedApprovalPosts.length],
   ["site data", /"trails"/.test(siteData) && /"parks"/.test(siteData)]
 ];
 
