@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "build:static": "node scripts/build-static-pages.mjs",
+    "check": "node scripts/validate-static.mjs",
+    "start": "python -m http.server 5173"
+  }
+}

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Compare Trails | Gradient Trail</title>
+  <link rel="canonical" href="https://www.gradienttrail.com/us-trails/compare.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/topo.css">
+</head>
+<body class="topo-bg">
+  <header class="site-head"><div class="wrap"><a class="brand" href="../index.html"><span class="brand-mark" aria-hidden="true">&#9651;</span><span>Gradient Trail <span class="brand-sub">National park trail fit</span></span></a><nav class="nav" aria-label="Primary"><a href="trails.html">Trails</a><a href="parks.html">Parks</a><a href="calculator.html">Calculator</a><a href="compare.html" aria-current="page">Compare</a><a href="Blog.html">Blog</a></nav></div></header>
+  <main>
+    <section class="page-head wrap"><p class="eyebrow">A vs B</p><h1>Compare two trail options</h1><p class="lead">Side-by-side comparison is one of the defensible tool pages from the spec: it helps users make a decision instead of reading another generic list.</p></section>
+    <section class="section tight wrap">
+      <div class="control-strip"><div class="field"><label for="trailA">Trail A</label><select id="trailA"></select></div><div class="field"><label for="trailB">Trail B</label><select id="trailB"></select></div></div>
+      <div class="result-panel"><div class="panel"><div class="thumb-slot" id="thumbA"></div></div><div class="panel"><div class="thumb-slot" id="thumbB"></div></div></div>
+      <div class="panel" style="margin-top:16px"><table class="compare-table" id="compareTable"></table></div>
+    </section>
+  </main>
+  <script src="assets/site-data.js"></script>
+  <script src="assets/topo-charts.js"></script>
+  <script>
+    const a = document.getElementById("trailA");
+    const b = document.getElementById("trailB");
+    SITE.trails.forEach((trail, index) => { a.add(new Option(trail.name, index)); b.add(new Option(trail.name, index)); });
+    b.value = "2";
+    function row(label, x, y) { return `<tr><th>${label}</th><td>${x}</td><td>${y}</td></tr>`; }
+    function render() {
+      const ta = SITE.trails[Number(a.value)];
+      const tb = SITE.trails[Number(b.value)];
+      document.getElementById("compareTable").innerHTML = `<thead><tr><th>Metric</th><th>${ta.name}</th><th>${tb.name}</th></tr></thead><tbody>${row("Park", ta.park, tb.park)}${row("Distance", `${ta.distance} mi`, `${tb.distance} mi`)}${row("Gain", `${ta.gain} ft`, `${tb.gain} ft`)}${row("Max grade", `${ta.maxGrade}%`, `${tb.maxGrade}%`)}${row("Gentleness", `${ta.gentle}/100`, `${tb.gentle}/100`)}${row("Access signal", ta.access, tb.access)}</tbody>`;
+      ["A","B"].forEach((slot) => document.getElementById(`thumb${slot}`).innerHTML = "");
+      document.getElementById("thumbA").appendChild(Topo.topoThumb({ seed: ta.seed, tint: "#4f7f8f" }));
+      document.getElementById("thumbB").appendChild(Topo.topoThumb({ seed: tb.seed, tint: "#8a9d5e" }));
+    }
+    [a,b].forEach((el) => el.addEventListener("change", render));
+    render();
+  </script>
+  <footer class="site-foot trust"><div class="wrap"><div><b>Gradient Trail</b><br>Terrain-first national park trail planning. Always verify current official park conditions before visiting.</div><nav class="foot-links" aria-label="Footer"><a href="../about.html">About</a><a href="../contact.html">Contact</a><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../editorial-policy.html">Editorial Policy</a><a href="../disclaimer.html">Disclaimer</a></nav></div></footer>
+</body>
+</html>

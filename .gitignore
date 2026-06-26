@@ -1,0 +1,7 @@
+.goal-harness/
+.omx/
+node_modules/
+.env
+.env.*
+*.local
+*.tmp

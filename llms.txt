@@ -1,0 +1,13 @@
+# Gradient Trail
+
+A local MVP for DEM-first national park trail planning.
+
+Key pages:
+- /us-trails/trails.html
+- /us-trails/parks.html
+- /us-trails/calculator.html
+- /us-trails/compare.html
+- /blog/
+- /us-trails/methodology.html
+
+Method: route-relation geometry, DEM elevation profile, deterministic gentleness/family/difficulty scores, conservative access language.

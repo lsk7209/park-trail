@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hiking Time Calculator | Gradient Trail</title>
+  <link rel="canonical" href="https://www.gradienttrail.com/us-trails/calculator.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/topo.css">
+</head>
+<body class="topo-bg">
+  <header class="site-head"><div class="wrap"><a class="brand" href="../index.html"><span class="brand-mark" aria-hidden="true">&#9651;</span><span>Gradient Trail <span class="brand-sub">National park trail fit</span></span></a><nav class="nav" aria-label="Primary"><a href="trails.html">Trails</a><a href="parks.html">Parks</a><a href="calculator.html" aria-current="page">Calculator</a><a href="compare.html">Compare</a><a href="Blog.html">Blog</a></nav></div></header>
+  <main>
+    <section class="page-head wrap"><p class="eyebrow">Input tool</p><h1>Estimate time before the trailhead</h1><p class="lead">A lightweight Naismith-style calculator for planning gentle hikes. It is a planning estimate, not a safety guarantee.</p></section>
+    <section class="section tight wrap">
+      <div class="result-panel">
+        <form class="panel" id="calcForm">
+          <div class="control-strip">
+            <div class="field"><label for="miles">Distance miles</label><input id="miles" type="number" step="0.1" min="0.1" value="1.8"></div>
+            <div class="field"><label for="gain">Gain feet</label><input id="gain" type="number" step="10" min="0" value="80"></div>
+            <div class="field"><label for="pace">Group pace</label><select id="pace"><option value="2.7">Relaxed</option><option value="3.1" selected>Average</option><option value="3.6">Fit</option></select></div>
+            <div class="field"><label for="load">Adjustment</label><select id="load"><option value="1">None</option><option value="1.18" selected>Kids or stroller</option><option value="1.28">Heavy pack</option></select></div>
+          </div>
+          <button class="btn" type="submit">Recalculate</button>
+        </form>
+        <div class="panel" aria-live="polite">
+          <p class="eyebrow">Estimated moving time</p>
+          <p class="big-number" id="timeOut">--</p>
+          <p id="effortOut">Enter route details to estimate effort.</p>
+          <p class="trust">Always check official park alerts, daylight, weather and personal ability before heading out.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    function calc() {
+      const miles = Number(document.getElementById("miles").value);
+      const gain = Number(document.getElementById("gain").value);
+      const pace = Number(document.getElementById("pace").value);
+      const load = Number(document.getElementById("load").value);
+      const hours = ((miles / pace) + (gain / 2000)) * load;
+      const minutes = Math.max(5, Math.round(hours * 60));
+      const h = Math.floor(minutes / 60);
+      const m = minutes % 60;
+      document.getElementById("timeOut").textContent = h ? `${h}h ${m}m` : `${m}m`;
+      document.getElementById("effortOut").textContent = minutes < 55 ? "Easy planning band for most groups." : minutes < 120 ? "Moderate outing; plan breaks and water." : "Longer outing; verify terrain and turnaround time.";
+    }
+    document.getElementById("calcForm").addEventListener("submit", (e) => { e.preventDefault(); calc(); });
+    ["miles","gain","pace","load"].forEach((id) => document.getElementById(id).addEventListener("input", calc));
+    calc();
+  </script>
+  <footer class="site-foot trust"><div class="wrap"><div><b>Gradient Trail</b><br>Terrain-first national park trail planning. Always verify current official park conditions before visiting.</div><nav class="foot-links" aria-label="Footer"><a href="../about.html">About</a><a href="../contact.html">Contact</a><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../editorial-policy.html">Editorial Policy</a><a href="../disclaimer.html">Disclaimer</a></nav></div></footer>
+</body>
+</html>

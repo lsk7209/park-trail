@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gentle Trail Finder | Gradient Trail</title>
+  <link rel="canonical" href="https://www.gradienttrail.com/us-trails/trails.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/topo.css">
+</head>
+<body class="topo-bg">
+  <header class="site-head"><div class="wrap"><a class="brand" href="../index.html"><span class="brand-mark" aria-hidden="true">&#9651;</span><span>Gradient Trail <span class="brand-sub">National park trail fit</span></span></a><nav class="nav" aria-label="Primary"><a href="trails.html" aria-current="page">Trails</a><a href="parks.html">Parks</a><a href="calculator.html">Calculator</a><a href="compare.html">Compare</a><a href="Blog.html">Blog</a></nav></div></header>
+  <main>
+    <section class="page-head wrap">
+      <p class="eyebrow">Trail finder</p>
+      <h1>Gentle routes with numbers attached</h1>
+      <p class="lead">Filter sample national park trails by park or distance. Scores are demo values shaped around the pSEO spec: gentleness first, access claims conservative.</p>
+      <div class="control-strip">
+        <div class="field"><label for="trailSearch">Search</label><input id="trailSearch" type="search" placeholder="Yosemite, lake, rim"></div>
+        <div class="field"><label for="parkFilter">Park</label><select id="parkFilter"><option value="all">All parks</option></select></div>
+        <div class="field"><label for="distanceFilter">Max distance</label><select id="distanceFilter"><option value="99">Any</option><option value="1">Under 1 mile</option><option value="2">Under 2 miles</option><option value="4">Under 4 miles</option></select></div>
+        <div class="field"><label for="sortFilter">Sort</label><select id="sortFilter"><option value="gentle">Gentleness</option><option value="family">Family fit</option><option value="distance">Shortest</option></select></div>
+      </div>
+    </section>
+    <section class="wrap section tight"><div class="listing" id="trailList"></div></section>
+  </main>
+  <script src="assets/site-data.js"></script>
+  <script>
+    const list = document.getElementById("trailList");
+    const search = document.getElementById("trailSearch");
+    const parkFilter = document.getElementById("parkFilter");
+    const distanceFilter = document.getElementById("distanceFilter");
+    const sortFilter = document.getElementById("sortFilter");
+    [...new Set(SITE.trails.map((t) => t.park))].forEach((park) => parkFilter.add(new Option(park, park)));
+    function render() {
+      const q = search.value.trim().toLowerCase();
+      const max = Number(distanceFilter.value);
+      let rows = SITE.trails.filter((t) => (parkFilter.value === "all" || t.park === parkFilter.value) && t.distance <= max && `${t.name} ${t.park}`.toLowerCase().includes(q));
+      rows.sort((a,b) => sortFilter.value === "distance" ? a.distance - b.distance : b[sortFilter.value] - a[sortFilter.value]);
+      list.innerHTML = rows.length ? "" : `<div class="panel">No routes match these filters yet.</div>`;
+      rows.forEach((trail) => {
+        const row = document.createElement("a");
+        row.className = "list-row";
+        row.href = `parks/${trail.parkSlug}/trails/${trail.slug}.html`;
+        row.innerHTML = `<div><h3>${trail.name}</h3><p>${trail.park}, ${trail.state} <span class="dot-sep"></span>${trail.type} <span class="dot-sep"></span>${trail.access}</p></div><div><b>${trail.distance} mi</b><p>Distance</p></div><div><b>${trail.gain} ft</b><p>Gain</p></div><div><b>${trail.maxGrade}%</b><p>Max grade</p></div><div class="score"><b>${trail.gentle}/100 gentle</b><div class="bar"><span style="--w:${trail.gentle}%"></span></div></div>`;
+        list.appendChild(row);
+      });
+    }
+    [search, parkFilter, distanceFilter, sortFilter].forEach((el) => el.addEventListener("input", render));
+    render();
+  </script>
+  <footer class="site-foot trust"><div class="wrap"><div><b>Gradient Trail</b><br>Terrain-first national park trail planning. Always verify current official park conditions before visiting.</div><nav class="foot-links" aria-label="Footer"><a href="../about.html">About</a><a href="../contact.html">Contact</a><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../editorial-policy.html">Editorial Policy</a><a href="../disclaimer.html">Disclaimer</a></nav></div></footer>
+</body>
+</html>
