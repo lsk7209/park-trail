@@ -1,17 +1,41 @@
 # Gradient Trail
 
-A local MVP for DEM-first national park trail planning.
+Gradient Trail is an English-language national park trail planning site for visitors who need lower-climb, family-aware, mobility-aware and source-literate route decisions.
 
 Canonical domain: https://gradienttrail.com
 Sitemap: https://gradienttrail.com/sitemap.xml
 RSS feed: https://gradienttrail.com/feed.xml
+Contact: https://gradienttrail.com/contact
+Editorial policy: https://gradienttrail.com/editorial-policy
+Safety and accessibility disclaimer: https://gradienttrail.com/disclaimer
 
-Key pages:
-- /us-trails/trails
-- /us-trails/parks
-- /us-trails/calculator
-- /us-trails/compare
-- /blog/
-- /us-trails/methodology
+## Primary topics
+- Gentle national park trail planning
+- Family hike pacing and turnaround decisions
+- Conservative accessibility and mobility wording
+- Route distance, gain, grade, surface and shape interpretation
+- Weather, heat, smoke, snow, shuttle and closure verification habits
+- Source hierarchy for official park pages, current alerts and terrain data
 
-Method: route-relation geometry, DEM elevation profile, deterministic gentleness/family/difficulty scores, conservative access language.
+## Key pages
+- https://gradienttrail.com/
+- https://gradienttrail.com/blog/
+- https://gradienttrail.com/us-trails/trails
+- https://gradienttrail.com/us-trails/parks
+- https://gradienttrail.com/us-trails/calculator
+- https://gradienttrail.com/us-trails/compare
+- https://gradienttrail.com/us-trails/methodology
+
+## Editorial method
+Gradient Trail articles are planning aids, not official park guidance. Stable terrain and route-fit signals can help readers make a shortlist, but current official park alerts, weather, accessibility notices, road status and facility status control same-day decisions.
+
+Articles are reviewed for reader job clarity, source hierarchy, conservative access language, internal links, outbound source notes, FAQ visibility, verification checklist quality and avoidance of generic route promises.
+
+## Source hierarchy
+1. Official park and agency pages for current conditions and park-specific facts.
+2. Primary data sources such as terrain or elevation datasets for stable route context.
+3. Expert or context references for planning behavior and safety framing.
+4. Reviews, photos and social posts only as weak context, never as final proof.
+
+## Do not infer
+Do not treat Gradient Trail as affiliated with the National Park Service, OpenStreetMap, USGS, Recreation.gov or any park concessioner. Do not treat a gentle score, short distance, paved route, boardwalk or article title as a safety, accessibility or current-open-status guarantee.

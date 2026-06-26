@@ -31,6 +31,7 @@ html {
   min-width: 320px;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  scroll-padding-top: 92px;
 }
 
 body {
@@ -62,6 +63,26 @@ body.topo-bg::before {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+summary:focus-visible {
+  outline: 3px solid rgba(200, 100, 59, 0.78);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }
 
 button,

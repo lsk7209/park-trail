@@ -338,15 +338,16 @@ const trustPagesSubstantiveOk = [about, contact, privacy, terms, editorialPolicy
   .every((content) => visibleLength(content) >= 900 && /Reader safety first/.test(content) && /Editorial corrections accepted/.test(content));
 
 const adsenseLoaderCount = (content) => (content.match(/pagead2\.googlesyndication\.com\/pagead\/js\/adsbygoogle\.js/g) || []).length;
-const publicPagesHaveSingleLoader = [home, blogIndex, article, about, contact, privacy, terms, editorialPolicy, disclaimer]
+const primaryPublicPages = [home, blogIndex, article, about, contact, privacy, terms, editorialPolicy, disclaimer, trails, parks, calculator, compare, methodology];
+const publicPagesHaveSingleLoader = primaryPublicPages
   .every((content) => adsenseLoaderCount(content) === 1);
-const publicPagesHaveRssDiscovery = [home, blogIndex, article, about, contact, privacy, terms, editorialPolicy, disclaimer]
+const publicPagesHaveRssDiscovery = primaryPublicPages
   .every((content) => /rel="alternate" type="application\/rss\+xml"[^>]+href="https:\/\/gradienttrail\.com\/feed\.xml"/.test(content));
-const publicPagesHaveVerificationMeta = [home, blogIndex, article, about, contact, privacy, terms, editorialPolicy, disclaimer]
+const publicPagesHaveVerificationMeta = primaryPublicPages
   .every((content) => /name="google-site-verification" content="EWaJY7dnYLETiLKgkZp6yXSfY-b0EQJfDkKcr5OubcM"/.test(content)
     && /name="naver-site-verification" content="1d1e74be2fc392a80a09240a8bbda0a3145084a8"/.test(content));
 const ga4LoaderCount = (content) => (content.match(/googletagmanager\.com\/gtag\/js\?id=G-JXKB19KWYF/g) || []).length;
-const publicPagesHaveSingleGa4 = [home, blogIndex, article, about, contact, privacy, terms, editorialPolicy, disclaimer]
+const publicPagesHaveSingleGa4 = primaryPublicPages
   .every((content) => ga4LoaderCount(content) === 1 && /gtag\("config","G-JXKB19KWYF"\)/.test(content));
 const cleanSitemapOk = /<loc>https:\/\/gradienttrail\.com\/<\/loc>/.test(sitemap)
   && /<loc>https:\/\/gradienttrail\.com\/blog\/<\/loc>/.test(sitemap)
@@ -391,6 +392,11 @@ const sitemapLocs = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) =>
 const indexablePublicPages = [
   ["index.html", home],
   ["blog/index.html", blogIndex],
+  ["us-trails/trails.html", trails],
+  ["us-trails/parks.html", parks],
+  ["us-trails/calculator.html", calculator],
+  ["us-trails/compare.html", compare],
+  ["us-trails/methodology.html", methodology],
   ["us-trails/articles/choose-gentle-national-park-trail.html", article],
   ["about.html", about],
   ["contact.html", contact],
@@ -419,6 +425,31 @@ const articleLinkStructureOk = /route-planning-next-step/.test(article)
   && (article.match(/href="\.\.\/\.\.\/us-trails\//g) || []).length >= 2
   && (article.match(/href="https:\/\/www\.nps\.gov\//g) || []).length >= 3;
 
+const primaryToolPagesEnhancedOk = [trails, parks, calculator, compare, methodology]
+  .every((content) => !/www\.gradienttrail\.com/.test(content)
+    && !/Blog\.html/.test(content)
+    && /name="description"/.test(content)
+    && /property="og:url" content="https:\/\/gradienttrail\.com\/us-trails\//.test(content)
+    && adsenseLoaderCount(content) === 1
+    && ga4LoaderCount(content) === 1);
+
+const crawlableToolFallbackOk = /Lower Yosemite Fall Loop/.test(trails)
+  && /Mather Point Rim Walk/.test(trails)
+  && /Jordan Pond Path/.test(trails)
+  && /href="parks\/yosemite\/trails\/lower-yosemite-fall-loop\.html"/.test(trails)
+  && /Yosemite/.test(parks)
+  && /Grand Canyon/.test(parks)
+  && /href="parks\/acadia\.html"/.test(parks);
+
+const articleTrustSchemaOk = /"@type":"Person"/.test(article)
+  && /"reviewedBy"/.test(article)
+  && /"@type":"BreadcrumbList"/.test(article)
+  && /Editorial review note/.test(article);
+
+const llmsExpandedOk = /## Editorial method/.test(await readFile(join(root, "llms.txt"), "utf8"))
+  && /## Source hierarchy/.test(await readFile(join(root, "llms.txt"), "utf8"))
+  && /Do not treat Gradient Trail as affiliated/.test(await readFile(join(root, "llms.txt"), "utf8"));
+
 const legacyBlogOk = /noindex,follow/.test(html)
   && getCanonical(html) === "https://gradienttrail.com/blog/"
   && !sitemap.includes("https://gradienttrail.com/us-trails/Blog")
@@ -434,6 +465,8 @@ const expectations = [
   ["home page", /Gradient Trail/.test(home) && /Find gentle trails/.test(home)],
   ["home navigation", /us-trails\/trails\.html/.test(home) && /blog\/index\.html/.test(home)],
   ["open graph metadata", /property="og:title"/.test(home) && /property="og:description"/.test(article) && /name="twitter:card"/.test(blogIndex)],
+  ["primary tool pages enhanced", primaryToolPagesEnhancedOk],
+  ["crawlable tool fallback", crawlableToolFallbackOk],
   ["blog index", /Gentle trail planning guides/.test(blogIndex) && (blogIndex.match(/class="site-card post-index-card"/g) || []).length === publishedApprovalPosts.length],
   ["canonical and sitemap consistency", canonicalAndSitemapOk],
   ["meta keyword coverage", metaKeywordFrontOk],
@@ -456,6 +489,7 @@ const expectations = [
   ["sitemap metadata", sitemapMetadataOk],
   ["robots sitemap", /Sitemap:/.test(robots)],
   ["rss feed", feedOk],
+  ["llms expanded", llmsExpandedOk],
   ["rss discovery", publicPagesHaveRssDiscovery],
   ["site verification meta", publicPagesHaveVerificationMeta],
   ["ga4 tag", publicPagesHaveSingleGa4],
@@ -464,6 +498,7 @@ const expectations = [
   ["privacy ads disclosure", /Google/.test(privacy) && /cookies/.test(privacy) && /personalized advertising/.test(privacy)],
   ["trust pages substantive", trustPagesSubstantiveOk],
   ["article content", /Field takeaways/.test(article) && /Sources and verification notes/.test(article) && /Article/.test(article)],
+  ["article trust schema", articleTrustSchemaOk],
   ["article CTA and links", articleLinkStructureOk],
   ["article quality gates", articleQualityFailures.length === 0],
   ["next100 rendered enhanced quality", next100RenderedEnhancementFailures.length === 0],

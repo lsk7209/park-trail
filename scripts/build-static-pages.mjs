@@ -183,25 +183,52 @@ function siteIdentitySchema() {
   ];
 }
 
+function authorProfile(post) {
+  const profiles = {
+    "Nolan Park": {
+      role: "Terrain planning editor",
+      bio: "Reviews route-fit articles for distance, grade, surface and source hierarchy before publication."
+    },
+    "Mara Finch": {
+      role: "Family route planning editor",
+      bio: "Checks family pacing, turnaround, restroom and mixed-ability planning assumptions."
+    },
+    "Elena Cruz": {
+      role: "Access-aware planning editor",
+      bio: "Reviews conservative accessibility wording and separates current conditions from stable route context."
+    },
+    "Owen Vale": {
+      role: "Seasonal conditions editor",
+      bio: "Reviews weather, daylight, heat, smoke, snow and same-day verification language."
+    }
+  };
+  return profiles[post.author] || {
+    role: "Gradient Trail editorial contributor",
+    bio: "Reviews trail planning articles against Gradient Trail source, safety and route-fit standards."
+  };
+}
+
 function articleToc(post) {
   const answerBox = articleAnswerData(post);
   const fieldExample = articleFieldExampleData(post);
   const verificationChecklist = articleVerificationData(post);
-  const headings = [
-    answerBox.title,
-    ...post.sections.map(([heading]) => heading),
-    post.visual?.title || `${post.decisionTool?.title || articleDecisionToolTitle(post) || "Route decision"}: visual planning block`,
-    fieldExample.title,
-    post.decisionTool?.title || articleDecisionToolTitle(post),
-    `${articleKeywords(post).main} quick questions`,
-    verificationChecklist.title,
-    "Research evidence used",
-    "How to use this guide on a real park day",
-    "Where to go next on Gradient Trail",
-    "Field takeaways",
-    "Sources and verification notes"
-  ].filter(Boolean);
-  return `<details class="toc-panel"><summary class="toc-title">Table of contents</summary><ol>${headings.map((heading) => `<li><a href="#${slugifyAnchor(heading)}">${esc(heading)}</a></li>`).join("")}</ol></details>`;
+  const decisionToolTitle = post.decisionTool?.title || articleDecisionToolTitle(post);
+  const items = [
+    { heading: answerBox.title, label: "Quick answer" },
+    ...post.sections.map(([heading]) => ({ heading, label: heading })),
+    { heading: post.visual?.title || `${decisionToolTitle || "Route decision"}: visual planning block`, label: "Visual planning block" },
+    { heading: fieldExample.title, label: "Field example" },
+    { heading: decisionToolTitle, label: "Decision tool" },
+    { heading: `${articleKeywords(post).main} quick questions`, label: "Quick questions" },
+    { heading: verificationChecklist.title, label: "Verification checklist" },
+    { heading: "Research evidence used", label: "Research evidence" },
+    { heading: "Editorial review note", label: "Editorial review" },
+    { heading: "How to use this guide on a real park day", label: "Park-day use" },
+    { heading: "Where to go next on Gradient Trail", label: "Related links" },
+    { heading: "Field takeaways", label: "Field takeaways" },
+    { heading: "Sources and verification notes", label: "Sources" }
+  ].filter((item) => item.heading);
+  return `<details class="toc-panel"><summary class="toc-title">Table of contents</summary><ol>${items.map((item) => `<li><a href="#${slugifyAnchor(item.heading)}">${esc(item.label)}</a></li>`).join("")}</ol></details>`;
 }
 
 function articleDecisionToolTitle(post) {
@@ -656,7 +683,7 @@ function articleResearchEvidence(post) {
   const sources = evidence.sources || [];
   const details = evidence.article_specific_details || [];
   const runs = evidence.research_runs || [];
-  return `<aside class="panel research-evidence"><h2 id="research-evidence-used">Research evidence used</h2><p>${esc(evidence.source_interpretation_note || "Sources are interpreted by role before route advice is treated as useful.")}</p><div class="research-grid"><section><h3>Source roles</h3><ul class="source-list">${sources.map((source) => `<li><a href="${esc(source.href)}">${esc(source.id)}: ${esc(source.label)}</a> <span>${esc(source.source_role)} · checked ${esc(source.accessed || "2026-06-27")}</span></li>`).join("")}</ul></section><section><h3>Article-specific details</h3><ul class="takeaway-list">${details.map((detail) => `<li><b>${esc(detail.source_id)}</b>: ${esc(detail.claim)}</li>`).join("")}</ul></section></div><details class="research-runs"><summary>Research runs checked for this article</summary><ul>${runs.map((run) => `<li>${esc(run)}</li>`).join("")}</ul></details></aside>`;
+  return `<aside class="panel research-evidence"><h2 id="research-evidence-used">Research evidence used</h2><p>${esc(evidence.source_interpretation_note || "Sources are interpreted by role before route advice is treated as useful.")}</p><div class="research-grid"><section><h3>Source roles</h3><ul class="source-list">${sources.map((source) => `<li><a href="${esc(source.href)}">${esc(source.id)}: ${esc(source.label)}</a> <span>${esc(source.source_role)} - checked ${esc(source.accessed || "2026-06-27")}</span></li>`).join("")}</ul></section><section><h3>Article-specific details</h3><ul class="takeaway-list">${details.map((detail) => `<li><b>${esc(detail.source_id)}</b>: ${esc(detail.claim)}</li>`).join("")}</ul></section></div><details class="research-runs"><summary>Research runs checked for this article</summary><ul>${runs.map((run) => `<li>${esc(run)}</li>`).join("")}</ul></details></aside>`;
 }
 
 function articleVisualBlock(post) {
@@ -684,11 +711,25 @@ function articleVisualBlock(post) {
 }
 
 function articleInternalLinks(post, prefix) {
+  const relatedPosts = publishedApprovalPosts
+    .filter((candidate) => candidate.slug !== post.slug && candidate.cat === post.cat)
+    .sort((a, b) => articleVariant({ slug: `${post.slug}-${a.slug}`, title: a.title, cat: a.cat }, 100000) - articleVariant({ slug: `${post.slug}-${b.slug}`, title: b.title, cat: b.cat }, 100000))
+    .slice(0, 2);
+  const crossCategory = publishedApprovalPosts
+    .filter((candidate) => candidate.slug !== post.slug && candidate.cat !== post.cat)
+    .sort((a, b) => articleVariant({ slug: `${post.slug}-${a.slug}`, title: a.title, cat: a.cat }, 100000) - articleVariant({ slug: `${post.slug}-${b.slug}`, title: b.title, cat: b.cat }, 100000))
+    .slice(0, 1);
+  const contextualLinks = [...relatedPosts, ...crossCategory].map((candidate) => [
+    candidate.title,
+    `${prefix}us-trails/articles/${candidate.slug}.html`,
+    candidate.dek || candidate.subtitle
+  ]);
   const links = [
     ["Methodology", `${prefix}us-trails/methodology.html`, "How Gradient Trail separates terrain metrics from current conditions."],
     ["Trail Finder", `${prefix}us-trails/trails.html`, "Use the sample finder to compare distance, gain, grade and gentle score."],
     ["Hiking Time Calculator", `${prefix}us-trails/calculator.html`, "Estimate time after choosing a candidate route."],
-    ["Compare Trails", `${prefix}us-trails/compare.html`, "Put two route profiles side by side before deciding."]
+    ["Compare Trails", `${prefix}us-trails/compare.html`, "Put two route profiles side by side before deciding."],
+    ...contextualLinks
   ];
   if (post.cat === "access") {
     links[1] = ["Accessibility guide", `${prefix}us-trails/articles/conservative-accessibility-national-park-trails.html`, "Review conservative access language before relying on route signals."];
@@ -701,6 +742,12 @@ function articleInternalLinks(post, prefix) {
 
 function articleCta(post, prefix) {
   return `<aside class="panel article-cta" aria-labelledby="route-planning-next-step"><h2 id="route-planning-next-step">Route planning next step</h2><p>Turn this guide into a practical shortlist before checking current official park conditions.</p><div class="hero-actions"><a class="btn" href="${prefix}us-trails/trails.html">Open Trail Finder</a><a class="btn alt" href="${prefix}us-trails/calculator.html">Estimate Hiking Time</a></div></aside>`;
+}
+
+function articleEditorialNote(post) {
+  const profile = authorProfile(post);
+  const updated = isoDate(post.publishAt || post.date);
+  return `<aside class="panel author-note"><h2 id="editorial-review-note">Editorial review note</h2><p><b>${esc(post.author)}</b>, ${esc(profile.role)}, reviewed this article for route-fit usefulness, conservative safety language and source hierarchy. ${esc(profile.bio)}</p><div class="mini-meta"><span>Published ${esc(isoDate(post.date))}</span><span>Reviewed ${esc(updated)}</span><span>No official park affiliation</span></div></aside>`;
 }
 
 function trailRows(trails, prefix) {
@@ -859,21 +906,46 @@ for (const trail of site.trails) {
 
 function articleSchema(post, path) {
   const faq = articleFaqData(post);
+  const profile = authorProfile(post);
+  const pageUrl = publicUrl(path);
+  const authorId = `${origin}/#author-${slugifyAnchor(post.author)}`;
   const article = {
     "@type": "Article",
+    "@id": `${pageUrl}#article`,
     "headline": post.title,
     "description": post.subtitle,
     "datePublished": isoDate(post.date),
     "dateModified": isoDate(post.publishAt || post.date),
-    "author": { "@type": "Organization", "name": post.author },
+    "author": { "@id": authorId },
+    "reviewedBy": { "@id": `${origin}/#organization` },
     "publisher": { "@id": `${origin}/#organization` },
-    "mainEntityOfPage": publicUrl(path)
+    "mainEntityOfPage": pageUrl,
+    "isPartOf": { "@id": `${origin}/#website` },
+    "about": [post.catLabel, articleKeywords(post).main, ...articleKeywords(post).extended].filter(Boolean),
+    "inLanguage": "en-US"
   };
   return {
     "@context": "https://schema.org",
     "@graph": [
       ...siteIdentitySchema(),
+      {
+        "@type": "Person",
+        "@id": authorId,
+        "name": post.author,
+        "jobTitle": profile.role,
+        "description": profile.bio,
+        "worksFor": { "@id": `${origin}/#organization` }
+      },
       article,
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${pageUrl}#breadcrumb`,
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": `${origin}/` },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": `${origin}/blog/` },
+          { "@type": "ListItem", "position": 3, "name": post.title, "item": pageUrl }
+        ]
+      },
       ...(faq.length ? [{
         "@type": "FAQPage",
         "mainEntity": faq.map((item) => ({
@@ -952,6 +1024,7 @@ for (const post of approvalPosts) {
         ${articleFaq(post)}
         ${articleVerificationChecklist(post)}
         ${articleResearchEvidence(post)}
+        ${articleEditorialNote(post)}
         <article class="panel"><h2 id="how-to-use-this-guide-on-a-real-park-day">How to use this guide on a real park day</h2><p>Use this article as a planning layer, not as the final authority. Start with the terrain idea explained here, compare it with the route's distance, gain, grade and surface, then open the official park page before you leave. If current alerts, weather, shuttle status, construction or accessibility details conflict with a comfortable plan, choose the official information and adjust the route.</p><p>For families and mixed-ability groups, make the decision at the pace of the least flexible person in the group. A route that looks efficient for one adult may still be the wrong choice if it has a hot return, uncertain surface, poor bailout options or facilities that do not match the day. The goal is not to collect a trail name. The goal is to arrive with a route that still makes sense when real conditions, energy and timing are considered together.</p></article>
         ${articleCta(post, prefix)}
         ${articleInternalLinks(post, prefix)}
@@ -1044,7 +1117,7 @@ const today = new Date().toISOString().slice(0, 10);
 await write("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(([url, changefreq, priority, lastmod]) => `  <url><loc>${publicUrl(url)}</loc><lastmod>${xmlEsc(lastmod || today)}</lastmod><changefreq>${changefreq}</changefreq><priority>${priority}</priority></url>`).join("\n")}\n</urlset>\n`);
 await write("robots.txt", `User-agent: *\nAllow: /\nSitemap: ${origin}/sitemap.xml\n`);
 await write("feed.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">\n  <channel>\n    <title>Gradient Trail</title>\n    <link>${origin}/</link>\n    <atom:link href="${origin}/feed.xml" rel="self" type="application/rss+xml" />\n    <description>Terrain-first national park trail planning articles from Gradient Trail.</description>\n    <language>en-us</language>\n    <lastBuildDate>${xmlEsc(buildNow.toUTCString())}</lastBuildDate>\n${rssItems}\n  </channel>\n</rss>\n`);
-await write("llms.txt", `# Gradient Trail\n\nA local MVP for DEM-first national park trail planning.\n\nCanonical domain: ${origin}\nSitemap: ${origin}/sitemap.xml\nRSS feed: ${origin}/feed.xml\n\nKey pages:\n- /us-trails/trails\n- /us-trails/parks\n- /us-trails/calculator\n- /us-trails/compare\n- /blog/\n- /us-trails/methodology\n\nMethod: route-relation geometry, DEM elevation profile, deterministic gentleness/family/difficulty scores, conservative access language.\n`);
+await write("llms.txt", `# Gradient Trail\n\nGradient Trail is an English-language national park trail planning site for visitors who need lower-climb, family-aware, mobility-aware and source-literate route decisions.\n\nCanonical domain: ${origin}\nSitemap: ${origin}/sitemap.xml\nRSS feed: ${origin}/feed.xml\nContact: ${origin}/contact\nEditorial policy: ${origin}/editorial-policy\nSafety and accessibility disclaimer: ${origin}/disclaimer\n\n## Primary topics\n- Gentle national park trail planning\n- Family hike pacing and turnaround decisions\n- Conservative accessibility and mobility wording\n- Route distance, gain, grade, surface and shape interpretation\n- Weather, heat, smoke, snow, shuttle and closure verification habits\n- Source hierarchy for official park pages, current alerts and terrain data\n\n## Key pages\n- ${origin}/\n- ${origin}/blog/\n- ${origin}/us-trails/trails\n- ${origin}/us-trails/parks\n- ${origin}/us-trails/calculator\n- ${origin}/us-trails/compare\n- ${origin}/us-trails/methodology\n\n## Editorial method\nGradient Trail articles are planning aids, not official park guidance. Stable terrain and route-fit signals can help readers make a shortlist, but current official park alerts, weather, accessibility notices, road status and facility status control same-day decisions.\n\nArticles are reviewed for reader job clarity, source hierarchy, conservative access language, internal links, outbound source notes, FAQ visibility, verification checklist quality and avoidance of generic route promises.\n\n## Source hierarchy\n1. Official park and agency pages for current conditions and park-specific facts.\n2. Primary data sources such as terrain or elevation datasets for stable route context.\n3. Expert or context references for planning behavior and safety framing.\n4. Reviews, photos and social posts only as weak context, never as final proof.\n\n## Do not infer\nDo not treat Gradient Trail as affiliated with the National Park Service, OpenStreetMap, USGS, Recreation.gov or any park concessioner. Do not treat a gentle score, short distance, paved route, boardwalk or article title as a safety, accessibility or current-open-status guarantee.\n`);
 await write("ads.txt", "google.com, pub-3050601904412736, DIRECT, f08c47fec0942fa0\n");
 
 console.log(`Generated ${urls.length} approval sitemap URLs, ${feedPosts.length} RSS items, ${approvalPosts.length} articles, ${site.parks.length} noindex park hubs, and ${site.trails.length} noindex trail pages.`);
