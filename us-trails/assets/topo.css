@@ -521,6 +521,58 @@ th,
   text-transform: uppercase;
 }
 
+.visual-block {
+  border-color: color-mix(in srgb, var(--visual-accent, var(--water)) 38%, var(--line));
+  background:
+    linear-gradient(180deg, var(--visual-soft, rgba(239,246,255,0.74)), rgba(255,253,248,0.96));
+}
+
+.visual-label {
+  display: inline-flex;
+  align-items: center;
+  border-radius: var(--r);
+  background: var(--visual-accent, var(--water));
+  color: #fff;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0;
+  margin-right: 8px;
+  padding: 4px 8px;
+  text-transform: uppercase;
+}
+
+.visual-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.visual-cell {
+  border: 1px solid color-mix(in srgb, var(--visual-accent, var(--water)) 30%, var(--line));
+  border-radius: var(--r);
+  background: rgba(255, 253, 248, 0.78);
+  display: grid;
+  gap: 7px;
+  padding: 14px;
+}
+
+.visual-cell b {
+  color: var(--ink);
+}
+
+.visual-cell span {
+  color: var(--ink-soft);
+  font-size: 14px;
+}
+
+.visual-cell em {
+  color: var(--visual-accent, var(--water));
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 900;
+}
+
 .thumb-slot {
   height: 210px;
   overflow: hidden;
@@ -727,6 +779,7 @@ th,
 
   .card-grid,
   .card-grid.two,
+  .visual-grid,
   .post-index-grid,
   .result-panel,
   .control-strip {

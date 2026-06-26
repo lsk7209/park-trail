@@ -2,11 +2,13 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { editorialPosts } from "./editorial-posts.mjs";
 import { expansionPosts } from "./editorial-expansion.mjs";
+import { freshPosts } from "./editorial-fresh.mjs";
 
 const root = process.cwd();
 const site = JSON.parse(await readFile(join(root, "data/site-content.json"), "utf8"));
 const origin = (process.env.SITE_ORIGIN || "https://www.gradienttrail.com").replace(/\/$/, "");
-const approvalPosts = [...editorialPosts.slice(0, 10), ...expansionPosts].slice(0, 100);
+const ARTICLE_TARGET = 200;
+const approvalPosts = [...editorialPosts.slice(0, 10), ...expansionPosts, ...freshPosts].slice(0, ARTICLE_TARGET);
 const adsenseClient = process.env.ADSENSE_CLIENT || "ca-pub-3050601904412736";
 const ga4Id = process.env.GA4_ID || "";
 
@@ -129,6 +131,7 @@ function slugifyAnchor(value) {
 function articleToc(post) {
   const headings = [
     ...post.sections.map(([heading]) => heading),
+    post.visual?.title || `${post.decisionTool?.title || articleDecisionToolTitle(post) || "Route decision"}: visual planning block`,
     post.decisionTool?.title || articleDecisionToolTitle(post),
     "How to use this guide on a real park day",
     "Where to go next on Gradient Trail",
@@ -250,6 +253,30 @@ function articleDecisionTool(post) {
   const tool = post.decisionTool || legacyDecisionTools[post.slug];
   if (!tool) return "";
   return `<article class="panel"><h2 id="${slugifyAnchor(tool.title)}">${esc(tool.title)}</h2><p>${esc(tool.intro)}</p><table class="compare-table"><thead><tr><th>Signal</th><th>Question</th><th>Decision use</th></tr></thead><tbody>${tool.rows.map((row) => `<tr><td>${esc(row[0])}</td><td>${esc(row[1])}</td><td>${esc(row[2])}</td></tr>`).join("")}</tbody></table></article>`;
+}
+
+function articleVisualBlock(post) {
+  const visual = post.visual || {
+    type: "evidenceChecklist",
+    title: `${post.decisionTool?.title || articleDecisionToolTitle(post) || "Route decision"}: visual planning block`,
+    accent: post.tint || "#4f7f8f",
+    accentSoft: "rgba(255,253,248,0.86)",
+    rows: (post.decisionTool || legacyDecisionTools[post.slug])?.rows || [
+      ["Terrain", "What distance, grade or surface detail changes the route fit?", "Use measured signals before vague labels."],
+      ["Logistics", "What parking, shuttle, restroom or turnaround detail affects the outing?", "Choose the route that stays manageable."],
+      ["Current condition", "What official alert or weather detail could override the plan?", "Verify before leaving."]
+    ]
+  };
+  const label = {
+    evidenceChecklist: "Evidence check",
+    decisionBox: "Decision rule",
+    stepCards: "Step sequence",
+    timeline: "Timing plan",
+    riskScale: "Risk scale",
+    scenarioTable: "Scenario table",
+    miniFormula: "Mini formula"
+  }[visual.type] || "Planning block";
+  return `<article class="panel visual-block" style="--visual-accent:${esc(visual.accent)};--visual-soft:${esc(visual.accentSoft)}"><h2 id="${slugifyAnchor(visual.title)}">${esc(visual.title)}</h2><p><span class="visual-label">${esc(label)}</span> This block highlights the one or two signals that should change the route choice, timing or backup plan.</p><div class="visual-grid">${visual.rows.map((row) => `<div class="visual-cell"><b>${esc(row[0])}</b><span>${esc(row[1])}</span><em>${esc(row[2])}</em></div>`).join("")}</div></article>`;
 }
 
 function articleInternalLinks(post, prefix) {
@@ -420,6 +447,10 @@ const sourceLinks = [
   ["USGS 3D Elevation Program", "https://www.usgs.gov/3d-elevation-program"]
 ];
 
+function articleSourceLinks(post) {
+  return post.sources?.length ? post.sources : sourceLinks;
+}
+
 const blogCategories = [...new Map(approvalPosts.map((post) => [post.cat, post.catLabel])).entries()];
 await write("blog/index.html", doc({
   path: "blog/index.html",
@@ -457,16 +488,17 @@ for (const post of approvalPosts) {
         <p class="eyebrow">${esc(post.catLabel)}</p>
         <h1>${esc(post.title)}</h1>
         <p class="lead">${esc(post.subtitle)}</p>
-        <div class="mini-meta"><span>${esc(post.author)}</span><span>${esc(post.date)}</span><span>${esc(post.read)}</span><span>Reader job: ${esc(post.readerJob)}</span></div>
+        <div class="mini-meta"><span>${esc(post.author)}</span><span>${esc(post.date)}</span><span>${esc(post.read)}</span>${post.publishAt ? `<span>Scheduled: ${esc(post.publishAt)}</span>` : ""}<span>Reader job: ${esc(post.readerJob)}</span></div>
       </section>
       <section class="section tight wrap article-body">
         ${articleToc(post)}
         ${post.sections.map(([heading, paragraphs]) => `<article class="panel"><h2 id="${slugifyAnchor(heading)}">${esc(heading)}</h2>${paragraphs.map((paragraph) => `<p>${esc(paragraph)}</p>`).join("")}</article>`).join("")}
+        ${articleVisualBlock(post)}
         ${articleDecisionTool(post)}
         <article class="panel"><h2 id="how-to-use-this-guide-on-a-real-park-day">How to use this guide on a real park day</h2><p>Use this article as a planning layer, not as the final authority. Start with the terrain idea explained here, compare it with the route's distance, gain, grade and surface, then open the official park page before you leave. If current alerts, weather, shuttle status, construction or accessibility details conflict with a comfortable plan, choose the official information and adjust the route.</p><p>For families and mixed-ability groups, make the decision at the pace of the least flexible person in the group. A route that looks efficient for one adult may still be the wrong choice if it has a hot return, uncertain surface, poor bailout options or facilities that do not match the day. The goal is not to collect a trail name. The goal is to arrive with a route that still makes sense when real conditions, energy and timing are considered together.</p></article>
         ${articleInternalLinks(post, prefix)}
         <aside class="panel"><h2 id="field-takeaways">Field takeaways</h2><ul class="takeaway-list">${post.takeaways.map((item) => `<li>${esc(item)}</li>`).join("")}</ul></aside>
-        <aside class="panel"><h2 id="sources-and-verification-notes">Sources and verification notes</h2><p>Gradient Trail articles are planning aids, not official park guidance. Check current park alerts, weather, road status and accessibility information before visiting.</p><ul class="source-list">${sourceLinks.map(([label, href]) => `<li><a href="${href}">${esc(label)}</a></li>`).join("")}</ul><div class="mini-meta"><span><a href="${prefix}us-trails/methodology.html">Methodology</a></span><span><a href="${prefix}disclaimer.html">Safety disclaimer</a></span><span><a href="${prefix}editorial-policy.html">Editorial policy</a></span></div></aside>
+        <aside class="panel"><h2 id="sources-and-verification-notes">Sources and verification notes</h2><p>Gradient Trail articles are planning aids, not official park guidance. Check current park alerts, weather, road status and accessibility information before visiting.</p><ul class="source-list">${articleSourceLinks(post).map(([label, href]) => `<li><a href="${href}">${esc(label)}</a></li>`).join("")}</ul><div class="mini-meta"><span><a href="${prefix}us-trails/methodology.html">Methodology</a></span><span><a href="${prefix}disclaimer.html">Safety disclaimer</a></span><span><a href="${prefix}editorial-policy.html">Editorial policy</a></span></div></aside>
       </section>
     </main>`
   }));

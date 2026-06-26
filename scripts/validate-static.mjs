@@ -1,12 +1,15 @@
-import { access, readFile } from "node:fs/promises";
+import { access, readFile, readdir } from "node:fs/promises";
 import { join } from "node:path";
 import { editorialPosts } from "./editorial-posts.mjs";
 import { expansionPosts } from "./editorial-expansion.mjs";
+import { freshPosts } from "./editorial-fresh.mjs";
 
 const root = process.cwd();
 const site = JSON.parse(await readFile(join(root, "data/site-content.json"), "utf8"));
 const filterSlugs = ["easy-flat-trails", "trails-under-2-miles", "kid-friendly"];
-const approvalPosts = [...editorialPosts.slice(0, 10), ...expansionPosts].slice(0, 100);
+const ARTICLE_TARGET = 200;
+const FRESH_TARGET = 100;
+const approvalPosts = [...editorialPosts.slice(0, 10), ...expansionPosts, ...freshPosts].slice(0, ARTICLE_TARGET);
 const approvalArticlePaths = approvalPosts.map((post) => `us-trails/articles/${post.slug}.html`);
 const requiredFiles = [
   "favicon.svg",
@@ -62,12 +65,50 @@ const article = await readFile(join(root, "us-trails/articles/choose-gentle-nati
 const privacy = await readFile(join(root, "privacy.html"), "utf8");
 const adsTxt = await readFile(join(root, "ads.txt"), "utf8");
 const blogIndex = await readFile(join(root, "blog/index.html"), "utf8");
+const articleDirFiles = (await readdir(join(root, "us-trails/articles"))).filter((file) => file.endsWith(".html"));
 const approvalArticles = await Promise.all(
   approvalArticlePaths.map(async (path) => [path, await readFile(join(root, path), "utf8")])
 );
+
+function normalize(value) {
+  return String(value || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim().replace(/\s+/g, " ");
+}
+
+function uniqueCount(values) {
+  return new Set(values.map(normalize)).size;
+}
+
+function hasKeywordCoverage(post) {
+  if (!post.mainKeyword) return !freshPosts.includes(post);
+  const title = normalize(post.title);
+  const subtitle = normalize(post.subtitle);
+  const main = normalize(post.mainKeyword);
+  const extended = post.extendedKeywords || [];
+  return main
+    && (title.includes(main) || subtitle.includes(main))
+    && extended.length >= 2
+    && extended.some((keyword) => title.includes(normalize(keyword)) || subtitle.includes(normalize(keyword)));
+}
+
+const scheduled = freshPosts.slice(0, FRESH_TARGET).map((post) => post.publishAt);
+const scheduleIntervalOk = scheduled.every((value, index) => {
+  if (!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$/.test(value)) return false;
+  if (index === 0) return true;
+  return new Date(value) - new Date(scheduled[index - 1]) === 5 * 60 * 60 * 1000;
+});
+
+const sourceQualityOk = approvalPosts.length === ARTICLE_TARGET
+  && freshPosts.length === FRESH_TARGET
+  && uniqueCount(approvalPosts.map((post) => post.slug)) === ARTICLE_TARGET
+  && uniqueCount(approvalPosts.map((post) => post.title)) === ARTICLE_TARGET
+  && uniqueCount(freshPosts.map((post) => post.mainKeyword)) === FRESH_TARGET
+  && approvalPosts.every(hasKeywordCoverage)
+  && scheduleIntervalOk;
+
 const articleQualityFailures = approvalArticles
   .filter(([, content]) => {
-    const visibleTextLength = content
+    const body = content.match(/<section class="section tight wrap article-body">([\s\S]*?)<\/section>/)?.[1] || "";
+    const visibleTextLength = body
       .replace(/<script[\s\S]*?<\/script>/g, "")
       .replace(/<style[\s\S]*?<\/style>/g, "")
       .replace(/<[^>]+>/g, " ")
@@ -75,6 +116,7 @@ const articleQualityFailures = approvalArticles
       .trim().length;
     return visibleTextLength < 4500
       || !/compare-table/.test(content)
+      || !/visual-block/.test(content)
       || !/Table of contents/.test(content)
       || !/Where to go next on Gradient Trail/.test(content)
       || !/Sources and verification notes/.test(content)
@@ -87,6 +129,8 @@ const expectations = [
   ["home page", /Gradient Trail/.test(home) && /Find gentle trails/.test(home)],
   ["home navigation", /us-trails\/trails\.html/.test(home) && /blog\/index\.html/.test(home)],
   ["blog index", /Gentle trail planning guides/.test(blogIndex) && (blogIndex.match(/class="site-card post-index-card"/g) || []).length === approvalPosts.length],
+  ["article source quality", sourceQualityOk],
+  ["article file count", articleDirFiles.length === ARTICLE_TARGET],
   ["title", /The Gradient Field Notes/.test(html)],
   ["filter bar", /id="filterBar"/.test(html)],
   ["featured card", /id="featuredCard"/.test(html)],
@@ -101,7 +145,7 @@ const expectations = [
   ["generated trail detail", /Trail detail/.test(generatedTrail) && /Access caution/.test(generatedTrail)],
   ["generated park hub", /Long-tail filters/.test(generatedPark) && /Top candidates/.test(generatedPark)],
   ["generated pages noindex", /noindex,follow/.test(generatedTrail) && /noindex,follow/.test(generatedPark)],
-  ["sitemap approval URLs", /blog\/index\.html/.test(sitemap) && /us-trails\/articles\/choose-gentle-national-park-trail\.html/.test(sitemap) && approvalArticlePaths.every((path) => sitemap.includes(path)) && !/127\.0\.0\.1/.test(sitemap) && !/easy-flat-trails/.test(sitemap)],
+  ["sitemap approval URLs", /blog\/index\.html/.test(sitemap) && /us-trails\/articles\/choose-gentle-national-park-trail\.html/.test(sitemap) && approvalArticlePaths.every((path) => sitemap.includes(path)) && (sitemap.match(/us-trails\/articles\//g) || []).length === ARTICLE_TARGET && !/127\.0\.0\.1/.test(sitemap) && !/easy-flat-trails/.test(sitemap)],
   ["robots sitemap", /Sitemap:/.test(robots)],
   ["ads txt", /google\.com, pub-3050601904412736, DIRECT, f08c47fec0942fa0/.test(adsTxt)],
   ["adsense loader", /ca-pub-3050601904412736/.test(home) && /ca-pub-3050601904412736/.test(blogIndex) && /ca-pub-3050601904412736/.test(article)],
