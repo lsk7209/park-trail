@@ -1416,6 +1416,19 @@ window.SAMPLE = {
       "date": "Jun 27, 2026",
       "read": "10 min",
       "featured": false
+    },
+    {
+      "title": "Trailhead Meal Timing for Short Scenic Hikes",
+      "dek": "Trailhead meal timing and short scenic hikes work better when snacks, heat and return time are planned together.",
+      "cat": "guide",
+      "catLabel": "Logistics",
+      "tint": "#6f7f4c",
+      "seed": "trailhead-meal-timing",
+      "href": "articles/trailhead-meal-timing.html",
+      "author": "Mira Lee",
+      "date": "Jun 27, 2026",
+      "read": "11 min",
+      "featured": false
     }
   ]
 };
