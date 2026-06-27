@@ -32,6 +32,7 @@ function publicUrl(pathFromRoot = "") {
 
 const requiredFiles = [
   "favicon.svg",
+  "vercel.json",
   "ads.txt",
   "robots.txt",
   "sitemap.xml",
@@ -90,6 +91,7 @@ const terms = await readFile(join(root, "terms.html"), "utf8");
 const editorialPolicy = await readFile(join(root, "editorial-policy.html"), "utf8");
 const disclaimer = await readFile(join(root, "disclaimer.html"), "utf8");
 const adsTxt = await readFile(join(root, "ads.txt"), "utf8");
+const vercelConfig = JSON.parse(await readFile(join(root, "vercel.json"), "utf8"));
 const blogIndex = await readFile(join(root, "blog/index.html"), "utf8");
 const articleDirFiles = (await readdir(join(root, "us-trails/articles"))).filter((file) => file.endsWith(".html"));
 const approvalArticles = await Promise.all(
@@ -455,6 +457,13 @@ const legacyBlogOk = /noindex,follow/.test(html)
   && !sitemap.includes("https://gradienttrail.com/us-trails/Blog")
   && !/www\.gradienttrail\.com/.test(html);
 
+const wwwRedirectOk = Array.isArray(vercelConfig.redirects)
+  && vercelConfig.redirects.some((redirect) => redirect.source === "/:path*"
+    && redirect.destination === "https://gradienttrail.com/:path*"
+    && redirect.permanent === true
+    && Array.isArray(redirect.has)
+    && redirect.has.some((rule) => rule.type === "host" && rule.value === "www.gradienttrail.com"));
+
 const headingStructureOk = indexablePublicPages.every(([, content]) => hasOrderedHeadings(content));
 const sitemapMetadataOk = sitemapLocs.length === 13 + publishedApprovalPosts.length
   && (sitemap.match(/<lastmod>\d{4}-\d{2}-\d{2}<\/lastmod>/g) || []).length === sitemapLocs.length
@@ -469,6 +478,7 @@ const expectations = [
   ["crawlable tool fallback", crawlableToolFallbackOk],
   ["blog index", /Gentle trail planning guides/.test(blogIndex) && (blogIndex.match(/class="site-card post-index-card"/g) || []).length === publishedApprovalPosts.length],
   ["canonical and sitemap consistency", canonicalAndSitemapOk],
+  ["www host redirect", wwwRedirectOk],
   ["meta keyword coverage", metaKeywordFrontOk],
   ["ordered heading structure", headingStructureOk],
   ["article source quality", sourceQualityOk],

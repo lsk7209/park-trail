@@ -1403,6 +1403,19 @@ window.SAMPLE = {
       "date": "Jun 26, 2026",
       "read": "14 min",
       "featured": false
+    },
+    {
+      "title": "Offline Meeting Points for Family National Park Hikes",
+      "dek": "How an offline meeting point and family hike communication plan help when cell service disappears.",
+      "cat": "guide",
+      "catLabel": "Logistics",
+      "tint": "#6f7f4c",
+      "seed": "offline-meeting-point-hike",
+      "href": "articles/offline-meeting-point-hike.html",
+      "author": "Gradient Field Team",
+      "date": "Jun 27, 2026",
+      "read": "10 min",
+      "featured": false
     }
   ]
 };

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://gradienttrail.com/</loc><lastmod>2026-06-26</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://gradienttrail.com/us-trails/trails</loc><lastmod>2026-06-26</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://gradienttrail.com/us-trails/parks</loc><lastmod>2026-06-26</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://gradienttrail.com/us-trails/calculator</loc><lastmod>2026-06-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://gradienttrail.com/us-trails/compare</loc><lastmod>2026-06-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://gradienttrail.com/blog/</loc><lastmod>2026-06-26</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>
-  <url><loc>https://gradienttrail.com/us-trails/methodology</loc><lastmod>2026-06-26</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://gradienttrail.com/about</loc><lastmod>2026-06-26</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
-  <url><loc>https://gradienttrail.com/contact</loc><lastmod>2026-06-26</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
-  <url><loc>https://gradienttrail.com/privacy</loc><lastmod>2026-06-26</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
-  <url><loc>https://gradienttrail.com/terms</loc><lastmod>2026-06-26</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
-  <url><loc>https://gradienttrail.com/editorial-policy</loc><lastmod>2026-06-26</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
-  <url><loc>https://gradienttrail.com/disclaimer</loc><lastmod>2026-06-26</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://gradienttrail.com/</loc><lastmod>2026-06-27</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://gradienttrail.com/us-trails/trails</loc><lastmod>2026-06-27</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://gradienttrail.com/us-trails/parks</loc><lastmod>2026-06-27</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://gradienttrail.com/us-trails/calculator</loc><lastmod>2026-06-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gradienttrail.com/us-trails/compare</loc><lastmod>2026-06-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gradienttrail.com/blog/</loc><lastmod>2026-06-27</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://gradienttrail.com/us-trails/methodology</loc><lastmod>2026-06-27</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gradienttrail.com/about</loc><lastmod>2026-06-27</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://gradienttrail.com/contact</loc><lastmod>2026-06-27</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://gradienttrail.com/privacy</loc><lastmod>2026-06-27</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://gradienttrail.com/terms</loc><lastmod>2026-06-27</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://gradienttrail.com/editorial-policy</loc><lastmod>2026-06-27</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://gradienttrail.com/disclaimer</loc><lastmod>2026-06-27</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
   <url><loc>https://gradienttrail.com/us-trails/articles/choose-gentle-national-park-trail</loc><lastmod>2026-06-11</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://gradienttrail.com/us-trails/articles/gentle-national-park-trails-first-time-visitors</loc><lastmod>2026-06-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://gradienttrail.com/us-trails/articles/elevation-gain-family-hike-guide</loc><lastmod>2026-06-09</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -118,4 +118,5 @@
   <url><loc>https://gradienttrail.com/us-trails/articles/visitor-center-first-route-plan</loc><lastmod>2026-06-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://gradienttrail.com/us-trails/articles/shuttle-gap-gentle-trail</loc><lastmod>2026-06-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://gradienttrail.com/us-trails/articles/trailhead-signage-confidence</loc><lastmod>2026-06-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://gradienttrail.com/us-trails/articles/offline-meeting-point-hike</loc><lastmod>2026-06-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
