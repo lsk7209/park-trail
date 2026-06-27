@@ -1,0 +1,65 @@
+name: NPS official data sync
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 9 * * 1,4"
+
+concurrency:
+  group: nps-official-data-sync
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      NPS_API_KEY: ${{ secrets.NPS_API_KEY }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Verify NPS secret is configured
+        run: |
+          if [ -z "$NPS_API_KEY" ]; then
+            echo "NPS_API_KEY GitHub Secret is missing."
+            exit 1
+          fi
+
+      - name: Fetch NPS cache
+        run: npm run nps:fetch
+
+      - name: Stop when official data did not change
+        id: nps_changed
+        shell: bash
+        run: |
+          changed="$(node -e "console.log(require('./data/nps-sync-summary.json').changed ? 'true' : 'false')")"
+          echo "changed=$changed" >> "$GITHUB_OUTPUT"
+          if [ "$changed" != "true" ]; then
+            echo "No official NPS content changes detected."
+          fi
+
+      - name: Rebuild and validate static site
+        if: steps.nps_changed.outputs.changed == 'true'
+        run: npm run build:static && npm run check
+
+      - name: Commit changed NPS artifacts
+        if: steps.nps_changed.outputs.changed == 'true'
+        run: |
+          if git diff --quiet; then
+            echo "No NPS data changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/nps-cache.json data/nps-sync-summary.json sitemap.xml feed.xml blog/index.html us-trails scripts package.json
+          git commit -m "Update NPS official data cache"
+          git push

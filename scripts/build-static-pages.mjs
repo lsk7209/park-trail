@@ -7,6 +7,7 @@ import { next100Posts } from "./editorial-next100.mjs";
 
 const root = process.cwd();
 const site = JSON.parse(await readFile(join(root, "data/site-content.json"), "utf8"));
+const npsCache = await readJsonIfExists("data/nps-cache.json", { parks: [] });
 const origin = (process.env.SITE_ORIGIN || "https://gradienttrail.com").replace(/\/$/, "");
 const ARTICLE_TARGET = 300;
 const approvalPosts = [...editorialPosts.slice(0, 10), ...expansionPosts, ...freshPosts, ...next100Posts].slice(0, ARTICLE_TARGET);
@@ -40,6 +41,14 @@ const filters = [
     predicate: (trail) => trail.family >= 85
   }
 ];
+
+async function readJsonIfExists(pathFromRoot, fallback) {
+  try {
+    return JSON.parse(await readFile(join(root, pathFromRoot), "utf8"));
+  } catch {
+    return fallback;
+  }
+}
 
 function esc(value) {
   return String(value).replace(/[&<>"']/g, (char) => ({
@@ -160,6 +169,105 @@ function slugifyAnchor(value) {
 function isoDate(value) {
   const date = new Date(value);
   return Number.isNaN(date.getTime()) ? new Date().toISOString().slice(0, 10) : date.toISOString().slice(0, 10);
+}
+
+function npsParkUrl(park) {
+  return `us-trails/parks/${park.slug}/official-planning.html`;
+}
+
+function npsOfficialParks() {
+  const bySlug = new Map((npsCache.parks || []).map((park) => [park.slug, park]));
+  return site.parks
+    .map((localPark) => {
+      const official = bySlug.get(localPark.slug);
+      return official ? { localPark, official } : null;
+    })
+    .filter(Boolean);
+}
+
+function money(value) {
+  const number = Number(value);
+  return Number.isFinite(number) ? `$${number.toFixed(0)}` : esc(value || "Check official page");
+}
+
+function npsSourceNote(official) {
+  const fetched = npsCache.fetchedAt ? isoDate(npsCache.fetchedAt) : "not recorded";
+  return `Official NPS API snapshot checked ${fetched}. Current conditions can change after this build; use the linked official park page before visiting.`;
+}
+
+function npsList(items, emptyText, render) {
+  if (!items?.length) return `<p>${esc(emptyText)}</p>`;
+  return `<ul class="source-list">${items.map(render).join("")}</ul>`;
+}
+
+function npsOfficialSchema(official, path) {
+  const pageUrl = publicUrl(path);
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      ...siteIdentitySchema(),
+      {
+        "@type": "WebPage",
+        "@id": `${pageUrl}#webpage`,
+        "url": pageUrl,
+        "name": `${official.name} official planning data`,
+        "description": `${official.name} official planning data from the National Park Service API, interpreted for gentle trail planning.`,
+        "isPartOf": { "@id": `${origin}/#website` },
+        "about": official.url ? { "@type": "Place", "name": official.name, "url": official.url } : official.name,
+        "dateModified": isoDate(npsCache.fetchedAt || new Date()),
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "Dataset",
+        "@id": `${pageUrl}#dataset`,
+        "name": `${official.name} NPS API planning snapshot`,
+        "creator": {
+          "@type": "Organization",
+          "name": "National Park Service",
+          "url": "https://www.nps.gov/"
+        },
+        "url": official.url || pageUrl,
+        "dateModified": isoDate(npsCache.fetchedAt || new Date())
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${pageUrl}#breadcrumb`,
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": `${origin}/` },
+          { "@type": "ListItem", "position": 2, "name": "Parks", "item": `${origin}/us-trails/parks` },
+          { "@type": "ListItem", "position": 3, "name": official.localName || official.name, "item": `${origin}/us-trails/parks/${official.slug}` },
+          { "@type": "ListItem", "position": 4, "name": "Official planning data", "item": pageUrl }
+        ]
+      }
+    ]
+  };
+}
+
+function npsOfficialBody(localPark, official) {
+  const primaryAddress = official.addresses?.find((address) => address.type === "Physical") || official.addresses?.[0];
+  const topAlerts = (official.alerts || []).slice(0, 6);
+  const visitorCenters = (official.visitorCenters || []).slice(0, 8);
+  const campgrounds = (official.campgrounds || []).slice(0, 8);
+  const fees = (official.entranceFees || []).slice(0, 5);
+  return (prefix) => `<main>
+    <section class="page-head wrap">
+      <p class="eyebrow">Official data snapshot</p>
+      <h1>${esc(official.name)} official planning data</h1>
+      <p class="lead">${esc(official.description || localPark.summary)}</p>
+      <div class="mini-meta"><span>${esc(official.states || localPark.state)}</span><span>${topAlerts.length} current alert${topAlerts.length === 1 ? "" : "s"} in snapshot</span><span>${visitorCenters.length} visitor center record${visitorCenters.length === 1 ? "" : "s"}</span><span>${campgrounds.length} campground record${campgrounds.length === 1 ? "" : "s"}</span></div>
+      <div class="hero-actions"><a class="btn" href="${esc(official.url || "#")}">Open official NPS page</a><a class="btn alt" href="${prefix}us-trails/parks/${localPark.slug}.html">Back to ${esc(localPark.name)} routes</a></div>
+    </section>
+    <section class="section tight wrap article-body">
+      <aside class="panel answer-card"><h2 id="quick-use">How to use this official snapshot</h2><p>This page turns NPS API data into a planning checkpoint for gentle-route decisions. Use it before relying on distance, grade or family-fit scores: alerts, roads, seasonal access, visitor-center logistics and campground constraints can override a route that looks easy in terrain data.</p><ul class="takeaway-list"><li>Start with alerts and weather language before choosing a trail.</li><li>Use visitor center and campground records as logistics clues, not availability guarantees.</li><li>Open the official NPS page for same-day status before leaving.</li></ul></aside>
+      <article class="panel"><h2 id="official-park-context">Official park context</h2><p>${esc(official.weatherInfo || "Weather information was not included in this API snapshot. Check the official park page before visiting.")}</p><p>${esc(official.directionsInfo || "Directions information was not included in this API snapshot. Check the official park page before visiting.")}</p>${primaryAddress ? `<div class="mini-meta"><span>${esc(primaryAddress.city)}, ${esc(primaryAddress.stateCode)}</span><span>${esc(primaryAddress.line1)}</span></div>` : ""}</article>
+      <article class="panel"><h2 id="current-alerts">Current alerts in the NPS snapshot</h2>${npsList(topAlerts, "No alert records were returned for this park in the latest NPS API snapshot.", (alert) => `<li><a href="${esc(alert.url || official.url || "#")}">${esc(alert.title)}</a>${alert.category ? ` <span class="cat-badge">${esc(alert.category)}</span>` : ""}<p>${esc(alert.description || "Open the official alert page for details.")}</p></li>`)}</article>
+      <article class="panel"><h2 id="visitor-centers">Visitor centers and planning stops</h2><p>Visitor center records help decide whether to start with a map, restroom, ranger question or same-day route check before a gentle trail.</p>${npsList(visitorCenters, "No visitor center records were returned in this snapshot.", (center) => `<li><a href="${esc(center.url || official.url || "#")}">${esc(center.name)}</a><p>${esc(center.description || center.directionsInfo || "Open the official page for visitor center details.")}</p></li>`)}</article>
+      <article class="panel"><h2 id="campground-logistics">Campground logistics near route planning</h2><p>Campground records are useful when a trail day starts or ends from inside the park. Treat reservation and site counts as planning context, not live availability.</p>${npsList(campgrounds, "No campground records were returned in this snapshot.", (camp) => `<li><a href="${esc(camp.url || camp.reservationUrl || official.url || "#")}">${esc(camp.name)}</a><p>${esc(camp.description || camp.weatherOverview || "Open the official page for campground details.")}</p></li>`)}</article>
+      <article class="panel"><h2 id="fees-and-hours">Fees and operating-hours clues</h2><div class="card-grid">${fees.map((fee) => `<div class="site-card"><div class="site-card-body"><h3>${esc(fee.title || "Entrance fee")}</h3><p><b>${money(fee.cost)}</b></p><p>${esc(fee.description || "Check the official page for fee details.")}</p></div></div>`).join("") || `<div class="site-card"><div class="site-card-body"><h3>Fees not returned</h3><p>Check the official NPS page for current entrance fee details.</p></div></div>`}</div></article>
+      <aside class="panel article-cta" aria-labelledby="route-next-step"><h2 id="route-next-step">Route planning next step</h2><p>After checking official data, compare gentle-route candidates by terrain and logistics.</p><div class="hero-actions"><a class="btn" href="${prefix}us-trails/trails.html">Open Trail Finder</a><a class="btn alt" href="${prefix}us-trails/calculator.html">Estimate Hiking Time</a></div></aside>
+      <aside class="panel"><h2 id="source-and-refresh">Source and refresh note</h2><p>${esc(npsSourceNote(official))}</p><ul class="source-list"><li><a href="${esc(official.url || "https://www.nps.gov/")}">Official ${esc(official.name)} page</a></li><li><a href="https://www.nps.gov/subjects/developer/api-documentation.htm">National Park Service API documentation</a></li><li><a href="${prefix}editorial-policy.html">Gradient Trail editorial policy</a></li><li><a href="${prefix}disclaimer.html">Safety and accessibility disclaimer</a></li></ul></aside>
+    </section>
+  </main>`;
 }
 
 function siteIdentitySchema() {
@@ -823,6 +931,7 @@ await write("us-trails/Blog.html", `<!doctype html>
 
 for (const park of site.parks) {
   const trails = site.trails.filter((trail) => trail.parkSlug === park.slug).sort((a, b) => b.gentle - a.gentle);
+  const official = npsOfficialParks().find((item) => item.localPark.slug === park.slug)?.official;
   await write(parkUrl(park), doc({
     path: parkUrl(park),
     title: `${park.name} gentle trails | Gradient Trail`,
@@ -838,7 +947,7 @@ for (const park of site.parks) {
       </section>
       <section class="section tight wrap">
         <div class="section-head"><div><p class="eyebrow">Long-tail filters</p><h2>Planning pages for ${esc(park.name)}</h2></div><p>These pages model the pSEO inventory: useful filters first, no empty-list publishing.</p></div>
-        <div class="card-grid">${filters.map((filter) => `<a class="site-card" href="${prefix}us-trails/parks/${park.slug}/${filter.slug}.html"><div class="site-card-body"><h3>${esc(filter.title(park))}</h3><p>${esc(filter.description)}</p></div></a>`).join("")}</div>
+        <div class="card-grid">${official ? `<a class="site-card" href="${prefix}${npsParkUrl(park)}"><div class="site-card-body"><h3>${esc(park.name)} official planning data</h3><p>Check NPS alerts, visitor centers, campground context, weather language and fee clues before route selection.</p></div></a>` : ""}${filters.map((filter) => `<a class="site-card" href="${prefix}us-trails/parks/${park.slug}/${filter.slug}.html"><div class="site-card-body"><h3>${esc(filter.title(park))}</h3><p>${esc(filter.description)}</p></div></a>`).join("")}</div>
       </section>
       <section class="section tight wrap">
         <div class="section-head"><div><p class="eyebrow">Top candidates</p><h2>Gentlest routes in this sample</h2></div></div>
@@ -846,6 +955,18 @@ for (const park of site.parks) {
       </section>
     </main>`
   }));
+
+  if (official) {
+    const path = npsParkUrl(park);
+    await write(path, doc({
+      path,
+      title: `${official.name} official planning data | Gradient Trail`,
+      description: `${official.name} NPS alerts, visitor centers, campgrounds, fees and planning context for gentle trail decisions.`,
+      active: "parks",
+      schema: npsOfficialSchema(official, path),
+      body: npsOfficialBody(park, official)
+    }));
+  }
 
   for (const filter of filters) {
     const filtered = trails.filter(filter.predicate).sort((a, b) => b.gentle - a.gentle);
@@ -1093,6 +1214,7 @@ const urls = [
   ["blog/index.html", "daily", "0.9"],
   ["us-trails/methodology.html", "monthly", "0.6"],
   ...trustPages.map(([path]) => [path, "yearly", "0.4"]),
+  ...npsOfficialParks().map(({ localPark }) => [npsParkUrl(localPark), "daily", "0.7", isoDate(npsCache.fetchedAt || new Date())]),
   ...publishedApprovalPosts.map((post) => [`us-trails/articles/${post.slug}.html`, "monthly", "0.8", isoDate(post.publishAt || post.date)])
 ];
 

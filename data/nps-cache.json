@@ -1,0 +1,1969 @@
+{
+  "schemaVersion": 1,
+  "source": "National Park Service API",
+  "sourceDocs": "https://www.nps.gov/subjects/developer/api-documentation.htm",
+  "fetchedAt": "2026-06-27T04:45:29.695Z",
+  "parkCodes": [
+    "yose",
+    "grca",
+    "romo",
+    "zion",
+    "yell",
+    "acad"
+  ],
+  "changedParks": [
+    "yosemite",
+    "grand-canyon",
+    "rocky-mountain",
+    "zion",
+    "yellowstone",
+    "acadia"
+  ],
+  "parks": [
+    {
+      "parkCode": "yose",
+      "slug": "yosemite",
+      "name": "Yosemite National Park",
+      "localName": "Yosemite",
+      "designation": "National Park",
+      "states": "CA",
+      "url": "https://www.nps.gov/yose/index.htm",
+      "description": "Not just a great valley, but a shrine to human foresight, the strength of granite, the power of glaciers, the persistence of life, and the tranquility of the High Sierra. First protected in 1864, Yosemite National Park is best known for its waterfalls, but within its nearly 1,200 square miles, you can find deep valleys, grand meadows, ancient giant sequoias, a vast wilderness area, and much more.",
+      "weatherInfo": "Yosemite National Park covers nearly 1,200 square miles (3,100 square km) in the Sierra Nevada, with elevations ranging from about 2,000 feet (600 m) to 13,000 ft (4,000 m). Yosemite receives 95% of its precipitation between October and May (and over 75% between November and March). Most of Yosemite is blanketed in snow from about November through May. (Yosemite Valley can be rainy or snowy in any given winter storm.)",
+      "directionsInfo": "You can drive to Yosemite year-round and enter via Highways 41, 140, and 120 from the west. Tioga Pass Entrance (via Highway 120 from the east) is closed from approximately November through late May or June. Hetch Hetchy is open all year but may close intermittently due to snow. Please note that GPS units do not always provide accurate directions to or within Yosemite.",
+      "directionsUrl": "http://www.nps.gov/yose/planyourvisit/driving.htm",
+      "latLong": "lat:37.84883288, long:-119.5571873",
+      "addresses": [
+        {
+          "type": "Physical",
+          "line1": "PO Box 577",
+          "city": "Yosemite National Park",
+          "stateCode": "CA",
+          "postalCode": "95389"
+        }
+      ],
+      "entranceFees": [
+        {
+          "title": "Entrance - Private Vehicle",
+          "cost": "35.00",
+          "description": "This fee is valid for seven consecutive days for a non-commercial car, pickup truck, RV, or van with 15 or fewer passenger seats. This fee covers the vehicle and everyone inside of it. Per-person nonresident fees still apply."
+        },
+        {
+          "title": "Entrance - Motorcycle",
+          "cost": "30.00",
+          "description": "Valid for 7 days. Admits up to 2 private, non-commercial motorcycles with up to 4 total passengers. Per-person nonresident fees still apply."
+        },
+        {
+          "title": "Entrance - Per Person",
+          "cost": "20.00",
+          "description": "This fee is valid for seven consecutive days for people entering on foot, a bicycle, a horse, or a non-commercial bus or van. People 15 years and younger are free."
+        },
+        {
+          "title": "Entrance - Non-commercial Groups",
+          "cost": "300.00",
+          "description": "The per-person fee is $20 to a maximum of $300 per vehicle. People 15 years and younger are free."
+        },
+        {
+          "title": "Entrance - Education/Academic Groups",
+          "cost": "0.00",
+          "description": "An educational fee waiver is available for educational and scientific groups that are accredited or tax-exempt for educational purposes planning a trip for educational or scientific purposes related to Yosemite that is not primarily recreat"
+        },
+        {
+          "title": "Commercial Entrance - Per Person",
+          "cost": "20.00",
+          "description": "The fee is $20 per person for any resident 16 years or older. For any nonresident the fee is $100 per person for anyone 16 years or older. This fee is valid for seven consecutive days."
+        }
+      ],
+      "operatingHours": [
+        {
+          "name": "Yosemite National Park",
+          "description": "Yosemite National Park is open 24 hours per day, 365 days per year.",
+          "standardHours": {
+            "wednesday": "All Day",
+            "monday": "All Day",
+            "thursday": "All Day",
+            "sunday": "All Day",
+            "tuesday": "All Day",
+            "friday": "All Day",
+            "saturday": "All Day"
+          }
+        },
+        {
+          "name": "Hetch Hetchy",
+          "description": "Hetch Hetchy area is only open from sunrise to sunset (except for permitted backpackers). All day visitors must exit Hetch Hetchy by sunset. The road is also closed to all vehicles (including backpackers) from sunset to sunrise.",
+          "standardHours": {
+            "wednesday": "Sunrise to Sunset",
+            "monday": "Sunrise to Sunset",
+            "thursday": "Sunrise to Sunset",
+            "sunday": "Sunrise to Sunset",
+            "tuesday": "Sunrise to Sunset",
+            "friday": "Sunrise to Sunset",
+            "saturday": "Sunrise to Sunset"
+          }
+        }
+      ],
+      "officialImages": [
+        {
+          "title": "Yosemite Falls on a Winter Morning",
+          "altText": "Two tall waterfalls flowing down snow covered granite walls.",
+          "credit": "NPS / Cindy Jacoby",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C84CC4C-1DD8-B71B-0BE967E5E5D93F25.jpg"
+        },
+        {
+          "title": "Upper Yosemite Fall and Merced River in spring",
+          "altText": "Upper Yosemite Fall and Merced River in spring",
+          "credit": "NPS Photo",
+          "url": "https://www.nps.gov/common/uploads/structured_data/05383E91-AA28-2DDC-AB517507594F9FA6.jpg"
+        },
+        {
+          "title": "Rainbow over Half Dome",
+          "altText": "A rainbow over a mountain in the distance.",
+          "credit": "NPS / Bob Roney",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C84C6CF-1DD8-B71B-0B1C7CB883AA8FB1.jpg"
+        }
+      ],
+      "alerts": [
+        {
+          "id": "342A4B2B-203E-4CBC-B625-9865D9FDCC71",
+          "title": "Yosemite Traffic Updates",
+          "category": "Information",
+          "url": "",
+          "description": "When the park is extremely busy, you can get updates on current traffic conditions in Yosemite by texting ynptraffic to 333111.",
+          "lastIndexedDate": "2026-06-26 00:00:00.0"
+        }
+      ],
+      "visitorCenters": [
+        {
+          "id": "888BB5B2-6EA6-473C-A803-ECA45A02AF57",
+          "name": "Big Oak Flat Information Station",
+          "url": "",
+          "description": "The Big Oak Flat Information Station has an information desk, wilderness permit desk, and Yosemite Conservancy bookstore. In the winter, self-registration wilderness permits for the Crane Flat area and Tioga Road trailheads only, are available on the front porch. You must bring your own bear canister when the information station is closed. Designated accessible parking spaces are available in front of the facility. This facility is wheelchair accessible.",
+          "directionsInfo": "The Big Oak Flat Information Station is located just inside the park near the Big Oak Flat Entrance, along the Big Oak Flat Road (continuation of Highway 120 inside the park). Parking is limited.",
+          "directionsUrl": "",
+          "addresses": []
+        },
+        {
+          "id": "D8CDB0BF-565A-48F9-803D-9685447AFD30",
+          "name": "Tuolumne Meadows Visitor Center",
+          "url": "",
+          "description": "The Tuolumne Meadows Visitor Center has an information desk, Yosemite Conservancy bookstore, and an exhibit area detailing the area's geology, plant and animal life, and history. A designated accessible parking space and entrance are available. From the main parking lot, drive up the service road to the visitor center. Park in the designated accessible parking space and follow the paved path in front of the visitor center to the rear entrance. Accessible restrooms are adjacent to the main parkin",
+          "directionsInfo": "The Tuolumne Meadows Visitor Center is located along the Tioga Road (continuation of Highway 120 inside the park) approximately 50 miles from Yosemite Valley and 8 miles from Tioga Pass in the northeast portion of the park.",
+          "directionsUrl": "",
+          "addresses": []
+        },
+        {
+          "id": "F5446CA3-5F8B-4DA1-A02E-C76472B3BCD3",
+          "name": "Wawona Visitor Center at Hill's Studio",
+          "url": "",
+          "description": "The Wawona Visitor Center has an information desk, wilderness permit desk, and Yosemite Conservancy bookstore. It includes an exhibit of Thomas Hill’s work, recreating a \"salon hanging\"—paintings covering the wall from floor to ceiling, typical of Victorian galleries in the nineteenth century. In the winter, self-registration wilderness permits are available on the front porch. You must bring your own bear canister when the information station is closed. This facility is wheelchair accessible.",
+          "directionsInfo": "The Wawona Visitor Center is located next to the Wawona Hotel along the Wawona Road (continuation of Highway 41 inside the park). Park at the hotel and walk to the visitor center or park at the Wawona Store and Pioneer Gift Shop parking area, located just north of the hotel, and follow the marked path up the hill locat",
+          "directionsUrl": "",
+          "addresses": []
+        },
+        {
+          "id": "E8610AC4-B20D-4F1A-BFA3-E9DB2CF3A1DE",
+          "name": "Yosemite Valley Welcome Center",
+          "url": "",
+          "description": "The Yosemite Valley Welcome Center is the destination for visitor information in Yosemite Valley. The welcome center has an information desk, informational exhibits, and a Yosemite Conservancy bookstore. The welcome center is located near Yosemite Village Parking and the Village Store in Yosemite Valley (shuttle stops 1 and 2.) In the winter, self-registration wilderness permits for Yosemite Valley trailheads are available. This facility is wheelchair accessible.",
+          "directionsInfo": "The Yosemite Valley Welcome Center is located in Yosemite Valley, near the Yosemite Village Parking Area. You can access the welcome center by walking from the parking area or using the free shuttle in Yosemite Valley and exiting at stop 2.",
+          "directionsUrl": "",
+          "addresses": []
+        }
+      ],
+      "campgrounds": [
+        {
+          "id": "58B9591C-4723-4049-B26C-D30C07A6FAD6",
+          "name": "Bridalveil Creek Campground",
+          "url": "https://www.nps.gov/yose/planyourvisit/bvcamp.htm",
+          "description": "The Bridalveil Creek Campground is located along the Glacier Point Road near Bridalveil Creek and is surrounded by a beautiful forest of red fir and lodgepole pine. At an elevation of 7,200 feet (2,200m) the campground is located 7 miles west of Glacier Point, 9 miles east of the Wawona Road turnoff, and is approximately 45 minutes from Yosemite Valley. The spectacular views from Glacier Point are nearby, and numerous hiking trails are located along the Glacier Point Road. There are no services ",
+          "reservationUrl": "https://www.recreation.gov/camping/campgrounds/232453",
+          "weatherOverview": "Yosemite National Park covers nearly 1,200 square miles (3,100 square km) in the Sierra Nevada, with elevations ranging from about 2,000 feet (600 m) to 13,000 ft (4,000 m). Yosemite receives 95% of its precipitation between October and May (and over 75% between November and March). Most of Yosemite is blanketed in sno",
+          "numberOfSitesReservable": "110",
+          "numberOfSitesFirstComeFirstServe": "0"
+        },
+        {
+          "id": "8F36DEB6-298E-4214-A677-064BD457996A",
+          "name": "Camp 4 Campground",
+          "url": "https://www.nps.gov/yose/planyourvisit/camp4.htm",
+          "description": "Camp 4 is located in Yosemite Valley near the base of granite cliffs close to Yosemite Falls. Yosemite Valley is centrally located in the park and boasts some of Yosemite’s most iconic features. This campground is located at 4,000 feet (1,200 m) elevation and can be accessed from all park roads. Camp 4 is within biking and walking distance of many services in Yosemite Valley and is located near the free shuttle route. There are food and grocery services nearby at Yosemite Valley Lodge and Yosemi",
+          "reservationUrl": "https://www.recreation.gov/camping/campgrounds/10004152",
+          "weatherOverview": "Yosemite National Park covers nearly 1,200 square miles (3,100 square km) in the Sierra Nevada, with elevations ranging from about 2,000 feet (600 m) to 13,000 ft (4,000 m). Yosemite receives 95% of its precipitation between October and May (and over 75% between November and March). Most of Yosemite is blanketed in sno",
+          "numberOfSitesReservable": "61",
+          "numberOfSitesFirstComeFirstServe": "0"
+        },
+        {
+          "id": "B1396AAB-EA01-4A6C-B45E-A9BBA51A89A1",
+          "name": "Crane Flat Campground",
+          "url": "https://www.nps.gov/yose/planyourvisit/cranecamp.htm",
+          "description": "The Crane Flat Campground is located along the Big Oak Flat Road, just west of Crane Flat, about 30 minutes northwest of Yosemite Valley, at 6,200 ft (1,900 m) elevation. There is a gas station and minimal convenience items located nearby at Crane Flat. Trailheads for both the Merced Grove and Tuolumne Grove of Giant Sequoias are located within a short drive of the campground.",
+          "reservationUrl": "https://www.recreation.gov/camping/campgrounds/232452",
+          "weatherOverview": "Yosemite National Park covers nearly 1,200 square miles (3,100 square km) in the Sierra Nevada, with elevations ranging from about 2,000 feet (600 m) to 13,000 ft (4,000 m). Yosemite receives 95% of its precipitation between October and May (and over 75% between November and March). Most of Yosemite is blanketed in sno",
+          "numberOfSitesReservable": "148",
+          "numberOfSitesFirstComeFirstServe": "0"
+        },
+        {
+          "id": "8D89A88A-5E90-449B-B4FA-78026CF14D70",
+          "name": "Hodgdon Meadow Campground",
+          "url": "https://www.nps.gov/yose/planyourvisit/hodgdoncamp.htm",
+          "description": "Hodgdon Meadow Campground is conveniently located along the Big Oak Flat Road at the Big Oak Flat Entrance. At an elevation of 4,900 feet (1,219 m), the campground is located along the western edge of the park, 25 miles and approximately 45 minutes from Yosemite Valley. There is a gas station and minimal convenience items located nearby at Crane Flat. Trailheads for both the Merced Grove and Tuolumne Grove of Giant Sequoias are located within a short drive of the campground.",
+          "reservationUrl": "https://www.recreation.gov/camping/campgrounds/232451",
+          "weatherOverview": "Yosemite National Park covers nearly 1,200 square miles (3,100 square km) in the Sierra Nevada, with elevations ranging from about 2,000 feet (600 m) to 13,000 ft (4,000 m). Yosemite receives 95% of its precipitation between October and May (and over 75% between November and March). Most of Yosemite is blanketed in sno",
+          "numberOfSitesReservable": "104",
+          "numberOfSitesFirstComeFirstServe": "0"
+        },
+        {
+          "id": "4C3C4954-FA9C-4C58-B6CF-E66054E1F0EF",
+          "name": "Lower Pines Campground",
+          "url": "https://www.nps.gov/yose/planyourvisit/pinescampgrounds.htm",
+          "description": "Lower Pines is located along the Merced River in Yosemite Valley. Yosemite Valley is centrally located in the park and boasts some of Yosemite’s most iconic features. This campground is located at 4,000 feet (1,219 m) elevation and can be accessed from all park roads. Lower Pines is within biking and walking distance of many services and trailheads in Yosemite Valley and is located on the free shuttle route. There are food and grocery services nearby at Curry Village and Yosemite Village.",
+          "reservationUrl": "https://www.recreation.gov/camping/campgrounds/232450",
+          "weatherOverview": "Yosemite National Park covers nearly 1,200 square miles (3,100 square km) in the Sierra Nevada, with elevations ranging from about 2,000 feet (600 m) to 13,000 ft (4,000 m). Yosemite receives 95% of its precipitation between October and May (and over 75% between November and March). Most of Yosemite is blanketed in sno",
+          "numberOfSitesReservable": "74",
+          "numberOfSitesFirstComeFirstServe": "0"
+        },
+        {
+          "id": "BDF9737C-DD6E-457F-9ADC-501B07851F77",
+          "name": "North Pines Campground",
+          "url": "https://www.nps.gov/yose/planyourvisit/pinescampgrounds.htm",
+          "description": "North Pines is located along the Merced River in Yosemite Valley. Yosemite Valley is centrally located in the park and boasts some of Yosemite’s most iconic features. This campground is located at 4,000 feet (1,219 m) elevation and can be accessed from all park roads. North Pines is within biking and walking distance of many services and trailheads in Yosemite Valley and is located on the free shuttle route. There are food and grocery services nearby at Curry Village and Yosemite Village.",
+          "reservationUrl": "https://www.recreation.gov/camping/campgrounds/232449",
+          "weatherOverview": "Yosemite National Park covers nearly 1,200 square miles (3,100 square km) in the Sierra Nevada, with elevations ranging from about 2,000 feet (600 m) to 13,000 ft (4,000 m). Yosemite receives 95% of its precipitation between October and May (and over 75% between November and March). Most of Yosemite is blanketed in sno",
+          "numberOfSitesReservable": "81",
+          "numberOfSitesFirstComeFirstServe": "0"
+        },
+        {
+          "id": "AFD1869B-19F1-4C47-9B9B-75A6625C7A6D",
+          "name": "Porcupine Flat Campground",
+          "url": "https://www.nps.gov/yose/planyourvisit/porcupinecamp.htm",
+          "description": "Porcupine Flat Campground is located off the Tioga Road about 30 minutes west of Tuolumne Meadows and over an hour from Yosemite Valley. RVs and Trailers are not recommended for the narrow roads in this more primitive campground. At an elevation of 8,100 feet (2,500 m) elevation, the campground is near Porcupine Creek, which is the only water source (must be filtered, treated, or boiled). The Porcupine Creek Trailhead is nearby. There are no visitor services close to the campground.",
+          "reservationUrl": "https://www.recreation.gov/camping/campgrounds/10083831",
+          "weatherOverview": "Yosemite National Park covers nearly 1,200 square miles (3,100 square km) in the Sierra Nevada, with elevations ranging from about 2,000 feet (600 m) to 13,000 ft (4,000 m). Yosemite receives 95% of its precipitation between October and May (and over 75% between November and March). Most of Yosemite is blanketed in sno",
+          "numberOfSitesReservable": "55",
+          "numberOfSitesFirstComeFirstServe": "0"
+        },
+        {
+          "id": "88397D32-BCEE-494E-8305-3BB22143019B",
+          "name": "Tamarack Flat Campground",
+          "url": "https://www.nps.gov/yose/planyourvisit/tamarack.htm",
+          "description": "Tamarack Flat Campground is located off the Tioga Road just east of Crane Flat. The campground is approximately 20 miles (45 minutes) from Yosemite Valley and is tucked away in the forest 3 miles off Tioga Road. RVs and Trailers are not recommended for this harder to access, and more primitive campground. At an elevation of 6,300 feet (1,900 m) elevation, the campground is near Tamarack Creek, which is the only water source (must be filtered, treated, or boiled). There is a gas station nearby at",
+          "reservationUrl": "https://www.recreation.gov/camping/campgrounds/10083845",
+          "weatherOverview": "Yosemite National Park covers nearly 1,200 square miles (3,100 square km) in the Sierra Nevada, with elevations ranging from about 2,000 feet (600 m) to 13,000 ft (4,000 m). Yosemite receives 95% of its precipitation between October and May (and over 75% between November and March). Most of Yosemite is blanketed in sno",
+          "numberOfSitesReservable": "52",
+          "numberOfSitesFirstComeFirstServe": "0"
+        },
+        {
+          "id": "45D3FDD7-DB1F-4DCE-83BD-B5C6EFA683DD",
+          "name": "Tuolumne Horse Campsites",
+          "url": "https://www.nps.gov/yose/planyourvisit/tmhorsecamp.htm",
+          "description": "Tuolumne Meadows Horse Campsites are located within Tuolumne Meadows Campground in breathtaking Yosemite National Park in Central California's rugged Sierra Nevada Mountain Range at an elevation of 8,600 feet. The site is situated along the scenic Tioga Road just eight miles from the Tioga Pass Entrance Station and 55 miles from Yosemite Valley. Within Yosemite, visitors can gaze upon waterfalls, sheer granite cliffs, deep valleys, grand meadows, ancient giant sequoias, vast wilderness areas, an",
+          "reservationUrl": "https://www.recreation.gov/camping/campgrounds/10346420",
+          "weatherOverview": "Yosemite National Park covers nearly 1,200 square miles (3,100 square km) in the Sierra Nevada, with elevations ranging from about 2,000 feet (600 m) to 13,000 feet (4,000 m). Yosemite receives 95% of its precipitation between October and May (and over 75% between November and March). Most of Yosemite is blanketed in s",
+          "numberOfSitesReservable": "4",
+          "numberOfSitesFirstComeFirstServe": "0"
+        },
+        {
+          "id": "793AAB2C-885E-44F7-A0A1-D64B37291338",
+          "name": "Tuolumne Meadows Campground",
+          "url": "https://www.nps.gov/yose/planyourvisit/tmcamp.htm",
+          "description": "Tuolumne Meadows Campground is Yosemite’s largest, and is located along the Tioga Road, with some areas located close to the Tuolumne River. At 8,000 feet (2,600 m) this campground is open seasonally and has wonderful summer access to many hikes, lakes, and prominent viewpoints. The campground is located approximately 1 hour and 30 minutes from Yosemite Valley but a small store, grill, and post office are located nearby in Tuolumne Meadows.",
+          "reservationUrl": "https://www.recreation.gov/camping/campgrounds/232448",
+          "weatherOverview": "Yosemite National Park covers nearly 1,200 square miles (3,100 square km) in the Sierra Nevada, with elevations ranging from about 2,000 feet (600 m) to 13,000 ft (4,000 m). Yosemite receives 95% of its precipitation between October and May (and over 75% between November and March). Most of Yosemite is blanketed in sno",
+          "numberOfSitesReservable": "289",
+          "numberOfSitesFirstComeFirstServe": "0"
+        },
+        {
+          "id": "9D5B57D0-793A-4C2B-B620-5B561EDFC031",
+          "name": "Upper Pines Campground",
+          "url": "https://www.nps.gov/yose/planyourvisit/pinescampgrounds.htm",
+          "description": "Upper Pines is located near the Merced River in Yosemite Valley. Yosemite Valley is centrally located in the park and boasts some of Yosemite’s most iconic features. This large campground is located at 4,000 feet (1,219 m) elevation and can be accessed from all park roads. Upper Pines is within biking and walking distance of many services and trailheads in Yosemite Valley and is located on the free shuttle route. There are food and grocery services nearby at Curry Village and Yosemite Village.",
+          "reservationUrl": "https://www.recreation.gov/camping/campgrounds/232447",
+          "weatherOverview": "Yosemite National Park covers nearly 1,200 square miles (3,100 square km) in the Sierra Nevada, with elevations ranging from about 2,000 feet (600 m) to 13,000 ft (4,000 m). Yosemite receives 95% of its precipitation between October and May (and over 75% between November and March). Most of Yosemite is blanketed in sno",
+          "numberOfSitesReservable": "236",
+          "numberOfSitesFirstComeFirstServe": "0"
+        },
+        {
+          "id": "F7CA3802-BD31-4C93-9C3C-A4097B955EE6",
+          "name": "Wawona Campground",
+          "url": "https://www.nps.gov/yose/planyourvisit/wawonacamp.htm",
+          "description": "The Wawona Campground is located along the South Fork Merced River close to historic Wawona. At an elevation of 4,000 feet (1,219 m), the campground is located in the southern end of the park, 27 miles and approximately 45 minutes from Yosemite Valley. The majestic Mariposa Grove of Giant Sequoias is just a short drive away and the Yosemite History Center is in nearby Wawona where you can see some of the park’s oldest structures. Wawona offers a visitor center, hotel, and a market.",
+          "reservationUrl": "https://www.recreation.gov/camping/campgrounds/232446",
+          "weatherOverview": "Yosemite National Park covers nearly 1,200 square miles (3,100 square km) in the Sierra Nevada, with elevations ranging from about 2,000 feet (600 m) to 13,000 feet (4,000 m). Yosemite receives 95% of its precipitation between October and May (and over 75% between November and March). Most of Yosemite is blanketed in s",
+          "numberOfSitesReservable": "95",
+          "numberOfSitesFirstComeFirstServe": "0"
+        },
+        {
+          "id": "DE70B459-9D01-4859-954D-766D6999B6D3",
+          "name": "Wawona Horse Camp",
+          "url": "https://www.nps.gov/yose/planyourvisit/wawonahorsecamp.htm",
+          "description": "The Wawona Horse Camp is located along the South Fork Merced River adjacent to historic Wawona. At an elevation of 4,000 feet (1,219 m), the camp is located in the southern end of the park, 27 miles and approximately 45 minutes from Yosemite Valley. The majestic Mariposa Grove of Giant Sequoias is just a short drive away and the Yosemite History Center is right next door where you can see some of the park’s oldest structures. Wawona offers a visitor center, hotel, and a market.",
+          "reservationUrl": "https://www.recreation.gov/camping/campgrounds/10220609",
+          "weatherOverview": "Yosemite National Park covers nearly 1,200 square miles (3,100 square km) in the Sierra Nevada, with elevations ranging from about 2,000 feet (600 m) to 13,000 feet (4,000 m). Yosemite receives 95% of its precipitation between October and May (and over 75% between November and March). Most of Yosemite is blanketed in s",
+          "numberOfSitesReservable": "2",
+          "numberOfSitesFirstComeFirstServe": "0"
+        },
+        {
+          "id": "2B396150-CB50-4013-AAF2-B862D4FA4823",
+          "name": "White Wolf Campground",
+          "url": "https://www.nps.gov/yose/planyourvisit/wwcamp.htm",
+          "description": "White Wolf Campground is located off the Tioga Road between Tuolumne Meadows and Crane Flat, approximately an hour from Yosemite Valley at 8,000 feet (2,400 m). The campground is tucked into the forest about a mile from Tioga Road near White Wolf Lodge. Trailheads nearby lead to Lukens and Harden Lakes and the area is popular for those accessing other wilderness destinations. Minimal services may be available at White Wolf Lodge (if open). There are no other visitor services close to the campgro",
+          "reservationUrl": "https://www.recreation.gov/camping/campgrounds/10083567",
+          "weatherOverview": "Yosemite National Park covers nearly 1,200 square miles (3,100 square km) in the Sierra Nevada, with elevations ranging from about 2,000 feet (600 m) to 13,000 ft (4,000 m). Yosemite receives 95% of its precipitation between October and May (and over 75% between November and March). Most of Yosemite is blanketed in sno",
+          "numberOfSitesReservable": "68",
+          "numberOfSitesFirstComeFirstServe": "0"
+        },
+        {
+          "id": "025AFF52-097D-4754-8952-5A554386CE62",
+          "name": "Yosemite Creek Campground",
+          "url": "https://www.nps.gov/yose/planyourvisit/ycreekcamp.htm",
+          "description": "Yosemite Creek Campground is located nearly 5 miles off the Tioga Road (via a rough unpaved road) 26 miles west of Tuolumne Meadows, and a little over an hour from Yosemite Valley. Located in the forest at 7,700 feet (2,300 m) many campsites are close to Yosemite Creek, which is the only water source (must be filtered, treated, or boiled). RVs and Trailers are not recommended for this harder to access, and more primitive campground. There are no visitor services close to the campground.",
+          "reservationUrl": "https://www.recreation.gov/camping/campgrounds/10083840",
+          "weatherOverview": "Yosemite National Park covers nearly 1,200 square miles (3,100 square km) in the Sierra Nevada, with elevations ranging from about 2,000 feet (600 m) to 13,000 ft (4,000 m). Yosemite receives 95% of its precipitation between October and May (and over 75% between November and March). Most of Yosemite is blanketed in sno",
+          "numberOfSitesReservable": "74",
+          "numberOfSitesFirstComeFirstServe": "0"
+        }
+      ],
+      "contentHash": "e222ebc8e82a6ebc087b1bcb3f880235e9f105d069f02893cd33216ac5cb6f3c"
+    },
+    {
+      "parkCode": "grca",
+      "slug": "grand-canyon",
+      "name": "Grand Canyon National Park",
+      "localName": "Grand Canyon",
+      "designation": "National Park",
+      "states": "AZ",
+      "url": "https://www.nps.gov/grca/index.htm",
+      "description": "Entirely within the state of Arizona, the park encompasses 278 miles (447 km) of the Colorado River and adjacent uplands. Located on the ancestral homelands of 11 present day Tribal Communities, Grand Canyon is one of the most spectacular examples of erosion anywhere in the world—a mile deep canyon unmatched in the incomparable vistas it offers visitors from both north and south rims.",
+      "weatherInfo": "Since Grand Canyon has elevations that range from 2,500 feet at the bottom to 8,400 feet on the North Rim, weather can vary significantly depending on the season and the specific location within the park. Winters tend to be cold and snowy, and summers have periods of excessive heat. High temperatures inside the canyon tend to be 20 to 30 degrees warmer then on the canyon's rims. Weather conditions can change rapidly, so it's wise to check forecasts before visiting.",
+      "directionsInfo": "South Rim: Open all year, is located 60 miles north of Williams, Arizona (via route 64 from Interstate 40) and 80 miles northwest of Flagstaff (via route 180). Grand Canyon lies entirely within the state of Arizona. ---- North Rim: Select areas are open to public access between Oct 1 and Nov 14. View the park's news releases for details. The North Rim entrance station is located 30 miles south of Jacob Lake, AZ, on Highway 67; the actual rim of the canyon is an additional 14 miles south.",
+      "directionsUrl": "http://www.nps.gov/grca/planyourvisit/directions.htm",
+      "latLong": "lat:36.0001165336, long:-112.121516363",
+      "addresses": [
+        {
+          "type": "Physical",
+          "line1": "20 South Entrance Road",
+          "city": "Grand Canyon",
+          "stateCode": "AZ",
+          "postalCode": "86023"
+        },
+        {
+          "type": "Mailing",
+          "line1": "PO Box 129",
+          "city": "Grand Canyon",
+          "stateCode": "AZ",
+          "postalCode": "86023"
+        }
+      ],
+      "entranceFees": [
+        {
+          "title": "Entrance - Private Vehicle",
+          "cost": "35.00",
+          "description": "Admits one single, private, non-commercial vehicle and all its passengers, up to a 15 person passenger van. Organized non-commercial groups over 16 passengers require different charges. Commercial groups are not eligible for the vehicle per"
+        },
+        {
+          "title": "Entrance - Motorcycle",
+          "cost": "30.00",
+          "description": "Valid for 7 days. Admits up to 2 private, non-commercial motorcycles with up to 4 total passengers."
+        },
+        {
+          "title": "Entrance - Per Person",
+          "cost": "20.00",
+          "description": "Individual ($20 valid for 7 days): for bicyclists, hikers, and pedestrians."
+        },
+        {
+          "title": "Nonresident",
+          "cost": "100.00",
+          "description": "Each non-US resident aged 16 and older visiting Grand Canyon National Park must pay a $100 nonresident fee (in addition to the standard entrance fee), unless admitted with an Annual or America the Beautiful Pass. This includes nonresidents "
+        }
+      ],
+      "operatingHours": [
+        {
+          "name": "South Rim - South Entrance",
+          "description": "Both Desert View (East Entrance) and South Entrance are Open 24 hours/day and 7 Days/week. Credit cards, and America the Beautiful passes are accepted for entry. Cash is not accepted at this time. The South Entrance Station, near Tusayan, A",
+          "standardHours": {
+            "wednesday": "All Day",
+            "monday": "All Day",
+            "thursday": "All Day",
+            "sunday": "All Day",
+            "tuesday": "All Day",
+            "friday": "All Day",
+            "saturday": "All Day"
+          }
+        },
+        {
+          "name": "South Rim - Desert View (East Entrance)",
+          "description": "The East Entrance to the park at Desert View is open 24 hours/day, 7 days/week. Visitors traveling through the Navajo Nation on US 89, turn west at Cameron, Arizona onto State Route 64, then drive 25 miles (40 km) to the park's East Entranc",
+          "standardHours": {
+            "wednesday": "All Day",
+            "monday": "All Day",
+            "thursday": "All Day",
+            "sunday": "All Day",
+            "tuesday": "All Day",
+            "friday": "All Day",
+            "saturday": "All Day"
+          }
+        }
+      ],
+      "officialImages": [
+        {
+          "title": "Grand Canyon Mather Point Sunset on the South Rim",
+          "altText": "The canyon glows orange as people visit Mather Point, a rock outcropping that juts into Grand Canyon",
+          "credit": "NPS/M.Quinn",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7B12D1-1DD8-B71B-0BCE0712F9CEA155.jpg"
+        },
+        {
+          "title": "Grand Canyon National Park: Desert View Watchtower (South Rim)",
+          "altText": "The Desert View Watchtower looms 70 feet into the air over a vast and dramatic view of the canyon.",
+          "credit": "NPS/M.Quinn",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7B15A4-1DD8-B71B-0BFADECB506765CC.jpg"
+        },
+        {
+          "title": "Looking down the Colorado River from Nankoweap at river mile 53",
+          "altText": "Tall canyon walls frame the wide Colorado river weaving back and forth.",
+          "credit": "NPS/M.Quinn",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7B1720-1DD8-B71B-0B74DCF6F887A960.jpg"
+        }
+      ],
+      "alerts": [
+        {
+          "id": "BDFCE1FC-7EA1-4589-92D3-DD10F9BC599F",
+          "title": "APS Potential Public Safety Power Shutoff beginning June 27, 2026",
+          "category": "Caution",
+          "url": "https://www.aps.com/psps",
+          "description": "Arizona Public Service (APS) has announced the potential for a Public Safety Power Shutoff (PSPS) beginning Saturday, June 27, at 10 am due to forecasted critical fire weather, including strong winds that may affect electrical infrastructure. If implemented, APS estimates the outage could last approximately 30 hours, although the duration will depend on weather conditions and the time required to safely inspect and restore the electrical system. The outage may affect all of South Rim and the Inner Canyon.",
+          "lastIndexedDate": "2026-06-26 00:00:00.0"
+        },
+        {
+          "id": "2CF15EBC-0800-4DF3-8179-B1579B6D4F57",
+          "title": "Critical Backcountry Updates/Closures",
+          "category": "Caution",
+          "url": "https://www.nps.gov/grca/planyourvisit/key-messages.htm",
+          "description": "Visit this link for the inner canyon weather forecast, current trail closures, today's heat risk, and drinking water availability.",
+          "lastIndexedDate": "2026-06-26 00:00:00.0"
+        },
+        {
+          "id": "74D6113F-1B0B-4CB6-AEAF-E5BB6A6E2304",
+          "title": "Stage 2 Fire Restrictions—HIGH FIRE DANGER",
+          "category": "Danger",
+          "url": "https://www.nps.gov/grca/learn/management/fireinformation.htm",
+          "description": "Stage 2 fire restrictions for South Rim and Inner Canyon begin Friday, June 26 at 12 pm, due to strong winds, critically low relative humidity, and exceptionally dry vegetation across northern Arizona. No wood or charcoal fires, outdoor smoking (except in vehicles), explosives, and certain engines except street legal vehicles. Follow link for more details on restrictions and exceptions.",
+          "lastIndexedDate": "2026-06-26 00:00:00.0"
+        },
+        {
+          "id": "3396D6D3-5F44-4532-B48B-42A629991493",
+          "title": "What's Closed and What's Open: South Rim & North Rim",
+          "category": "Information",
+          "url": "https://www.nps.gov/grca/planyourvisit/grand-canyon-national-park-public-health-update.htm",
+          "description": "Visit this link for a list of the available visitor services in Grand Canyon Village, Desert View, and the North Rim.",
+          "lastIndexedDate": "2026-06-26 00:00:00.0"
+        }
+      ],
+      "visitorCenters": [
+        {
+          "id": "3581F5FB-C717-410D-8CE6-B0E993BA2981",
+          "name": "Grand Canyon Visitor Center (South Rim)",
+          "url": "https://www.nps.gov/grca/planyourvisit/grand-canyon-visitor-center.htm",
+          "description": "Trip planning and hiking information is available through exhibit kiosks and sidewalk signs outside of the building. Park in one of four large parking lots and get your first look at Grand Canyon by walking to nearby Mather Point. With your vehicle parked at the Visitor Center, you can also board free shuttle buses and be transported around the village and out to scenic overlooks.",
+          "directionsInfo": "Coming from the South Entrance Station, continue following the road for 5 miles, it will lead you to the Visitor Center. The Visitor Center Plaza has four parking lots surrounding the Visitor Center, the Park Bookstore, a cafe, and the short 5-minute walk to Mather Point on the edge of the Canyon. From the Visitor Cent",
+          "directionsUrl": "",
+          "addresses": [
+            {
+              "type": "Physical",
+              "line1": "8 South Entrance Road",
+              "city": "Grand Canyon Village",
+              "stateCode": "AZ"
+            },
+            {
+              "type": "Mailing",
+              "line1": "P.O. Box 129",
+              "city": "Grand Canyon",
+              "stateCode": "AZ"
+            }
+          ]
+        },
+        {
+          "id": "866EE786-71ED-4C7C-B917-C452433C2811",
+          "name": "Verkamp's Visitor Center (South Rim)",
+          "url": "https://www.nps.gov/grca/planyourvisit/verkamps.htm",
+          "description": "In the Village Historic District, near Hopi House and El Tovar Hotel, Verkamp's Visitor Center features exhibits that focus on the Grand Canyon Community; what it was like to live and work here on the brink of one of the seven natural wonders. A staffed information desk and a Grand Canyon Conservancy Museum Store are also located here. Public restrooms are available in a separate building behind the Visitor Center.",
+          "directionsInfo": "Verkamp's Visitor Center is a short walk just east of El Tovar Hotel and Hopi House. Parking in the nearby lot may be limited during busy periods, which include spring break, summer and fall months. If you are walking from the shuttle bus stop across from the Railroad Depot, climb the stairway to the top of the hill. H",
+          "directionsUrl": "",
+          "addresses": [
+            {
+              "type": "Physical",
+              "line1": "100 S Entrance Rd,",
+              "city": "Grand Canyon Village,",
+              "stateCode": "AZ"
+            },
+            {
+              "type": "Mailing",
+              "line1": "P.O. Box 129",
+              "city": "Grand Canyon",
+              "stateCode": "AZ"
+            }
+          ]
+        }
+      ],
+      "campgrounds": [
+        {
+          "id": "889D3F1F-C595-40D2-B66B-5DA52128DB6A",
+          "name": "Desert View Campground (Reservations Required)",
+          "url": "https://www.nps.gov/grca/planyourvisit/desert-view-campground.htm",
+          "description": "At the East Entrance, Desert View Campground offers a peaceful setting with 49 campsites. 30 feet (9.1 m) combined total length is the maximum length for RVs or vehicles pulling travel trailers. Campsites are available by reservation only at www.recreation.gov and can be made up to 6 months in advance, Sat. April 11, through the night of Sun. October 18, 2026. Make reservations online or call (877-444-6777). It is possible to make same day call-in and/or online reservations.",
+          "reservationUrl": "https://www.recreation.gov/camping/campgrounds/258825",
+          "weatherOverview": "Late spring and early summer are the driest times of the year, with relative humidity often falling below 10% during the day. Early July through September is the the “monsoon” season. Strong ground-level heating creates updrafts of warm air, which produce powerful thunderstorms whenever there is sufficient moisture. Ni",
+          "numberOfSitesReservable": "49",
+          "numberOfSitesFirstComeFirstServe": "0"
+        },
+        {
+          "id": "CBEBF627-E888-45E6-9E8C-6EA6AE9A1B2D",
+          "name": "Mather Campground - South Rim",
+          "url": "https://www.nps.gov/grca/planyourvisit/mather-campground-south-rim.htm",
+          "description": "Mather Campground is located in Grand Canyon Village on the South Rim of Grand Canyon National Park. There are 327 sites. Each includes a campfire ring/cooking grate, picnic table, parking space and room for up to six people, three tents, and two vehicles. There are flush toilets and drinking water throughout the campground. No hookups are available, however there is a free dump station. Most RV spaces are pull-through.",
+          "reservationUrl": "https://www.recreation.gov/camping/campgrounds/232490",
+          "weatherOverview": "With an elevation spanning from around 2000 feet to over 8000 feet (760-2440m), the Grand Canyon area experiences a variety of weather conditions. This weather variety includes cold winters and mild pleasant summers, moderate humidity, and considerable diurnal temperature changes at the higher elevations, with hot and ",
+          "numberOfSitesReservable": "300",
+          "numberOfSitesFirstComeFirstServe": "15"
+        },
+        {
+          "id": "DF0F45FB-FEE4-47A9-ACD4-63E3DC9BF9DA",
+          "name": "Trailer Village RV Park - South Rim",
+          "url": "https://www.visitgrandcanyon.com/trailer-village-rv-park",
+          "description": "Trailer Village is the only in-park RV campground with full hookups (sewage, water, and electrical with 30 amp and 50 amp sites available) Open year-round, Trailer Village features paved pull-through sites which can accommodate vehicles up to 50 feet long. Trailer Village is operated by Delaware North. Reservations can be made up to 13 months in advance. If visiting during the busy season (May through October) making reservations 1 year in advance is recommend. Visit their website to make reserv",
+          "reservationUrl": "https://gc.synxis.com/rez.aspx?chain=398&template=respgc&shell=gccls&dest=gcnp&hotel=63275&_ga=2.214229012.246257283.1612044367-731013058.1606790486",
+          "weatherOverview": "With an elevation spanning from around 2000 feet to over 8000 feet (760-2440m), the Grand Canyon area experiences a variety of weather conditions. This weather variety includes cold winters and mild pleasant summers, moderate humidity, and considerable diurnal temperature changes at the higher elevations, with hot and ",
+          "numberOfSitesReservable": "123",
+          "numberOfSitesFirstComeFirstServe": "0"
+        }
+      ],
+      "contentHash": "375156a4c4190e7a788e1f851726ee2c9deda07a0d091116ad3b8892b90ba4bc"
+    },
+    {
+      "parkCode": "romo",
+      "slug": "rocky-mountain",
+      "name": "Rocky Mountain National Park",
+      "localName": "Rocky Mountain",
+      "designation": "National Park",
+      "states": "CO",
+      "url": "https://www.nps.gov/romo/index.htm",
+      "description": "Rocky Mountain National Park's 415 square miles (265,807 acres) encompasses a spectacular range of mountain environments. From meadows found in the montane life zone to glistening alpine lakes and up to the towering mountain peaks, there is something for everyone to discover. Along the way explore over 300 miles of hiking trails and incredible wildlife viewing.",
+      "weatherInfo": "Weather can change quickly in Rocky Mountain National Park due to the mountains and elevation. Elevation in the park ranges from 7,800 feet above sea level to over 14,000 feet at the top of the tallest mountain peaks. Weather conditions can change quickly throughout the day. For detailed weather information, visit https://www.nps.gov/romo/planyourvisit/all-about-weather.htm For the most up-to-date weather forecasts, visit the National Weather Service webpage for Rocky at https://www.weather.gov/bou/rmnp",
+      "directionsInfo": "Rocky Mountain National Park is located in northern Colorado. To visit the east side (near Estes Park, CO), follow U.S. I-25 to U.S. Hwy 34 or 36 west to Estes Park. To visit the west side of the park, follow I-70 to U.S Hwy 40 towards Granby, take US Hwy 34 east to Grand Lake, CO.",
+      "directionsUrl": "http://www.nps.gov/romo/planyourvisit/directions.htm",
+      "latLong": "lat:40.3556924, long:-105.6972879",
+      "addresses": [
+        {
+          "type": "Physical",
+          "line1": "1000 US Hwy 36",
+          "city": "Estes Park",
+          "stateCode": "CO",
+          "postalCode": "80517"
+        },
+        {
+          "type": "Mailing",
+          "line1": "1000 US Hwy 36",
+          "city": "Estes Park",
+          "stateCode": "CO",
+          "postalCode": "80517"
+        }
+      ],
+      "entranceFees": [
+        {
+          "title": "Entrance - Private Vehicle",
+          "cost": "30.00",
+          "description": "1-Day Vehicle Entrance Pass. This pass is valid for one private vehicle to enter RMNP for one day only. All passengers inside the vehicle are covered. Park entrance passes may be purchased in person at any of the park's entrance stations or"
+        },
+        {
+          "title": "Entrance - Private Vehicle",
+          "cost": "35.00",
+          "description": "7-Day Vehicle Entrance Pass. This vehicle entrance pass is valid for one vehicle to enter RMNP for 7 consecutive days. All passengers inside the vehicle are covered. Park entrance passes may be purchased in person at the any of the park's e"
+        },
+        {
+          "title": "Entrance - Per Person",
+          "cost": "15.00",
+          "description": "1-Day Per Person Entrance Pass. This park entrance fee is for individuals, walk-ins, bicycles, and non-commercial groups to enter RMNP for 1-day only. Park entrance passes may be purchased in person at the any of the park's entrance station"
+        },
+        {
+          "title": "Entrance - Motorcycle",
+          "cost": "25.00",
+          "description": "Valid for 1 day. Admits up to 2 private, non-commercial motorcycles with up to 4 total passengers. Park entrance passes may be purchased in person at the any of the park's entrance stations or in advance online at www.recreation.gov."
+        },
+        {
+          "title": "Entrance - Motorcycle",
+          "cost": "30.00",
+          "description": "Valid for 7 days. Admits up to 2 private, non-commercial motorcycles with up to 4 total passengers. Park entrance passes may be purchased in person at the any of the park's entrance stations or in advance online at www.recreation.gov."
+        },
+        {
+          "title": "Entrance - Per Person",
+          "cost": "20.00",
+          "description": "7-Day Per Person Entrance Pass. This park entrance fee is for individuals, walk-ins, bicycles, and non-commercial groups to enter RMNP for 7 consecutive days. Park entrance passes may be purchased in person at the any of the park's entrance"
+        }
+      ],
+      "operatingHours": [
+        {
+          "name": "Rocky Mountain National Park",
+          "description": "While certain roads and facilities may be closed for the winter season, Rocky Mountain National Park is open 24 hours a day, 365 days a year.",
+          "standardHours": {
+            "wednesday": "All Day",
+            "monday": "All Day",
+            "thursday": "All Day",
+            "sunday": "All Day",
+            "tuesday": "All Day",
+            "friday": "All Day",
+            "saturday": "All Day"
+          }
+        }
+      ],
+      "officialImages": [
+        {
+          "title": "Take a hike in May and early June",
+          "altText": "A person is using hiking poles and traction devices and hiking in snow",
+          "credit": "NPS Photo",
+          "url": "https://www.nps.gov/common/uploads/structured_data/25871823-F36D-9986-8C552F7496B7D557.jpg"
+        },
+        {
+          "title": "View Wildlife",
+          "altText": "A cow elk is walking in a meadow with two calves",
+          "credit": "NPS Photo",
+          "url": "https://www.nps.gov/common/uploads/structured_data/25DE2A3F-EF40-16CC-AB4645848692560C.jpg"
+        },
+        {
+          "title": "Visit Bear Lake",
+          "altText": "Two junior rangers are gazing at Bear Lake in late spring/early summer",
+          "credit": "NPS Photo",
+          "url": "https://www.nps.gov/common/uploads/structured_data/259CAEEE-BD13-92E2-C510A3F71BCBFA2F.jpg"
+        }
+      ],
+      "alerts": [
+        {
+          "id": "48631016-A37E-4173-9321-62CD38A41AA7",
+          "title": "Status of Trail Ridge Road",
+          "category": "Information",
+          "url": "",
+          "description": "Trail Ridge Road (U.S. Hwy 34 inside Rocky Mountain National Park) is open to through travel. Timed Entry Reservations are required for Trail Ridge Road from 9 am to 2 pm. Updates are available on the recorded Trail Ridge Road Status Line at 970-586-1222. Updates are also available on the RMNP webpage and the official RMNP social media pages.",
+          "lastIndexedDate": "2026-05-29 00:00:00.0"
+        },
+        {
+          "id": "ECFDB7DF-3A9E-4043-9923-EDB5E4299E73",
+          "title": "Update on Transponders",
+          "category": "Park Closure",
+          "url": "https://www.nps.gov/romo/planyourvisit/transponder-devices.htm",
+          "description": "Due to some unexpected technical issues that are impacting recent transponder sales and renewals, Rocky Mountain National Park is temporarily pausing the sale and renewal of transponder devices. Updates will be posted on the park webpage.",
+          "lastIndexedDate": "2026-05-26 00:00:00.0"
+        }
+      ],
+      "visitorCenters": [
+        {
+          "id": "6024ADBB-9505-45FD-A9AE-FF50CDA658A0",
+          "name": "Alpine Visitor Center",
+          "url": "",
+          "description": "Alpine Visitor Center is open for the 2026 summer season. Located at the top of Fall River Pass and accessed via Trail Ridge Road, Alpine Visitor Center is the highest elevation visitor center in the National Park System at 11,796 feet above sea level. Stop by and learn more about plants and wildlife that live in the land above trees - the Alpine tundra.",
+          "directionsInfo": "Alpine Visitor Center is located inside Rocky Mountain National Park at the top of Fall River Pass. It is accessed primarily via Trail Ridge Road. When traveling from the east side of RMNP, Alpine Visitor Center is located approximately 22 miles from Beaver Meadows Entrance. When traveling from the west, it is located ",
+          "directionsUrl": "",
+          "addresses": [
+            {
+              "type": "Physical",
+              "line1": "",
+              "city": "Estes Park",
+              "stateCode": "CO"
+            },
+            {
+              "type": "Mailing",
+              "line1": "1000 US Hwy 36",
+              "city": "Estes Park",
+              "stateCode": "CO"
+            }
+          ]
+        },
+        {
+          "id": "1FBA44B1-AD80-485D-81B9-940FC3C64E0B",
+          "name": "Beaver Meadows Visitor Center",
+          "url": "",
+          "description": "Beaver Meadows Visitor Center is open year-round. This visitor center is located on the east side of RMNP near the town of Estes Park, along U.S. Highway 36 approximately 1 mile east of the Beaver Meadows Entrance to RMNP. Inside the visitor center, meet with park staff, enjoy the park's movie, and visit the Rocky Mountain Conservancy Nature Store.",
+          "directionsInfo": "When entering the park through the main entrance on US Hwy 36, Beaver Meadows Visitor Center will be on your left.",
+          "directionsUrl": "",
+          "addresses": [
+            {
+              "type": "Physical",
+              "line1": "1000 US Hwy 36",
+              "city": "Estes Park",
+              "stateCode": "CO"
+            },
+            {
+              "type": "Mailing",
+              "line1": "1000 US Hwy 36",
+              "city": "Estes Park",
+              "stateCode": "CO"
+            }
+          ]
+        },
+        {
+          "id": "D27BE956-FF88-4467-B0C8-A50E8457C422",
+          "name": "Fall River Visitor Center",
+          "url": "",
+          "description": "The Fall River Visitor Center is located west of the town of Estes Park on U.S. Highway 34, just before the Fall River Entrance to RMNP. Find park information, learn about programs, and more. Explore Rocky Mountain Conservancy's Nature Store.",
+          "directionsInfo": "U.S. Highway 34, five miles west of the town of Estes Park. Shares building with Gateway Store.",
+          "directionsUrl": "",
+          "addresses": [
+            {
+              "type": "Physical",
+              "line1": "3450 Fall River Road",
+              "city": "Estes Park",
+              "stateCode": "CO"
+            },
+            {
+              "type": "Mailing",
+              "line1": "1000 US Hwy 36",
+              "city": "Estes Park",
+              "stateCode": "CO"
+            }
+          ]
+        },
+        {
+          "id": "8E0D534D-3945-42D6-8143-4F00007638F5",
+          "name": "Holzwarth Historic Site",
+          "url": "",
+          "description": "Explore the Holzwarth Historic Site, where the Never Summer Ranch and the Holzwarth Trout Lodge was operated by the Holzwarth family through multiple generations from the 1910s to 1970s. Located on the west side of Rocky Mountain National Park eight miles east of (12.8 km) the Kawuneeche Visitor Center. The grounds of the Holzwarth Historic Site are open year-round, 24 hours a day. Beginning on May 23, buildings will be open from 9:30 a.m. to 2:30 p.m., conditions permitting.",
+          "directionsInfo": "Explore the Holzwarth Historic Site, located on the west side of Rocky Mountain National Park along Trail Ridge Road eight miles (12.8 km) from the Kawuneeche Visitor Center, north of the Grand Lake Entrance. Park your vehicle at the Holzwarth Historic Site parking area and walk down a dirt path along the Colorado Rive",
+          "directionsUrl": "",
+          "addresses": [
+            {
+              "type": "Physical",
+              "line1": "Holzwarth Historic Site",
+              "city": "Grand Lake",
+              "stateCode": "CO"
+            },
+            {
+              "type": "Mailing",
+              "line1": "1000 US Hwy 36",
+              "city": "Estes Park",
+              "stateCode": "CO"
+            }
+          ]
+        },
+        {
+          "id": "593C4E0B-88AE-4CE3-8150-DC1EE862ADA2",
+          "name": "Information Office",
+          "url": "https://www.nps.gov/romo/contacts.htm",
+          "description": "Have questions about Rocky Mountain National Park? Call the Information Office! NPS staff and volunteers are available to help your plan your trips, learn about the park, and more! Call us at 970-586-1206 or email us at romo_information@nps.gov.",
+          "directionsInfo": "",
+          "directionsUrl": "",
+          "addresses": []
+        },
+        {
+          "id": "B9076D87-29B0-4624-ADFE-EEFA5AC631EE",
+          "name": "Junior Ranger Headquarters at Hidden Valley",
+          "url": "https://www.nps.gov/romo/learn/kidsyouth/junior-ranger.htm",
+          "description": "Open during the summer, Junior Ranger Headquarters is a place just for kids! Located on the east side of Rocky Mountain National Park at Hidden Valley, Junior Rangers of all ages are invited to stop by and explore! Hidden Valley is located on Trail Ridge Road approximately 7 miles from the Beaver Meadows or Fall River Entrances. Junior Rangers and their families have the opportunity to stop and learn about forest ecology, wildlife biology, animal track identification, plant identification, and m",
+          "directionsInfo": "When traveling from Estes Park, enter RMNP using either the Beaver Meadows or Fall River Entrances via U.S. Highway 36 or 34 and drive towards Deer Ridge Junction. At Deer Ridge Junction, follow the signs to Trail Ridge Road and Hidden Valley. Hidden Valley is approximately 7 miles from the east side entrances. Look fo",
+          "directionsUrl": "",
+          "addresses": [
+            {
+              "type": "Physical",
+              "line1": "1000 U.S. Highway 36",
+              "city": "Estes Park",
+              "stateCode": "CO"
+            },
+            {
+              "type": "Mailing",
+              "line1": "1000 U.S. Highway 36",
+              "city": "Estes Park",
+              "stateCode": "CO"
+            }
+          ]
+        },
+        {
+          "id": "674B1262-7CAF-40BA-9CF8-608703A95A8A",
+          "name": "Kawuneeche Visitor Center",
+          "url": "",
+          "description": "Open daily, the Kawuneeche Visitor Center is located along U.S. Highway 34 on the west side of RMNP, north of the town of Grand Lake.",
+          "directionsInfo": "One mile north of the town of Grand Lake on the east side of Trail Ridge Road/ US Highway 34 at the entrance to the park",
+          "directionsUrl": "",
+          "addresses": [
+            {
+              "type": "Physical",
+              "line1": "16018 US Highway 34",
+              "city": "Grand Lake",
+              "stateCode": "CO"
+            },
+            {
+              "type": "Mailing",
+              "line1": "16018 US Highway 34",
+              "city": "Grand Lake",
+              "stateCode": "CO"
+            }
+          ]
+        },
+        {
+          "id": "C8DCF727-A024-419F-96A7-B341A8FA6721",
+          "name": "Moraine Park Discovery Center",
+          "url": "",
+          "description": "Moraine Park Discovery Center is open daily during the summer season. Located along Bear Lake Road, the Moraine Park Discovery Center is a great place for families and Junior Rangers to explore. Take in scenic views of Moraine Park and Longs Peak. Discover fun Junior Ranger activities and exhibits. Restrooms and water are available. There is also a Nature Store managed by Rocky Mountain Conservancy.",
+          "directionsInfo": "Moraine Park Discover Center is located on Bear Lake Road, approximately 1.5 miles from the Beaver Meadows Entrance.",
+          "directionsUrl": "",
+          "addresses": [
+            {
+              "type": "Physical",
+              "line1": "Bear Lake Road",
+              "city": "Estes Park",
+              "stateCode": "CO"
+            },
+            {
+              "type": "Mailing",
+              "line1": "1000 US Hwy 36",
+              "city": "Estes Park",
+              "stateCode": "CO"
+            }
+          ]
+        },
+        {
+          "id": "3C332C63-87D4-4E7D-A2F0-3C6E8DA48B23",
+          "name": "Sheep Lakes Information Station",
+          "url": "https://www.nps.gov/romo/planyourvisit/visitorcenters.htm",
+          "description": "Sheep Lakes, located in Horseshoe Park, is a great place to view wildlife. This parking area and viewpoint are open year-round daily 24 hours a day. The Sheep Lakes Information Station is open daily from mid-May to mid-August from 9:30 a.m. to 4:30 p.m.",
+          "directionsInfo": "In Horseshoe Park on US Hwy 34 west of Estes Park.",
+          "directionsUrl": "",
+          "addresses": [
+            {
+              "type": "Physical",
+              "line1": "",
+              "city": "Estes Park",
+              "stateCode": "CO"
+            }
+          ]
+        },
+        {
+          "id": "3C2A4ACE-B582-4AF7-A937-B61DA050C3B6",
+          "name": "Wilderness Office",
+          "url": "https://www.nps.gov/romo/planyourvisit/wilderness-overnight-backpacking.htm#11/40.3455/-105.6061",
+          "description": "Have questions about planning for an overnight backpacking camping trip? Ready to pick up your backpacking permits? Visit the park's Wilderness Office or call 970-586-1242. To get to the Wilderness Office, park your vehicle at Beaver Meadows Visitor Center and follow the signs and paved path to the Wilderness Office.",
+          "directionsInfo": "",
+          "directionsUrl": "",
+          "addresses": []
+        }
+      ],
+      "campgrounds": [
+        {
+          "id": "7475825B-E844-4012-841B-0E29E05D4540",
+          "name": "Aspenglen Campground",
+          "url": "https://www.nps.gov/romo/planyourvisit/agcg.htm",
+          "description": "Aspenglen Campground is open for the summer! Campsites are available for tents and RVs. Campsites are available by reservation only. To make a reservation, visit www.recreation.gov online, use the Recreation.gov Mobile App or call 1-877-444-6777 and search for Rocky Mountain National Park - Aspenglen Campground.",
+          "reservationUrl": "https://www.recreation.gov/camping/campgrounds/233187",
+          "weatherOverview": "Weather can vary greatly in Rocky Mountain National Park throughout the summer season. Be prepared for varying conditions. Expect sun, clouds, rain, or even snow. For the most up to date information on weather, visit https://www.weather.gov/bou/rmnp",
+          "numberOfSitesReservable": "52",
+          "numberOfSitesFirstComeFirstServe": "0"
+        },
+        {
+          "id": "6715A7CC-280C-4093-85D3-492004C2DB48",
+          "name": "Glacier Basin Campground",
+          "url": "https://www.nps.gov/romo/planyourvisit/gbcg.htm",
+          "description": "Glacier Basin Campground is open for the summer! Located on Bear Lake Road near Park & Ride, campsites are available for tents, RVs and groups. Campsites are available by reservation only. To make a reservation, visit www.recreation.gov online, use the Recreation.gov Mobile App or call 1-877-444-6777 and search for Rocky Mountain National Park - Glacier Basin Campground.",
+          "reservationUrl": "https://www.recreation.gov/camping/campgrounds/232462",
+          "weatherOverview": "Average High and Low Temperatures (Fahrenheit) May: 62 / 34 June: 73 / 41 July: 78 / 46 August: 77 / 45 September: 70 / 38",
+          "numberOfSitesReservable": "153",
+          "numberOfSitesFirstComeFirstServe": "0"
+        },
+        {
+          "id": "F7CE47A2-A770-449F-8085-0DF17DD432EB",
+          "name": "Longs Peak Campground",
+          "url": "https://www.nps.gov/romo/planyourvisit/lpcg.htm",
+          "description": "Longs Peak Campground is now closed. Each year, this campground is open from early July through early September. Longs Peak Campground is a tent-only campground that is available on a first-come, first-served basis.",
+          "reservationUrl": "https://www.recreation.gov/camping/campgrounds/10317461",
+          "weatherOverview": "Average High and Low Temperatures (Fahrenheit) June: 69 / 37 July: 74 / 42 August: 73 / 41 September: 66 / 34",
+          "numberOfSitesReservable": "0",
+          "numberOfSitesFirstComeFirstServe": "26"
+        },
+        {
+          "id": "D322E1E9-8058-4C42-80A3-9FBC82583190",
+          "name": "Moraine Park Campground",
+          "url": "https://www.nps.gov/romo/planyourvisit/mpcg.htm",
+          "description": "Moraine Park Campground is open for the summer! Campsites are available for tents and RVs. Campsites are available by reservation only. To make a reservation, visit www.recreation.gov online, use the Recreation.gov Mobile App or call 1-877-444-6777 and search for Rocky Mountain National Park - Moraine Park Campground.",
+          "reservationUrl": "https://www.recreation.gov/camping/7/232463",
+          "weatherOverview": "Average High and Low Temperatures (Fahrenheit) January: 39 / 16 February: 41 / 17 March: 45 / 21 April: 53 / 27 May: 62 / 34 June: 73 / 41 July: 78 / 46 August: 77 / 45 September: 70 / 38 October: 60 / 30 November: 46 / 23 December: 40 / 18",
+          "numberOfSitesReservable": "244",
+          "numberOfSitesFirstComeFirstServe": "0"
+        },
+        {
+          "id": "F7965B87-3035-49D4-B55A-D55D6CAD0C93",
+          "name": "Timber Creek Campground",
+          "url": "https://www.nps.gov/romo/planyourvisit/tccg.htm",
+          "description": "Timber Creek Campground is open for the summer! Campsites are available for tents and RVs. Campsites are available by reservation only. To make a reservation, visit www.recreation.gov online, use the Recreation.gov Mobile App or call 1-877-444-6777 and search for Rocky Mountain National Park - Timber Creek Campground.",
+          "reservationUrl": "https://www.recreation.gov/camping/campgrounds/260552",
+          "weatherOverview": "Average High and Low Temperatures (Fahrenheit) May: 59 / 27 June: 70 / 33 July: 75 / 37 August: 74 / 36 September: 67 / 29 October: 57 / 22",
+          "numberOfSitesReservable": "98",
+          "numberOfSitesFirstComeFirstServe": "0"
+        }
+      ],
+      "contentHash": "aecc6229a99ae2078dee7e95e9dbbfdb9c3cfe517f351d44adb402b5537ba9a9"
+    },
+    {
+      "parkCode": "zion",
+      "slug": "zion",
+      "name": "Zion National Park",
+      "localName": "Zion",
+      "designation": "National Park",
+      "states": "UT",
+      "url": "https://www.nps.gov/zion/index.htm",
+      "description": "Follow the paths where people have walked for thousands of years. Gaze up at massive sandstone cliffs of cream, pink, and red that soar into a brilliant blue sky. Experience the tall, stretching walls of a narrow slot canyon. Zion’s unique array of plants and animals will enchant you as you absorb the rich history of the past and enjoy the excitement of present-day adventures.",
+      "weatherInfo": "Zion is known for a wide range of weather conditions. Temperatures vary with changes in elevation and day/night temperatures may differ by over 30°F. In summer, temperatures in Zion National Park often exceed 100°F/38°C. Zion experiences monsoons from mid-July into September that result in an increased risk of flash floods. Always be aware of the threat of storms and lightning and be prepared for a wide range of weather conditions. Winters are generally mild.",
+      "directionsInfo": "Zion National Park's main, south entrance and administrative offices are located near Springdale, Utah You may drive yourself on all open park roads except the Zion Canyon Scenic Drive. During most of the year, the Scenic Drive is accessed by shuttle bus only. Shuttles are free to ride. Board one in Springdale or at the Zion Canyon Visitor Center.",
+      "directionsUrl": "http://www.nps.gov/zion/planyourvisit/directions.htm",
+      "latLong": "lat:37.29839254, long:-113.0265138",
+      "addresses": [
+        {
+          "type": "Physical",
+          "line1": "Zion National Park",
+          "city": "Springdale",
+          "stateCode": "UT",
+          "postalCode": "84767"
+        },
+        {
+          "type": "Mailing",
+          "line1": "Zion National Park",
+          "city": "Springdale",
+          "stateCode": "UT",
+          "postalCode": "84767"
+        }
+      ],
+      "entranceFees": [
+        {
+          "title": "Entrance - Private Vehicle",
+          "cost": "35.00",
+          "description": "Admits private, non-commercial vehicle (15 passenger capacity or less) and all occupants to Zion National Park. Valid for 1-7 days."
+        },
+        {
+          "title": "Entrance - Motorcycle",
+          "cost": "30.00",
+          "description": "Valid for 7 days. Admits up to 2 private, non-commercial motorcycles with up to 4 total passengers."
+        },
+        {
+          "title": "Entrance - Snowmobile",
+          "cost": "20.00",
+          "description": "Admits one individual with no car to Zion National Park. Typically used for bicyclists, hikers and pedestrians. Youth 15 and under are admitted free. Valid for 1-7 days."
+        },
+        {
+          "title": "Entrance - Per Person",
+          "cost": "20.00",
+          "description": "Admits one individual with no car to Zion National Park. Typically used for bicyclists, hikers and pedestrians. Youth 15 and under are admitted free. Valid for 1-7 days."
+        },
+        {
+          "title": "Entrance - Non-commercial Groups",
+          "cost": "20.00",
+          "description": "$20 per person. Non-commercial vehicles with a capacity of 16 or greater. Fees will not exceed the commercial fee for the same-sized vehicle. Youth 15 and under are free. Individuals or families with any valid Annual or Lifetime pass may us"
+        },
+        {
+          "title": "Commercial Entrance - Van",
+          "cost": "70.00",
+          "description": "A commercial tour is defined as consisting of one or more persons traveling on an itinerary that has been packaged, priced, or sold for leisure or recreational purposes by an organization that realizes financial gain through the provision o"
+        }
+      ],
+      "operatingHours": [
+        {
+          "name": "Zion National Park",
+          "description": "Zion National Park is open every day of the year.",
+          "standardHours": {
+            "wednesday": "All Day",
+            "monday": "All Day",
+            "thursday": "All Day",
+            "sunday": "All Day",
+            "tuesday": "All Day",
+            "friday": "All Day",
+            "saturday": "All Day"
+          }
+        }
+      ],
+      "officialImages": [
+        {
+          "title": "The Watchman",
+          "altText": "A triangular sandstone mountain overlooks green and yellow foliage. A cloudy blue sky is overhead.",
+          "credit": "NPS/Shane Carte",
+          "url": "https://www.nps.gov/common/uploads/structured_data/68BFC1AC-BF96-629F-89D261D78F181C64.jpg"
+        },
+        {
+          "title": "The Towers of the Virgin",
+          "altText": "The sun sets behind large red and white towers of sandstone.",
+          "credit": "NPS/Jesse Nelson",
+          "url": "https://www.nps.gov/common/uploads/structured_data/69162F54-D4AF-8695-A42F97A8F9774C19.jpg"
+        },
+        {
+          "title": "Zion Canyon Visitor Center",
+          "altText": "A sandstone and glass building surrounded by tall trees with a mountain behind it.",
+          "credit": "NPS",
+          "url": "https://www.nps.gov/common/uploads/structured_data/68D46E7D-A116-A443-ABA04AD1DD785208.jpg"
+        }
+      ],
+      "alerts": [
+        {
+          "id": "F093B239-D138-4B04-BDFE-745A41F17B04",
+          "title": "Angels Landing Pilot Permit Program",
+          "category": "Information",
+          "url": "https://www.nps.gov/zion/planyourvisit/angels-landing-hiking-permits.htm",
+          "description": "Everyone who hikes Angels Landing needs to have a permit. Learn why you need a permit and how to get one. This requirement does not affect entering the park or riding the park shuttle (when it is running).",
+          "lastIndexedDate": "2026-02-11 00:00:00.0"
+        },
+        {
+          "id": "83AE2DD9-F167-445F-8B00-A4F9E5A993D8",
+          "title": "Large vehicle restrictions now in effect for Zion-Mt. Carmel Highway",
+          "category": "Caution",
+          "url": "https://www.nps.gov/zion/planyourvisit/large-vehicles.htm",
+          "description": "As of June 7, 2026, the park is enforcing size and weight limits for vehicles on the Zion-Mt. Carmel Highway. Vehicles that exceed length, width, height, or weight limits cannot travel between Canyon Junction and the park's East Entrance. See the current limits on the page linked below.",
+          "lastIndexedDate": "2026-06-06 00:00:00.0"
+        },
+        {
+          "id": "0EA570B2-2FF0-4B33-AD3A-1313385965A0",
+          "title": "Please park legally and responsibly in Zion National Park and the Town of Springdale",
+          "category": "Information",
+          "url": "https://www.nps.gov/zion/planyourvisit/index.htm",
+          "description": "Zion has limited parking space. Park only in designated stalls. Vehicles parked outside of designated stalls are subject to citation and may be towed. Once all designated parking stalls in Zion are full, visitors should park in Springdale.",
+          "lastIndexedDate": "2018-05-18 14:28:24.0"
+        },
+        {
+          "id": "DD17A94A-AD46-4DD7-8CD1-85FEB125A9B6",
+          "title": "Stage 2 fire restrictions in effect",
+          "category": "Caution",
+          "url": "https://www.nps.gov/zion/learn/news/2026-05-22-fire-restrictions.htm",
+          "description": "No setting, building, maintaining, attending, or using open fires of any kind in the park. This includes campfires and charcoal fires in Watchman Campground, South Campground, and picnic areas in Zion Canyon. Stoves fueled by petroleum or liquid propane gas are allowed. Smoking is allowed only in non-vegetated areas.",
+          "lastIndexedDate": "2026-05-22 00:00:00.0"
+        },
+        {
+          "id": "09699C7F-F2CD-4BE9-B8D4-5E19CC89BE7A",
+          "title": "Toxic Cyanobacteria in the Virgin River and the streams of Zion National Park",
+          "category": "Caution",
+          "url": "https://www.nps.gov/zion/planyourvisit/toxic-cyanobacteria-bloom-in-the-virgin-river-and-the-streams-of-zion-national-park.htm",
+          "description": "Do not submerge your head in or filter drinking water from still or moving water.",
+          "lastIndexedDate": "2023-03-15 20:31:23.0"
+        }
+      ],
+      "visitorCenters": [
+        {
+          "id": "835FC05C-8AC2-43AD-87C0-9704B9895144",
+          "name": "Human History Museum",
+          "url": "https://www.nps.gov/zion/learn/historyculture/zion-human-history-museum.htm",
+          "description": "Immerse yourself in the human history of Zion National Park! Rangers staff an information desk during operating hours. Indoor exhibits explore the people, places, and stories of Zion. Rotating exhibits feature regional artists, local discoveries, and more. A 22-minute orientation film examines the history of the canyon and highlights the dramatic landscapes of the park. Visit the bookstore for books, gifts, and souvenirs. There are also dramatic views of the Towers of the Virgin and Bridge Mount",
+          "directionsInfo": "The Zion Human History Museum is located roughly 1 mile from the park's South Entrance. This building can be reached by driving or by walking on the Pa'rus Trail. To reach the museum by car, drive along the Zion-Mt. Carmel Highway. About 1 mile north of the South Entrance, there is a turn with a sign for the Human Hist",
+          "directionsUrl": "https://www.nps.gov/zion/planyourvisit/directions.htm",
+          "addresses": [
+            {
+              "type": "Physical",
+              "line1": "1 Zion Park Blvd",
+              "city": "Springdale",
+              "stateCode": "UT"
+            },
+            {
+              "type": "Mailing",
+              "line1": "1 Zion Park Blvd",
+              "city": "Springdale",
+              "stateCode": "UT"
+            }
+          ]
+        },
+        {
+          "id": "5A161ABB-8443-4F3C-8F3C-773A10B4ED2C",
+          "name": "Kolob Canyons Visitor Center",
+          "url": "https://www.nps.gov/zion/planyourvisit/kolob-canyons.htm",
+          "description": "Closed daily from 12pm-1pm This is the entry point to the Kolob Canyons area of the park. It is located 45 miles north of Springdale and 17 miles south of Cedar City at Exit 40 on Interstate 15. Park rangers are available to answer questions. Exhibits explore the geology, vegetation, and wildlife of this unique landscape.",
+          "directionsInfo": "This is the entry point to the Kolob Canyons area of the park. It is located 45 miles north of Springdale and 17 miles south of Cedar City at Exit 40 on Interstate 15.",
+          "directionsUrl": "https://www.nps.gov/zion/planyourvisit/kolob-canyons.htm",
+          "addresses": []
+        },
+        {
+          "id": "774A69FB-32DF-4A52-A5C9-E9B29F754B51",
+          "name": "Zion Canyon Visitor Center",
+          "url": "https://www.nps.gov/zion/learn/nature/zion-canyon-visitor-center.htm",
+          "description": "Located near the South Entrance of the park, the Zion Canyon Visitor Center is an excellent place to begin your exploration of Zion Canyon. Park rangers and outdoor exhibits will help you plan your visit and make the most of your time. Inquire at the Zion Canyon Wilderness Desk about permits for backpacking, canyoneering, and other trips into the wilderness. Visit the bookstore for maps, books, and gifts.",
+          "directionsInfo": "Zion Canyon Visitor Center is located next to the park's South Entrance and pedestrian entrance in Springdale, Utah. If you drive into the park through the South Entrance, take the first right after passing through the entrance station. Then, simply follow the signs for Visitor Center parking. The pedestrian entrance i",
+          "directionsUrl": "https://www.nps.gov/zion/planyourvisit/directions.htm",
+          "addresses": [
+            {
+              "type": "Physical",
+              "line1": "1 Zion Park Blvd.",
+              "city": "Springdale",
+              "stateCode": "UT"
+            },
+            {
+              "type": "Mailing",
+              "line1": "1 Zion Park Blvd.",
+              "city": "Springdale",
+              "stateCode": "UT"
+            }
+          ]
+        },
+        {
+          "id": "07EAF461-10E1-478F-B3BD-A54C910F6A4B",
+          "name": "Zion Nature Center",
+          "url": "https://www.nps.gov/places/zion-nature-center.htm",
+          "description": "During the summer, come visit the Zion Nature Center! This is a perfect place to learn about geology, animals, and the history of Zion. Take a break from the sun to explore different habitats, enjoy bird songs, listen to canyon tree frog calls, and participate in Junior Ranger programs. The inside of the Nature Center has a variety of interactive exhibits, animal models, changing activities, and crafts. Park rangers host educational programs throughout the day.",
+          "directionsInfo": "The Zion Nature Center is located along the Zion-Mt. Carmel Highway, about halfway between the Zion Canyon Visitor Center and Human History Museum. To reach the Nature Center by car, drive just under 1/2 mile northeast from the park's South Entrance. There will be a turn for the Nature Center parking lot. To reach the ",
+          "directionsUrl": "https://www.nps.gov/zion/planyourvisit/directions.htm",
+          "addresses": [
+            {
+              "type": "Physical",
+              "line1": "1 Zion Park Blvd",
+              "city": "Springdale",
+              "stateCode": "UT"
+            },
+            {
+              "type": "Mailing",
+              "line1": "1 Zion Park Blvd",
+              "city": "Springdale",
+              "stateCode": "UT"
+            }
+          ]
+        }
+      ],
+      "campgrounds": [
+        {
+          "id": "B30A5B7D-0343-4E47-97E3-CBBAC4700D6B",
+          "name": "Lava Point Campground",
+          "url": "https://www.recreation.gov/camping/campgrounds/10138237",
+          "description": "Lava Point Campground is open as weather allows, typically from May through September. Situated at 7890 feet above sea level, the campground can be reached via the Kolob Terrace Road, 25 miles (45 minutes) north of the Virgin. It takes approximately 80 minutes to drive to the campground from the South Entrance of Zion Canyon. Six (6) primitive campsites are available for reservation. The campground has pit toilets and trash cans, but no running water. Vehicles longer than 19 feet are not permitt",
+          "reservationUrl": "https://www.recreation.gov/camping/campgrounds/10138237",
+          "weatherOverview": "Zion is known for a wide range of weather conditions. Temperatures vary with changes in elevation and day/night temperatures may differ by over 30°F. Learn more on our weather webpage: https://www.nps.gov/zion/planyourvisit/weather-and-climate.htm The campground is 7890 feet above sea level, almost 5000 feet higher tha",
+          "numberOfSitesReservable": "6",
+          "numberOfSitesFirstComeFirstServe": "0"
+        },
+        {
+          "id": "BC2D51FF-DE4E-407C-86B3-3470BE11BBAF",
+          "name": "South Campground",
+          "url": "https://www.nps.gov/zion/planyourvisit/south-campground.htm",
+          "description": "South Campground is located between the Zion Canyon Visitor Center and Zion Nature Center, ½ mile from the South Entrance in Springdale, Utah. Campsites are typically available from mid-March through October 31. All sites include a parking space, a picnic table, a fire ring, a food storage box, and space for a tent or RV/camper. All campsites in South Campground require reservations. Reservations can be made up to 2 weeks in advance. First-come, first-served sites are not available.",
+          "reservationUrl": "https://www.recreation.gov/camping/campgrounds/272266",
+          "weatherOverview": "Zion is known for a wide range of weather conditions. Temperatures vary with changes in elevation and day/night temperatures may differ by over 30°F. More details are on our weather webpage: https://www.nps.gov/zion/planyourvisit/weather-and-climate.htm",
+          "numberOfSitesReservable": "124",
+          "numberOfSitesFirstComeFirstServe": "0"
+        },
+        {
+          "id": "2DEDB733-BCA8-41FF-8E0C-3E676DE620DF",
+          "name": "Watchman Campground",
+          "url": "https://www.nps.gov/zion/planyourvisit/watchman-campground.htm",
+          "description": "Watchman Campground is located next to the Zion Canyon Visitor Center, ¼ mile away from the South Entrance in Springdale, Utah. Tent, RV, and group campsites are typically available year-round. All sites include a parking space, a picnic table, a fire ring, and space for a tent or RV/camper. All campsites in Watchman Campground require reservations. Reservations can be made up to 6 months in advance for standard sites or 12 months for group sites. First-come, first-served sites are not available",
+          "reservationUrl": "https://www.recreation.gov/camping/campgrounds/232445",
+          "weatherOverview": "Zion is known for a wide range of weather conditions. Temperatures vary with changes in elevation and day/night temperatures may differ by over 30°F. More details are on our weather webpage: https://www.nps.gov/zion/planyourvisit/weather-and-climate.htm",
+          "numberOfSitesReservable": "176",
+          "numberOfSitesFirstComeFirstServe": "0"
+        }
+      ],
+      "contentHash": "b1d0e632bb18c24d571c07a501c3d4635c156104c9fa6aa1f351a6468f04a3bf"
+    },
+    {
+      "parkCode": "yell",
+      "slug": "yellowstone",
+      "name": "Yellowstone National Park",
+      "localName": "Yellowstone",
+      "designation": "National Park",
+      "states": "ID,MT,WY",
+      "url": "https://www.nps.gov/yell/index.htm",
+      "description": "On March 1, 1872, Yellowstone became the first national park for all to enjoy the unique hydrothermal wonders. Today, millions of people come here each year to camp, hike, and enjoy the majesty of the park.",
+      "weatherInfo": "Yellowstone's weather can vary quite a bit, even in a single day. In the summer, daytime highs can exceed 70°F (21°C), only to drop 20 or more degrees when a thunderstorm rolls through. It can snow during any month of the year, and winter lows frequently drop below 0°F (-18°C), especially at night. Bring a range of clothing options, including a warm jacket and rain gear, even in the summer.",
+      "directionsInfo": "Yellowstone National Park covers nearly 3,500 square miles in the northwest corner of Wyoming (3% of the park is in Montana and 1% is in Idaho). Yellowstone has five entrance stations, and several are closed to regular vehicles during winter. It takes many hours to drive between these entrances, so be sure to check the status of roads at the entrance you intend to use while planning your trip and before you arrive.",
+      "directionsUrl": "http://www.nps.gov/yell/planyourvisit/directions.htm",
+      "latLong": "lat:44.59824417, long:-110.5471695",
+      "addresses": [
+        {
+          "type": "Physical",
+          "line1": "2 Officers Row",
+          "city": "Yellowstone National Park",
+          "stateCode": "WY",
+          "postalCode": "82190"
+        },
+        {
+          "type": "Mailing",
+          "line1": "PO Box 168",
+          "city": "Yellowstone National Park",
+          "stateCode": "WY",
+          "postalCode": "82190-0168"
+        }
+      ],
+      "entranceFees": [
+        {
+          "title": "Entrance - Private Vehicle",
+          "cost": "35.00",
+          "description": "Unlimited entry for one vehicle and all passengers for seven consecutive days, beginning on the day of purchase. Vehicles must be private, non-commercial, and with a seating capacity of 15 or less."
+        },
+        {
+          "title": "Entrance - Non-commercial Groups",
+          "cost": "20.00",
+          "description": "Non-commercial group (e.g. church groups, scouts) traveling in a vehicle with a capacity of 16 or more people. Cost is per person. Unlimited entry for one vehicle and all passengers for seven consecutive days, beginning on the day of purcha"
+        },
+        {
+          "title": "Entrance - Motorcycle",
+          "cost": "30.00",
+          "description": "Valid for 7 days. Admits up to 2 private, non-commercial motorcycles with up to 4 total passengers."
+        },
+        {
+          "title": "Entrance - Snowmobile",
+          "cost": "30.00",
+          "description": "Valid for 7 days. Admits up to 2 snowmobiles with up to 4 total passengers."
+        },
+        {
+          "title": "Entrance - Per Person",
+          "cost": "20.00",
+          "description": "Entry for visitors on foot, bicycle, ski, etc., when 16 years of age or older."
+        },
+        {
+          "title": "Commercial Entrance - Sedan",
+          "cost": "20.00",
+          "description": "A commercial tour is defined as consisting of one or more persons traveling on an itinerary that has been packaged, priced, or sold for leisure or recreational purposes by an organization that realizes financial gain through the provision o"
+        }
+      ],
+      "operatingHours": [
+        {
+          "name": "All Park Hours",
+          "description": "Yellowstone is open daily, year-round, although activities and services are limited at night and certain times of year. The park has five entrance stations, but not all entrance stations are open year-round. Make sure to carefully read abou",
+          "standardHours": {
+            "wednesday": "All Day",
+            "monday": "All Day",
+            "thursday": "All Day",
+            "sunday": "All Day",
+            "tuesday": "All Day",
+            "friday": "All Day",
+            "saturday": "All Day"
+          }
+        },
+        {
+          "name": "West Entrance",
+          "description": "Adjacent to the town of West Yellowstone, Montana, the West Entrance is usually open (weather-dependent) to wheeled vehicles from the third Friday in April through early November, and to tracked-oversnow (snowmobiles and snowcoaches) vehicl",
+          "standardHours": {
+            "wednesday": "All Day",
+            "monday": "All Day",
+            "thursday": "All Day",
+            "sunday": "All Day",
+            "tuesday": "All Day",
+            "friday": "All Day",
+            "saturday": "All Day"
+          }
+        },
+        {
+          "name": "North Entrance",
+          "description": "Near the gateway community of Gardiner, Montana, the North Entrance is the only park entrance open to wheeled vehicles all year. November through April, the North Entrance provides the only access to Cooke City, Montana. US Highway 212 east",
+          "standardHours": {
+            "wednesday": "All Day",
+            "monday": "All Day",
+            "thursday": "All Day",
+            "sunday": "All Day",
+            "tuesday": "All Day",
+            "friday": "All Day",
+            "saturday": "All Day"
+          }
+        },
+        {
+          "name": "East Entrance",
+          "description": "Depending on the weather and conditions, this entrance usually opens to wheeled vehicles the first Friday in May and to tracked-oversnow vehicles December 22 through March 15.",
+          "standardHours": {
+            "wednesday": "All Day",
+            "monday": "All Day",
+            "thursday": "All Day",
+            "sunday": "All Day",
+            "tuesday": "All Day",
+            "friday": "All Day",
+            "saturday": "All Day"
+          }
+        }
+      ],
+      "officialImages": [
+        {
+          "title": "Grand Prismatic Spring",
+          "altText": "Brilliant blues and greens of a hot spring ringed by oranges, yellows, reds, and browns.",
+          "credit": "NPS/Jim Peaco",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7D5920-1DD8-B71B-0B83F012ED802CEA.jpg"
+        },
+        {
+          "title": "Aurum Geyser",
+          "altText": "A crowd of people standing along a wooden boardwalk watches a geyser erupt.",
+          "credit": "NPS/Jim Peaco",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7D2FBB-1DD8-B71B-0BED99731011CFCE.jpg"
+        },
+        {
+          "title": "Black Pool",
+          "altText": "A visitor stands on a boardwalk near a hot spring and a lake.",
+          "credit": "NPS/Diane Renkin",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7D383B-1DD8-B71B-0BEC4A4D6BDF7CAD.jpg"
+        }
+      ],
+      "alerts": [
+        {
+          "id": "B0EBF84F-F50C-4137-A5F0-2DD81007839F",
+          "title": "Elk with Calves are Extremely Dangerous",
+          "category": "Caution",
+          "url": "https://www.nps.gov/yell/planyourvisit/safety.htm#elk",
+          "description": "Be alert, especially this time of year around Mammoth Hot Springs. Elk calves may be hidden close to buildings, under or next to vehicles, and around blind corners. You must remain at least 25 yards from all wildlife. If an elk charges, retreat!",
+          "lastIndexedDate": "2026-06-01 00:00:00.0"
+        },
+        {
+          "id": "B4BBEF6E-D53D-424F-984D-CEA54598BDEC",
+          "title": "Temporary Closure of Some Trails, Backcountry Campsites, and Fishing Areas",
+          "category": "Park Closure",
+          "url": "https://www.nps.gov/yell/learn/news/26008.htm",
+          "description": "Certain trails, backcountry campsites, and fishing areas in the western part of the park near Biscuit Basin are closed until further notice to allow for an investigation following a bear-caused human injury.",
+          "lastIndexedDate": "2026-05-05 00:00:00.0"
+        },
+        {
+          "id": "57EFE369-9186-400A-8F18-0E966993B8A3",
+          "title": "Traffic Delays - Gardner River High Bridge",
+          "category": "Information",
+          "url": "https://www.nps.gov/yell/planyourvisit/parkroads.htm",
+          "description": "Expect a single lane of traffic with up to 15-minute delays, 24 hours a day, seven days a week, from April 1 through late October 2026. Oversized/overweight vehicles (8'6\"+ wide, 75'+ long, 80,000 lbs+ gross vehicle weight) will not be able to cross the bridge during this time.",
+          "lastIndexedDate": "2026-03-19 00:00:00.0"
+        },
+        {
+          "id": "68BF1AEF-79A0-4FE9-B11C-BDFDAD08E15E",
+          "title": "Vehicle Entrance Reservation Not Needed",
+          "category": "Information",
+          "url": "https://www.nps.gov/yell/planyourvisit/fees.htm",
+          "description": "Although an entrance pass is required to enter Yellowstone National Park, vehicle reservations are not needed. You are encouraged to purchase an entrance pass before arriving, but you may also purchase passes at any entrance station upon arrival.",
+          "lastIndexedDate": "2025-06-18 19:15:37.0"
+        }
+      ],
+      "visitorCenters": [
+        {
+          "id": "2010AE0C-1A5A-46EF-8B65-631BF5D53852",
+          "name": "Albright Visitor Center",
+          "url": "http://www.nps.gov/yell/planyourvisit/albright-visitor-center.htm",
+          "description": "Here you can gather park information, orient yourself to the rest of the park (including road conditions, and campground and lodge availability), shop for souvenirs, explore exhibits to learn more about the wildlife and history of Yellowstone, join a ranger program, pick up a fishing permit (fees are payable by debit or credit card), or use the restrooms.",
+          "directionsInfo": "The Albright Visitor Center is located at Mammoth Hot Springs, five miles south of the North Entrance at the northern part of the upper loop of the Grand Loop Road. It is housed in one of the old stone buildings of Fort Yellowstone, a US Army fort built during the early days of the national park.",
+          "directionsUrl": "http://www.nps.gov/yell/planyourvisit/directions.htm",
+          "addresses": [
+            {
+              "type": "Physical",
+              "line1": "Grand Loop Road",
+              "city": "Yellowstone National Park",
+              "stateCode": "WY"
+            },
+            {
+              "type": "Mailing",
+              "line1": "PO Box 168",
+              "city": "Yellowstone National Park",
+              "stateCode": "WY"
+            }
+          ]
+        },
+        {
+          "id": "BF28C0CA-0D8A-4000-952B-DAD60226AE22",
+          "name": "Canyon Visitor Education Center",
+          "url": "https://www.nps.gov/yell/planyourvisit/canyonvc.htm",
+          "description": "Stop by the Canyon Visitor Education Center to learn more about the geologic story of the area, including the Yellowstone volcano, and view a room-size relief map of Yellowstone. You can also get orientation information, pick up a fishing permit (fees are payable by debit or credit card), shop for a souvenir, find out what ranger programs are available, watch a 20-minute film, or use the restrooms. Restrooms are available 24 hours a day.",
+          "directionsInfo": "The Canyon Visitor Education Center is located in the Canyon Village complex near the center of the Grand Loop Road system. It can be accessed from three different directions.",
+          "directionsUrl": "http://www.nps.gov/yell/planyourvisit/directions.htm",
+          "addresses": [
+            {
+              "type": "Physical",
+              "line1": "Grand Loop Road",
+              "city": "Yellowstone National Park",
+              "stateCode": "WY"
+            },
+            {
+              "type": "Mailing",
+              "line1": "PO Box 168",
+              "city": "Yellowstone National Park",
+              "stateCode": "WY"
+            }
+          ]
+        },
+        {
+          "id": "24014C78-9C04-4986-BDE7-D681EAFB76CC",
+          "name": "Fishing Bridge Visitor Center and Trailside Museum",
+          "url": "https://www.nps.gov/yell/planyourvisit/fishing-bridge-visitor-center.htm",
+          "description": "The distinctive stone-and-log architecture of this old building—known as \"parkitecture\"—was one of several prototypes for park buildings around the country. Today, the visitor center and museum highlight the ecology of Yellowstone Lake, focusing on birds. Also stop by to visit with a ranger and find out when ranger programs are scheduled, buy a fishing permit (payable by debit or credit card), pick up a souvenir, or take in some truly stunning views of Yellowstone Lake and the surrounding mounta",
+          "directionsInfo": "Fishing Bridge Museum is situated near the north shore of Yellowstone Lake on the East Entrance Road. It can be accessed from the east and west directions.",
+          "directionsUrl": "http://www.nps.gov/yell/planyourvisit/directions.htm",
+          "addresses": [
+            {
+              "type": "Physical",
+              "line1": "Grand Loop Road",
+              "city": "Yellowstone National Park",
+              "stateCode": "WY"
+            },
+            {
+              "type": "Mailing",
+              "line1": "PO Box 168",
+              "city": "Yellowstone National Park",
+              "stateCode": "WY"
+            }
+          ]
+        },
+        {
+          "id": "7E9FF3BE-48F0-48C0-9042-EEF0DF11371C",
+          "name": "Grant Visitor Center",
+          "url": "https://www.nps.gov/yell/planyourvisit/grant-visitor-center.htm",
+          "description": "Fire plays an important, natural role in the ecosystems found in Yellowstone National Park and the surrounding region. Learn more about this and the fires of 1988 in the exhibit hall, gather park information and trip ideas, shop for souvenirs at the park store, join a ranger program, buy a fishing, boating, or backcountry camping permit (fees are payable by debit or credit card), or use the restrooms.",
+          "directionsInfo": "Grant Visitor Center is located on the western shore of Yellowstone Lake, a short distance south of the West Thumb Geyser Basin. There are two directions from which to access Grant Village.",
+          "directionsUrl": "http://www.nps.gov/yell/planyourvisit/directions.htm",
+          "addresses": [
+            {
+              "type": "Physical",
+              "line1": "Grand Loop Road",
+              "city": "Yellowstone National Park",
+              "stateCode": "WY"
+            },
+            {
+              "type": "Mailing",
+              "line1": "PO Box 168",
+              "city": "Yellowstone National Park",
+              "stateCode": "WY"
+            }
+          ]
+        },
+        {
+          "id": "B737D37D-E754-410D-9936-BCFFEB45804F",
+          "name": "Madison Information Station and Trailside Museum",
+          "url": "https://www.nps.gov/yell/planyourvisit/madison-information-station.htm",
+          "description": "Located about halfway between Old Faithful and West Yellowstone, you can stop here for park information as visitors have been doing since 1930. The structure is an example of \"parkitecture\" or designing a building in a way that reflects the surrounding ecosystem. You can also shop for souvenirs in the park store or use the restrooms.",
+          "directionsInfo": "Located just south of Madison Junction. Madison can be reached from two different directions, so check your map carefully before driving.",
+          "directionsUrl": "http://www.nps.gov/yell/planyourvisit/directions.htm",
+          "addresses": [
+            {
+              "type": "Physical",
+              "line1": "Grand Loop Road",
+              "city": "Yellowstone National Park",
+              "stateCode": "WY"
+            },
+            {
+              "type": "Mailing",
+              "line1": "PO Box 168",
+              "city": "Yellowstone National Park",
+              "stateCode": "WY"
+            }
+          ]
+        },
+        {
+          "id": "46950353-B28C-467C-A832-73143248EFB6",
+          "name": "Museum of the National Park Ranger",
+          "url": "https://www.nps.gov/yell/planyourvisit/museum-of-the-national-park-ranger.htm",
+          "description": "Once a US Army outpost built in 1908, this visitor center houses exhibits that celebrate the history of the park ranger profession. The current structure replaced previous structures dating back to 1884.",
+          "directionsInfo": "Located off the Grand Loop Road at the entrance to Norris Campground.",
+          "directionsUrl": "http://www.nps.gov/yell/planyourvisit/directions.htm",
+          "addresses": [
+            {
+              "type": "Physical",
+              "line1": "Grand Loop Road",
+              "city": "Yellowstone National Park",
+              "stateCode": "WY"
+            },
+            {
+              "type": "Mailing",
+              "line1": "PO Box 168",
+              "city": "Yellowstone National Park",
+              "stateCode": "WY"
+            }
+          ]
+        },
+        {
+          "id": "97408BA3-6FE7-4CF7-9B02-9817D22081AD",
+          "name": "Norris Geyser Basin Museum and Information Station",
+          "url": "https://www.nps.gov/yell/planyourvisit/norris-geyser-basin-museum.htm",
+          "description": "Situated on the ridge overlooking the Norris Geyser Basin, this historic building is staffed during the summer with rangers who provide park information and facilitate ranger programs. Visitors have been seeking information here since 1930 when the museum was built as a \"trailside museum\" to serve people traveling in their own automobiles without a guide. Restrooms are located in the parking lot.",
+          "directionsInfo": "The Norris Geyser Basin Museum is located 1/4-mile west of Norris Junction just off the Grand Loop Road. It can be accessed from three directions so check a map carefully before planning your trip.",
+          "directionsUrl": "http://www.nps.gov/yell/planyourvisit/directions.htm",
+          "addresses": [
+            {
+              "type": "Physical",
+              "line1": "Grand Loop Road",
+              "city": "Yellowstone National Park",
+              "stateCode": "WY"
+            },
+            {
+              "type": "Mailing",
+              "line1": "PO Box 168",
+              "city": "Yellowstone National Park",
+              "stateCode": "WY"
+            }
+          ]
+        },
+        {
+          "id": "A4DCAB98-6937-466A-ADBD-E8D249721852",
+          "name": "Old Faithful Visitor Education Center",
+          "url": "https://www.nps.gov/yell/planyourvisit/oldfaithfulvec.htm",
+          "description": "Located near Old Faithful Geyser, this visitor center offers views of the geyser's eruption from the tall, windowed front of the visitor center. Additionally, you can gather park information, talk with a park ranger at the front desk, shop for souvenirs in the park store, delve into the natural wonders of Yellowstone in the exhibit hall, join a ranger program, or use the restrooms.",
+          "directionsInfo": "Located in the Upper Geyser Basin, Old Faithful Visitor Education Center can be accessed from two different directions so check your map before traveling.",
+          "directionsUrl": "http://www.nps.gov/yell/planyourvisit/directions.htm",
+          "addresses": [
+            {
+              "type": "Physical",
+              "line1": "Grand Loop Road",
+              "city": "Yellowstone National Park",
+              "stateCode": "WY"
+            },
+            {
+              "type": "Mailing",
+              "line1": "PO Box 168",
+              "city": "Yellowstone National Park",
+              "stateCode": "WY"
+            }
+          ]
+        },
+        {
+          "id": "25A690CE-C968-477A-844F-EF711168904A",
+          "name": "West Thumb Information Station",
+          "url": "https://www.nps.gov/yell/planyourvisit/west-thumb-information-station.htm",
+          "description": "A small facility at the start of the West Thumb Geyser Basin boardwalks, where you can visit with a park ranger and gather park information, shop for souvenirs in the park store, or join a ranger program. The structure was built in 1925 and is an example of historic ranger-station architecture in Yellowstone.",
+          "directionsInfo": "A few miles north of Grant Village on the western shore of Yellowstone Lake, West Thumb can be accessed from three different directions.",
+          "directionsUrl": "http://www.nps.gov/yell/planyourvisit/directions.htm",
+          "addresses": [
+            {
+              "type": "Physical",
+              "line1": "Grand Loop Road",
+              "city": "Yellowstone National Park",
+              "stateCode": "WY"
+            },
+            {
+              "type": "Mailing",
+              "line1": "PO Box 168",
+              "city": "Yellowstone National Park",
+              "stateCode": "WY"
+            }
+          ]
+        },
+        {
+          "id": "BC296A8B-2282-4753-95C5-2A2A32471784",
+          "name": "West Yellowstone Visitor Information Center (Chamber of Commerce Desk)",
+          "url": "https://www.nps.gov/yell/planyourvisit/west-yellowstone-visitor-information-center.htm",
+          "description": "Located in the town of West Yellowstone, Montana, there is a desk staffed by National Park Service rangers (summer and winters only). The building is open year-round and a second desk is staffed by the West Yellowstone Chamber of Commerce. Stop by to obtain backcountry and fishing permits, get park information or to use the restrooms.",
+          "directionsInfo": "Located inside the West Yellowstone Chamber of Commerce, in the town of West Yellowstone.",
+          "directionsUrl": "http://www.nps.gov/yell/planyourvisit/directions.htm",
+          "addresses": [
+            {
+              "type": "Physical",
+              "line1": "Chamber of Commerce of West Yellowstone",
+              "city": "West Yellowstone",
+              "stateCode": "MT"
+            },
+            {
+              "type": "Mailing",
+              "line1": "PO Box 168",
+              "city": "Yellowstone National Park",
+              "stateCode": "WY"
+            }
+          ]
+        },
+        {
+          "id": "AF13DB25-242C-4DB9-A7BF-58D9B78B8B4B",
+          "name": "West Yellowstone Visitor Information Center (NPS Desk)",
+          "url": "https://www.nps.gov/yell/planyourvisit/west-yellowstone-visitor-information-center.htm",
+          "description": "Located in the town of West Yellowstone, Montana, there is a desk and backcountry office staffed by National Park Service rangers (summer and winters only). The building is open year-round and a second desk is staffed by the West Yellowstone Chamber of Commerce. Stop by to obtain backcountry and fishing permits (fees are payable by debit or credit card), to get park information, or to use the restrooms. Call 307-344-2876 for additional information.",
+          "directionsInfo": "Located inside the West Yellowstone Chamber of Commerce",
+          "directionsUrl": "http://www.nps.gov/yell/planyourvisit/directions.htm",
+          "addresses": [
+            {
+              "type": "Physical",
+              "line1": "Chamber of Commerce of West Yellowstone",
+              "city": "West Yellowstone",
+              "stateCode": "MT"
+            },
+            {
+              "type": "Mailing",
+              "line1": "PO Box 168",
+              "city": "Yellowstone National Park",
+              "stateCode": "WY"
+            }
+          ]
+        }
+      ],
+      "campgrounds": [
+        {
+          "id": "1A5B19B8-BF1F-4803-8D87-2D4091D59A4D",
+          "name": "Bridge Bay Campground",
+          "url": "https://www.nps.gov/yell/planyourvisit/bridgebaycg.htm",
+          "description": "Bridge Bay Campground—elevation 7,800 feet (2377 m)—is located near Yellowstone Lake, one of the largest, high-elevation, fresh-water lakes in North America. Campers at Bridge Bay will enjoy spectacular views of the lake and the Absaroka Range rising above the lake's eastern shore. Yellowstone National Park Lodges provides reservations for this campground.",
+          "reservationUrl": "https://secure.yellowstonenationalparklodges.com/booking/lodging",
+          "weatherOverview": "Yellowstone's weather can vary greatly within a day and throughout the park. Snow can fall every month of the year. Summer highs reach 70–80°F (25–30°C) during the day, but nights can be cool (and it may freeze at higher elevations). During spring and fall, daytime highs range from 30–60°F (0–20°C), with overnight lows",
+          "numberOfSitesReservable": "432",
+          "numberOfSitesFirstComeFirstServe": "0"
+        },
+        {
+          "id": "8C42E6D8-1819-46F3-A363-3C8107A1AFAC",
+          "name": "Canyon Campground",
+          "url": "https://www.nps.gov/yell/planyourvisit/canyoncg.htm",
+          "description": "Canyon Campground—elevation 7,900 feet (2408 m)—lies in a lodgepole pine forest at Canyon Village, south of the Washburn range and near the breath-taking Grand Canyon of the Yellowstone River. Canyon Village offers stores, restaurants, and lodging. Nearby hikes include Cascade Lake, Mount Washburn, and the Canyon Rim trails. Yellowstone National Park Lodges provides reservations for this campground.",
+          "reservationUrl": "https://secure.yellowstonenationalparklodges.com/booking/lodging",
+          "weatherOverview": "Yellowstone's weather can vary greatly within a day and throughout the park. Snow can fall every month of the year. Summer highs reach 70–80°F (25–30°C) during the day, but nights can be cool (and it may freeze at higher elevations). During spring and fall, daytime highs range from 30–60°F (0–20°C), with overnight lows",
+          "numberOfSitesReservable": "273",
+          "numberOfSitesFirstComeFirstServe": "0"
+        },
+        {
+          "id": "64ABF507-2DCD-4FE4-90B9-F2C5636D4B52",
+          "name": "Fishing Bridge RV Park",
+          "url": "https://www.nps.gov/yell/planyourvisit/fishingbridgecg.htm",
+          "description": "Fishing Bridge RV Park—elevation 7,800 feet (2377 m)—is located near the Yellowstone River where it exits Yellowstone Lake on its way toward the Grand Canyon of the Yellowstone. Only campground in Yellowstone to offer water, sewer, and electrical hookups. Because grizzly bears frequent the area, no tents or tent campers are allowed. Yellowstone National Park Lodges provides reservations for this campground.",
+          "reservationUrl": "https://secure.yellowstonenationalparklodges.com/booking/lodging",
+          "weatherOverview": "Yellowstone's weather can vary greatly within a day and throughout the park. Snow can fall every month of the year. Summer highs reach 70–80°F (25–30°C) during the day, but nights can be cool (and it may freeze at higher elevations). During spring and fall, daytime highs range from 30–60°F (0–20°C), with overnight lows",
+          "numberOfSitesReservable": "310",
+          "numberOfSitesFirstComeFirstServe": "0"
+        },
+        {
+          "id": "E8EB610A-8BBA-490F-BC39-CBCB28909F20",
+          "name": "Grant Village Campground",
+          "url": "https://www.nps.gov/yell/planyourvisit/grantcg.htm",
+          "description": "Grant Campground—elevation 7,800 feet (2377 m)—is located in Grant Village, just off the Grand Loop Road at the south end of Yellowstone Lake. It is one of the larger campgrounds in the park. Group and wheel-chair accessible sites are available. Nearby there are stores, a restaurant, gas station, visitor center, and boat ramp. Yellowstone National Park Lodges provides reservations for this campground.",
+          "reservationUrl": "https://secure.yellowstonenationalparklodges.com/booking/lodging",
+          "weatherOverview": "Yellowstone's weather can vary greatly within a day and throughout the park. Snow can fall every month of the year. Summer highs reach 70–80°F (25–30°C) during the day, but nights can be cool (and it may freeze at higher elevations). During spring and fall, daytime highs range from 30–60°F (0–20°C), with overnight lows",
+          "numberOfSitesReservable": "430",
+          "numberOfSitesFirstComeFirstServe": "0"
+        },
+        {
+          "id": "31A8FCDE-C07A-465F-BABA-0AD338ED9938",
+          "name": "Indian Creek Campground",
+          "url": "https://www.nps.gov/yell/planyourvisit/indiancreekcg.htm",
+          "description": "Located about eight miles south of Mammoth Hot Springs on the road to Norris, Indian Creek Campground—elevation 7,300 feet (2225 m)—sits near the base of the Gallatin Mountains and offers breathtaking views of Electric Peak. The area offers easy access to fishing and hiking. The campground is away from the main road and provides a quieter, more primitive, experience than many other locations. This is a reservable campground run by the National Park Service.",
+          "reservationUrl": "https://www.recreation.gov/camping/campgrounds/259304",
+          "weatherOverview": "Yellowstone's weather can vary greatly within a day and throughout the park. Snow can fall every month of the year. Summer highs reach 70–80°F (25–30°C) during the day, but nights can be cool (and it may freeze at higher elevations). During spring and fall, daytime highs range from 30–60°F (0–20°C), with overnight lows",
+          "numberOfSitesReservable": "70",
+          "numberOfSitesFirstComeFirstServe": "0"
+        },
+        {
+          "id": "86643A75-55AF-4A7F-ADD1-DE35E379BB7F",
+          "name": "Lewis Lake Campground",
+          "url": "https://www.nps.gov/yell/planyourvisit/lewislakecg.htm",
+          "description": "Lewis Lake Campground—elevation 7,800 ft (2377 m)—is about eight miles from the South Entrance and a short walk from the southeast shore of Lewis Lake. A boat ramp is located near the campground information and registration area. Canoes, kayaks, and motor boats are allowed on Lewis Lake. Boat permits and an aquatic invasive species inspection performed by park staff are required. This is a reservable campground run by the National Park Service.",
+          "reservationUrl": "https://www.recreation.gov/camping/campgrounds/259309",
+          "weatherOverview": "Yellowstone's weather can vary greatly within a day and throughout the park. Snow can fall every month of the year. Summer highs reach 70–80°F (25–30°C) during the day, but nights can be cool (and it may freeze at higher elevations). During spring and fall, daytime highs range from 30–60°F (0–20°C), with overnight lows",
+          "numberOfSitesReservable": "85",
+          "numberOfSitesFirstComeFirstServe": "0"
+        },
+        {
+          "id": "66DFF49B-F1DC-49BB-A3CF-9F007330450D",
+          "name": "Madison Campground",
+          "url": "https://www.nps.gov/yell/planyourvisit/madisoncg.htm",
+          "description": "Madison Campground—elevation 6,800 feet (2073 m)—sits about 14 miles east from the town of West Yellowstone and 16 miles north of Old Faithful. Nearby, the Gibbon and Firehole rivers join to form the Madison River. In early summer, meadows teem with wildflowers and bison. In September and October, you can often hear bugling elk. Yellowstone National Park Lodges provides reservations for this campground.",
+          "reservationUrl": "https://secure.yellowstonenationalparklodges.com/booking/lodging",
+          "weatherOverview": "Yellowstone's weather can vary greatly within a day and throughout the park. Snow can fall every month of the year. Summer highs reach 70–80°F (25–30°C) during the day, but nights can be cool (and it may freeze at higher elevations). During spring and fall, daytime highs range from 30–60°F (0–20°C), with overnight lows",
+          "numberOfSitesReservable": "278",
+          "numberOfSitesFirstComeFirstServe": "0"
+        },
+        {
+          "id": "5B664E0A-C138-40B1-BAD2-17E27200DFD9",
+          "name": "Mammoth Campground",
+          "url": "https://www.nps.gov/yell/planyourvisit/mammothhscg.htm",
+          "description": "The only campground in the park open year-round, Mammoth Campground—elevation 6,200 feet (1890 m)—is located five miles south of the park's North Entrance. Scattered juniper and Douglas fir trees provide shade during hot summer months. The campground is close to fishing, hiking, and the Mammoth Hot Springs. Great wildlife viewing opportunities abound with elk and bison occasionally passing through the campground. The campground is run by the NPS.",
+          "reservationUrl": "https://www.recreation.gov/camping/campgrounds/247571",
+          "weatherOverview": "Yellowstone's weather can vary greatly within a day and throughout the park. Snow can fall every month of the year. Summer highs reach 70–80°F (25–30°C) during the day, but nights can be cool (and it may freeze at higher elevations). During spring and fall, daytime highs range from 30–60°F (0–20°C), with overnight lows",
+          "numberOfSitesReservable": "85",
+          "numberOfSitesFirstComeFirstServe": "0"
+        },
+        {
+          "id": "6B63B182-983C-41D9-82F7-F879170A3517",
+          "name": "Norris Campground",
+          "url": "https://www.nps.gov/yell/planyourvisit/norrishscg.htm",
+          "description": "Norris has been closed to the public for five years and will remain closed for the foreseeable future. Due to Norris’ remote location, the park does not have the staffing required to effectively respond to emergency incidents (law enforcement, emergency medical services etc.) and facility maintenance and repairs. For this reason, we have removed it from Yellowstone’s website and publications.",
+          "reservationUrl": "",
+          "weatherOverview": "Yellowstone's weather can vary greatly within a day and throughout the park. Snow can fall every month of the year. Summer highs reach 70–80°F (25–30°C) during the day, but nights can be cool (and it may freeze at higher elevations). During spring and fall, daytime highs range from 30–60°F (0–20°C), with overnight lows",
+          "numberOfSitesReservable": "112",
+          "numberOfSitesFirstComeFirstServe": "0"
+        },
+        {
+          "id": "FB8D1AFA-AD1F-48F1-AFF4-B649857B6D61",
+          "name": "Pebble Creek Campground",
+          "url": "https://www.nps.gov/yell/planyourvisit/pebblecreekcg.htm",
+          "description": "Pebble Creek Campground was significantly impacted by the 2022 floods and will remain CLOSED until further notice for flood recovery work.",
+          "reservationUrl": "https://www.recreation.gov/camping/campgrounds/259307",
+          "weatherOverview": "Yellowstone's weather can vary greatly within a day and throughout the park. Snow can fall every month of the year. Summer highs reach 70–80°F (25–30°C) during the day, but nights can be cool (and it may freeze at higher elevations). During spring and fall, daytime highs range from 30–60°F (0–20°C), with overnight lows",
+          "numberOfSitesReservable": "27",
+          "numberOfSitesFirstComeFirstServe": "0"
+        },
+        {
+          "id": "827FE6FC-C9A3-4543-93A5-F3150E009DDF",
+          "name": "Slough Creek Campground",
+          "url": "https://www.nps.gov/yell/planyourvisit/sloughcreekcg.htm",
+          "description": "Near some of the best wildlife watching opportunities in the park. Located at the end of a two-mile dirt road, this campground is best suited for tents and small RVs. There are plenty of hiking and fishing opportunities in the area, including the Slough Creek Trail which begins nearby. Nighttime offers a quiet, unimpeded view of the stars and the possibility of hearing wolves howl. Elevation: 6,250 ft (1905 m). This is a reservable campground run by the National Park Service.",
+          "reservationUrl": "https://www.recreation.gov/camping/campgrounds/259310",
+          "weatherOverview": "Yellowstone's weather can vary greatly within a day and throughout the park. Snow can fall every month of the year. Summer highs reach 70–80°F (25–30°C) during the day, but nights can be cool (and it may freeze at higher elevations). During spring and fall, daytime highs range from 30–60°F (0–20°C), with overnight lows",
+          "numberOfSitesReservable": "16",
+          "numberOfSitesFirstComeFirstServe": "0"
+        },
+        {
+          "id": "6CB8E14E-8C58-414A-A764-CB117EB34B8C",
+          "name": "Tower Fall Campground",
+          "url": "https://www.nps.gov/yell/planyourvisit/towerfallcg.htm",
+          "description": "Tower Fall Campground—elevation 6,600 feet (2012 m)—is located on the north side of the steep, winding, road to Dunraven Pass. The campground is near the Tower General Store and Tower Fall. The Lamar Valley, with spectacular wildlife viewing opportunities, is located nearby as are several hiking trails. Roosevelt Lodge, a short drive from the campground, offers dining and horseback riding. This is a reservable campground run by the National Park Service.",
+          "reservationUrl": "",
+          "weatherOverview": "Yellowstone's weather can vary greatly within a day and throughout the park. Snow can fall every month of the year. Summer highs reach 70–80°F (25–30°C) during the day, but nights can be cool (and it may freeze at higher elevations). During spring and fall, daytime highs range from 30–60°F (0–20°C), with overnight lows",
+          "numberOfSitesReservable": "31",
+          "numberOfSitesFirstComeFirstServe": "0"
+        }
+      ],
+      "contentHash": "a08a8f878c173314941df55bba4b73f8072bfca35fd976892c60c717d4f78c9c"
+    },
+    {
+      "parkCode": "acad",
+      "slug": "acadia",
+      "name": "Acadia National Park",
+      "localName": "Acadia",
+      "designation": "National Park",
+      "states": "ME",
+      "url": "https://www.nps.gov/acad/index.htm",
+      "description": "Acadia National Park protects the natural beauty of the highest rocky headlands along the Atlantic coastline of the United States, an abundance of habitats, and a rich cultural heritage. At 4 million visits a year, it's one of the top 10 most-visited national parks in the United States. Visitors enjoy 27 miles of historic motor roads, 158 miles of hiking trails, and 45 miles of carriage roads.",
+      "weatherInfo": "Located on Mount Desert Island in Maine, Acadia experiences all four seasons. Summer temperatures range from 45-90F (7-30C). Fall temperatures range from 30-70F (-1-21C). Typically the first frost is in mid-October and first snowfall begins in November and can continue through April with an average accumulation of 73 inches (185 cm). Winter temperatures range from 14-35F (-10 - 2C). Spring temperatures range from 30-70F (-1-21C).",
+      "directionsInfo": "From Boston take I-95 north to Augusta, Maine, then Route 3 east to Ellsworth, and on to Mount Desert Island. For an alternate route, continue on I-95 north to Bangor, Maine, then take I-395 to U.S. Route 1A east to Ellsworth. In Ellsworth, take Route 3 to Mount Desert Island.",
+      "directionsUrl": "http://www.nps.gov/acad/planyourvisit/directions.htm",
+      "latLong": "lat:44.409286, long:-68.247501",
+      "addresses": [
+        {
+          "type": "Physical",
+          "line1": "25 Visitor Center Road",
+          "city": "Bar Harbor",
+          "stateCode": "ME",
+          "postalCode": "04609"
+        },
+        {
+          "type": "Mailing",
+          "line1": "PO Box 177",
+          "city": "Bar Harbor",
+          "stateCode": "ME",
+          "postalCode": "04609"
+        }
+      ],
+      "entranceFees": [
+        {
+          "title": "Timed Entry Reservation - Location",
+          "cost": "6.00",
+          "description": "Vehicle reservations are not required for any other areas of the park, or for visitors who enter the area by foot, bike, or taxi. Vehicle reservations provide a timed entry, but do not require a departure time until 9 pm, when the road clos"
+        },
+        {
+          "title": "Entrance - Private Vehicle",
+          "cost": "35.00",
+          "description": "Valid for seven days. Admits private, non-commercial vehicle (15 passenger capacity or less) and all occupants. This includes rental cars, RVs, and vans with fewer than 16 passengers. If the vehicle pass is purchased, no other pass is neces"
+        },
+        {
+          "title": "Entrance - Motorcycle",
+          "cost": "30.00",
+          "description": "Valid for 7 days. Admits up to 2 private, non-commercial motorcycles with up to 4 total passengers."
+        },
+        {
+          "title": "Entrance - Per Person",
+          "cost": "20.00",
+          "description": "Valid for seven days. Admits one individual with no car (bicyclist, hiker, pedestrian). Youth 15 and under are admitted free of charge."
+        },
+        {
+          "title": "Entrance - Education/Academic Groups",
+          "cost": "0.00",
+          "description": "School groups and other academic institutions may qualify for an Educational Fee Waiver. If not qualified, please check fees for large or commercial groups."
+        },
+        {
+          "title": "Entrance - Non-commercial Groups",
+          "cost": "0.00",
+          "description": "Groups entering Acadia by bus, van, or other high-capacity vehicles (16 people or more) must pay an organized group entrance fee. Adults (16 years old and over): $20/per person Youth (15 years old and under): Free"
+        }
+      ],
+      "operatingHours": [
+        {
+          "name": "Acadia National Park",
+          "description": "Acadia National Park is open year-round. Check our website for park facilities operating hours, such as Hulls Cove Visitor Center.",
+          "standardHours": {
+            "wednesday": "All Day",
+            "monday": "All Day",
+            "thursday": "All Day",
+            "sunday": "All Day",
+            "tuesday": "All Day",
+            "friday": "All Day",
+            "saturday": "All Day"
+          }
+        }
+      ],
+      "officialImages": [
+        {
+          "title": "Sunset atop Cadillac Mountain",
+          "altText": "A brilliant sunset filled with hues of blue, red, orange, magenta, and purple highlight the sky.",
+          "credit": "NPS / Kristi Rugg",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7B477B-1DD8-B71B-0BCB48E009241BAA.jpg"
+        },
+        {
+          "title": "Heavy snow-laden trees",
+          "altText": "Hiking tracks carved through three feet of snow wind through a heavy snow-laden forest.",
+          "credit": "NPS / Kristi Rugg",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7B4BEC-1DD8-B71B-0B2CF833F93140FF.jpg"
+        },
+        {
+          "title": "Acadia's rocky coastline",
+          "altText": "Large puffy clouds dot a brilliant blue sky as wave crash against the rocky coastline of Acadia.",
+          "credit": "NPS / Kristi Rugg",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7B45AE-1DD8-B71B-0B7EE131C7DFC2F5.jpg"
+        }
+      ],
+      "alerts": [
+        {
+          "id": "7EF83B4C-AD0D-4210-8CCB-BA035B6FB21B",
+          "title": "Several Trails Close For Peregrine Falcon Nesting Season",
+          "category": "Park Closure",
+          "url": "https://www.nps.gov/acad/planyourvisit/conditions.htm",
+          "description": "Effective March 1, areas including Jordan Cliffs Trail, Penobscot East Trail, Precipice Trail, and Valley Cove Trail are closed to protect nesting peregrine falcons. The parking lot for the Precipice Trail is also closed. Rangers strictly enforce closures.",
+          "lastIndexedDate": "2026-02-27 00:00:00.0"
+        }
+      ],
+      "visitorCenters": [
+        {
+          "id": "99B33FA9-2579-415C-B2C7-2A29879744F8",
+          "name": "Acadia Gateway Center",
+          "url": "https://www.mainetourism.com/listing/maine-state-visitor-information-center-trenton/10336/",
+          "description": "The Acadia Gateway Center is an intermodal transit and welcome center located on Route 3 in Trenton three miles north of Mount Desert Island. Facilities include an Island Explorer bus stop, day-use parking, and an 11,000-square-foot welcome center with tourism information, a store, waiting area, and restrooms. Owned by the State of Maine, it is operated by the Maine Department of Transportation in partnership with the National Park Service, Downeast Transportation Inc., and Maine Office of Touri",
+          "directionsInfo": "Located on Route 3 in Trenton, Maine three miles north of Mount Desert Island.",
+          "directionsUrl": "",
+          "addresses": [
+            {
+              "type": "Physical",
+              "line1": "Acadia Gateway Center",
+              "city": "Trenton",
+              "stateCode": "ME"
+            },
+            {
+              "type": "Mailing",
+              "line1": "Acadia Gateway Center",
+              "city": "Trenton",
+              "stateCode": "ME"
+            }
+          ]
+        },
+        {
+          "id": "2DC6EAAC-3718-4438-9630-85E55A3DA496",
+          "name": "Hulls Cove Visitor Center",
+          "url": "https://www.nps.gov/acad/planyourvisit/hours.htm",
+          "description": "Located close to Bar Harbor off Route 3, the Hulls Cove Visitor Center is Acadia’s main visitor contact station and transportation hub from May into October. It is a popular, and often crowded, first stop for many visitors. It is adjacent to an entrance for the park's iconic 27-mile Park Loop Road and it serves as a key stop for several routes on the fare-free Island Explorer bus system. From a large parking lot, visitors must climb 52 steps to the main entrance. There is a separate accessible e",
+          "directionsInfo": "Located off ME 3 in Hulls Cove (just north of Bar Harbor) Hulls Cove Visitor Center is at the top of the hill above the large parking lots. An accessible entrance is also available.",
+          "directionsUrl": "http://www.nps.gov/acad/planyourvisit/directions.htm",
+          "addresses": [
+            {
+              "type": "Physical",
+              "line1": "25 Visitor Center Road",
+              "city": "Bar Harbor",
+              "stateCode": "ME"
+            },
+            {
+              "type": "Mailing",
+              "line1": "PO Box 177",
+              "city": "Bar Harbor",
+              "stateCode": "ME"
+            }
+          ]
+        },
+        {
+          "id": "109BDB6B-C627-4C8D-87DA-A4F687E81BCE",
+          "name": "Islesford Historical Museum",
+          "url": "http://www.nps.gov/acad/planyourvisit/hours.htm",
+          "description": "The Islesford Historical Museum is expected to reopen in 2021 showcasing both the upgrades and a community-curated exhibit helping to tell the stories of the Cranberry Isles.",
+          "directionsInfo": "Accessible only by boat, Islesford Historical Museum is located to the left of the Town Pier in Islesford.",
+          "directionsUrl": "http://www.nps.gov/acad/planyourvisit/directions.htm",
+          "addresses": [
+            {
+              "type": "Physical",
+              "line1": "Little Cranberry Island",
+              "city": "Islesford",
+              "stateCode": "ME"
+            },
+            {
+              "type": "Mailing",
+              "line1": "PO Box 177",
+              "city": "Bar Harbor",
+              "stateCode": "ME"
+            }
+          ]
+        },
+        {
+          "id": "46CA9FEA-036F-42CC-9B75-48F0BF531F7F",
+          "name": "Schoodic Institute Welcome Center at Rockefeller Hall",
+          "url": "http://www.nps.gov/acad/planyourvisit/hours.htm",
+          "description": "The Schoodic Institute Welcome Center at Rockefeller Hall is located on Schoodic Peninsula off the one-way loop road. Exhibits about the old Navy base and park information can be found here.",
+          "directionsInfo": "Rockefeller Welcome Center is located in the Schoodic District of Acadia. Follow ME 186 into Winter Harbor, and follow signs for the Schoodic Education and Research Center. Take Schoodic Loop Road to Arey Cove Drive, and take your first right onto Acadia Drive. Take your second left onto Atterbury Circle to park in the",
+          "directionsUrl": "http://www.nps.gov/acad/planyourvisit/directions.htm",
+          "addresses": [
+            {
+              "type": "Physical",
+              "line1": "9 Atterbury Circle",
+              "city": "Winter Harbor",
+              "stateCode": "ME"
+            },
+            {
+              "type": "Mailing",
+              "line1": "PO Box 177",
+              "city": "Bar Harbor",
+              "stateCode": "ME"
+            }
+          ]
+        },
+        {
+          "id": "CA752C71-AFF4-4599-AE84-DEDFE0A21EAA",
+          "name": "Sieur de Monts Nature Center",
+          "url": "http://www.nps.gov/acad/planyourvisit/hours.htm",
+          "description": "Sieur de Monts Nature Center has visitor services, hiking information, and interactive exhibits. It acts as a trailhead for many hiking trails starting in the Sieur de Monts area. Park rangers are present during the spring, summer, and fall months.",
+          "directionsInfo": "Sieur de Monts Nature Center can be accessed from Park Loop Road as well as ME 3 (Main Street) south of Bar Harbor. Follow park signs.",
+          "directionsUrl": "http://www.nps.gov/acad/planyourvisit/directions.htm",
+          "addresses": [
+            {
+              "type": "Physical",
+              "line1": "47 Sweet Water Circle",
+              "city": "Bar Harbor",
+              "stateCode": "ME"
+            },
+            {
+              "type": "Mailing",
+              "line1": "PO Box 177",
+              "city": "Bar Harbor",
+              "stateCode": "ME"
+            }
+          ]
+        },
+        {
+          "id": "373CC760-48E2-4CD7-884A-50262FC3B560",
+          "name": "Winter Information: Bar Harbor Chamber of Commerce",
+          "url": "https://www.nps.gov/acad/planyourvisit/winter.htm",
+          "description": "During winter and spring, information and sales of some passes are available at the Bar Harbor Chamber of Commerce, 2 Cottage Street, at the corner of Cottage and Main streets (GPS coordinates = 44.398633, -68.204933). The center is open 7 days a week from 8 am to 4 pm. There will be full-day holiday closures on Thanksgiving, Christmas Eve, Christmas Day, New Year's Eve, and New Year's Day.",
+          "directionsInfo": "2 Cottage Street, at the corner of Cottage and Main streets (GPS coordinates = 44.398633, -68.204933).",
+          "directionsUrl": "",
+          "addresses": [
+            {
+              "type": "Physical",
+              "line1": "2 Cottage Street",
+              "city": "Bar Harbor",
+              "stateCode": "ME"
+            },
+            {
+              "type": "Mailing",
+              "line1": "PO Box 177",
+              "city": "Bar Harbor",
+              "stateCode": "ME"
+            }
+          ]
+        }
+      ],
+      "campgrounds": [
+        {
+          "id": "6E127BF1-F2A9-4C59-90FA-C4BED53EA7F5",
+          "name": "Blackwoods Campground",
+          "url": "https://www.nps.gov/acad/planyourvisit/blackwoods-campground.htm",
+          "description": "Blackwoods Campground is located on the east side of Mount Desert Island, about 5 miles (8 km) south of Bar Harbor on Route 3. All sites at Blackwoods are wooded and within a 10-minute walk of the ocean. The majority of Blackwoods' sites are for small and large tents; other sites can accommodate travelers with RVs. Flush toilets, running water, and a dump station are provided, as are picnic tables and fire rings. Roads are paved.",
+          "reservationUrl": "https://www.recreation.gov/camping/campgrounds/232508",
+          "weatherOverview": "For seasonal weather conditions, check https://www.nps.gov/acad/planyourvisit/weather.htm.",
+          "numberOfSitesReservable": "281",
+          "numberOfSitesFirstComeFirstServe": "0"
+        },
+        {
+          "id": "C1388F86-68A9-4C1C-85C2-193CD4BD3EE1",
+          "name": "Duck Harbor Campground",
+          "url": "https://www.nps.gov/acad/planyourvisit/duckharbor.htm",
+          "description": "Duck Harbor Campground is located on Isle au Haut, a rugged island off the coast of Stonington, Maine. This campground has five sites with lean-to shelters and is a great launch point for paddling excursions. Remote and inaccessible to automobiles, Isle au Haut is linked to the mainland by mailboat.",
+          "reservationUrl": "https://www.recreation.gov/camping/campgrounds/264293",
+          "weatherOverview": "",
+          "numberOfSitesReservable": "5",
+          "numberOfSitesFirstComeFirstServe": "0"
+        },
+        {
+          "id": "B2B52195-15AB-4E9E-B441-0694F4193585",
+          "name": "Schoodic Woods Campground",
+          "url": "https://www.nps.gov/acad/planyourvisit/camping.htm",
+          "description": "Schoodic Woods Campground is the newest campground in the park and located 1.5 miles (2.5 km) southeast of Winter Harbor on the Schoodic Peninsula. It is approximately 60-70 minutes from Bar Harbor and other areas of Mount Desert Island.",
+          "reservationUrl": "https://www.recreation.gov/camping/campgrounds/251833",
+          "weatherOverview": "For complete weather information, please see https://www.nps.gov/acad/planyourvisit/weather.htm.",
+          "numberOfSitesReservable": "89",
+          "numberOfSitesFirstComeFirstServe": "0"
+        },
+        {
+          "id": "B530C7AD-249F-4632-B78F-3CE8C9F3DBDA",
+          "name": "Seawall Campground",
+          "url": "https://www.nps.gov/acad/planyourvisit/seawall-campground.htm",
+          "description": "Seawall Campground is located on the west side of Mount Desert Island about 4 miles (6 km) south of Southwest Harbor. The campground is approximately 18 miles from Bar Harbor. All sites at Seawall are within a short walking distance of the coastline.",
+          "reservationUrl": "https://www.recreation.gov/camping/campgrounds/234674",
+          "weatherOverview": "",
+          "numberOfSitesReservable": "202",
+          "numberOfSitesFirstComeFirstServe": "0"
+        }
+      ],
+      "contentHash": "061995cceee64e9fc122121eeb97edaf48f1a3dd26eb137d237fa187fee90704"
+    }
+  ]
+}

@@ -7,6 +7,7 @@ import { next100Posts } from "./editorial-next100.mjs";
 
 const root = process.cwd();
 const site = JSON.parse(await readFile(join(root, "data/site-content.json"), "utf8"));
+const npsCache = JSON.parse(await readFile(join(root, "data/nps-cache.json"), "utf8"));
 const filterSlugs = ["easy-flat-trails", "trails-under-2-miles", "kid-friendly"];
 const ARTICLE_TARGET = 300;
 const FRESH_TARGET = 100;
@@ -17,6 +18,7 @@ const publishedApprovalPosts = approvalPosts.filter((post) => !post.publishAt ||
 const approvalArticlePaths = approvalPosts.map((post) => `us-trails/articles/${post.slug}.html`);
 const publishedApprovalArticlePaths = publishedApprovalPosts.map((post) => `us-trails/articles/${post.slug}.html`);
 const origin = "https://gradienttrail.com";
+const npsOfficialPaths = (npsCache.parks || []).map((park) => `us-trails/parks/${park.slug}/official-planning.html`);
 
 function cleanPublicPath(pathFromRoot) {
   if (pathFromRoot === "index.html") return "";
@@ -33,12 +35,15 @@ function publicUrl(pathFromRoot = "") {
 const requiredFiles = [
   "favicon.svg",
   "vercel.json",
+  ".github/workflows/nps-sync.yml",
   "ads.txt",
   "robots.txt",
   "sitemap.xml",
   "feed.xml",
   "llms.txt",
   "data/site-content.json",
+  "data/nps-cache.json",
+  "data/nps-sync-summary.json",
   "index.html",
   "us-trails/Blog.html",
   "us-trails/trails.html",
@@ -58,6 +63,7 @@ const requiredFiles = [
   "editorial-policy.html",
   "disclaimer.html",
   "blog/index.html",
+  ...npsOfficialPaths,
   ...approvalArticlePaths,
   ...site.parks.map((park) => `us-trails/parks/${park.slug}.html`),
   ...site.parks.flatMap((park) => filterSlugs.map((filter) => `us-trails/parks/${park.slug}/${filter}.html`)),
@@ -92,11 +98,34 @@ const editorialPolicy = await readFile(join(root, "editorial-policy.html"), "utf
 const disclaimer = await readFile(join(root, "disclaimer.html"), "utf8");
 const adsTxt = await readFile(join(root, "ads.txt"), "utf8");
 const vercelConfig = JSON.parse(await readFile(join(root, "vercel.json"), "utf8"));
+const npsWorkflow = await readFile(join(root, ".github/workflows/nps-sync.yml"), "utf8");
 const blogIndex = await readFile(join(root, "blog/index.html"), "utf8");
+const npsOfficialPages = await Promise.all(
+  npsOfficialPaths.map(async (path) => [path, await readFile(join(root, path), "utf8")])
+);
 const articleDirFiles = (await readdir(join(root, "us-trails/articles"))).filter((file) => file.endsWith(".html"));
 const approvalArticles = await Promise.all(
   approvalArticlePaths.map(async (path) => [path, await readFile(join(root, path), "utf8")])
 );
+
+async function collectHtmlFiles(dirFromRoot) {
+  const dir = join(root, dirFromRoot);
+  const entries = await readdir(dir, { withFileTypes: true });
+  const files = [];
+  for (const entry of entries) {
+    const rel = dirFromRoot ? `${dirFromRoot}/${entry.name}` : entry.name;
+    if (entry.isDirectory()) {
+      if (entry.name === ".git" || entry.name === ".goal-harness" || entry.name === ".omx" || entry.name === "node_modules") continue;
+      files.push(...await collectHtmlFiles(rel));
+    } else if (entry.isFile() && entry.name.endsWith(".html")) {
+      files.push(rel.replace(/\\/g, "/"));
+    }
+  }
+  return files;
+}
+
+const allHtmlFiles = await collectHtmlFiles("");
+const allHtmlPages = await Promise.all(allHtmlFiles.map(async (path) => [path, await readFile(join(root, path), "utf8")]));
 
 function normalize(value) {
   return String(value || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim().replace(/\s+/g, " ");
@@ -340,7 +369,8 @@ const trustPagesSubstantiveOk = [about, contact, privacy, terms, editorialPolicy
   .every((content) => visibleLength(content) >= 900 && /Reader safety first/.test(content) && /Editorial corrections accepted/.test(content));
 
 const adsenseLoaderCount = (content) => (content.match(/pagead2\.googlesyndication\.com\/pagead\/js\/adsbygoogle\.js/g) || []).length;
-const primaryPublicPages = [home, blogIndex, article, about, contact, privacy, terms, editorialPolicy, disclaimer, trails, parks, calculator, compare, methodology];
+const npsOfficialPageContents = npsOfficialPages.map(([, content]) => content);
+const primaryPublicPages = [home, blogIndex, article, about, contact, privacy, terms, editorialPolicy, disclaimer, trails, parks, calculator, compare, methodology, ...npsOfficialPageContents];
 const publicPagesHaveSingleLoader = primaryPublicPages
   .every((content) => adsenseLoaderCount(content) === 1);
 const publicPagesHaveRssDiscovery = primaryPublicPages
@@ -354,6 +384,7 @@ const publicPagesHaveSingleGa4 = primaryPublicPages
 const cleanSitemapOk = /<loc>https:\/\/gradienttrail\.com\/<\/loc>/.test(sitemap)
   && /<loc>https:\/\/gradienttrail\.com\/blog\/<\/loc>/.test(sitemap)
   && publishedApprovalArticlePaths.every((path) => sitemap.includes(`<loc>${publicUrl(path)}</loc>`))
+  && npsOfficialPaths.every((path) => sitemap.includes(`<loc>${publicUrl(path)}</loc>`))
   && approvalArticlePaths.filter((path) => !publishedApprovalArticlePaths.includes(path)).every((path) => !sitemap.includes(`<loc>${publicUrl(path)}</loc>`))
   && !/\.html<\/loc>/.test(sitemap)
   && !/127\.0\.0\.1/.test(sitemap)
@@ -405,7 +436,8 @@ const indexablePublicPages = [
   ["privacy.html", privacy],
   ["terms.html", terms],
   ["editorial-policy.html", editorialPolicy],
-  ["disclaimer.html", disclaimer]
+  ["disclaimer.html", disclaimer],
+  ...npsOfficialPages
 ];
 
 const canonicalAndSitemapOk = indexablePublicPages.every(([path, content]) => {
@@ -464,8 +496,64 @@ const wwwRedirectOk = Array.isArray(vercelConfig.redirects)
     && Array.isArray(redirect.has)
     && redirect.has.some((rule) => rule.type === "host" && rule.value === "www.gradienttrail.com"));
 
+const sitemapUniqueOk = sitemapLocs.length === new Set(sitemapLocs).size;
+const canonicalUniqueOk = indexablePublicPages
+  .map(([, content]) => getCanonical(content))
+  .filter(Boolean).length === new Set(indexablePublicPages.map(([, content]) => getCanonical(content)).filter(Boolean)).size;
+
+const noManualAdSlotsOk = allHtmlPages.every(([, content]) => !/<ins\b[^>]*class=["'][^"']*adsbygoogle/i.test(content)
+  && !/data-ad-slot\s*=/.test(content)
+  && !/adsbygoogle\.push\s*\(/.test(content));
+
+const noindexPagesNoLoaderOk = allHtmlPages
+  .filter(([, content]) => /name="robots" content="noindex,follow"/.test(content))
+  .every(([, content]) => adsenseLoaderCount(content) === 0 && ga4LoaderCount(content) === 0);
+
+const npsCacheText = JSON.stringify(npsCache);
+const npsCacheSafeOk = npsCache.schemaVersion === 1
+  && npsCache.source === "National Park Service API"
+  && /^\d{4}-\d{2}-\d{2}T/.test(npsCache.fetchedAt || "")
+  && Array.isArray(npsCache.parks)
+  && npsCache.parks.length === site.parks.length
+  && npsCache.parks.every((park) => park.slug && park.parkCode && park.name && park.url?.startsWith("https://www.nps.gov/") && park.contentHash && Array.isArray(park.alerts) && Array.isArray(park.visitorCenters) && Array.isArray(park.campgrounds))
+  && !/api[_-]?key/i.test(npsCacheText);
+
+const npsWorkflowOk = /workflow_dispatch:/.test(npsWorkflow)
+  && /cron: "17 9 \* \* 1,4"/.test(npsWorkflow)
+  && /concurrency:/.test(npsWorkflow)
+  && /contents: write/.test(npsWorkflow)
+  && /NPS_API_KEY: \$\{\{ secrets\.NPS_API_KEY \}\}/.test(npsWorkflow)
+  && /npm run nps:fetch/.test(npsWorkflow)
+  && /npm run build:static && npm run check/.test(npsWorkflow)
+  && /steps\.nps_changed\.outputs\.changed == 'true'/.test(npsWorkflow);
+
+const npsOfficialPagesQualityOk = npsOfficialPages.length === npsCache.parks.length
+  && npsOfficialPages.every(([path, content]) => {
+    const park = npsCache.parks.find((item) => path.includes(`/parks/${item.slug}/`));
+    const canonical = getCanonical(content);
+    const visible = visibleLength(content);
+    return park
+      && canonical === publicUrl(path)
+      && sitemap.includes(`<loc>${canonical}</loc>`)
+      && !/noindex,follow/.test(content)
+      && visible >= 1800
+      && /Official data snapshot/.test(content)
+      && /How to use this official snapshot/.test(content)
+      && /Current alerts in the NPS snapshot/.test(content)
+      && /Visitor centers and planning stops/.test(content)
+      && /Campground logistics near route planning/.test(content)
+      && /Source and refresh note/.test(content)
+      && /Open official NPS page/.test(content)
+      && /National Park Service API documentation/.test(content)
+      && /current official|official NPS page|official park page/i.test(content)
+      && /"@type":"Dataset"/.test(content)
+      && /"@type":"BreadcrumbList"/.test(content)
+      && adsenseLoaderCount(content) === 1
+      && ga4LoaderCount(content) === 1;
+  });
+
 const headingStructureOk = indexablePublicPages.every(([, content]) => hasOrderedHeadings(content));
-const sitemapMetadataOk = sitemapLocs.length === 13 + publishedApprovalPosts.length
+const sitemapMetadataOk = sitemapLocs.length === 13 + npsOfficialPaths.length + publishedApprovalPosts.length
   && (sitemap.match(/<lastmod>\d{4}-\d{2}-\d{2}<\/lastmod>/g) || []).length === sitemapLocs.length
   && (sitemap.match(/<changefreq>/g) || []).length === sitemapLocs.length
   && (sitemap.match(/<priority>/g) || []).length === sitemapLocs.length;
@@ -496,15 +584,22 @@ const expectations = [
   ["generated pages noindex", /noindex,follow/.test(generatedTrail) && /noindex,follow/.test(generatedPark)],
   ["noindex pages omit adsense loader", adsenseLoaderCount(generatedTrail) === 0 && adsenseLoaderCount(generatedPark) === 0],
   ["sitemap clean approval URLs", cleanSitemapOk],
+  ["sitemap unique URLs", sitemapUniqueOk],
   ["sitemap metadata", sitemapMetadataOk],
   ["robots sitemap", /Sitemap:/.test(robots)],
   ["rss feed", feedOk],
+  ["unique canonicals", canonicalUniqueOk],
+  ["nps cache safe schema", npsCacheSafeOk],
+  ["nps workflow", npsWorkflowOk],
+  ["nps official pages quality", npsOfficialPagesQualityOk],
   ["llms expanded", llmsExpandedOk],
   ["rss discovery", publicPagesHaveRssDiscovery],
   ["site verification meta", publicPagesHaveVerificationMeta],
   ["ga4 tag", publicPagesHaveSingleGa4],
   ["ads txt", /google\.com, pub-3050601904412736, DIRECT, f08c47fec0942fa0/.test(adsTxt)],
   ["adsense loader", publicPagesHaveSingleLoader && /ca-pub-3050601904412736/.test(home) && /ca-pub-3050601904412736/.test(blogIndex) && /ca-pub-3050601904412736/.test(article)],
+  ["no manual adsense slots", noManualAdSlotsOk],
+  ["noindex pages omit tracking", noindexPagesNoLoaderOk],
   ["privacy ads disclosure", /Google/.test(privacy) && /cookies/.test(privacy) && /personalized advertising/.test(privacy)],
   ["trust pages substantive", trustPagesSubstantiveOk],
   ["article content", /Field takeaways/.test(article) && /Sources and verification notes/.test(article) && /Article/.test(article)],

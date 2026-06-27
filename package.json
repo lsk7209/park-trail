@@ -1,5 +1,7 @@
 {
   "scripts": {
+    "nps:fetch": "node scripts/fetch-nps-data.mjs",
+    "nps:sync": "node scripts/fetch-nps-data.mjs && node scripts/build-static-pages.mjs && node scripts/validate-static.mjs",
     "build:static": "node scripts/build-static-pages.mjs",
     "check": "node scripts/validate-static.mjs",
     "start": "python -m http.server 5173"
