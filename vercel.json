@@ -3,6 +3,16 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/us-trails/Blog",
+      "destination": "https://gradienttrail.com/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/us-trails/Blog.html",
+      "destination": "https://gradienttrail.com/blog/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [
         {

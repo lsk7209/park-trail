@@ -518,6 +518,11 @@ const wwwRedirectOk = Array.isArray(vercelConfig.redirects)
     && Array.isArray(redirect.has)
     && redirect.has.some((rule) => rule.type === "host" && rule.value === "www.gradienttrail.com"));
 
+const legacyBlogServerRedirectOk = Array.isArray(vercelConfig.redirects)
+  && ["/us-trails/Blog", "/us-trails/Blog.html"].every((source) => vercelConfig.redirects.some((redirect) => redirect.source === source
+    && redirect.destination === "https://gradienttrail.com/blog/"
+    && redirect.permanent === true));
+
 const sitemapUniqueOk = sitemapLocs.length === new Set(sitemapLocs).size;
 const canonicalUniqueOk = indexablePublicPages
   .map(([, content]) => getCanonical(content))
@@ -530,6 +535,22 @@ const noManualAdSlotsOk = allHtmlPages.every(([, content]) => !/<ins\b[^>]*class
 const noindexPagesNoLoaderOk = allHtmlPages
   .filter(([, content]) => /name="robots" content="noindex,follow"/.test(content))
   .every(([, content]) => adsenseLoaderCount(content) === 0 && ga4LoaderCount(content) === 0);
+
+const coreSchemaPages = [
+  home,
+  trails,
+  parks,
+  calculator,
+  compare,
+  methodology
+];
+const coreSchemaOk = coreSchemaPages.every((content) => /<script type="application\/ld\+json">/.test(content)
+  && /"@id":"https:\/\/gradienttrail\.com\/#organization"/.test(content)
+  && /"@id":"https:\/\/gradienttrail\.com\/#website"/.test(content));
+
+const homeHeroImageOk = /<img class="hero-media"[^>]+src="us-trails\/assets\/hero-gentle-trail\.png"[^>]+width="1536"[^>]+height="1024"[^>]+alt="[^"]+"/.test(home)
+  && /fetchpriority="high"/.test(home)
+  && /\.hero-media/.test(css);
 
 const npsCacheText = JSON.stringify(npsCache);
 const npsCacheSafeOk = npsCache.schemaVersion === 1
@@ -589,6 +610,7 @@ const expectations = [
   ["blog index", /Gentle trail planning guides/.test(blogIndex) && (blogIndex.match(/class="site-card post-index-card"/g) || []).length === publishedApprovalPosts.length],
   ["canonical and sitemap consistency", canonicalAndSitemapOk],
   ["www host redirect", wwwRedirectOk],
+  ["legacy blog server redirect", legacyBlogServerRedirectOk],
   ["meta keyword coverage", metaKeywordFrontOk],
   ["ordered heading structure", headingStructureOk],
   ["article source quality", sourceQualityOk],
@@ -622,6 +644,8 @@ const expectations = [
   ["adsense loader", publicPagesHaveSingleLoader && /ca-pub-3050601904412736/.test(home) && /ca-pub-3050601904412736/.test(blogIndex) && /ca-pub-3050601904412736/.test(article)],
   ["no manual adsense slots", noManualAdSlotsOk],
   ["noindex pages omit tracking", noindexPagesNoLoaderOk],
+  ["core page schema", coreSchemaOk],
+  ["home hero image asset", homeHeroImageOk],
   ["privacy ads disclosure", /Google/.test(privacy) && /cookies/.test(privacy) && /personalized advertising/.test(privacy)],
   ["trust pages substantive", trustPagesSubstantiveOk],
   ["article content", /Field takeaways/.test(article) && /Sources and verification notes/.test(article) && /Article/.test(article)],
