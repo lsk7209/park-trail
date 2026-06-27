@@ -480,6 +480,28 @@ const articleTrustSchemaOk = /"@type":"Person"/.test(article)
   && /"@type":"BreadcrumbList"/.test(article)
   && /Editorial review note/.test(article);
 
+const articleOfficialDepthSamples = [
+  "us-trails/articles/gentle-national-park-trails-first-time-visitors.html",
+  "us-trails/articles/how-to-read-national-park-trail-page.html",
+  "us-trails/articles/official-alerts-night-before-hike.html",
+  "us-trails/articles/yosemite-gentle-trail-first-day.html",
+  "us-trails/articles/zion-gentle-walk-shuttle-day.html",
+  "us-trails/articles/yellowstone-boardwalk-gentle-routes.html",
+  "us-trails/articles/grand-canyon-rim-gentle-walk.html",
+  "us-trails/articles/acadia-carriage-road-gentle-hike.html",
+  "us-trails/articles/rocky-mountain-lake-loop-easy.html"
+];
+const articleOfficialDepthOk = articleOfficialDepthSamples.every((path) => {
+  const content = approvalArticles.find(([articlePath]) => articlePath === path)?.[1] || "";
+  return /Official park data checkpoints/.test(content)
+    && /NPS data/.test(content)
+    && /official-planning\.html/.test(content)
+    && /Same-day official pages still control closures/.test(content)
+    && /alerts<\/span>/.test(content)
+    && /visitor centers<\/span>/.test(content)
+    && /campgrounds<\/span>/.test(content);
+});
+
 const llmsExpandedOk = /## Editorial method/.test(await readFile(join(root, "llms.txt"), "utf8"))
   && /## Source hierarchy/.test(await readFile(join(root, "llms.txt"), "utf8"))
   && /Do not treat Gradient Trail as affiliated/.test(await readFile(join(root, "llms.txt"), "utf8"));
@@ -604,6 +626,7 @@ const expectations = [
   ["trust pages substantive", trustPagesSubstantiveOk],
   ["article content", /Field takeaways/.test(article) && /Sources and verification notes/.test(article) && /Article/.test(article)],
   ["article trust schema", articleTrustSchemaOk],
+  ["representative article official data depth", articleOfficialDepthOk],
   ["article CTA and links", articleLinkStructureOk],
   ["article quality gates", articleQualityFailures.length === 0],
   ["next100 rendered enhanced quality", next100RenderedEnhancementFailures.length === 0],

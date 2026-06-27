@@ -64,6 +64,10 @@ function xmlEsc(value) {
   return esc(value);
 }
 
+function normalize(value) {
+  return String(value || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim().replace(/\s+/g, " ");
+}
+
 function cleanPublicPath(pathFromRoot) {
   if (pathFromRoot === "index.html") return "";
   if (pathFromRoot.endsWith("/index.html")) return pathFromRoot.slice(0, -"index.html".length);
@@ -320,6 +324,7 @@ function articleToc(post) {
   const answerBox = articleAnswerData(post);
   const fieldExample = articleFieldExampleData(post);
   const verificationChecklist = articleVerificationData(post);
+  const hasOfficialPanel = relevantNpsParksForPost(post).length > 0;
   const decisionToolTitle = post.decisionTool?.title || articleDecisionToolTitle(post);
   const items = [
     { heading: answerBox.title, label: "Quick answer" },
@@ -329,6 +334,7 @@ function articleToc(post) {
     { heading: decisionToolTitle, label: "Decision tool" },
     { heading: `${articleKeywords(post).main} quick questions`, label: "Quick questions" },
     { heading: verificationChecklist.title, label: "Verification checklist" },
+    ...(hasOfficialPanel ? [{ heading: "Official park data checkpoints", label: "Official data" }] : []),
     { heading: "Research evidence used", label: "Research evidence" },
     { heading: "Editorial review note", label: "Editorial review" },
     { heading: "How to use this guide on a real park day", label: "Park-day use" },
@@ -794,6 +800,60 @@ function articleResearchEvidence(post) {
   return `<aside class="panel research-evidence"><h2 id="research-evidence-used">Research evidence used</h2><p>${esc(evidence.source_interpretation_note || "Sources are interpreted by role before route advice is treated as useful.")}</p><div class="research-grid"><section><h3>Source roles</h3><ul class="source-list">${sources.map((source) => `<li><a href="${esc(source.href)}">${esc(source.id)}: ${esc(source.label)}</a> <span>${esc(source.source_role)} - checked ${esc(source.accessed || "2026-06-27")}</span></li>`).join("")}</ul></section><section><h3>Article-specific details</h3><ul class="takeaway-list">${details.map((detail) => `<li><b>${esc(detail.source_id)}</b>: ${esc(detail.claim)}</li>`).join("")}</ul></section></div><details class="research-runs"><summary>Research runs checked for this article</summary><ul>${runs.map((run) => `<li>${esc(run)}</li>`).join("")}</ul></details></aside>`;
 }
 
+function relevantNpsParksForPost(post) {
+  const officialParks = npsOfficialParks();
+  if (!officialParks.length) return [];
+  const haystack = normalize([
+    post.slug,
+    post.title,
+    post.subtitle,
+    post.dek,
+    post.readerJob,
+    post.mainKeyword,
+    ...(post.extendedKeywords || []),
+    ...(post.sections || []).map(([heading]) => heading)
+  ].flat().join(" "));
+  const direct = officialParks.filter(({ localPark, official }) => {
+    const names = [
+      localPark.name,
+      localPark.slug,
+      official.name,
+      official.localName,
+      official.parkCode
+    ].filter(Boolean).map(normalize);
+    return names.some((name) => name && haystack.includes(name));
+  });
+  if (direct.length) return direct.slice(0, 3);
+  if (post.slug === "gentle-national-park-trails-first-time-visitors") {
+    return officialParks.filter(({ localPark }) => ["yosemite", "zion", "grand-canyon"].includes(localPark.slug));
+  }
+  if (post.slug === "how-to-read-national-park-trail-page" || post.slug === "official-alerts-before-gentle-hikes" || post.slug === "official-alerts-night-before-hike") {
+    return officialParks.filter(({ localPark }) => ["yosemite", "yellowstone", "zion"].includes(localPark.slug));
+  }
+  if (post.cat === "parks" && post.structureType === "park_playbook") {
+    return officialParks.slice(0, 2);
+  }
+  return [];
+}
+
+function articleOfficialPlanningPanel(post, prefix) {
+  const relevant = relevantNpsParksForPost(post);
+  if (!relevant.length) return "";
+  const cards = relevant.map(({ localPark, official }) => {
+    const alert = official.alerts?.[0];
+    const center = official.visitorCenters?.[0];
+    const campground = official.campgrounds?.[0];
+    const decisionText = [
+      alert ? `Alert signal: ${alert.title}.` : "Alert signal: no current alert record was returned in the latest NPS snapshot.",
+      center ? `Planning stop: ${center.name}.` : "Planning stop: no visitor center record was returned in the latest NPS snapshot.",
+      campground ? `Overnight context: ${campground.name}.` : "Overnight context: no campground record was returned in the latest NPS snapshot."
+    ].join(" ");
+    return `<a class="site-card official-data-card" href="${prefix}${npsParkUrl(localPark)}"><div class="site-card-body"><span class="cat-badge">NPS data</span><h3>${esc(localPark.name)} official planning data</h3><p>${esc(decisionText)}</p><div class="mini-meta"><span>${official.alerts.length} alerts</span><span>${official.visitorCenters.length} visitor centers</span><span>${official.campgrounds.length} campgrounds</span></div></div></a>`;
+  }).join("");
+  const fetched = npsCache.fetchedAt ? `NPS API snapshot checked ${isoDate(npsCache.fetchedAt)}.` : "NPS API snapshot date was not recorded.";
+  return `<aside class="panel official-data-panel"><h2 id="official-park-data-checkpoints">Official park data checkpoints</h2><p>This article is stronger when its route advice is paired with current park-managed facts. Use these official-data pages to check alerts, visitor centers, campground context and NPS source links before treating the plan as ready.</p><div class="card-grid">${cards}</div><p class="trust">${esc(`${fetched} Same-day official pages still control closures, access details and safety-sensitive decisions.`)}</p></aside>`;
+}
+
 function articleVisualBlock(post) {
   const visual = post.visual || {
     type: "evidenceChecklist",
@@ -1144,6 +1204,7 @@ for (const post of approvalPosts) {
         ${articleDecisionTool(post)}
         ${articleFaq(post)}
         ${articleVerificationChecklist(post)}
+        ${articleOfficialPlanningPanel(post, prefix)}
         ${articleResearchEvidence(post)}
         ${articleEditorialNote(post)}
         <article class="panel"><h2 id="how-to-use-this-guide-on-a-real-park-day">How to use this guide on a real park day</h2><p>Use this article as a planning layer, not as the final authority. Start with the terrain idea explained here, compare it with the route's distance, gain, grade and surface, then open the official park page before you leave. If current alerts, weather, shuttle status, construction or accessibility details conflict with a comfortable plan, choose the official information and adjust the route.</p><p>For families and mixed-ability groups, make the decision at the pace of the least flexible person in the group. A route that looks efficient for one adult may still be the wrong choice if it has a hot return, uncertain surface, poor bailout options or facilities that do not match the day. The goal is not to collect a trail name. The goal is to arrive with a route that still makes sense when real conditions, energy and timing are considered together.</p></article>
