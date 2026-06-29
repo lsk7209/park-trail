@@ -1,11 +1,13 @@
 {
-  "changed": false,
-  "changedParks": [],
+  "changed": true,
+  "changedParks": [
+    "grand-canyon"
+  ],
   "parkCount": 6,
-  "alertCount": 17,
+  "alertCount": 16,
   "visitorCenterCount": 37,
   "campgroundCount": 42,
   "dryRun": false,
   "secretPrinted": false,
-  "generatedAt": "2026-06-27T04:51:02.813Z"
+  "generatedAt": "2026-06-29T13:15:46.046Z"
 }

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "source": "National Park Service API",
   "sourceDocs": "https://www.nps.gov/subjects/developer/api-documentation.htm",
-  "fetchedAt": "2026-06-27T04:45:29.695Z",
+  "fetchedAt": "2026-06-29T13:15:46.046Z",
   "parkCodes": [
     "yose",
     "grca",
@@ -12,12 +12,7 @@
     "acad"
   ],
   "changedParks": [
-    "yosemite",
-    "grand-canyon",
-    "rocky-mountain",
-    "zion",
-    "yellowstone",
-    "acadia"
+    "grand-canyon"
   ],
   "parks": [
     {
@@ -425,14 +420,6 @@
       ],
       "alerts": [
         {
-          "id": "BDFCE1FC-7EA1-4589-92D3-DD10F9BC599F",
-          "title": "APS Potential Public Safety Power Shutoff beginning June 27, 2026",
-          "category": "Caution",
-          "url": "https://www.aps.com/psps",
-          "description": "Arizona Public Service (APS) has announced the potential for a Public Safety Power Shutoff (PSPS) beginning Saturday, June 27, at 10 am due to forecasted critical fire weather, including strong winds that may affect electrical infrastructure. If implemented, APS estimates the outage could last approximately 30 hours, although the duration will depend on weather conditions and the time required to safely inspect and restore the electrical system. The outage may affect all of South Rim and the Inner Canyon.",
-          "lastIndexedDate": "2026-06-26 00:00:00.0"
-        },
-        {
           "id": "2CF15EBC-0800-4DF3-8179-B1579B6D4F57",
           "title": "Critical Backcountry Updates/Closures",
           "category": "Caution",
@@ -535,7 +522,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "375156a4c4190e7a788e1f851726ee2c9deda07a0d091116ad3b8892b90ba4bc"
+      "contentHash": "8efaa16139804836ce5b7a11679ada6574d094d0dd718216b255d5889eaf7f81"
     },
     {
       "parkCode": "romo",
