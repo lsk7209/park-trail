@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "source": "National Park Service API",
   "sourceDocs": "https://www.nps.gov/subjects/developer/api-documentation.htm",
-  "fetchedAt": "2026-06-29T13:15:46.046Z",
+  "fetchedAt": "2026-07-02T11:43:31.542Z",
   "parkCodes": [
     "yose",
     "grca",
@@ -12,7 +12,11 @@
     "acad"
   ],
   "changedParks": [
-    "grand-canyon"
+    "yosemite",
+    "grand-canyon",
+    "rocky-mountain",
+    "yellowstone",
+    "acadia"
   ],
   "parks": [
     {
@@ -99,10 +103,10 @@
       ],
       "officialImages": [
         {
-          "title": "Yosemite Falls on a Winter Morning",
-          "altText": "Two tall waterfalls flowing down snow covered granite walls.",
+          "title": "Half Dome",
+          "altText": "Granite dome with trace amounts of snow.",
           "credit": "NPS / Cindy Jacoby",
-          "url": "https://www.nps.gov/common/uploads/structured_data/3C84CC4C-1DD8-B71B-0BE967E5E5D93F25.jpg"
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C84CF74-1DD8-B71B-0B9C7FF83F7C68EB.jpg"
         },
         {
           "title": "Upper Yosemite Fall and Merced River in spring",
@@ -111,10 +115,10 @@
           "url": "https://www.nps.gov/common/uploads/structured_data/05383E91-AA28-2DDC-AB517507594F9FA6.jpg"
         },
         {
-          "title": "Rainbow over Half Dome",
-          "altText": "A rainbow over a mountain in the distance.",
-          "credit": "NPS / Bob Roney",
-          "url": "https://www.nps.gov/common/uploads/structured_data/3C84C6CF-1DD8-B71B-0B1C7CB883AA8FB1.jpg"
+          "title": "Cathedral Peak and Lake in Autumn",
+          "altText": "A mountain reflecting in a lake.",
+          "credit": "NPS / Cindy Jacoby",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C84C3C0-1DD8-B71B-0BFF90B64283C3D8.jpg"
         }
       ],
       "alerts": [
@@ -174,6 +178,16 @@
           "reservationUrl": "https://www.recreation.gov/camping/campgrounds/232453",
           "weatherOverview": "Yosemite National Park covers nearly 1,200 square miles (3,100 square km) in the Sierra Nevada, with elevations ranging from about 2,000 feet (600 m) to 13,000 ft (4,000 m). Yosemite receives 95% of its precipitation between October and May (and over 75% between November and March). Most of Yosemite is blanketed in sno",
           "numberOfSitesReservable": "110",
+          "numberOfSitesFirstComeFirstServe": "0"
+        },
+        {
+          "id": "784ADEC8-49C3-4939-A47D-197ADC701CD9",
+          "name": "Bridalveil Creek Horse Camp",
+          "url": "",
+          "description": "The Bridalveil Creek Horse Camp is within Bridalveil Creek Campground located along the Glacier Point Road near Bridalveil Creek and surrounded by a beautiful forest of red fir and lodgepole pine. At an elevation of 7,200 feet (2,200m) the campground is located 7 miles west of Glacier Point, 9 miles east of the Wawona Road turnoff. The spectacular views from Glacier Point are nearby, and numerous hiking trails are located along the Glacier Point Road. There are no services nearby.",
+          "reservationUrl": "https://www.recreation.gov/camping/campgrounds/10390880",
+          "weatherOverview": "Yosemite National Park covers nearly 1,200 square miles (3,100 square km) in the Sierra Nevada, with elevations ranging from about 2,000 feet (600 m) to 13,000 ft (4,000 m). Yosemite receives 95% of its precipitation between October and May (and over 75% between November and March). Most of Yosemite is blanketed in sno",
+          "numberOfSitesReservable": "3",
           "numberOfSitesFirstComeFirstServe": "0"
         },
         {
@@ -247,23 +261,23 @@
           "numberOfSitesFirstComeFirstServe": "0"
         },
         {
-          "id": "45D3FDD7-DB1F-4DCE-83BD-B5C6EFA683DD",
-          "name": "Tuolumne Horse Campsites",
-          "url": "https://www.nps.gov/yose/planyourvisit/tmhorsecamp.htm",
-          "description": "Tuolumne Meadows Horse Campsites are located within Tuolumne Meadows Campground in breathtaking Yosemite National Park in Central California's rugged Sierra Nevada Mountain Range at an elevation of 8,600 feet. The site is situated along the scenic Tioga Road just eight miles from the Tioga Pass Entrance Station and 55 miles from Yosemite Valley. Within Yosemite, visitors can gaze upon waterfalls, sheer granite cliffs, deep valleys, grand meadows, ancient giant sequoias, vast wilderness areas, an",
-          "reservationUrl": "https://www.recreation.gov/camping/campgrounds/10346420",
-          "weatherOverview": "Yosemite National Park covers nearly 1,200 square miles (3,100 square km) in the Sierra Nevada, with elevations ranging from about 2,000 feet (600 m) to 13,000 feet (4,000 m). Yosemite receives 95% of its precipitation between October and May (and over 75% between November and March). Most of Yosemite is blanketed in s",
-          "numberOfSitesReservable": "4",
-          "numberOfSitesFirstComeFirstServe": "0"
-        },
-        {
           "id": "793AAB2C-885E-44F7-A0A1-D64B37291338",
           "name": "Tuolumne Meadows Campground",
           "url": "https://www.nps.gov/yose/planyourvisit/tmcamp.htm",
-          "description": "Tuolumne Meadows Campground is Yosemite’s largest, and is located along the Tioga Road, with some areas located close to the Tuolumne River. At 8,000 feet (2,600 m) this campground is open seasonally and has wonderful summer access to many hikes, lakes, and prominent viewpoints. The campground is located approximately 1 hour and 30 minutes from Yosemite Valley but a small store, grill, and post office are located nearby in Tuolumne Meadows.",
+          "description": "Tuolumne Meadows Campground is Yosemite’s largest, and is located along the Tioga Road, with some areas located near the Tuolumne River. At 8,000 feet (2,600 m) this campground is open seasonally and has wonderful summer access to many hikes, lakes, and prominent viewpoints. The campground is located approximately 1 hour and 30 minutes from Yosemite Valley but a small store, grill, and post office are located nearby in Tuolumne Meadows.",
           "reservationUrl": "https://www.recreation.gov/camping/campgrounds/232448",
           "weatherOverview": "Yosemite National Park covers nearly 1,200 square miles (3,100 square km) in the Sierra Nevada, with elevations ranging from about 2,000 feet (600 m) to 13,000 ft (4,000 m). Yosemite receives 95% of its precipitation between October and May (and over 75% between November and March). Most of Yosemite is blanketed in sno",
           "numberOfSitesReservable": "289",
+          "numberOfSitesFirstComeFirstServe": "0"
+        },
+        {
+          "id": "45D3FDD7-DB1F-4DCE-83BD-B5C6EFA683DD",
+          "name": "Tuolumne Meadows Horse Camp",
+          "url": "https://www.nps.gov/yose/planyourvisit/tmhorsecamp.htm",
+          "description": "Tuolumne Meadows Horse Campsites are located within Tuolumne Meadows Campground along the Tioga Road. At 8,000 feet (2,600 m) this campground is open seasonally and has wonderful summer access to many hikes, lakes, and prominent viewpoints. The campground is located approximately 1 hour and 30 minutes from Yosemite Valley but a small store, grill, and post office are located nearby in Tuolumne Meadows.",
+          "reservationUrl": "https://www.recreation.gov/camping/campgrounds/10346420",
+          "weatherOverview": "Yosemite National Park covers nearly 1,200 square miles (3,100 square km) in the Sierra Nevada, with elevations ranging from about 2,000 feet (600 m) to 13,000 feet (4,000 m). Yosemite receives 95% of its precipitation between October and May (and over 75% between November and March). Most of Yosemite is blanketed in s",
+          "numberOfSitesReservable": "4",
           "numberOfSitesFirstComeFirstServe": "0"
         },
         {
@@ -317,7 +331,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "e222ebc8e82a6ebc087b1bcb3f880235e9f105d069f02893cd33216ac5cb6f3c"
+      "contentHash": "539443b1a43bb86a90f13f261035676867e874b245eb62d865558f82810e425e"
     },
     {
       "parkCode": "grca",
@@ -428,6 +442,14 @@
           "lastIndexedDate": "2026-06-26 00:00:00.0"
         },
         {
+          "id": "41A76F84-5574-47F6-96CD-60712D182370",
+          "title": "Fire activity in Walhalla Plateau area",
+          "category": "Danger",
+          "url": "",
+          "description": "Fire activity is occurring in the Walhalla Plateau area. There are no trail or area closures. Backcountry permits for the Walhalla Plateau are temporarily on hold.",
+          "lastIndexedDate": "2026-06-30 00:00:00.0"
+        },
+        {
           "id": "74D6113F-1B0B-4CB6-AEAF-E5BB6A6E2304",
           "title": "Stage 2 Fire Restrictions—HIGH FIRE DANGER",
           "category": "Danger",
@@ -522,7 +544,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "8efaa16139804836ce5b7a11679ada6574d094d0dd718216b255d5889eaf7f81"
+      "contentHash": "543c531c19e4c10ea9e3fe0fddd751d1a173aa9d6d813cc06ea908e14d0d7d9a"
     },
     {
       "parkCode": "romo",
@@ -602,40 +624,40 @@
       ],
       "officialImages": [
         {
-          "title": "Take a hike in May and early June",
-          "altText": "A person is using hiking poles and traction devices and hiking in snow",
-          "credit": "NPS Photo",
-          "url": "https://www.nps.gov/common/uploads/structured_data/25871823-F36D-9986-8C552F7496B7D557.jpg"
+          "title": "Scenic views of Tundra",
+          "altText": "Alpine wildflowers are blooming",
+          "credit": "NPS Photo/R.Williams",
+          "url": "https://www.nps.gov/common/uploads/structured_data/0772DCB5-BDCF-0571-AEE80FA1F2590755.jpg"
         },
         {
-          "title": "View Wildlife",
-          "altText": "A cow elk is walking in a meadow with two calves",
+          "title": "Trail Ridge Road at Rock Cut",
+          "altText": "Trail Ridge Road in summer",
           "credit": "NPS Photo",
-          "url": "https://www.nps.gov/common/uploads/structured_data/25DE2A3F-EF40-16CC-AB4645848692560C.jpg"
+          "url": "https://www.nps.gov/common/uploads/structured_data/0789A53A-D63E-EE37-DA2CEC07D73BFD97.jpg"
         },
         {
-          "title": "Visit Bear Lake",
-          "altText": "Two junior rangers are gazing at Bear Lake in late spring/early summer",
-          "credit": "NPS Photo",
-          "url": "https://www.nps.gov/common/uploads/structured_data/259CAEEE-BD13-92E2-C510A3F71BCBFA2F.jpg"
+          "title": "Elk calves on tundra in summer",
+          "altText": "Several elk cows and calves are grazing on tundra plants",
+          "credit": "NPS Photo/P.Baker",
+          "url": "https://www.nps.gov/common/uploads/structured_data/0795D6A9-B886-96E7-AB79EFE8FA3A3891.jpg"
         }
       ],
       "alerts": [
         {
-          "id": "48631016-A37E-4173-9321-62CD38A41AA7",
-          "title": "Status of Trail Ridge Road",
-          "category": "Information",
-          "url": "",
-          "description": "Trail Ridge Road (U.S. Hwy 34 inside Rocky Mountain National Park) is open to through travel. Timed Entry Reservations are required for Trail Ridge Road from 9 am to 2 pm. Updates are available on the recorded Trail Ridge Road Status Line at 970-586-1222. Updates are also available on the RMNP webpage and the official RMNP social media pages.",
-          "lastIndexedDate": "2026-05-29 00:00:00.0"
+          "id": "B425BE94-DB30-48D3-8EA8-51B9B235AC2E",
+          "title": "A Fire Ban (Stage 2 Fire Restrictions) Are In Effect",
+          "category": "Park Closure",
+          "url": "https://www.nps.gov/romo/learn/fire-information-and-regulations.htm",
+          "description": "Due to very high fire danger, the extended weather forecast, and current fire activity in the State of Colorado, Stage 2 Fire Restrictions are now in effect within Rocky Mountain National Park. When Stage 2 Fire Restrictions are in effect, this means that all campfires, including charcoal briquette fires are not permitted anywhere within Rocky Mountain National Park. This ban is effective beginning today, June 29, and will remain in effect until further notice.",
+          "lastIndexedDate": "2026-06-29 00:00:00.0"
         },
         {
           "id": "ECFDB7DF-3A9E-4043-9923-EDB5E4299E73",
           "title": "Update on Transponders",
-          "category": "Park Closure",
+          "category": "Information",
           "url": "https://www.nps.gov/romo/planyourvisit/transponder-devices.htm",
           "description": "Due to some unexpected technical issues that are impacting recent transponder sales and renewals, Rocky Mountain National Park is temporarily pausing the sale and renewal of transponder devices. Updates will be posted on the park webpage.",
-          "lastIndexedDate": "2026-05-26 00:00:00.0"
+          "lastIndexedDate": "2026-06-29 00:00:00.0"
         }
       ],
       "visitorCenters": [
@@ -880,7 +902,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "aecc6229a99ae2078dee7e95e9dbbfdb9c3cfe517f351d44adb402b5537ba9a9"
+      "contentHash": "eea0bb4ff8ee7fc7c1b1cfd8f6a5dbb4bea45da28722dcafc0b7bbe6edb932d4"
     },
     {
       "parkCode": "zion",
@@ -1139,7 +1161,7 @@
       "designation": "National Park",
       "states": "ID,MT,WY",
       "url": "https://www.nps.gov/yell/index.htm",
-      "description": "On March 1, 1872, Yellowstone became the first national park for all to enjoy the unique hydrothermal wonders. Today, millions of people come here each year to camp, hike, and enjoy the majesty of the park.",
+      "description": "",
       "weatherInfo": "Yellowstone's weather can vary quite a bit, even in a single day. In the summer, daytime highs can exceed 70°F (21°C), only to drop 20 or more degrees when a thunderstorm rolls through. It can snow during any month of the year, and winter lows frequently drop below 0°F (-18°C), especially at night. Bring a range of clothing options, including a warm jacket and rain gear, even in the summer.",
       "directionsInfo": "Yellowstone National Park covers nearly 3,500 square miles in the northwest corner of Wyoming (3% of the park is in Montana and 1% is in Idaho). Yellowstone has five entrance stations, and several are closed to regular vehicles during winter. It takes many hours to drive between these entrances, so be sure to check the status of roads at the entrance you intend to use while planning your trip and before you arrive.",
       "directionsUrl": "http://www.nps.gov/yell/planyourvisit/directions.htm",
@@ -1248,40 +1270,32 @@
       ],
       "officialImages": [
         {
-          "title": "Grand Prismatic Spring",
-          "altText": "Brilliant blues and greens of a hot spring ringed by oranges, yellows, reds, and browns.",
-          "credit": "NPS/Jim Peaco",
-          "url": "https://www.nps.gov/common/uploads/structured_data/3C7D5920-1DD8-B71B-0B83F012ED802CEA.jpg"
+          "title": "Electric Peak Sunset",
+          "altText": "The sun sets behind the sharp point of a snow-covered mountain; pink clouds are reflected in a pond",
+          "credit": "NPS / Jacob W. Frank",
+          "url": "https://www.nps.gov/common/uploads/structured_data/2815637A-9869-FC9C-99461D0B36AA1922.jpg"
         },
         {
-          "title": "Aurum Geyser",
-          "altText": "A crowd of people standing along a wooden boardwalk watches a geyser erupt.",
-          "credit": "NPS/Jim Peaco",
-          "url": "https://www.nps.gov/common/uploads/structured_data/3C7D2FBB-1DD8-B71B-0BED99731011CFCE.jpg"
+          "title": "Beehive Geyser Eruption",
+          "altText": "A geyser erupts steam in front of the bright sun.",
+          "credit": "NPS / Jacob W. Frank",
+          "url": "https://www.nps.gov/common/uploads/structured_data/28B56C01-ABED-ED7B-FDC8E6D3FC843D09.jpg"
         },
         {
-          "title": "Black Pool",
-          "altText": "A visitor stands on a boardwalk near a hot spring and a lake.",
-          "credit": "NPS/Diane Renkin",
-          "url": "https://www.nps.gov/common/uploads/structured_data/3C7D383B-1DD8-B71B-0BEC4A4D6BDF7CAD.jpg"
+          "title": "Bison in Lamar Valley",
+          "altText": "Bison graze in sage brush",
+          "credit": "NPS / Brett Raeburn",
+          "url": "https://www.nps.gov/common/uploads/structured_data/29EB105C-BCE3-4859-9B83F22E1091AA2F.jpg"
         }
       ],
       "alerts": [
         {
-          "id": "B0EBF84F-F50C-4137-A5F0-2DD81007839F",
-          "title": "Elk with Calves are Extremely Dangerous",
-          "category": "Caution",
-          "url": "https://www.nps.gov/yell/planyourvisit/safety.htm#elk",
-          "description": "Be alert, especially this time of year around Mammoth Hot Springs. Elk calves may be hidden close to buildings, under or next to vehicles, and around blind corners. You must remain at least 25 yards from all wildlife. If an elk charges, retreat!",
-          "lastIndexedDate": "2026-06-01 00:00:00.0"
-        },
-        {
-          "id": "B4BBEF6E-D53D-424F-984D-CEA54598BDEC",
-          "title": "Temporary Closure of Some Trails, Backcountry Campsites, and Fishing Areas",
+          "id": "75EAC129-65A2-4CDA-B29C-413502DD3A35",
+          "title": "Biscuit Basin Closed Due to Hydrothermal Explosion",
           "category": "Park Closure",
-          "url": "https://www.nps.gov/yell/learn/news/26008.htm",
-          "description": "Certain trails, backcountry campsites, and fishing areas in the western part of the park near Biscuit Basin are closed until further notice to allow for an investigation following a bear-caused human injury.",
-          "lastIndexedDate": "2026-05-05 00:00:00.0"
+          "url": "https://www.nps.gov/yell/images/Biscuit_Basin_Closure_Map_20250529_1.png",
+          "description": "The parking lot, boardwalk, and Firehole River at Biscuit Basin, located north of Old Faithful, is closed to all travel until further notice due to the possibility of another event at the site of a hydrothermal explosion that occurred July 23, 2024.",
+          "lastIndexedDate": "2026-07-01 00:00:00.0"
         },
         {
           "id": "57EFE369-9186-400A-8F18-0E966993B8A3",
@@ -1666,7 +1680,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "a08a8f878c173314941df55bba4b73f8072bfca35fd976892c60c717d4f78c9c"
+      "contentHash": "4d1ae76efcef25d2b8b5b801effa38271e47718f12b63f37d9066ab3d389c908"
     },
     {
       "parkCode": "acad",
@@ -1765,6 +1779,14 @@
         }
       ],
       "alerts": [
+        {
+          "id": "5916109A-4B06-47C9-9DAF-53855BEA2EEC",
+          "title": "Extreme Heat Advisory",
+          "category": "Danger",
+          "url": "",
+          "description": "The National Weather Service has issued extreme heat warnings and advisories for Wednesday, July 1, through Friday, July 3, which will produce dangerous conditions. Some people will face a higher risk of heat-related illness due to underlying medical conditions or certain activities. Dress cool, stay hydrated, and limit exertion. Watch for dizziness, nausea, headaches, shortness of breath, confusion, rapid pulse, and fainting. If you or someone else experiences signs of heat stroke, call 911 immediately.",
+          "lastIndexedDate": "2026-07-02 00:00:00.0"
+        },
         {
           "id": "7EF83B4C-AD0D-4210-8CCB-BA035B6FB21B",
           "title": "Several Trails Close For Peregrine Falcon Nesting Season",
@@ -1950,7 +1972,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "061995cceee64e9fc122121eeb97edaf48f1a3dd26eb137d237fa187fee90704"
+      "contentHash": "b74ae434640e6776aaebce00379feff538fbc15b0f8dff925c0e12a678d63beb"
     }
   ]
 }
