@@ -537,6 +537,13 @@ const noindexPagesNoLoaderOk = allHtmlPages
   .filter(([, content]) => /name="robots" content="noindex,follow"/.test(content))
   .every(([, content]) => adsenseLoaderCount(content) === 0 && ga4LoaderCount(content) === 0);
 const skimlinksLoaderOk = allHtmlPages.every(([, content]) => skimlinksLoaderCount(content) === 1);
+const affiliateDisclosureOk = allHtmlPages.every(([, content]) => /may be affiliate-enabled through Skimlinks/.test(content))
+  && /Affiliate links/.test(privacy)
+  && /Affiliate independence/.test(editorialPolicy)
+  && approvalArticles.every(([, content]) => /Planning resources and affiliate disclosure/.test(content)
+    && /class="affiliate-disclosure"/.test(content)
+    && /rel="sponsored noopener"/.test(content)
+    && /https:\/\/www\.rei\.com\//.test(content));
 
 const coreSchemaPages = [
   home,
@@ -645,6 +652,7 @@ const expectations = [
   ["ads txt", /google\.com, pub-3050601904412736, DIRECT, f08c47fec0942fa0/.test(adsTxt)],
   ["adsense loader", publicPagesHaveSingleLoader && /ca-pub-3050601904412736/.test(home) && /ca-pub-3050601904412736/.test(blogIndex) && /ca-pub-3050601904412736/.test(article)],
   ["skimlinks loader", skimlinksLoaderOk],
+  ["affiliate disclosure and resources", affiliateDisclosureOk],
   ["no manual adsense slots", noManualAdSlotsOk],
   ["noindex pages omit tracking", noindexPagesNoLoaderOk],
   ["core page schema", coreSchemaOk],
@@ -659,7 +667,7 @@ const expectations = [
   ["next100 rendered enhanced quality", next100RenderedEnhancementFailures.length === 0],
   ["all approval articles enhanced quality", approvalRenderedEnhancementFailures.length === 0],
   ["all approval article pattern diversity", approvalPatternDiversityOk],
-  ["topo tokens", /--pine:/.test(css) && /--blaze:/.test(css)],
+  ["topo tokens", /--pine:/.test(css) && /--blaze:/.test(css) && /affiliate-resource-panel/.test(css)],
   ["shared layout css", /hero-shell/.test(css) && /list-row/.test(css)],
   ["sample categories", /catOrder/.test(data) && /seasonal/.test(data) && (data.match(/"href": "articles\//g) || []).length === publishedApprovalPosts.length],
   ["site data", /"trails"/.test(siteData) && /"parks"/.test(siteData)]

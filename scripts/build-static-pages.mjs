@@ -16,6 +16,7 @@ const publishedApprovalPosts = approvalPosts.filter((post) => !post.publishAt ||
 const adsenseClient = process.env.ADSENSE_CLIENT || "ca-pub-3050601904412736";
 const ga4Id = process.env.GA4_ID || "G-JXKB19KWYF";
 const skimlinksPublisherScript = '<script type="text/javascript" src="https://s.skimresources.com/js/305683X1793900.skimlinks.js"></script>';
+const affiliateDisclosureText = "Some outbound gear, lodging or planning links may be affiliate-enabled through Skimlinks. Gradient Trail may earn a commission if you buy through those links, at no extra cost to you. Editorial route decisions stay independent.";
 const googleSiteVerification = "EWaJY7dnYLETiLKgkZp6yXSfY-b0EQJfDkKcr5OubcM";
 const naverSiteVerification = "1d1e74be2fc392a80a09240a8bbda0a3145084a8";
 
@@ -98,7 +99,7 @@ function header(prefix, active = "") {
 }
 
 function footer(prefix) {
-  return `<footer class="site-foot trust"><div class="wrap"><div><b>Gradient Trail</b><br>Terrain-first national park trail planning. Always verify current official park conditions before visiting.</div><nav class="foot-links" aria-label="Footer"><a href="${prefix}about.html">About</a><a href="${prefix}contact.html">Contact</a><a href="${prefix}privacy.html">Privacy</a><a href="${prefix}terms.html">Terms</a><a href="${prefix}editorial-policy.html">Editorial Policy</a><a href="${prefix}disclaimer.html">Disclaimer</a></nav></div></footer>`;
+  return `<footer class="site-foot trust"><div class="wrap"><div><b>Gradient Trail</b><br>Terrain-first national park trail planning. Always verify current official park conditions before visiting.<br><span class="affiliate-footnote">${esc(affiliateDisclosureText)}</span></div><nav class="foot-links" aria-label="Footer"><a href="${prefix}about.html">About</a><a href="${prefix}contact.html">Contact</a><a href="${prefix}privacy.html">Privacy</a><a href="${prefix}terms.html">Terms</a><a href="${prefix}editorial-policy.html">Editorial Policy</a><a href="${prefix}disclaimer.html">Disclaimer</a></nav></div></footer>`;
 }
 
 function schemaTag(schema) {
@@ -340,6 +341,7 @@ function articleToc(post) {
     { heading: "Research evidence used", label: "Research evidence" },
     { heading: "Editorial review note", label: "Editorial review" },
     { heading: "How to use this guide on a real park day", label: "Park-day use" },
+    { heading: "Planning resources and affiliate disclosure", label: "Planning resources" },
     { heading: "Where to go next on Gradient Trail", label: "Related links" },
     { heading: "Field takeaways", label: "Field takeaways" },
     { heading: "Sources and verification notes", label: "Sources" }
@@ -914,6 +916,43 @@ function articleCta(post, prefix) {
   return `<aside class="panel article-cta" aria-labelledby="route-planning-next-step"><h2 id="route-planning-next-step">Route planning next step</h2><p>Turn this guide into a practical shortlist before checking current official park conditions.</p><div class="hero-actions"><a class="btn" href="${prefix}us-trails/trails.html">Open Trail Finder</a><a class="btn alt" href="${prefix}us-trails/calculator.html">Estimate Hiking Time</a></div></aside>`;
 }
 
+function articleAffiliateResources(post) {
+  const resourceSets = {
+    family: [
+      ["REI day hiking checklist", "https://www.rei.com/learn/expert-advice/day-hiking-checklist.html", "Use as a packing baseline before a short family or mixed-pace route."],
+      ["REI hiking footwear", "https://www.rei.com/c/hiking-footwear", "Compare footwear categories after checking surface, slope and weather."],
+      ["Booking.com near national parks", "https://www.booking.com/searchresults.html?ss=United%20States%20National%20Parks", "Use only after the route plan, driving time and cancellation window make sense."]
+    ],
+    access: [
+      ["REI hiking poles", "https://www.rei.com/c/trekking-poles", "Compare pole options only if the route surface and personal fit support using them."],
+      ["REI day hiking checklist", "https://www.rei.com/learn/expert-advice/day-hiking-checklist.html", "Review water, layers and safety basics without treating gear as an access guarantee."],
+      ["Booking.com accessible travel filters", "https://www.booking.com/accessible-travel.html", "Confirm accessibility details directly with the property before relying on them."]
+    ],
+    seasonal: [
+      ["REI Ten Essentials", "https://www.rei.com/learn/expert-advice/ten-essentials.html", "Use before weather, heat, smoke or daylight changes the risk profile."],
+      ["Backcountry hiking and camping", "https://www.backcountry.com/hiking-camping", "Compare seasonal layers and basics after checking the forecast."],
+      ["REI hiking clothing", "https://www.rei.com/c/hiking-clothing", "Match clothing to exposure, temperature swing and rain timing."]
+    ],
+    parks: [
+      ["Booking.com near national parks", "https://www.booking.com/searchresults.html?ss=United%20States%20National%20Parks", "Compare lodging only after the park entry, shuttle and driving plan are realistic."],
+      ["REI day hiking checklist", "https://www.rei.com/learn/expert-advice/day-hiking-checklist.html", "Use as a basic packing check for first-visit park days."],
+      ["REI Ten Essentials", "https://www.rei.com/learn/expert-advice/ten-essentials.html", "Review essentials before committing to a route away from services."]
+    ],
+    data: [
+      ["REI Ten Essentials", "https://www.rei.com/learn/expert-advice/ten-essentials.html", "Pair terrain data with the ordinary safety items that still matter on easy routes."],
+      ["REI day hiking checklist", "https://www.rei.com/learn/expert-advice/day-hiking-checklist.html", "Use after the route metrics point to the kind of outing you are planning."],
+      ["Backcountry hiking and camping", "https://www.backcountry.com/hiking-camping", "Compare basics only after the route's surface, weather and timing are clear."]
+    ],
+    guide: [
+      ["REI day hiking checklist", "https://www.rei.com/learn/expert-advice/day-hiking-checklist.html", "Use as a practical packing baseline after choosing a candidate route."],
+      ["REI Ten Essentials", "https://www.rei.com/learn/expert-advice/ten-essentials.html", "Check essentials before relying on a short-distance label."],
+      ["REI hiking daypacks", "https://www.rei.com/c/hiking-daypacks", "Compare pack types only after estimating time, water and layer needs."]
+    ]
+  };
+  const resources = resourceSets[post.cat] || resourceSets.guide;
+  return `<aside class="panel affiliate-resource-panel" aria-labelledby="planning-resources-affiliate-disclosure"><h2 id="planning-resources-affiliate-disclosure">Planning resources and affiliate disclosure</h2><p class="affiliate-disclosure">${esc(affiliateDisclosureText)}</p><div class="card-grid">${resources.map(([label, href, text]) => `<a class="site-card merchant-card" href="${href}" rel="sponsored noopener"><div class="site-card-body"><span class="cat-badge">External resource</span><h3>${esc(label)}</h3><p>${esc(text)}</p></div></a>`).join("")}</div></aside>`;
+}
+
 function articleEditorialNote(post) {
   const profile = authorProfile(post);
   const updated = isoDate(post.publishAt || post.date);
@@ -1211,6 +1250,7 @@ for (const post of approvalPosts) {
         ${articleResearchEvidence(post)}
         ${articleEditorialNote(post)}
         <article class="panel"><h2 id="how-to-use-this-guide-on-a-real-park-day">How to use this guide on a real park day</h2><p>Use this article as a planning layer, not as the final authority. Start with the terrain idea explained here, compare it with the route's distance, gain, grade and surface, then open the official park page before you leave. If current alerts, weather, shuttle status, construction or accessibility details conflict with a comfortable plan, choose the official information and adjust the route.</p><p>For families and mixed-ability groups, make the decision at the pace of the least flexible person in the group. A route that looks efficient for one adult may still be the wrong choice if it has a hot return, uncertain surface, poor bailout options or facilities that do not match the day. The goal is not to collect a trail name. The goal is to arrive with a route that still makes sense when real conditions, energy and timing are considered together.</p></article>
+        ${articleAffiliateResources(post)}
         ${articleCta(post, prefix)}
         ${articleInternalLinks(post, prefix)}
         <aside class="panel"><h2 id="field-takeaways">Field takeaways</h2><ul class="takeaway-list">${post.takeaways.map((item) => `<li>${esc(item)}</li>`).join("")}</ul></aside>
@@ -1236,6 +1276,7 @@ const trustPages = [
   ["privacy.html", "Privacy Policy", "Privacy, cookies, analytics and advertising disclosures for Gradient Trail.", "Privacy Policy", [
     ["Information we may collect", "Gradient Trail may process ordinary server logs, browser/device information, approximate usage data, referring pages and contact messages. This information is used to operate the site, diagnose errors, understand which planning pages are useful and respond to reader feedback."],
     ["Advertising and cookies", "If Google AdSense is enabled, Google and its partners may use cookies or similar technologies to serve, personalize and measure ads. Google may use information from visits to this and other websites according to its advertising policies and user controls."],
+    ["Affiliate links", "Some outbound gear, lodging or planning links may be affiliate-enabled through Skimlinks. If a reader clicks one of those links and makes a purchase, Gradient Trail may earn a commission at no extra cost to the reader. Affiliate availability, pricing and merchant terms are controlled by the external site."],
     ["Analytics and third parties", "The site may use analytics, hosting, security and advertising providers. These services can process technical data such as IP address, browser type, page URL and interaction signals. Gradient Trail does not sell personal trail plans or contact-form messages."],
     ["Reader control", "Readers can manage cookies, personalized advertising and ad measurement through browser settings and Google advertising controls. If you contact the site by email, use only the information needed to explain the correction or question."]
   ]],
@@ -1248,6 +1289,7 @@ const trustPages = [
   ["editorial-policy.html", "Editorial Policy", "How Gradient Trail creates and reviews trail planning content.", "Editorial Policy", [
     ["Source hierarchy", "Articles separate stable route context from current conditions. Official park pages, current alerts, weather sources and access notes control live decisions. Terrain and route data support early planning, while photos and reviews are treated only as secondary clues."],
     ["Access wording", "We avoid claiming that a trail is wheelchair accessible unless the evidence supports that statement. When evidence is partial, the article uses conservative wording, describes what is known, and tells readers what to verify before depending on the route."],
+    ["Affiliate independence", "Affiliate-enabled links may appear as external planning resources, but they do not control trail selection, route-fit scoring, source hierarchy, safety language or accessibility wording. We would rather remove a monetized link than weaken a route decision."],
     ["Article quality", "Approved guides must have a reader job, decision criterion, internal links, source notes, structured FAQ, verification checklist and article-specific evidence. Batch content is checked for repeated title patterns, repeated FAQ shapes, thin body text and generic conclusions."],
     ["Corrections and updates", "When a correction request includes an official source or a clear issue, we review the affected page and update the language, source list or disclaimer where needed. We would rather narrow a claim than overstate a route's fit."]
   ]],

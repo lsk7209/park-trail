@@ -236,6 +236,27 @@ th,
   font-size: 13px;
 }
 
+.affiliate-footnote {
+  display: block;
+  margin-top: 8px;
+  max-width: 720px;
+}
+
+.affiliate-resource-panel {
+  border-color: rgba(200, 100, 59, 0.24);
+  background: rgba(255,253,248,0.9);
+}
+
+.affiliate-disclosure {
+  margin: 0 0 16px;
+  color: var(--ink-soft);
+  font-size: 13px;
+}
+
+.merchant-card {
+  border-style: dashed;
+}
+
 .dot-sep::before {
   content: "\00b7";
   margin: 0 8px;
