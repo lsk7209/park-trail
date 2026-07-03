@@ -369,6 +369,7 @@ const trustPagesSubstantiveOk = [about, contact, privacy, terms, editorialPolicy
   .every((content) => visibleLength(content) >= 900 && /Reader safety first/.test(content) && /Editorial corrections accepted/.test(content));
 
 const adsenseLoaderCount = (content) => (content.match(/pagead2\.googlesyndication\.com\/pagead\/js\/adsbygoogle\.js/g) || []).length;
+const skimlinksLoaderCount = (content) => (content.match(/s\.skimresources\.com\/js\/305683X1793900\.skimlinks\.js/g) || []).length;
 const npsOfficialPageContents = npsOfficialPages.map(([, content]) => content);
 const primaryPublicPages = [home, blogIndex, article, about, contact, privacy, terms, editorialPolicy, disclaimer, trails, parks, calculator, compare, methodology, ...npsOfficialPageContents];
 const publicPagesHaveSingleLoader = primaryPublicPages
@@ -535,6 +536,7 @@ const noManualAdSlotsOk = allHtmlPages.every(([, content]) => !/<ins\b[^>]*class
 const noindexPagesNoLoaderOk = allHtmlPages
   .filter(([, content]) => /name="robots" content="noindex,follow"/.test(content))
   .every(([, content]) => adsenseLoaderCount(content) === 0 && ga4LoaderCount(content) === 0);
+const skimlinksLoaderOk = allHtmlPages.every(([, content]) => skimlinksLoaderCount(content) === 1);
 
 const coreSchemaPages = [
   home,
@@ -642,6 +644,7 @@ const expectations = [
   ["ga4 tag", publicPagesHaveSingleGa4],
   ["ads txt", /google\.com, pub-3050601904412736, DIRECT, f08c47fec0942fa0/.test(adsTxt)],
   ["adsense loader", publicPagesHaveSingleLoader && /ca-pub-3050601904412736/.test(home) && /ca-pub-3050601904412736/.test(blogIndex) && /ca-pub-3050601904412736/.test(article)],
+  ["skimlinks loader", skimlinksLoaderOk],
   ["no manual adsense slots", noManualAdSlotsOk],
   ["noindex pages omit tracking", noindexPagesNoLoaderOk],
   ["core page schema", coreSchemaOk],

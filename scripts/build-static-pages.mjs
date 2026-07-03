@@ -15,6 +15,7 @@ const buildNow = new Date();
 const publishedApprovalPosts = approvalPosts.filter((post) => !post.publishAt || new Date(post.publishAt) <= buildNow);
 const adsenseClient = process.env.ADSENSE_CLIENT || "ca-pub-3050601904412736";
 const ga4Id = process.env.GA4_ID || "G-JXKB19KWYF";
+const skimlinksPublisherScript = '<script type="text/javascript" src="https://s.skimresources.com/js/305683X1793900.skimlinks.js"></script>';
 const googleSiteVerification = "EWaJY7dnYLETiLKgkZp6yXSfY-b0EQJfDkKcr5OubcM";
 const naverSiteVerification = "1d1e74be2fc392a80a09240a8bbda0a3145084a8";
 
@@ -133,6 +134,7 @@ function doc({ path, title, description, active, body, noindex = false, schema }
   <link rel="icon" href="${prefix}favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="${prefix}us-trails/assets/topo.css">
   ${noindex ? "" : trackingTags()}
+  ${skimlinksPublisherScript}
   ${schemaTag(schema || {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -978,6 +980,7 @@ await write("us-trails/Blog.html", `<!doctype html>
   <meta http-equiv="refresh" content="0; url=../blog/">
   <link rel="canonical" href="${origin}/blog/">
   <link rel="stylesheet" href="assets/topo.css">
+  ${skimlinksPublisherScript}
 </head>
 <body class="topo-bg">
   <main class="wrap page-head">
