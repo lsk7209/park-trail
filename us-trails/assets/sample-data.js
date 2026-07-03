@@ -1754,6 +1754,71 @@ window.SAMPLE = {
       "date": "Jul 2, 2026",
       "read": "11 min",
       "featured": false
+    },
+    {
+      "title": "Neurodivergent Child Trail Planning for Gentle Park Routes",
+      "dek": "Neurodivergent child trail planning and gentle park routes benefit from predictability, exits and sensory load checks.",
+      "cat": "family",
+      "catLabel": "Family",
+      "tint": "#c89332",
+      "seed": "neurodivergent-child-trail-plan",
+      "href": "articles/neurodivergent-child-trail-plan.html",
+      "author": "Sara Kim",
+      "date": "Jul 2, 2026",
+      "read": "12 min",
+      "featured": false
+    },
+    {
+      "title": "Stroller Nap Timing on National Park Walks",
+      "dek": "Stroller nap timing and national park walks depend on surface, shade, noise and return certainty.",
+      "cat": "family",
+      "catLabel": "Family",
+      "tint": "#c89332",
+      "seed": "stroller-nap-timing",
+      "href": "articles/stroller-nap-timing.html",
+      "author": "Elena Cruz",
+      "date": "Jul 2, 2026",
+      "read": "13 min",
+      "featured": false
+    },
+    {
+      "title": "Sibling Split Plans for Family-Friendly Trail Days",
+      "dek": "A sibling split hike plan and family-friendly trail day can protect different energy levels without splitting safety.",
+      "cat": "family",
+      "catLabel": "Family",
+      "tint": "#c89332",
+      "seed": "sibling-split-hike-plan",
+      "href": "articles/sibling-split-hike-plan.html",
+      "author": "Nolan Park",
+      "date": "Jul 3, 2026",
+      "read": "14 min",
+      "featured": false
+    },
+    {
+      "title": "Family Photo Stop Pacing on Scenic Easy Trails",
+      "dek": "Family photo stop pacing and scenic easy trails change total outing time, attention and crowd pressure.",
+      "cat": "family",
+      "catLabel": "Family",
+      "tint": "#c89332",
+      "seed": "family-photo-stop-pacing",
+      "href": "articles/family-photo-stop-pacing.html",
+      "author": "Gradient Field Team",
+      "date": "Jul 3, 2026",
+      "read": "10 min",
+      "featured": false
+    },
+    {
+      "title": "Kid Water Reminder Routes for Hot Easy Hikes",
+      "dek": "Kid water reminder routes and hot easy hikes work better when shade, breaks and refill points are visible.",
+      "cat": "family",
+      "catLabel": "Family",
+      "tint": "#c89332",
+      "seed": "kid-water-reminder-route",
+      "href": "articles/kid-water-reminder-route.html",
+      "author": "Mira Lee",
+      "date": "Jul 3, 2026",
+      "read": "11 min",
+      "featured": false
     }
   ]
 };

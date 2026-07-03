@@ -936,7 +936,7 @@ function trailRows(trails, prefix) {
 async function write(pathFromRoot, contents) {
   const abs = join(root, pathFromRoot);
   await mkdir(dirname(abs), { recursive: true });
-  await writeFile(abs, contents);
+  await writeFile(abs, contents.replace(/[ \t]+$/gm, ""));
 }
 
 const jsData = `window.SITE = ${JSON.stringify(site, null, 2)};\n`;
