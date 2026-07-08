@@ -1026,6 +1026,7 @@ await write("us-trails/Blog.html", `<!doctype html>
     <p class="eyebrow">Moved</p>
     <h1>Gradient Trail Blog moved</h1>
     <p class="lead">The canonical article archive is now <a href="../blog/">Gradient Trail Blog</a>.</p>
+    <p class="affiliate-footnote">${esc(affiliateDisclosureText)}</p>
   </main>
 </body>
 </html>
