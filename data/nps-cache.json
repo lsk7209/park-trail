@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "source": "National Park Service API",
   "sourceDocs": "https://www.nps.gov/subjects/developer/api-documentation.htm",
-  "fetchedAt": "2026-07-02T11:43:31.542Z",
+  "fetchedAt": "2026-07-08T00:33:48.300Z",
   "parkCodes": [
     "yose",
     "grca",
@@ -14,8 +14,7 @@
   "changedParks": [
     "yosemite",
     "grand-canyon",
-    "rocky-mountain",
-    "yellowstone",
+    "zion",
     "acadia"
   ],
   "parks": [
@@ -127,8 +126,8 @@
           "title": "Yosemite Traffic Updates",
           "category": "Information",
           "url": "",
-          "description": "When the park is extremely busy, you can get updates on current traffic conditions in Yosemite by texting ynptraffic to 333111.",
-          "lastIndexedDate": "2026-06-26 00:00:00.0"
+          "description": "When the park is very busy, you can get updates on current traffic conditions in Yosemite by texting ynptraffic to 333111.",
+          "lastIndexedDate": "2026-07-03 00:00:00.0"
         }
       ],
       "visitorCenters": [
@@ -331,7 +330,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "539443b1a43bb86a90f13f261035676867e874b245eb62d865558f82810e425e"
+      "contentHash": "cc95567f82ad21e3aaec361c0379f07b811d43eb7453bbabd37d8a487dbc2512"
     },
     {
       "parkCode": "grca",
@@ -414,22 +413,22 @@
       ],
       "officialImages": [
         {
-          "title": "Grand Canyon Mather Point Sunset on the South Rim",
-          "altText": "The canyon glows orange as people visit Mather Point, a rock outcropping that juts into Grand Canyon",
-          "credit": "NPS/M.Quinn",
-          "url": "https://www.nps.gov/common/uploads/structured_data/3C7B12D1-1DD8-B71B-0BCE0712F9CEA155.jpg"
+          "title": "Sunset from Mather Point",
+          "altText": "At Sunset, swirling rain clouds above a vast canyon filled with colorful peaks and cliff walls.",
+          "credit": "NPS/M. Quinn",
+          "url": "https://www.nps.gov/common/uploads/structured_data/6C7F2214-CE4D-E366-A283BE0F4E65F83B.jpg"
         },
         {
-          "title": "Grand Canyon National Park: Desert View Watchtower (South Rim)",
-          "altText": "The Desert View Watchtower looms 70 feet into the air over a vast and dramatic view of the canyon.",
-          "credit": "NPS/M.Quinn",
-          "url": "https://www.nps.gov/common/uploads/structured_data/3C7B15A4-1DD8-B71B-0BFADECB506765CC.jpg"
+          "title": "Ancestral granary at Nankoweap",
+          "altText": "a small ancestral masonry storage room in a cliff above a muddy river.",
+          "credit": "NPS/Mark Lellouch",
+          "url": "https://www.nps.gov/common/uploads/structured_data/6D21F1C3-FC94-9597-A861557ED5AD2BC2.jpg"
         },
         {
-          "title": "Looking down the Colorado River from Nankoweap at river mile 53",
-          "altText": "Tall canyon walls frame the wide Colorado river weaving back and forth.",
-          "credit": "NPS/M.Quinn",
-          "url": "https://www.nps.gov/common/uploads/structured_data/3C7B1720-1DD8-B71B-0B74DCF6F887A960.jpg"
+          "title": "Moonrise over Vishnu Temple",
+          "altText": "The last glow of sunset across the canyon rim with a full moon rising above a pointed peak",
+          "credit": "NPS/M. Quinn",
+          "url": "https://www.nps.gov/common/uploads/structured_data/6D4E8EE9-CBB3-C067-D68889233F7AAF8F.jpg"
         }
       ],
       "alerts": [
@@ -451,11 +450,11 @@
         },
         {
           "id": "74D6113F-1B0B-4CB6-AEAF-E5BB6A6E2304",
-          "title": "Stage 2 Fire Restrictions—HIGH FIRE DANGER",
+          "title": "Stage 2 Fire Restrictions—VERY HIGH FIRE DANGER",
           "category": "Danger",
           "url": "https://www.nps.gov/grca/learn/management/fireinformation.htm",
-          "description": "Stage 2 fire restrictions for South Rim and Inner Canyon begin Friday, June 26 at 12 pm, due to strong winds, critically low relative humidity, and exceptionally dry vegetation across northern Arizona. No wood or charcoal fires, outdoor smoking (except in vehicles), explosives, and certain engines except street legal vehicles. Follow link for more details on restrictions and exceptions.",
-          "lastIndexedDate": "2026-06-26 00:00:00.0"
+          "description": "Stage 2 fire restrictions for South Rim, North Rim, and Inner Canyon are in effect due to very high and extreme fire danger. No wood or charcoal fires, outdoor smoking (except in vehicles), explosives, and certain engines except street legal vehicles. Follow link for more details on restrictions and exceptions.",
+          "lastIndexedDate": "2026-07-06 00:00:00.0"
         },
         {
           "id": "3396D6D3-5F44-4532-B48B-42A629991493",
@@ -544,7 +543,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "543c531c19e4c10ea9e3fe0fddd751d1a173aa9d6d813cc06ea908e14d0d7d9a"
+      "contentHash": "d88f9f3ae3c7ff21fd83702847b8a1807affd07246338d05fe87e22c60dc7708"
     },
     {
       "parkCode": "romo",
@@ -1030,8 +1029,8 @@
           "title": "Stage 2 fire restrictions in effect",
           "category": "Caution",
           "url": "https://www.nps.gov/zion/learn/news/2026-05-22-fire-restrictions.htm",
-          "description": "No setting, building, maintaining, attending, or using open fires of any kind in the park. This includes campfires and charcoal fires in Watchman Campground, South Campground, and picnic areas in Zion Canyon. Stoves fueled by petroleum or liquid propane gas are allowed. Smoking is allowed only in non-vegetated areas.",
-          "lastIndexedDate": "2026-05-22 00:00:00.0"
+          "description": "No setting, building, maintaining, attending, or using open fires of any kind in the park. This includes campfires and charcoal fires in Watchman Campground, South Campground, and picnic areas in Zion Canyon. Stoves fueled by petroleum or liquid propane gas are allowed. Smoking is prohibited, except within an enclosed vehicle.",
+          "lastIndexedDate": "2026-07-04 00:00:00.0"
         },
         {
           "id": "09699C7F-F2CD-4BE9-B8D4-5E19CC89BE7A",
@@ -1151,7 +1150,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "b1d0e632bb18c24d571c07a501c3d4635c156104c9fa6aa1f351a6468f04a3bf"
+      "contentHash": "ca9bcba2baf00dd33770801b55e3a671dff3cd0c41a160998b49eab2994cb555"
     },
     {
       "parkCode": "yell",
@@ -1780,14 +1779,6 @@
       ],
       "alerts": [
         {
-          "id": "5916109A-4B06-47C9-9DAF-53855BEA2EEC",
-          "title": "Extreme Heat Advisory",
-          "category": "Danger",
-          "url": "",
-          "description": "The National Weather Service has issued extreme heat warnings and advisories for Wednesday, July 1, through Friday, July 3, which will produce dangerous conditions. Some people will face a higher risk of heat-related illness due to underlying medical conditions or certain activities. Dress cool, stay hydrated, and limit exertion. Watch for dizziness, nausea, headaches, shortness of breath, confusion, rapid pulse, and fainting. If you or someone else experiences signs of heat stroke, call 911 immediately.",
-          "lastIndexedDate": "2026-07-02 00:00:00.0"
-        },
-        {
           "id": "7EF83B4C-AD0D-4210-8CCB-BA035B6FB21B",
           "title": "Several Trails Close For Peregrine Falcon Nesting Season",
           "category": "Park Closure",
@@ -1972,7 +1963,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "b74ae434640e6776aaebce00379feff538fbc15b0f8dff925c0e12a678d63beb"
+      "contentHash": "061995cceee64e9fc122121eeb97edaf48f1a3dd26eb137d237fa187fee90704"
     }
   ]
 }
