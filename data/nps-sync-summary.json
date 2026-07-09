@@ -1,10 +1,7 @@
 {
   "changed": true,
   "changedParks": [
-    "yosemite",
-    "grand-canyon",
-    "zion",
-    "acadia"
+    "grand-canyon"
   ],
   "parkCount": 6,
   "alertCount": 16,
@@ -12,5 +9,5 @@
   "campgroundCount": 43,
   "dryRun": false,
   "secretPrinted": false,
-  "generatedAt": "2026-07-08T00:33:48.300Z"
+  "generatedAt": "2026-07-09T12:15:53.111Z"
 }

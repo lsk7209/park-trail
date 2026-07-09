@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "source": "National Park Service API",
   "sourceDocs": "https://www.nps.gov/subjects/developer/api-documentation.htm",
-  "fetchedAt": "2026-07-08T00:33:48.300Z",
+  "fetchedAt": "2026-07-09T12:15:53.111Z",
   "parkCodes": [
     "yose",
     "grca",
@@ -12,10 +12,7 @@
     "acad"
   ],
   "changedParks": [
-    "yosemite",
-    "grand-canyon",
-    "zion",
-    "acadia"
+    "grand-canyon"
   ],
   "parks": [
     {
@@ -421,7 +418,7 @@
         {
           "title": "Ancestral granary at Nankoweap",
           "altText": "a small ancestral masonry storage room in a cliff above a muddy river.",
-          "credit": "NPS/Mark Lellouch",
+          "credit": "NPS/M. Lellouch",
           "url": "https://www.nps.gov/common/uploads/structured_data/6D21F1C3-FC94-9597-A861557ED5AD2BC2.jpg"
         },
         {
@@ -543,7 +540,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "d88f9f3ae3c7ff21fd83702847b8a1807affd07246338d05fe87e22c60dc7708"
+      "contentHash": "551330ac5faf08f18c4ef26c1159cb0f053d72232ee65759ae7b5deab1de41f5"
     },
     {
       "parkCode": "romo",

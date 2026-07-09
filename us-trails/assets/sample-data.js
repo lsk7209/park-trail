@@ -2092,6 +2092,97 @@ window.SAMPLE = {
       "date": "Jul 7, 2026",
       "read": "12 min",
       "featured": false
+    },
+    {
+      "title": "Volcanic Trail Footing for Gentle Scenic Walks",
+      "dek": "Volcanic trail footing and gentle scenic walks require loose rock, heat, edges and official route boundaries.",
+      "cat": "parks",
+      "catLabel": "Landscapes",
+      "tint": "#557d66",
+      "seed": "volcanic-trail-footing",
+      "href": "articles/volcanic-trail-footing.html",
+      "author": "Elena Cruz",
+      "date": "Jul 8, 2026",
+      "read": "13 min",
+      "featured": false
+    },
+    {
+      "title": "Historic Site Walking Loops as Gentle Trail Alternatives",
+      "dek": "Historic site walking loops and gentle trail alternatives can offer shade, learning stops and predictable surfaces.",
+      "cat": "parks",
+      "catLabel": "Landscapes",
+      "tint": "#557d66",
+      "seed": "historic-site-walking-loop",
+      "href": "articles/historic-site-walking-loop.html",
+      "author": "Nolan Park",
+      "date": "Jul 8, 2026",
+      "read": "14 min",
+      "featured": false
+    },
+    {
+      "title": "Elevation Profile Reading Order for Easy Trail Choices",
+      "dek": "An elevation profile reading order for easy trail choices helps catch early climbs, late climbs and grade spikes.",
+      "cat": "data",
+      "catLabel": "Metrics",
+      "tint": "#496f93",
+      "seed": "elevation-profile-reading-order",
+      "href": "articles/elevation-profile-reading-order.html",
+      "author": "Gradient Field Team",
+      "date": "Jul 8, 2026",
+      "read": "10 min",
+      "featured": false
+    },
+    {
+      "title": "Moving Time vs Outing Time on Gentle National Park Routes",
+      "dek": "Moving time vs outing time and gentle national park routes explains breaks, photos, shuttles and return buffers.",
+      "cat": "data",
+      "catLabel": "Metrics",
+      "tint": "#496f93",
+      "seed": "moving-time-vs-outing-time",
+      "href": "articles/moving-time-vs-outing-time.html",
+      "author": "Mira Lee",
+      "date": "Jul 8, 2026",
+      "read": "11 min",
+      "featured": false
+    },
+    {
+      "title": "When Trail Scores Disagree: Gentle, Family and Difficulty Signals",
+      "dek": "Trail scores disagree when gentle family difficulty signals weigh terrain, logistics and group fit differently.",
+      "cat": "data",
+      "catLabel": "Metrics",
+      "tint": "#496f93",
+      "seed": "score-conflict-trail-choice",
+      "href": "articles/score-conflict-trail-choice.html",
+      "author": "Sara Kim",
+      "date": "Jul 8, 2026",
+      "read": "12 min",
+      "featured": false
+    },
+    {
+      "title": "Route Shape Changes Effort on Easy Out-and-Back Trails",
+      "dek": "Route shape effort and easy out-and-back trails depend on turnarounds, return climbs and navigation certainty.",
+      "cat": "data",
+      "catLabel": "Metrics",
+      "tint": "#496f93",
+      "seed": "route-shape-effort",
+      "href": "articles/route-shape-effort.html",
+      "author": "Elena Cruz",
+      "date": "Jul 9, 2026",
+      "read": "13 min",
+      "featured": false
+    },
+    {
+      "title": "One-Way Distance vs Round-Trip Distance for Park Walks",
+      "dek": "One-way distance vs round-trip distance and park walks can prevent undercounting family time and water needs.",
+      "cat": "data",
+      "catLabel": "Metrics",
+      "tint": "#496f93",
+      "seed": "distance-one-way-vs-round-trip",
+      "href": "articles/distance-one-way-vs-round-trip.html",
+      "author": "Nolan Park",
+      "date": "Jul 9, 2026",
+      "read": "14 min",
+      "featured": false
     }
   ]
 };
