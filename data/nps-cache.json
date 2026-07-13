@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "source": "National Park Service API",
   "sourceDocs": "https://www.nps.gov/subjects/developer/api-documentation.htm",
-  "fetchedAt": "2026-07-09T12:15:53.111Z",
+  "fetchedAt": "2026-07-13T12:16:51.755Z",
   "parkCodes": [
     "yose",
     "grca",
@@ -12,7 +12,10 @@
     "acad"
   ],
   "changedParks": [
-    "grand-canyon"
+    "grand-canyon",
+    "rocky-mountain",
+    "yellowstone",
+    "acadia"
   ],
   "parks": [
     {
@@ -438,14 +441,6 @@
           "lastIndexedDate": "2026-06-26 00:00:00.0"
         },
         {
-          "id": "41A76F84-5574-47F6-96CD-60712D182370",
-          "title": "Fire activity in Walhalla Plateau area",
-          "category": "Danger",
-          "url": "",
-          "description": "Fire activity is occurring in the Walhalla Plateau area. There are no trail or area closures. Backcountry permits for the Walhalla Plateau are temporarily on hold.",
-          "lastIndexedDate": "2026-06-30 00:00:00.0"
-        },
-        {
           "id": "74D6113F-1B0B-4CB6-AEAF-E5BB6A6E2304",
           "title": "Stage 2 Fire Restrictions—VERY HIGH FIRE DANGER",
           "category": "Danger",
@@ -540,7 +535,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "551330ac5faf08f18c4ef26c1159cb0f053d72232ee65759ae7b5deab1de41f5"
+      "contentHash": "c3e3471760b46b021212e7a7b3cc20340fdc3ecdf418d9a23fafb910dd81a2d9"
     },
     {
       "parkCode": "romo",
@@ -871,7 +866,7 @@
           "id": "F7CE47A2-A770-449F-8085-0DF17DD432EB",
           "name": "Longs Peak Campground",
           "url": "https://www.nps.gov/romo/planyourvisit/lpcg.htm",
-          "description": "Longs Peak Campground is now closed. Each year, this campground is open from early July through early September. Longs Peak Campground is a tent-only campground that is available on a first-come, first-served basis.",
+          "description": "Longs Peak Campground is open for the season. This campground is first-come, first-served and open to tents only. There is no water available. Campers will need to bring their own water. Vault toilets and trash are available. Each campsite has a picnic table, tent pad, fire ring, and food storage box. Stage 2 Fire Restrictions are in effect within Rocky Mountain National Park. This means that all campfires, including charcoal briquette fires are not permitted. Stoves with on/off switches may be ",
           "reservationUrl": "https://www.recreation.gov/camping/campgrounds/10317461",
           "weatherOverview": "Average High and Low Temperatures (Fahrenheit) June: 69 / 37 July: 74 / 42 August: 73 / 41 September: 66 / 34",
           "numberOfSitesReservable": "0",
@@ -898,7 +893,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "eea0bb4ff8ee7fc7c1b1cfd8f6a5dbb4bea45da28722dcafc0b7bbe6edb932d4"
+      "contentHash": "37b23fe82511e320256eb5059af268a7d5e66e1ac875638a5875e9d91a71f433"
     },
     {
       "parkCode": "zion",
@@ -1294,12 +1289,28 @@
           "lastIndexedDate": "2026-07-01 00:00:00.0"
         },
         {
+          "id": "22ED4752-D38D-4389-BB2C-CABCB41301DB",
+          "title": "Select rivers closed to fishing daily, 2 p.m. to sunrise",
+          "category": "Information",
+          "url": "https://www.nps.gov/yell/learn/news/26015.htm",
+          "description": "The following rivers and their tributaries will close daily from 2 p.m. to sunrise due to warm water temperatures and low flows: Madison River, Firehole River, and Gibbon River.",
+          "lastIndexedDate": "2026-07-09 00:00:00.0"
+        },
+        {
           "id": "57EFE369-9186-400A-8F18-0E966993B8A3",
           "title": "Traffic Delays - Gardner River High Bridge",
           "category": "Information",
           "url": "https://www.nps.gov/yell/planyourvisit/parkroads.htm",
           "description": "Expect a single lane of traffic with up to 15-minute delays, 24 hours a day, seven days a week, from April 1 through late October 2026. Oversized/overweight vehicles (8'6\"+ wide, 75'+ long, 80,000 lbs+ gross vehicle weight) will not be able to cross the bridge during this time.",
           "lastIndexedDate": "2026-03-19 00:00:00.0"
+        },
+        {
+          "id": "5396AFF0-9C9E-462B-942C-314E8D36D442",
+          "title": "Traffic Delays - Gibbon River Bridge",
+          "category": "Information",
+          "url": "https://www.nps.gov/yell/planyourvisit/parkroads.htm",
+          "description": "Expect up to 15-minute delays on Gibbon River Bridge from July 9 through late-July while crews repair the railing.",
+          "lastIndexedDate": "2026-07-09 00:00:00.0"
         },
         {
           "id": "68BF1AEF-79A0-4FE9-B11C-BDFDAD08E15E",
@@ -1676,7 +1687,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "4d1ae76efcef25d2b8b5b801effa38271e47718f12b63f37d9066ab3d389c908"
+      "contentHash": "a9dba273d273b6c7c14d1eaa59141e34e4731ab3b0f2fdf9b7bbe4decf4e2798"
     },
     {
       "parkCode": "acad",
@@ -1756,22 +1767,22 @@
       ],
       "officialImages": [
         {
-          "title": "Sunset atop Cadillac Mountain",
-          "altText": "A brilliant sunset filled with hues of blue, red, orange, magenta, and purple highlight the sky.",
-          "credit": "NPS / Kristi Rugg",
-          "url": "https://www.nps.gov/common/uploads/structured_data/3C7B477B-1DD8-B71B-0BCB48E009241BAA.jpg"
+          "title": "Pemetic Mountain Sunset",
+          "altText": "Silhouette of a hiker walking along a ridgeline at sunset",
+          "credit": "Photo courtesy of Will Newton, Friends of Acadia",
+          "url": "https://www.nps.gov/common/uploads/structured_data/D433FC5B-A16D-B207-62C59381F9C70B36.jpg"
         },
         {
-          "title": "Heavy snow-laden trees",
-          "altText": "Hiking tracks carved through three feet of snow wind through a heavy snow-laden forest.",
-          "credit": "NPS / Kristi Rugg",
-          "url": "https://www.nps.gov/common/uploads/structured_data/3C7B4BEC-1DD8-B71B-0B2CF833F93140FF.jpg"
+          "title": "Carriage Road Bike Tour",
+          "altText": "A group of people riding bicycles travels under the arch of a large stone bridge",
+          "credit": "Photo courtesy Yehyun Kim, Friends of Acadia",
+          "url": "https://www.nps.gov/common/uploads/structured_data/D44C463F-A561-74ED-C78695D3E0D31FF3.jpg"
         },
         {
-          "title": "Acadia's rocky coastline",
-          "altText": "Large puffy clouds dot a brilliant blue sky as wave crash against the rocky coastline of Acadia.",
-          "credit": "NPS / Kristi Rugg",
-          "url": "https://www.nps.gov/common/uploads/structured_data/3C7B45AE-1DD8-B71B-0B7EE131C7DFC2F5.jpg"
+          "title": "Entrance Fee Required Year-Round",
+          "altText": "Two small, booth-like buildings are positioned across a roadway. Park rangers are seated at open win",
+          "credit": "NPS Photo by Kent Miller",
+          "url": "https://www.nps.gov/common/uploads/structured_data/D52D7489-CCF1-DC62-32BA0B2BDE814324.jpg"
         }
       ],
       "alerts": [
@@ -1960,7 +1971,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "061995cceee64e9fc122121eeb97edaf48f1a3dd26eb137d237fa187fee90704"
+      "contentHash": "2ffe6aa9c6e5bb6fac9272e51eafba223660d87ea99134226f32afe5fc6cd273"
     }
   ]
 }
