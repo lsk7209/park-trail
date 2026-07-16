@@ -1,16 +1,15 @@
 {
   "changed": true,
   "changedParks": [
-    "grand-canyon",
-    "rocky-mountain",
+    "zion",
     "yellowstone",
     "acadia"
   ],
   "parkCount": 6,
-  "alertCount": 17,
+  "alertCount": 19,
   "visitorCenterCount": 37,
   "campgroundCount": 43,
   "dryRun": false,
   "secretPrinted": false,
-  "generatedAt": "2026-07-13T12:16:51.755Z"
+  "generatedAt": "2026-07-16T11:11:48.259Z"
 }

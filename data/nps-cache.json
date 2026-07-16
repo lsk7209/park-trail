@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "source": "National Park Service API",
   "sourceDocs": "https://www.nps.gov/subjects/developer/api-documentation.htm",
-  "fetchedAt": "2026-07-13T12:16:51.755Z",
+  "fetchedAt": "2026-07-16T11:11:48.259Z",
   "parkCodes": [
     "yose",
     "grca",
@@ -12,8 +12,7 @@
     "acad"
   ],
   "changedParks": [
-    "grand-canyon",
-    "rocky-mountain",
+    "zion",
     "yellowstone",
     "acadia"
   ],
@@ -1025,6 +1024,14 @@
           "lastIndexedDate": "2026-07-04 00:00:00.0"
         },
         {
+          "id": "CDF834D3-8986-47CF-BAF3-0092F8A5D6F7",
+          "title": "The Virgin River Narrows and all slot canyons closed",
+          "category": "Park Closure",
+          "url": "https://www.nps.gov/zion/planyourvisit/flash-flood.htm",
+          "description": "The Narrows and all slot canyons are closed at this time due to a flash flood warning.",
+          "lastIndexedDate": "2026-07-15 00:00:00.0"
+        },
+        {
           "id": "09699C7F-F2CD-4BE9-B8D4-5E19CC89BE7A",
           "title": "Toxic Cyanobacteria in the Virgin River and the streams of Zion National Park",
           "category": "Caution",
@@ -1142,7 +1149,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "ca9bcba2baf00dd33770801b55e3a671dff3cd0c41a160998b49eab2994cb555"
+      "contentHash": "a3357b723da8bab042666aa303b0eef62bc02ed41b872798cca49017f8b849ee"
     },
     {
       "parkCode": "yell",
@@ -1290,11 +1297,11 @@
         },
         {
           "id": "22ED4752-D38D-4389-BB2C-CABCB41301DB",
-          "title": "Select rivers closed to fishing daily, 2 p.m. to sunrise",
+          "title": "Madison, Firehole, and Gibbon Rivers Closed to Fishing",
           "category": "Information",
           "url": "https://www.nps.gov/yell/learn/news/26015.htm",
-          "description": "The following rivers and their tributaries will close daily from 2 p.m. to sunrise due to warm water temperatures and low flows: Madison River, Firehole River, and Gibbon River.",
-          "lastIndexedDate": "2026-07-09 00:00:00.0"
+          "description": "The following rivers and their tributaries are closed to fishing due to warm water temperatures and low flows: Madison River, Firehole River, and Gibbon River.",
+          "lastIndexedDate": "2026-07-15 00:00:00.0"
         },
         {
           "id": "57EFE369-9186-400A-8F18-0E966993B8A3",
@@ -1502,7 +1509,7 @@
           "id": "25A690CE-C968-477A-844F-EF711168904A",
           "name": "West Thumb Information Station",
           "url": "https://www.nps.gov/yell/planyourvisit/west-thumb-information-station.htm",
-          "description": "A small facility at the start of the West Thumb Geyser Basin boardwalks, where you can visit with a park ranger and gather park information, shop for souvenirs in the park store, or join a ranger program. The structure was built in 1925 and is an example of historic ranger-station architecture in Yellowstone.",
+          "description": "This facility is closed until further notice as of July 2026. A small facility at the start of the West Thumb Geyser Basin boardwalks, where you can visit with a park ranger and gather park information, shop for souvenirs in the park store, or join a ranger program. The structure was built in 1925 and is an example of historic ranger-station architecture in Yellowstone.",
           "directionsInfo": "A few miles north of Grant Village on the western shore of Yellowstone Lake, West Thumb can be accessed from three different directions.",
           "directionsUrl": "http://www.nps.gov/yell/planyourvisit/directions.htm",
           "addresses": [
@@ -1687,7 +1694,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "a9dba273d273b6c7c14d1eaa59141e34e4731ab3b0f2fdf9b7bbe4decf4e2798"
+      "contentHash": "c502455166bc890b7abbd5c921b0b30b6a1f242b98c092e5ae328f71bf3bfe36"
     },
     {
       "parkCode": "acad",
@@ -1770,7 +1777,7 @@
           "title": "Pemetic Mountain Sunset",
           "altText": "Silhouette of a hiker walking along a ridgeline at sunset",
           "credit": "Photo courtesy of Will Newton, Friends of Acadia",
-          "url": "https://www.nps.gov/common/uploads/structured_data/D433FC5B-A16D-B207-62C59381F9C70B36.jpg"
+          "url": "https://www.nps.gov/common/uploads/structured_data/9692920F-E68E-EDF5-26E0FC8BD7264916.jpg"
         },
         {
           "title": "Carriage Road Bike Tour",
@@ -1786,6 +1793,14 @@
         }
       ],
       "alerts": [
+        {
+          "id": "84711631-8024-4895-8EB1-D943BA5A163A",
+          "title": "Avoid Water Contact at Sand Beach Lagoon (Not for Sand Beach)",
+          "category": "Caution",
+          "url": "",
+          "description": "Bacterial levels have exceeded public health standards at Sand Beach Lagoon and a Public Health Advisory has been posted. The public is advised against swimming at this beach until bacterial levels return to healthful levels. (Not for Sand Beach.)",
+          "lastIndexedDate": "2026-07-15 00:00:00.0"
+        },
         {
           "id": "7EF83B4C-AD0D-4210-8CCB-BA035B6FB21B",
           "title": "Several Trails Close For Peregrine Falcon Nesting Season",
@@ -1844,7 +1859,7 @@
           "id": "109BDB6B-C627-4C8D-87DA-A4F687E81BCE",
           "name": "Islesford Historical Museum",
           "url": "http://www.nps.gov/acad/planyourvisit/hours.htm",
-          "description": "The Islesford Historical Museum is expected to reopen in 2021 showcasing both the upgrades and a community-curated exhibit helping to tell the stories of the Cranberry Isles.",
+          "description": "The Islesford Historical Museum continues its mission of celebrating Islesford’s cultural history. Historical exhibits showcase life on and around Cranberry Isles from the 1700s to present. Come see artifacts from local families, historical societies, and Acadia's collection while learning about the unique experience of living on an unbridged island.",
           "directionsInfo": "Accessible only by boat, Islesford Historical Museum is located to the left of the Town Pier in Islesford.",
           "directionsUrl": "http://www.nps.gov/acad/planyourvisit/directions.htm",
           "addresses": [
@@ -1971,7 +1986,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "2ffe6aa9c6e5bb6fac9272e51eafba223660d87ea99134226f32afe5fc6cd273"
+      "contentHash": "0aeb551a0247d5f5ded4e331b8f3cfe261c561f108fe5e089fd907d962fc3f6c"
     }
   ]
 }
