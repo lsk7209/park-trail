@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "source": "National Park Service API",
   "sourceDocs": "https://www.nps.gov/subjects/developer/api-documentation.htm",
-  "fetchedAt": "2026-07-16T11:11:48.259Z",
+  "fetchedAt": "2026-07-20T11:57:57.311Z",
   "parkCodes": [
     "yose",
     "grca",
@@ -12,9 +12,9 @@
     "acad"
   ],
   "changedParks": [
-    "zion",
-    "yellowstone",
-    "acadia"
+    "grand-canyon",
+    "rocky-mountain",
+    "zion"
   ],
   "parks": [
     {
@@ -440,14 +440,6 @@
           "lastIndexedDate": "2026-06-26 00:00:00.0"
         },
         {
-          "id": "74D6113F-1B0B-4CB6-AEAF-E5BB6A6E2304",
-          "title": "Stage 2 Fire Restrictions—VERY HIGH FIRE DANGER",
-          "category": "Danger",
-          "url": "https://www.nps.gov/grca/learn/management/fireinformation.htm",
-          "description": "Stage 2 fire restrictions for South Rim, North Rim, and Inner Canyon are in effect due to very high and extreme fire danger. No wood or charcoal fires, outdoor smoking (except in vehicles), explosives, and certain engines except street legal vehicles. Follow link for more details on restrictions and exceptions.",
-          "lastIndexedDate": "2026-07-06 00:00:00.0"
-        },
-        {
           "id": "3396D6D3-5F44-4532-B48B-42A629991493",
           "title": "What's Closed and What's Open: South Rim & North Rim",
           "category": "Information",
@@ -534,7 +526,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "c3e3471760b46b021212e7a7b3cc20340fdc3ecdf418d9a23fafb910dd81a2d9"
+      "contentHash": "f4e20ebd6db582e213550257eb29eb0424d1ef8a60f760715129b33c66fae60f"
     },
     {
       "parkCode": "romo",
@@ -648,6 +640,14 @@
           "url": "https://www.nps.gov/romo/planyourvisit/transponder-devices.htm",
           "description": "Due to some unexpected technical issues that are impacting recent transponder sales and renewals, Rocky Mountain National Park is temporarily pausing the sale and renewal of transponder devices. Updates will be posted on the park webpage.",
           "lastIndexedDate": "2026-06-29 00:00:00.0"
+        },
+        {
+          "id": "C06ABE92-3F5C-41EC-8B3B-BD6C8847DC01",
+          "title": "Wild Basin Road Will Be Closed for Road Maintenance July 21 - July 23",
+          "category": "Park Closure",
+          "url": "",
+          "description": "Beginning Tuesday, July 21, through Thursday, July 23, Wild Basin Road in Rocky Mountain National Park will be closed to all uses, including vehicles, bicycles and pedestrians for road maintenance. This closure will occur at the Wild Basin Entrance Station and will include the entire two-mile section of the road to the Wild Basin Trailhead. Trailhead access and parking area for the Sandbeach Lake Trail will not be impacted by this closure.",
+          "lastIndexedDate": "2026-07-16 00:00:00.0"
         }
       ],
       "visitorCenters": [
@@ -892,7 +892,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "37b23fe82511e320256eb5059af268a7d5e66e1ac875638a5875e9d91a71f433"
+      "contentHash": "806958f7f90631233bae7512a5bbba0d78a550077eec307bfb75a41ff67f8ca5"
     },
     {
       "parkCode": "zion",
@@ -1024,14 +1024,6 @@
           "lastIndexedDate": "2026-07-04 00:00:00.0"
         },
         {
-          "id": "CDF834D3-8986-47CF-BAF3-0092F8A5D6F7",
-          "title": "The Virgin River Narrows and all slot canyons closed",
-          "category": "Park Closure",
-          "url": "https://www.nps.gov/zion/planyourvisit/flash-flood.htm",
-          "description": "The Narrows and all slot canyons are closed at this time due to a flash flood warning.",
-          "lastIndexedDate": "2026-07-15 00:00:00.0"
-        },
-        {
           "id": "09699C7F-F2CD-4BE9-B8D4-5E19CC89BE7A",
           "title": "Toxic Cyanobacteria in the Virgin River and the streams of Zion National Park",
           "category": "Caution",
@@ -1149,7 +1141,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "a3357b723da8bab042666aa303b0eef62bc02ed41b872798cca49017f8b849ee"
+      "contentHash": "ca9bcba2baf00dd33770801b55e3a671dff3cd0c41a160998b49eab2994cb555"
     },
     {
       "parkCode": "yell",
