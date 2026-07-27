@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "source": "National Park Service API",
   "sourceDocs": "https://www.nps.gov/subjects/developer/api-documentation.htm",
-  "fetchedAt": "2026-07-20T11:57:57.311Z",
+  "fetchedAt": "2026-07-27T12:36:00.172Z",
   "parkCodes": [
     "yose",
     "grca",
@@ -12,9 +12,7 @@
     "acad"
   ],
   "changedParks": [
-    "grand-canyon",
-    "rocky-mountain",
-    "zion"
+    "rocky-mountain"
   ],
   "parks": [
     {
@@ -640,14 +638,6 @@
           "url": "https://www.nps.gov/romo/planyourvisit/transponder-devices.htm",
           "description": "Due to some unexpected technical issues that are impacting recent transponder sales and renewals, Rocky Mountain National Park is temporarily pausing the sale and renewal of transponder devices. Updates will be posted on the park webpage.",
           "lastIndexedDate": "2026-06-29 00:00:00.0"
-        },
-        {
-          "id": "C06ABE92-3F5C-41EC-8B3B-BD6C8847DC01",
-          "title": "Wild Basin Road Will Be Closed for Road Maintenance July 21 - July 23",
-          "category": "Park Closure",
-          "url": "",
-          "description": "Beginning Tuesday, July 21, through Thursday, July 23, Wild Basin Road in Rocky Mountain National Park will be closed to all uses, including vehicles, bicycles and pedestrians for road maintenance. This closure will occur at the Wild Basin Entrance Station and will include the entire two-mile section of the road to the Wild Basin Trailhead. Trailhead access and parking area for the Sandbeach Lake Trail will not be impacted by this closure.",
-          "lastIndexedDate": "2026-07-16 00:00:00.0"
         }
       ],
       "visitorCenters": [
@@ -892,7 +882,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "806958f7f90631233bae7512a5bbba0d78a550077eec307bfb75a41ff67f8ca5"
+      "contentHash": "37b23fe82511e320256eb5059af268a7d5e66e1ac875638a5875e9d91a71f433"
     },
     {
       "parkCode": "zion",
