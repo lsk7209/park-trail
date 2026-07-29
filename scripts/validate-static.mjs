@@ -372,8 +372,11 @@ const adsenseLoaderCount = (content) => (content.match(/pagead2\.googlesyndicati
 const skimlinksLoaderCount = (content) => (content.match(/s\.skimresources\.com\/js\/305683X1793900\.skimlinks\.js/g) || []).length;
 const npsOfficialPageContents = npsOfficialPages.map(([, content]) => content);
 const primaryPublicPages = [home, blogIndex, article, about, contact, privacy, terms, editorialPolicy, disclaimer, trails, parks, calculator, compare, methodology, ...npsOfficialPageContents];
-const publicPagesHaveSingleLoader = primaryPublicPages
-  .every((content) => adsenseLoaderCount(content) === 1);
+const readerArticlePagesHaveSingleLoader = approvalArticles
+  .filter(([path]) => publishedApprovalArticlePaths.includes(path))
+  .every(([, content]) => adsenseLoaderCount(content) === 1);
+const nonReaderPublicPagesOmitAdsense = [home, blogIndex, about, contact, privacy, terms, editorialPolicy, disclaimer, trails, parks, calculator, compare, methodology, ...npsOfficialPageContents]
+  .every((content) => adsenseLoaderCount(content) === 0);
 const publicPagesHaveRssDiscovery = primaryPublicPages
   .every((content) => /rel="alternate" type="application\/rss\+xml"[^>]+href="https:\/\/gradienttrail\.com\/feed\.xml"/.test(content));
 const publicPagesHaveVerificationMeta = primaryPublicPages
@@ -465,7 +468,7 @@ const primaryToolPagesEnhancedOk = [trails, parks, calculator, compare, methodol
     && !/Blog\.html/.test(content)
     && /name="description"/.test(content)
     && /property="og:url" content="https:\/\/gradienttrail\.com\/us-trails\//.test(content)
-    && adsenseLoaderCount(content) === 1
+    && adsenseLoaderCount(content) === 0
     && ga4LoaderCount(content) === 1);
 
 const crawlableToolFallbackOk = /Lower Yosemite Fall Loop/.test(trails)
@@ -600,7 +603,7 @@ const npsOfficialPagesQualityOk = npsOfficialPages.length === npsCache.parks.len
       && /current official|official NPS page|official park page/i.test(content)
       && /"@type":"Dataset"/.test(content)
       && /"@type":"BreadcrumbList"/.test(content)
-      && adsenseLoaderCount(content) === 1
+      && adsenseLoaderCount(content) === 0
       && ga4LoaderCount(content) === 1;
   });
 
@@ -633,7 +636,7 @@ const expectations = [
   ["compare page", /compareTable/.test(compare) && /Trail A/.test(compare)],
   ["methodology page", /Gentleness score/.test(methodology) && /Source attribution/.test(methodology)],
   ["generated trail detail", /Trail detail/.test(generatedTrail) && /Access caution/.test(generatedTrail)],
-  ["generated park hub", /Long-tail filters/.test(generatedPark) && /Top candidates/.test(generatedPark)],
+  ["generated park hub", /Plan options/.test(generatedPark) && /Top candidates/.test(generatedPark)],
   ["generated pages noindex", /noindex,follow/.test(generatedTrail) && /noindex,follow/.test(generatedPark)],
   ["noindex pages omit adsense loader", adsenseLoaderCount(generatedTrail) === 0 && adsenseLoaderCount(generatedPark) === 0],
   ["sitemap clean approval URLs", cleanSitemapOk],
@@ -650,7 +653,7 @@ const expectations = [
   ["site verification meta", publicPagesHaveVerificationMeta],
   ["ga4 tag", publicPagesHaveSingleGa4],
   ["ads txt", /google\.com, pub-3050601904412736, DIRECT, f08c47fec0942fa0/.test(adsTxt)],
-  ["adsense loader", publicPagesHaveSingleLoader && /ca-pub-3050601904412736/.test(home) && /ca-pub-3050601904412736/.test(blogIndex) && /ca-pub-3050601904412736/.test(article)],
+  ["adsense loader scope", readerArticlePagesHaveSingleLoader && nonReaderPublicPagesOmitAdsense && /ca-pub-3050601904412736/.test(article)],
   ["skimlinks loader", skimlinksLoaderOk],
   ["affiliate disclosure and resources", affiliateDisclosureOk],
   ["no manual adsense slots", noManualAdSlotsOk],

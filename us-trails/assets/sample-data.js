@@ -3314,6 +3314,97 @@ window.SAMPLE = {
       "date": "Jul 27, 2026",
       "read": "12 min",
       "featured": false
+    },
+    {
+      "title": "Narrow Bridge Gentle Route Pressure for Real Passing Space Tradeoffs",
+      "dek": "Narrow bridge gentle route pressure with passing space, rail comfort and crowd timing.",
+      "cat": "data",
+      "catLabel": "Route Features",
+      "tint": "#3f7f8c",
+      "seed": "narrow-bridge-gentle-route-pressure",
+      "href": "articles/narrow-bridge-gentle-route-pressure.html",
+      "author": "Sara Kim",
+      "date": "Jul 27, 2026",
+      "read": "13 min",
+      "featured": false
+    },
+    {
+      "title": "Stair Descent Short Route Effort When the Plan Depends on Handrail Evidence",
+      "dek": "Stair descent short route effort with knee load, return climb and handrail evidence.",
+      "cat": "data",
+      "catLabel": "Route Features",
+      "tint": "#3f7f8c",
+      "seed": "stair-descent-short-route-effort",
+      "href": "articles/stair-descent-short-route-effort.html",
+      "author": "Elena Cruz",
+      "date": "Jul 27, 2026",
+      "read": "14 min",
+      "featured": false
+    },
+    {
+      "title": "Gravel Wash Gentle Walk Footing: Loose Stone Field Check",
+      "dek": "Gravel wash gentle walk footing with loose stone, drainage channels and route marker confidence.",
+      "cat": "data",
+      "catLabel": "Route Features",
+      "tint": "#3f7f8c",
+      "seed": "gravel-wash-gentle-walk-footing",
+      "href": "articles/gravel-wash-gentle-walk-footing.html",
+      "author": "Nolan Park",
+      "date": "Jul 28, 2026",
+      "read": "15 min",
+      "featured": false
+    },
+    {
+      "title": "Sand Dune Edge Family Walk Without Overcommitting: Turnaround Landmarks Field Check",
+      "dek": "Sand dune edge family walk planning with soft-sand fatigue, wind and turnaround landmarks.",
+      "cat": "data",
+      "catLabel": "Route Features",
+      "tint": "#3f7f8c",
+      "seed": "sand-dune-edge-family-walk",
+      "href": "articles/sand-dune-edge-family-walk.html",
+      "author": "Gradient Field Team",
+      "date": "Jul 28, 2026",
+      "read": "11 min",
+      "featured": false
+    },
+    {
+      "title": "Slickrock Route Marker Confidence on Gentle Walks With Painted Marks",
+      "dek": "Slickrock route marker confidence with cairn caution, painted marks and return certainty.",
+      "cat": "data",
+      "catLabel": "Route Features",
+      "tint": "#3f7f8c",
+      "seed": "slickrock-route-marker-confidence",
+      "href": "articles/slickrock-route-marker-confidence.html",
+      "author": "Mira Lee",
+      "date": "Jul 28, 2026",
+      "read": "12 min",
+      "featured": false
+    },
+    {
+      "title": "River Corridor Shade Gentle Route Value When Flood-alert Checks Matters",
+      "dek": "River corridor shade gentle route planning with sound cover, cooling breaks and flood-alert checks.",
+      "cat": "data",
+      "catLabel": "Route Features",
+      "tint": "#3f7f8c",
+      "seed": "river-corridor-shade-gentle-route",
+      "href": "articles/river-corridor-shade-gentle-route.html",
+      "author": "Sara Kim",
+      "date": "Jul 28, 2026",
+      "read": "13 min",
+      "featured": false
+    },
+    {
+      "title": "Canyon Rim Fence Gap Comfort Check: Child Distance Before You Commit",
+      "dek": "Canyon rim fence gap comfort with child distance, photo stops and edge-pressure rules.",
+      "cat": "data",
+      "catLabel": "Route Features",
+      "tint": "#3f7f8c",
+      "seed": "canyon-rim-fence-gap-comfort",
+      "href": "articles/canyon-rim-fence-gap-comfort.html",
+      "author": "Elena Cruz",
+      "date": "Jul 28, 2026",
+      "read": "14 min",
+      "featured": false
     }
   ]
 };

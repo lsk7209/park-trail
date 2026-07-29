@@ -106,8 +106,8 @@ function schemaTag(schema) {
   return schema ? `\n  <script type="application/ld+json">${JSON.stringify(schema).replace(/</g, "\\u003c")}</script>` : "";
 }
 
-function trackingTags() {
-  const adsense = adsenseClient ? `\n  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${esc(adsenseClient)}" crossorigin="anonymous"></script>` : "";
+function trackingTags({ includeAds = false } = {}) {
+  const adsense = includeAds && adsenseClient ? `\n  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${esc(adsenseClient)}" crossorigin="anonymous"></script>` : "";
   const ga4 = /^G-[A-Z0-9]+$/.test(ga4Id) ? `\n  <script async src="https://www.googletagmanager.com/gtag/js?id=${esc(ga4Id)}"></script>\n  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","${esc(ga4Id)}");</script>` : "";
   return `${adsense}${ga4}`;
 }
@@ -134,7 +134,7 @@ function doc({ path, title, description, active, body, noindex = false, schema }
   <link rel="alternate" type="application/rss+xml" title="Gradient Trail RSS" href="${origin}/feed.xml">
   <link rel="icon" href="${prefix}favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="${prefix}us-trails/assets/topo.css">
-  ${noindex ? "" : trackingTags()}
+  ${noindex ? "" : trackingTags({ includeAds: path.startsWith("us-trails/articles/") })}
   ${skimlinksPublisherScript}
   ${schemaTag(schema || {
     "@context": "https://schema.org",
@@ -1049,7 +1049,7 @@ for (const park of site.parks) {
         <div class="mini-meta"><span>${esc(park.state)}</span><span>${park.count} mapped candidates</span><span>Official alert check: ${esc(park.alert)}</span></div>
       </section>
       <section class="section tight wrap">
-        <div class="section-head"><div><p class="eyebrow">Long-tail filters</p><h2>Planning pages for ${esc(park.name)}</h2></div><p>These pages model the pSEO inventory: useful filters first, no empty-list publishing.</p></div>
+        <div class="section-head"><div><p class="eyebrow">Plan options</p><h2>Planning pages for ${esc(park.name)}</h2></div><p>Use these filters to narrow a shortlist, then confirm current conditions with the official park source.</p></div>
         <div class="card-grid">${official ? `<a class="site-card" href="${prefix}${npsParkUrl(park)}"><div class="site-card-body"><h3>${esc(park.name)} official planning data</h3><p>Check NPS alerts, visitor centers, campground context, weather language and fee clues before route selection.</p></div></a>` : ""}${filters.map((filter) => `<a class="site-card" href="${prefix}us-trails/parks/${park.slug}/${filter.slug}.html"><div class="site-card-body"><h3>${esc(filter.title(park))}</h3><p>${esc(filter.description)}</p></div></a>`).join("")}</div>
       </section>
       <section class="section tight wrap">
