@@ -3405,6 +3405,97 @@ window.SAMPLE = {
       "date": "Jul 28, 2026",
       "read": "14 min",
       "featured": false
+    },
+    {
+      "title": "Lake Loop Marshy Edge Detour Planning for Alternate Shore Segments Decisions",
+      "dek": "Lake loop marshy edge detour planning with wet boards, seasonal bugs and alternate shore segments.",
+      "cat": "data",
+      "catLabel": "Route Features",
+      "tint": "#3f7f8c",
+      "seed": "lake-loop-marshy-edge-detour",
+      "href": "articles/lake-loop-marshy-edge-detour.html",
+      "author": "Nolan Park",
+      "date": "Jul 29, 2026",
+      "read": "15 min",
+      "featured": false
+    },
+    {
+      "title": "Meadow Protection Rope Route Choice Under Seasonal Closures Pressure",
+      "dek": "Meadow protection rope route choice with seasonal closures, photo pressure and boardwalk limits.",
+      "cat": "data",
+      "catLabel": "Route Features",
+      "tint": "#3f7f8c",
+      "seed": "meadow-protection-rope-route-choice",
+      "href": "articles/meadow-protection-rope-route-choice.html",
+      "author": "Gradient Field Team",
+      "date": "Jul 29, 2026",
+      "read": "11 min",
+      "featured": false
+    },
+    {
+      "title": "Waterfall Mist Zone Footing for Easy Trails and Child Spacing Signals",
+      "dek": "Waterfall mist zone footing with slippery rock, photo stops and child spacing.",
+      "cat": "data",
+      "catLabel": "Route Features",
+      "tint": "#3f7f8c",
+      "seed": "waterfall-mist-zone-footing",
+      "href": "articles/waterfall-mist-zone-footing.html",
+      "author": "Mira Lee",
+      "date": "Jul 29, 2026",
+      "read": "12 min",
+      "featured": false
+    },
+    {
+      "title": "Cave Entrance Steps Gentle Route After the Temperature Shift Check",
+      "dek": "Cave entrance steps gentle route planning with temperature shift, railings and tour fatigue.",
+      "cat": "data",
+      "catLabel": "Route Features",
+      "tint": "#3f7f8c",
+      "seed": "cave-entrance-steps-gentle-route",
+      "href": "articles/cave-entrance-steps-gentle-route.html",
+      "author": "Sara Kim",
+      "date": "Jul 29, 2026",
+      "read": "13 min",
+      "featured": false
+    },
+    {
+      "title": "Thermal Basin Steam Visibility Walk Planning Through a Closure Signals Lens",
+      "dek": "Thermal basin steam visibility walk planning with boardwalk focus, crowd pauses and official closure signals.",
+      "cat": "data",
+      "catLabel": "Route Features",
+      "tint": "#3f7f8c",
+      "seed": "thermal-basin-steam-visibility-walk",
+      "href": "articles/thermal-basin-steam-visibility-walk.html",
+      "author": "Elena Cruz",
+      "date": "Jul 29, 2026",
+      "read": "14 min",
+      "featured": false
+    },
+    {
+      "title": "Overlook Spur Trail Turnaround Decision Before Grade Surprise Becomes the Problem",
+      "dek": "Overlook spur trail turnaround planning with payoff distance, grade surprise and crowd pressure.",
+      "cat": "data",
+      "catLabel": "Route Features",
+      "tint": "#3f7f8c",
+      "seed": "overlook-spur-trail-turnaround",
+      "href": "articles/overlook-spur-trail-turnaround.html",
+      "author": "Nolan Park",
+      "date": "Jul 30, 2026",
+      "read": "15 min",
+      "featured": false
+    },
+    {
+      "title": "Lollipop Route Junction Confidence for Easy Hikes With a Wrong-turn Recovery Cross-Check",
+      "dek": "Lollipop route junction confidence with loop direction, signage and wrong-turn recovery.",
+      "cat": "data",
+      "catLabel": "Route Features",
+      "tint": "#3f7f8c",
+      "seed": "lollipop-route-junction-confidence",
+      "href": "articles/lollipop-route-junction-confidence.html",
+      "author": "Gradient Field Team",
+      "date": "Jul 30, 2026",
+      "read": "11 min",
+      "featured": false
     }
   ]
 };

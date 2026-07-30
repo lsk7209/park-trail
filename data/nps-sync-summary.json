@@ -1,13 +1,13 @@
 {
   "changed": true,
   "changedParks": [
-    "rocky-mountain"
+    "yellowstone"
   ],
   "parkCount": 6,
-  "alertCount": 17,
+  "alertCount": 20,
   "visitorCenterCount": 37,
   "campgroundCount": 43,
   "dryRun": false,
   "secretPrinted": false,
-  "generatedAt": "2026-07-27T12:36:00.172Z"
+  "generatedAt": "2026-07-30T11:20:16.569Z"
 }
