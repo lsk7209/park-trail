@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "source": "National Park Service API",
   "sourceDocs": "https://www.nps.gov/subjects/developer/api-documentation.htm",
-  "fetchedAt": "2026-07-30T11:20:16.569Z",
+  "fetchedAt": "2026-08-03T12:35:15.277Z",
   "parkCodes": [
     "yose",
     "grca",
@@ -1291,7 +1291,7 @@
           "category": "Information",
           "url": "https://www.nps.gov/yell/learn/news/26015.htm",
           "description": "All park rivers and streams are closed to fishing daily from 2 p.m. to sunrise due to high water temperatures and low stream flows. Additionally, the Madison, Firehole, and Gibbon (downstream of Norris Campground) rivers are fully closed to fishing. These closures will remain in effect until conditions improve to protect the park’s native and wild trout fisheries.",
-          "lastIndexedDate": "2026-07-28 00:00:00.0"
+          "lastIndexedDate": "2026-07-30 00:00:00.0"
         },
         {
           "id": "20E98D85-7FAA-49D6-AD35-532EB5011BDA",
@@ -1700,7 +1700,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "9bbe486df72e54ce731dce5ee45827c0928c273528cf0e7b8c6e05673333c11b"
+      "contentHash": "c3991b60df1295a41c203cb3d08a50ed1ebcc5690230e572c8ad322608190e14"
     },
     {
       "parkCode": "acad",
