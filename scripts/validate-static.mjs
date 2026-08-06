@@ -471,6 +471,12 @@ const primaryToolPagesEnhancedOk = [trails, parks, calculator, compare, methodol
     && adsenseLoaderCount(content) === 0
     && ga4LoaderCount(content) === 1);
 
+const calculatorSourceDisclosureOk = /What this estimate does—and does not—tell you/.test(calculator)
+  && /Official route check before use/.test(calculator)
+  && /https:\/\/www\.nps\.gov\/findapark\/index\.htm/.test(calculator)
+  && /https:\/\/www\.nps\.gov\/subjects\/developer\/api-documentation\.htm/.test(calculator)
+  && /When an official source and this estimate point in different directions/.test(calculator);
+
 const crawlableToolFallbackOk = /Lower Yosemite Fall Loop/.test(trails)
   && /Mather Point Rim Walk/.test(trails)
   && /Jordan Pond Path/.test(trails)
@@ -618,6 +624,7 @@ const expectations = [
   ["home navigation", /us-trails\/trails\.html/.test(home) && /blog\/index\.html/.test(home)],
   ["open graph metadata", /property="og:title"/.test(home) && /property="og:description"/.test(article) && /name="twitter:card"/.test(blogIndex)],
   ["primary tool pages enhanced", primaryToolPagesEnhancedOk],
+  ["calculator source disclosure", calculatorSourceDisclosureOk],
   ["crawlable tool fallback", crawlableToolFallbackOk],
   ["blog index", /Gentle trail planning guides/.test(blogIndex) && (blogIndex.match(/class="site-card post-index-card"/g) || []).length === publishedApprovalPosts.length],
   ["canonical and sitemap consistency", canonicalAndSitemapOk],
