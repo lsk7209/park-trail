@@ -477,6 +477,13 @@ const calculatorSourceDisclosureOk = /What this estimate does—and does not—t
   && /https:\/\/www\.nps\.gov\/subjects\/developer\/api-documentation\.htm/.test(calculator)
   && /When an official source and this estimate point in different directions/.test(calculator);
 
+const sharedOfficialSourceGuidanceOk = /Use a guide to plan, then verify the park/.test(blogIndex)
+  && /Find a Park — National Park Service/.test(blogIndex)
+  && /Use official park information before relying on this trail note/.test(generatedTrail)
+  && /Use .* official information for the final route check/.test(generatedPark)
+  && /https:\/\/www\.nps\.gov\/findapark\/index\.htm/.test(generatedTrail)
+  && /https:\/\/www\.nps\.gov\/findapark\/index\.htm/.test(generatedPark);
+
 const crawlableToolFallbackOk = /Lower Yosemite Fall Loop/.test(trails)
   && /Mather Point Rim Walk/.test(trails)
   && /Jordan Pond Path/.test(trails)
@@ -625,6 +632,7 @@ const expectations = [
   ["open graph metadata", /property="og:title"/.test(home) && /property="og:description"/.test(article) && /name="twitter:card"/.test(blogIndex)],
   ["primary tool pages enhanced", primaryToolPagesEnhancedOk],
   ["calculator source disclosure", calculatorSourceDisclosureOk],
+  ["shared official source guidance", sharedOfficialSourceGuidanceOk],
   ["crawlable tool fallback", crawlableToolFallbackOk],
   ["blog index", /Gentle trail planning guides/.test(blogIndex) && (blogIndex.match(/class="site-card post-index-card"/g) || []).length === publishedApprovalPosts.length],
   ["canonical and sitemap consistency", canonicalAndSitemapOk],

@@ -202,6 +202,10 @@ function npsSourceNote(official) {
   return `Official NPS API snapshot checked ${fetched}. Current conditions can change after this build; use the linked official park page before visiting.`;
 }
 
+function officialSourceCheckPanel(prefix, { heading = "Before you leave: verify the official source" } = {}) {
+  return `<aside class="panel official-source-check" aria-labelledby="official-source-check-heading"><h2 id="official-source-check-heading">${heading}</h2><p>Use Gradient Trail to compare stable route context. Before a park day, open the National Park Service page for the destination and let its current alerts, access notices, roads, weather and facility information change the plan when needed.</p><ol class="takeaway-list"><li>Find the destination&apos;s official NPS page and read current visitor information.</li><li>Check whether an alert, closure, weather notice, road, shuttle, permit or access detail changes the route, start time or backup.</li><li>If the official source conflicts with a score, estimate or article, follow the official source and choose a safer or simpler plan.</li></ol><p><a href="https://www.nps.gov/findapark/index.htm">Find a Park — National Park Service</a> <span class="dot-sep"></span> <a href="${prefix}us-trails/methodology.html">How Gradient Trail separates stable metrics from current conditions</a></p></aside>`;
+}
+
 function npsList(items, emptyText, render) {
   if (!items?.length) return `<p>${esc(emptyText)}</p>`;
   return `<ul class="source-list">${items.map(render).join("")}</ul>`;
@@ -1052,6 +1056,7 @@ for (const park of site.parks) {
         <div class="section-head"><div><p class="eyebrow">Plan options</p><h2>Planning pages for ${esc(park.name)}</h2></div><p>Use these filters to narrow a shortlist, then confirm current conditions with the official park source.</p></div>
         <div class="card-grid">${official ? `<a class="site-card" href="${prefix}${npsParkUrl(park)}"><div class="site-card-body"><h3>${esc(park.name)} official planning data</h3><p>Check NPS alerts, visitor centers, campground context, weather language and fee clues before route selection.</p></div></a>` : ""}${filters.map((filter) => `<a class="site-card" href="${prefix}us-trails/parks/${park.slug}/${filter.slug}.html"><div class="site-card-body"><h3>${esc(filter.title(park))}</h3><p>${esc(filter.description)}</p></div></a>`).join("")}</div>
       </section>
+      <section class="section tight wrap">${officialSourceCheckPanel(prefix, { heading: `Use ${esc(park.name)} official information for the final route check` })}</section>
       <section class="section tight wrap">
         <div class="section-head"><div><p class="eyebrow">Top candidates</p><h2>Gentlest routes in this sample</h2></div></div>
         ${trailRows(trails, prefix)}
@@ -1116,6 +1121,7 @@ for (const trail of site.trails) {
           <div class="panel"><h2>Access caution</h2><p>${esc(trail.accessNote)}</p><p class="trust">Always check official park alerts and current trail conditions before visiting.</p></div>
         </div>
       </section>
+      <section class="section tight wrap">${officialSourceCheckPanel(prefix, { heading: "Use official park information before relying on this trail note" })}</section>
       <section class="section tight wrap">
         <div class="section-head"><div><p class="eyebrow">Internal links</p><h2>Related planning pages</h2></div></div>
         <div class="card-grid">
@@ -1212,6 +1218,7 @@ await write("blog/index.html", doc({
     </section>
     <section class="section tight wrap blog-index-intro">
       <div class="panel"><h2>Use the archive by planning job</h2><p>Start with the constraint that matters most: family pacing, mobility-aware access, route surface, seasonal conditions, park-specific planning or data literacy. Each card links to a full article with a table of contents, route decision tool, internal links and source notes.</p></div>
+      ${officialSourceCheckPanel(prefix, { heading: "Use a guide to plan, then verify the park" })}
       <div class="blog-category-row" aria-label="Blog categories">${blogCategories.map(([cat, label]) => `<a href="#${esc(cat)}">${esc(label)}</a>`).join("")}</div>
     </section>
     ${blogCategories.map(([cat, label]) => {
