@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "source": "National Park Service API",
   "sourceDocs": "https://www.nps.gov/subjects/developer/api-documentation.htm",
-  "fetchedAt": "2026-08-03T12:35:15.277Z",
+  "fetchedAt": "2026-08-06T11:32:35.516Z",
   "parkCodes": [
     "yose",
     "grca",
@@ -12,6 +12,7 @@
     "acad"
   ],
   "changedParks": [
+    "zion",
     "yellowstone"
   ],
   "parks": [
@@ -964,13 +965,13 @@
         {
           "title": "The Watchman",
           "altText": "A triangular sandstone mountain overlooks green and yellow foliage. A cloudy blue sky is overhead.",
-          "credit": "NPS/Shane Carte",
+          "credit": "NPS Photo / Shane Carte",
           "url": "https://www.nps.gov/common/uploads/structured_data/68BFC1AC-BF96-629F-89D261D78F181C64.jpg"
         },
         {
           "title": "The Towers of the Virgin",
           "altText": "The sun sets behind large red and white towers of sandstone.",
-          "credit": "NPS/Jesse Nelson",
+          "credit": "NPS Photo / Jesse Nelson",
           "url": "https://www.nps.gov/common/uploads/structured_data/69162F54-D4AF-8695-A42F97A8F9774C19.jpg"
         },
         {
@@ -1131,7 +1132,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "ca9bcba2baf00dd33770801b55e3a671dff3cd0c41a160998b49eab2994cb555"
+      "contentHash": "dfa96f220635b1ccd6d80962f9fd3c62cd0bc84a268793f81bdb349fcaf95b44"
     },
     {
       "parkCode": "yell",
@@ -1276,14 +1277,6 @@
           "url": "https://www.nps.gov/yell/images/Biscuit_Basin_Closure_Map_20250529_1.png",
           "description": "The parking lot, boardwalk, and Firehole River at Biscuit Basin, located north of Old Faithful, is closed to all travel until further notice due to the possibility of another event at the site of a hydrothermal explosion that occurred July 23, 2024.",
           "lastIndexedDate": "2026-07-01 00:00:00.0"
-        },
-        {
-          "id": "F4B0D760-8B13-4CBB-A9C9-A9B4DD6A13A3",
-          "title": "Osprey Falls Trail Temporary Closure",
-          "category": "Information",
-          "url": "https://www.nps.gov/yell/planyourvisit/situationreport.htm",
-          "description": "The Osprey Falls Trail, located south of Mammoth Hot Springs near Bunsen Peak, will be temporarily closed for critical trail repair work July 28–Aug. 4 from 8 a.m.–4 p.m. On July 30–31, the trail will be closed all day. The Old Bunsen Peak Road will remain open during repair work.",
-          "lastIndexedDate": "2026-07-28 00:00:00.0"
         },
         {
           "id": "22ED4752-D38D-4389-BB2C-CABCB41301DB",
@@ -1700,7 +1693,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "c3991b60df1295a41c203cb3d08a50ed1ebcc5690230e572c8ad322608190e14"
+      "contentHash": "7dd16a92429cb3b3045b5761c13f0c4e8889c7a2babfae809a199d707ffb2076"
     },
     {
       "parkCode": "acad",
