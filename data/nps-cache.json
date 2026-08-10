@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "source": "National Park Service API",
   "sourceDocs": "https://www.nps.gov/subjects/developer/api-documentation.htm",
-  "fetchedAt": "2026-08-06T11:32:35.516Z",
+  "fetchedAt": "2026-08-10T10:35:33.663Z",
   "parkCodes": [
     "yose",
     "grca",
@@ -12,7 +12,6 @@
     "acad"
   ],
   "changedParks": [
-    "zion",
     "yellowstone"
   ],
   "parks": [
@@ -1303,14 +1302,6 @@
           "lastIndexedDate": "2026-03-19 00:00:00.0"
         },
         {
-          "id": "5396AFF0-9C9E-462B-942C-314E8D36D442",
-          "title": "Traffic Delays - Gibbon River Bridge",
-          "category": "Information",
-          "url": "https://www.nps.gov/yell/planyourvisit/parkroads.htm",
-          "description": "Expect up to 15-minute delays on Gibbon River Bridge from July 9 through late-July while crews repair the railing.",
-          "lastIndexedDate": "2026-07-09 00:00:00.0"
-        },
-        {
           "id": "81C7FD68-A919-4483-918E-21BBBD960302",
           "title": "Traffic Delays - Yellowstone River Bridge",
           "category": "Information",
@@ -1693,7 +1684,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "7dd16a92429cb3b3045b5761c13f0c4e8889c7a2babfae809a199d707ffb2076"
+      "contentHash": "b780ae13112c650cd0e312583bd06d1443640884515bd903449612e9821f2be7"
     },
     {
       "parkCode": "acad",
