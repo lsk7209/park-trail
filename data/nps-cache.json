@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "source": "National Park Service API",
   "sourceDocs": "https://www.nps.gov/subjects/developer/api-documentation.htm",
-  "fetchedAt": "2026-08-10T10:35:33.663Z",
+  "fetchedAt": "2026-08-13T10:20:52.809Z",
   "parkCodes": [
     "yose",
     "grca",
@@ -12,6 +12,7 @@
     "acad"
   ],
   "changedParks": [
+    "zion",
     "yellowstone"
   ],
   "parks": [
@@ -893,8 +894,8 @@
       "states": "UT",
       "url": "https://www.nps.gov/zion/index.htm",
       "description": "Follow the paths where people have walked for thousands of years. Gaze up at massive sandstone cliffs of cream, pink, and red that soar into a brilliant blue sky. Experience the tall, stretching walls of a narrow slot canyon. Zion’s unique array of plants and animals will enchant you as you absorb the rich history of the past and enjoy the excitement of present-day adventures.",
-      "weatherInfo": "Zion is known for a wide range of weather conditions. Temperatures vary with changes in elevation and day/night temperatures may differ by over 30°F. In summer, temperatures in Zion National Park often exceed 100°F/38°C. Zion experiences monsoons from mid-July into September that result in an increased risk of flash floods. Always be aware of the threat of storms and lightning and be prepared for a wide range of weather conditions. Winters are generally mild.",
-      "directionsInfo": "Zion National Park's main, south entrance and administrative offices are located near Springdale, Utah You may drive yourself on all open park roads except the Zion Canyon Scenic Drive. During most of the year, the Scenic Drive is accessed by shuttle bus only. Shuttles are free to ride. Board one in Springdale or at the Zion Canyon Visitor Center.",
+      "weatherInfo": "Zion is known for a wide range of weather conditions. Temperatures vary with changes in elevation and day/night temperatures may differ by over 30°F (16°C). In summer, temperatures in Zion National Park often exceed 100°F (38°C). Zion experiences monsoons from mid-July into September that result in an increased risk of flash floods. Always be aware of the threat of storms and lightning and be prepared for a wide range of weather conditions. Winters are generally mild.",
+      "directionsInfo": "Zion National Park's South Entrance and administrative offices are located near Springdale, Utah. This area, called Zion Canyon, is where most campsites and popular hikes are located. Zion Canyon can also be accessed through the park's East Entrance, which is west of Mt. Carmel Junction, Utah. Once inside the park, Zion Canyon can be explored via the Zion Canyon Scenic Drive. For most of the year, the scenic drive is only open to shuttle busses. Board shuttles at the Zion Canyon Visitor Center.",
       "directionsUrl": "http://www.nps.gov/zion/planyourvisit/directions.htm",
       "latLong": "lat:37.29839254, long:-113.0265138",
       "addresses": [
@@ -1131,7 +1132,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "dfa96f220635b1ccd6d80962f9fd3c62cd0bc84a268793f81bdb349fcaf95b44"
+      "contentHash": "2b549c4bf788a65b6c15f742ee306a43788420ca372f735a8bc600bf236ff6e6"
     },
     {
       "parkCode": "yell",
@@ -1278,12 +1279,12 @@
           "lastIndexedDate": "2026-07-01 00:00:00.0"
         },
         {
-          "id": "22ED4752-D38D-4389-BB2C-CABCB41301DB",
-          "title": "Park Rivers and Streams Closed to Fishing Daily from 2 p.m. to Sunrise",
+          "id": "7EAFDE25-DEEB-4789-9648-DFC1634B4C88",
+          "title": "Select Park Rivers Closed to Fishing",
           "category": "Information",
           "url": "https://www.nps.gov/yell/learn/news/26015.htm",
-          "description": "All park rivers and streams are closed to fishing daily from 2 p.m. to sunrise due to high water temperatures and low stream flows. Additionally, the Madison, Firehole, and Gibbon (downstream of Norris Campground) rivers are fully closed to fishing. These closures will remain in effect until conditions improve to protect the park’s native and wild trout fisheries.",
-          "lastIndexedDate": "2026-07-30 00:00:00.0"
+          "description": "The Madison, Firehole and Gibbon (downstream of Norris Campground) rivers are closed to fishing until water temperatures cool to protect the park's native and wild trout fisheries. Most other rivers and streams are open to fishing, as specified in park fishing regulations.",
+          "lastIndexedDate": "2026-08-12 00:00:00.0"
         },
         {
           "id": "20E98D85-7FAA-49D6-AD35-532EB5011BDA",
@@ -1684,7 +1685,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "b780ae13112c650cd0e312583bd06d1443640884515bd903449612e9821f2be7"
+      "contentHash": "29f07c32ebbaff892b6c18275d09a69966111b857461b6b1c959b1a2b9b88aa3"
     },
     {
       "parkCode": "acad",

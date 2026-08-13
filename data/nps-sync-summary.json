@@ -1,6 +1,7 @@
 {
   "changed": true,
   "changedParks": [
+    "zion",
     "yellowstone"
   ],
   "parkCount": 6,
@@ -9,5 +10,5 @@
   "campgroundCount": 43,
   "dryRun": false,
   "secretPrinted": false,
-  "generatedAt": "2026-08-10T10:35:33.663Z"
+  "generatedAt": "2026-08-13T10:20:52.809Z"
 }
