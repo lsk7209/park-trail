@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "source": "National Park Service API",
   "sourceDocs": "https://www.nps.gov/subjects/developer/api-documentation.htm",
-  "fetchedAt": "2026-08-17T09:56:23.622Z",
+  "fetchedAt": "2026-08-24T10:02:57.966Z",
   "parkCodes": [
     "yose",
     "grca",
@@ -13,7 +13,7 @@
   ],
   "changedParks": [
     "grand-canyon",
-    "yellowstone",
+    "rocky-mountain",
     "acadia"
   ],
   "parks": [
@@ -440,14 +440,6 @@
           "lastIndexedDate": "2026-06-26 00:00:00.0"
         },
         {
-          "id": "4CC2EC5B-2CAD-44DC-90C1-86856D021228",
-          "title": "Water Conservation Measures in Effect for South Rim",
-          "category": "Caution",
-          "url": "https://www.nps.gov/grca/learn/news/greater-water-conservation-measures-aug-13-2026.htm",
-          "description": "As of August 13, increased water conservation measures have been implemented at Grand Canyon National Park due to diminishing water reserves. The park remains open with the following changes in place: Camper Services is closed; water spigots at Mather Campground and Desert View are off; fires within Mather and Desert View Campgrounds prohibited. Restrooms at Mather and Desert View Campgrounds remain open. Park concessioners, visitors, and residents are asked to reduce water use wherever possible.",
-          "lastIndexedDate": "2026-08-14 00:00:00.0"
-        },
-        {
           "id": "3396D6D3-5F44-4532-B48B-42A629991493",
           "title": "What's Closed and What's Open: South Rim & North Rim",
           "category": "Information",
@@ -534,7 +526,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "21a33b0e4c38682876be80d92fa789fd3074e037a9d01bc795b2a09565518a46"
+      "contentHash": "f4e20ebd6db582e213550257eb29eb0424d1ef8a60f760715129b33c66fae60f"
     },
     {
       "parkCode": "romo",
@@ -639,14 +631,6 @@
           "category": "Park Closure",
           "url": "https://www.nps.gov/romo/learn/fire-information-and-regulations.htm",
           "description": "Due to very high fire danger, the extended weather forecast, and current fire activity in the State of Colorado, Stage 2 Fire Restrictions are now in effect within Rocky Mountain National Park. When Stage 2 Fire Restrictions are in effect, this means that all campfires, including charcoal briquette fires are not permitted anywhere within Rocky Mountain National Park. This ban is effective beginning today, June 29, and will remain in effect until further notice.",
-          "lastIndexedDate": "2026-06-29 00:00:00.0"
-        },
-        {
-          "id": "ECFDB7DF-3A9E-4043-9923-EDB5E4299E73",
-          "title": "Update on Transponders",
-          "category": "Information",
-          "url": "https://www.nps.gov/romo/planyourvisit/transponder-devices.htm",
-          "description": "Due to some unexpected technical issues that are impacting recent transponder sales and renewals, Rocky Mountain National Park is temporarily pausing the sale and renewal of transponder devices. Updates will be posted on the park webpage.",
           "lastIndexedDate": "2026-06-29 00:00:00.0"
         }
       ],
@@ -892,7 +876,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "37b23fe82511e320256eb5059af268a7d5e66e1ac875638a5875e9d91a71f433"
+      "contentHash": "2085adfd989e70a63b96ed68432954ed9544f10f061f91ab3471df6bc14f528f"
     },
     {
       "parkCode": "zion",
@@ -1766,10 +1750,10 @@
       ],
       "officialImages": [
         {
-          "title": "Pemetic Mountain Sunset",
-          "altText": "Silhouette of a hiker walking along a ridgeline at sunset",
-          "credit": "Photo courtesy of Will Newton, Friends of Acadia",
-          "url": "https://www.nps.gov/common/uploads/structured_data/9692920F-E68E-EDF5-26E0FC8BD7264916.jpg"
+          "title": "Save Our Summits Hike",
+          "altText": "A man and woman holding walking sticks hike up a mountain summit near a wooden trail sign.",
+          "credit": "Photo courtesy of Sam Mallon, Friends of Acadia",
+          "url": "https://www.nps.gov/common/uploads/structured_data/45637FDC-0A5F-0862-76C4B1418A914B5A.jpg"
         },
         {
           "title": "Carriage Road Bike Tour",
@@ -1970,7 +1954,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "80dd4a9181b354229613e4e2e8bd75e8a7c82d464430cb21f1a4fa3268257d15"
+      "contentHash": "02e1ce43f0ae058cce66747c65464b52eaf75804236f6bf118bd4d1a74c448e4"
     }
   ]
 }

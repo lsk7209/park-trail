@@ -2,14 +2,14 @@
   "changed": true,
   "changedParks": [
     "grand-canyon",
-    "yellowstone",
+    "rocky-mountain",
     "acadia"
   ],
   "parkCount": 6,
-  "alertCount": 17,
+  "alertCount": 15,
   "visitorCenterCount": 37,
   "campgroundCount": 43,
   "dryRun": false,
   "secretPrinted": false,
-  "generatedAt": "2026-08-17T09:56:23.622Z"
+  "generatedAt": "2026-08-24T10:02:57.966Z"
 }
