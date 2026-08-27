@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "source": "National Park Service API",
   "sourceDocs": "https://www.nps.gov/subjects/developer/api-documentation.htm",
-  "fetchedAt": "2026-08-24T10:02:57.966Z",
+  "fetchedAt": "2026-08-27T19:50:11.901Z",
   "parkCodes": [
     "yose",
     "grca",
@@ -12,9 +12,7 @@
     "acad"
   ],
   "changedParks": [
-    "grand-canyon",
-    "rocky-mountain",
-    "acadia"
+    "yellowstone"
   ],
   "parks": [
     {
@@ -1280,12 +1278,12 @@
           "lastIndexedDate": "2026-08-12 00:00:00.0"
         },
         {
-          "id": "20E98D85-7FAA-49D6-AD35-532EB5011BDA",
-          "title": "Their Space, Your Safety",
+          "id": "67146540-50E1-44EE-8D3A-2314B0192DDB",
+          "title": "Stay Away From Bull Elk",
           "category": "Caution",
-          "url": "https://www.nps.gov/yell/planyourvisit/safety.htm",
-          "description": "Animals in Yellowstone are wild and dangerous. Stay at least 100 yards (91 m) from bears/wolves/cougars and 25 yards (23 m) from bison/elk/all other wildlife. Carry bear spray (even on short walks) and know how to use it—you can rent/purchase/recycle it at several locations in the park.",
-          "lastIndexedDate": "2026-07-28 00:00:00.0"
+          "url": "https://www.nps.gov/yell/planyourvisit/safety.htm#elk",
+          "description": "Bull elk are fast and unpredictable this time of year and can seriously injure people. If an elk charges, run. In addition to staying at least 25 yards (23 m) away from elk and bison, always stay at least 100 yards (91 m) away from bears and wolves.",
+          "lastIndexedDate": "2026-08-26 00:00:00.0"
         },
         {
           "id": "57EFE369-9186-400A-8F18-0E966993B8A3",
@@ -1670,7 +1668,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "bdfdd32ba871f5eb7c9dec95d0c94815c69aa1dcf9bfb57074bc5b72a1d07f96"
+      "contentHash": "4a3b8236610eea758122722e61e6452476a7e66a8b18b7109f868c9563a3b4b1"
     },
     {
       "parkCode": "acad",
