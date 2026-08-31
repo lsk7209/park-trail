@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "source": "National Park Service API",
   "sourceDocs": "https://www.nps.gov/subjects/developer/api-documentation.htm",
-  "fetchedAt": "2026-08-27T19:50:11.901Z",
+  "fetchedAt": "2026-08-31T17:03:24.127Z",
   "parkCodes": [
     "yose",
     "grca",
@@ -12,7 +12,9 @@
     "acad"
   ],
   "changedParks": [
-    "yellowstone"
+    "grand-canyon",
+    "yellowstone",
+    "acadia"
   ],
   "parks": [
     {
@@ -430,12 +432,28 @@
       ],
       "alerts": [
         {
+          "id": "BD6EC75E-89ED-4345-BE71-4A2EA5FF186E",
+          "title": "CLOSED - N. Kaibab Trail, Phantom, and Silver/Black Bridges",
+          "category": "Danger",
+          "url": "",
+          "description": "The entirety of the North Kaibab Trail, Phantom Ranch, and Silver and Black Bridges are closed until further notice. The NPS is conducting an air evacuation of approximately 50 individuals from the Phantom Ranch area. Xanterra will inform guests with future Phantom Ranch reservations about the status of their reservations. Please do not attempt to access the closed areas.",
+          "lastIndexedDate": "2026-08-30 00:00:00.0"
+        },
+        {
           "id": "2CF15EBC-0800-4DF3-8179-B1579B6D4F57",
           "title": "Critical Backcountry Updates/Closures",
           "category": "Caution",
           "url": "https://www.nps.gov/grca/planyourvisit/key-messages.htm",
           "description": "Visit this link for the inner canyon weather forecast, current trail closures, today's heat risk, and drinking water availability.",
           "lastIndexedDate": "2026-06-26 00:00:00.0"
+        },
+        {
+          "id": "4CC2EC5B-2CAD-44DC-90C1-86856D021228",
+          "title": "Overnight Lodging and Stage 4 Water Restrictions take effect Aug. 31",
+          "category": "Park Closure",
+          "url": "https://www.nps.gov/grca/learn/news/greater-water-conservation-measures-aug-13-2026.htm",
+          "description": "Grand Canyon National Park will implement Stage 4 water restrictions on the South Rim beginning August 31 at noon due to extensive flash flood damage to the Transcanyon Waterline. Overnight accommodations will close, and only dry camping will be permitted. The park will remain open for day use, with food and beverage services, the Grand Canyon Clinic, and Post Office remaining open. Visitors and residents are asked to conserve water.",
+          "lastIndexedDate": "2026-08-30 00:00:00.0"
         },
         {
           "id": "3396D6D3-5F44-4532-B48B-42A629991493",
@@ -524,7 +542,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "f4e20ebd6db582e213550257eb29eb0424d1ef8a60f760715129b33c66fae60f"
+      "contentHash": "5225f10c58f77840de528a284776b076597983ec4f5b9cc0e7b92bfc75da080c"
     },
     {
       "parkCode": "romo",
@@ -1270,12 +1288,12 @@
           "lastIndexedDate": "2026-07-01 00:00:00.0"
         },
         {
-          "id": "7EAFDE25-DEEB-4789-9648-DFC1634B4C88",
-          "title": "Select Park Rivers Closed to Fishing",
+          "id": "833EEC60-6E0B-4939-908C-9C1A0544514A",
+          "title": "Partial Fishing Closures on the Madison, Firehole and Gibbon Rivers",
           "category": "Information",
           "url": "https://www.nps.gov/yell/learn/news/26015.htm",
-          "description": "The Madison, Firehole and Gibbon (downstream of Norris Campground) rivers are closed to fishing until water temperatures cool to protect the park's native and wild trout fisheries. Most other rivers and streams are open to fishing, as specified in park fishing regulations.",
-          "lastIndexedDate": "2026-08-12 00:00:00.0"
+          "description": "The Madison, Firehole and Gibbon (downstream of Norris Campground) rivers are closed to fishing daily between 2 p.m. and sunrise until water temperatures cool to protect the park's native and wild trout fisheries. Most other rivers and streams are open to fishing, as specified in park fishing regulations.",
+          "lastIndexedDate": "2026-08-27 00:00:00.0"
         },
         {
           "id": "67146540-50E1-44EE-8D3A-2314B0192DDB",
@@ -1668,7 +1686,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "4a3b8236610eea758122722e61e6452476a7e66a8b18b7109f868c9563a3b4b1"
+      "contentHash": "b55e27c36501ed57bb8a91b530ef756b7df7c15ccc424b92d14acc25919c80fb"
     },
     {
       "parkCode": "acad",
@@ -1774,6 +1792,22 @@
           "url": "",
           "description": "Bacterial levels have exceeded public health standards at Sand Beach Lagoon and a Public Health Advisory has been posted. The public is advised against swimming at this beach until bacterial levels return to healthful levels. (Not for Sand Beach.)",
           "lastIndexedDate": "2026-07-15 00:00:00.0"
+        },
+        {
+          "id": "96A00261-453A-467D-A1D5-24D68A59AB50",
+          "title": "Schoodic Mountain Road Closed for Repairs",
+          "category": "Park Closure",
+          "url": "",
+          "description": "Starting Aug 31, the Schoodic Mountain Road will be closed for repairs from Schoodic Loop Road to the summit of Schoodic Head. Workers will be operating heavy equipment for resurfacing, regrading and ditching.",
+          "lastIndexedDate": "2026-08-24 00:00:00.0"
+        },
+        {
+          "id": "D3E90E5C-ABED-4EDD-B17F-7D4744770978",
+          "title": "Southern Section of Ocean Path Closed for Repairs",
+          "category": "Park Closure",
+          "url": "",
+          "description": "Starting Aug 31, a section of Ocean Path will be closed for repairs from a trailhead across from the Otter Point parking lot to the trail's southern terminus.",
+          "lastIndexedDate": "2026-08-24 00:00:00.0"
         }
       ],
       "visitorCenters": [
@@ -1952,7 +1986,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "02e1ce43f0ae058cce66747c65464b52eaf75804236f6bf118bd4d1a74c448e4"
+      "contentHash": "66e0186386f06bf83cb90930aeacb786a026200f8938ee9d65f0aa469f3739ba"
     }
   ]
 }
