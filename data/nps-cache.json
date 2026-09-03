@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "source": "National Park Service API",
   "sourceDocs": "https://www.nps.gov/subjects/developer/api-documentation.htm",
-  "fetchedAt": "2026-08-31T17:03:24.127Z",
+  "fetchedAt": "2026-09-03T13:34:33.239Z",
   "parkCodes": [
     "yose",
     "grca",
@@ -13,8 +13,8 @@
   ],
   "changedParks": [
     "grand-canyon",
-    "yellowstone",
-    "acadia"
+    "rocky-mountain",
+    "zion"
   ],
   "parks": [
     {
@@ -433,11 +433,11 @@
       "alerts": [
         {
           "id": "BD6EC75E-89ED-4345-BE71-4A2EA5FF186E",
-          "title": "CLOSED - N. Kaibab Trail, Phantom, and Silver/Black Bridges",
+          "title": "CLOSED - N. Kaibab Trail, Phantom Ranch and Silver/Black Bridges",
           "category": "Danger",
-          "url": "",
-          "description": "The entirety of the North Kaibab Trail, Phantom Ranch, and Silver and Black Bridges are closed until further notice. The NPS is conducting an air evacuation of approximately 50 individuals from the Phantom Ranch area. Xanterra will inform guests with future Phantom Ranch reservations about the status of their reservations. Please do not attempt to access the closed areas.",
-          "lastIndexedDate": "2026-08-30 00:00:00.0"
+          "url": "https://www.nps.gov/grca/learn/news/significant-flash-flooding-closes-phantom-ranch-and-north-kaibab-trail.htm",
+          "description": "The entirety of the North Kaibab Trail, Cottonwood and Bright Angel Campgrounds, Phantom Ranch, and the Silver and Black Bridges are closed until further notice due to extensive flash flood damage. Xanterra will inform guests with future Phantom Ranch reservations about the status of their reservations. Please do not attempt to access the closed areas.",
+          "lastIndexedDate": "2026-09-02 00:00:00.0"
         },
         {
           "id": "2CF15EBC-0800-4DF3-8179-B1579B6D4F57",
@@ -451,9 +451,9 @@
           "id": "4CC2EC5B-2CAD-44DC-90C1-86856D021228",
           "title": "Overnight Lodging and Stage 4 Water Restrictions take effect Aug. 31",
           "category": "Park Closure",
-          "url": "https://www.nps.gov/grca/learn/news/greater-water-conservation-measures-aug-13-2026.htm",
+          "url": "https://www.nps.gov/grca/learn/news/grand-canyon-national-park-to-close-overnight-hotel-accommodations-beginning-august-31.htm",
           "description": "Grand Canyon National Park will implement Stage 4 water restrictions on the South Rim beginning August 31 at noon due to extensive flash flood damage to the Transcanyon Waterline. Overnight accommodations will close, and only dry camping will be permitted. The park will remain open for day use, with food and beverage services, the Grand Canyon Clinic, and Post Office remaining open. Visitors and residents are asked to conserve water.",
-          "lastIndexedDate": "2026-08-30 00:00:00.0"
+          "lastIndexedDate": "2026-08-31 00:00:00.0"
         },
         {
           "id": "3396D6D3-5F44-4532-B48B-42A629991493",
@@ -525,7 +525,7 @@
           "id": "CBEBF627-E888-45E6-9E8C-6EA6AE9A1B2D",
           "name": "Mather Campground - South Rim",
           "url": "https://www.nps.gov/grca/planyourvisit/mather-campground-south-rim.htm",
-          "description": "Mather Campground is located in Grand Canyon Village on the South Rim of Grand Canyon National Park. There are 327 sites. Each includes a campfire ring/cooking grate, picnic table, parking space and room for up to six people, three tents, and two vehicles. There are flush toilets and drinking water throughout the campground. No hookups are available, however there is a free dump station. Most RV spaces are pull-through.",
+          "description": "Mather Campground is located in Grand Canyon Village on the South Rim of Grand Canyon National Park. There are 327 sites. Only dry camping is currently permitted due to Stage 4 water restrictions. Spigot access is turned off, though faucets in bathrooms remain operational. No fires are currently allowed on the South Rim and inner canyon areas. Fire restrictions prohibit all wood burning and charcoal fires. No hookups are available, however there is a free dump station. Most RV spaces are pull-th",
           "reservationUrl": "https://www.recreation.gov/camping/campgrounds/232490",
           "weatherOverview": "With an elevation spanning from around 2000 feet to over 8000 feet (760-2440m), the Grand Canyon area experiences a variety of weather conditions. This weather variety includes cold winters and mild pleasant summers, moderate humidity, and considerable diurnal temperature changes at the higher elevations, with hot and ",
           "numberOfSitesReservable": "300",
@@ -535,14 +535,14 @@
           "id": "DF0F45FB-FEE4-47A9-ACD4-63E3DC9BF9DA",
           "name": "Trailer Village RV Park - South Rim",
           "url": "https://www.visitgrandcanyon.com/trailer-village-rv-park",
-          "description": "Trailer Village is the only in-park RV campground with full hookups (sewage, water, and electrical with 30 amp and 50 amp sites available) Open year-round, Trailer Village features paved pull-through sites which can accommodate vehicles up to 50 feet long. Trailer Village is operated by Delaware North. Reservations can be made up to 13 months in advance. If visiting during the busy season (May through October) making reservations 1 year in advance is recommend. Visit their website to make reserv",
+          "description": "CLOSED as of August 31, 2026 due to Stage 4 water restrictions.",
           "reservationUrl": "https://gc.synxis.com/rez.aspx?chain=398&template=respgc&shell=gccls&dest=gcnp&hotel=63275&_ga=2.214229012.246257283.1612044367-731013058.1606790486",
           "weatherOverview": "With an elevation spanning from around 2000 feet to over 8000 feet (760-2440m), the Grand Canyon area experiences a variety of weather conditions. This weather variety includes cold winters and mild pleasant summers, moderate humidity, and considerable diurnal temperature changes at the higher elevations, with hot and ",
           "numberOfSitesReservable": "123",
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "5225f10c58f77840de528a284776b076597983ec4f5b9cc0e7b92bfc75da080c"
+      "contentHash": "8e427823113181de31916dc10cabde8243db5986e26c58118ce56a65e0a7c28a"
     },
     {
       "parkCode": "romo",
@@ -752,7 +752,7 @@
           "id": "B9076D87-29B0-4624-ADFE-EEFA5AC631EE",
           "name": "Junior Ranger Headquarters at Hidden Valley",
           "url": "https://www.nps.gov/romo/learn/kidsyouth/junior-ranger.htm",
-          "description": "Open during the summer, Junior Ranger Headquarters is a place just for kids! Located on the east side of Rocky Mountain National Park at Hidden Valley, Junior Rangers of all ages are invited to stop by and explore! Hidden Valley is located on Trail Ridge Road approximately 7 miles from the Beaver Meadows or Fall River Entrances. Junior Rangers and their families have the opportunity to stop and learn about forest ecology, wildlife biology, animal track identification, plant identification, and m",
+          "description": "Junior Ranger Headquarters has closed for the season. We invite you to get out and explore the Hidden Valley area on your own with your family. Hidden Valley is located on Trail Ridge Road approximately 7 miles from the Beaver Meadows or Fall River Entrances.",
           "directionsInfo": "When traveling from Estes Park, enter RMNP using either the Beaver Meadows or Fall River Entrances via U.S. Highway 36 or 34 and drive towards Deer Ridge Junction. At Deer Ridge Junction, follow the signs to Trail Ridge Road and Hidden Valley. Hidden Valley is approximately 7 miles from the east side entrances. Look fo",
           "directionsUrl": "",
           "addresses": [
@@ -796,7 +796,7 @@
           "id": "C8DCF727-A024-419F-96A7-B341A8FA6721",
           "name": "Moraine Park Discovery Center",
           "url": "",
-          "description": "Moraine Park Discovery Center is open daily during the summer season. Located along Bear Lake Road, the Moraine Park Discovery Center is a great place for families and Junior Rangers to explore. Take in scenic views of Moraine Park and Longs Peak. Discover fun Junior Ranger activities and exhibits. Restrooms and water are available. There is also a Nature Store managed by Rocky Mountain Conservancy.",
+          "description": "The Nature Store in the Moraine Park Discovery Center is open daily. This store is managed by Rocky Mountain Conservancy. Ranger-led activities have ended at Moraine Park Discovery Center for the season. We look forward to seeing you again next summer!",
           "directionsInfo": "Moraine Park Discover Center is located on Bear Lake Road, approximately 1.5 miles from the Beaver Meadows Entrance.",
           "directionsUrl": "",
           "addresses": [
@@ -892,7 +892,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "2085adfd989e70a63b96ed68432954ed9544f10f061f91ab3471df6bc14f528f"
+      "contentHash": "4581ef8defabb0a1dcb2ebe7a7604ea29050cc1110a2502acedd834e5aab14ca"
     },
     {
       "parkCode": "zion",
@@ -1030,6 +1030,22 @@
           "url": "https://www.nps.gov/zion/planyourvisit/toxic-cyanobacteria-bloom-in-the-virgin-river-and-the-streams-of-zion-national-park.htm",
           "description": "Do not submerge your head in or filter drinking water from still or moving water.",
           "lastIndexedDate": "2023-03-15 20:31:23.0"
+        },
+        {
+          "id": "CDD9D321-49B3-4C74-89AD-A186807220E6",
+          "title": "Watchman Trail Closed",
+          "category": "Park Closure",
+          "url": "",
+          "description": "The Watchman Trail is closed pending repairs.",
+          "lastIndexedDate": "2026-09-01 00:00:00.0"
+        },
+        {
+          "id": "4208C559-FDF5-4801-A903-1529A09FB54B",
+          "title": "Zion Canyon Scenic Drive closed to pedestrians and bicycles",
+          "category": "Caution",
+          "url": "https://www.nps.gov/zion/planyourvisit/zion-canyon-shuttle-system.htm",
+          "description": "The Zion Canyon Scenic Drive is temporarily closed to pedestrians and bicyclists pending cleanup. The road and its shoulders have been impacted by a recent flash flood. Visitors wishing to see the canyon should use the free shuttle system instead. The road remains open to shuttles and vehicles with valid Zion Lodge reservations.",
+          "lastIndexedDate": "2026-09-02 00:00:00.0"
         }
       ],
       "visitorCenters": [
@@ -1141,7 +1157,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "2b549c4bf788a65b6c15f742ee306a43788420ca372f735a8bc600bf236ff6e6"
+      "contentHash": "755e2e86d531bbd2fae4582f724d24f739c346c5879eb436fb1784e34612bf21"
     },
     {
       "parkCode": "yell",
