@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "source": "National Park Service API",
   "sourceDocs": "https://www.nps.gov/subjects/developer/api-documentation.htm",
-  "fetchedAt": "2026-09-03T13:34:33.239Z",
+  "fetchedAt": "2026-09-07T15:02:58.332Z",
   "parkCodes": [
     "yose",
     "grca",
@@ -13,8 +13,8 @@
   ],
   "changedParks": [
     "grand-canyon",
-    "rocky-mountain",
-    "zion"
+    "zion",
+    "yellowstone"
   ],
   "parks": [
     {
@@ -432,20 +432,28 @@
       ],
       "alerts": [
         {
-          "id": "BD6EC75E-89ED-4345-BE71-4A2EA5FF186E",
-          "title": "CLOSED - N. Kaibab Trail, Phantom Ranch and Silver/Black Bridges",
-          "category": "Danger",
-          "url": "https://www.nps.gov/grca/learn/news/significant-flash-flooding-closes-phantom-ranch-and-north-kaibab-trail.htm",
-          "description": "The entirety of the North Kaibab Trail, Cottonwood and Bright Angel Campgrounds, Phantom Ranch, and the Silver and Black Bridges are closed until further notice due to extensive flash flood damage. Xanterra will inform guests with future Phantom Ranch reservations about the status of their reservations. Please do not attempt to access the closed areas.",
-          "lastIndexedDate": "2026-09-02 00:00:00.0"
-        },
-        {
           "id": "2CF15EBC-0800-4DF3-8179-B1579B6D4F57",
           "title": "Critical Backcountry Updates/Closures",
           "category": "Caution",
           "url": "https://www.nps.gov/grca/planyourvisit/key-messages.htm",
           "description": "Visit this link for the inner canyon weather forecast, current trail closures, today's heat risk, and drinking water availability.",
           "lastIndexedDate": "2026-06-26 00:00:00.0"
+        },
+        {
+          "id": "BD6EC75E-89ED-4345-BE71-4A2EA5FF186E",
+          "title": "INNER CANYON TRAIL CLOSURES",
+          "category": "Danger",
+          "url": "https://www.nps.gov/grca/learn/news/grand-canyon-national-park-expands-inner-canyon-closures-following-august-29-flash-flood.htm",
+          "description": "Current trail closures: North Kaibab Trail, Cottonwood Campground, Phantom Ranch, Bright Angel Campground, Silver Bridge, Black Bridge. Additionally South Kaibab Trail below Tip-Off Point, and Bright Angel Trail below the intersection with the Tonto Trail is closed. (River exchanges may continue at Pipe Creek Beach). Please do not attempt to access the closed areas.",
+          "lastIndexedDate": "2026-09-05 00:00:00.0"
+        },
+        {
+          "id": "608538F9-D5D1-4AD4-BD95-6BB351146EDC",
+          "title": "INNER CANYON WATER SHUTOFFS",
+          "category": "Danger",
+          "url": "https://www.nps.gov/grca/planyourvisit/key-messages.htm",
+          "description": "Beginning Sep. 6 at 10 a.m., no potable water will be available in the inner canyon, including along the Bright Angel Trail (1.5 Mile Resthouse, 3-Mile Resthouse, Havasupai Gardens day use and campground). All backpackers and hikers should carry water filtration and treatment OR carry all water with them.",
+          "lastIndexedDate": "2026-09-05 00:00:00.0"
         },
         {
           "id": "4CC2EC5B-2CAD-44DC-90C1-86856D021228",
@@ -525,7 +533,7 @@
           "id": "CBEBF627-E888-45E6-9E8C-6EA6AE9A1B2D",
           "name": "Mather Campground - South Rim",
           "url": "https://www.nps.gov/grca/planyourvisit/mather-campground-south-rim.htm",
-          "description": "Mather Campground is located in Grand Canyon Village on the South Rim of Grand Canyon National Park. There are 327 sites. Only dry camping is currently permitted due to Stage 4 water restrictions. Spigot access is turned off, though faucets in bathrooms remain operational. No fires are currently allowed on the South Rim and inner canyon areas. Fire restrictions prohibit all wood burning and charcoal fires. No hookups are available, however there is a free dump station. Most RV spaces are pull-th",
+          "description": "Mather Campground is located in Grand Canyon Village on the South Rim of Grand Canyon National Park. There are 327 sites. Only dry camping is currently permitted due to Stage 4 water restrictions. Spigot access and bathroom faucets are turned off. No fires are currently allowed on the South Rim and inner canyon areas. Fire restrictions prohibit all wood burning and charcoal fires. No hookups are available, however there is a free dump station. Most RV spaces are pull-through.",
           "reservationUrl": "https://www.recreation.gov/camping/campgrounds/232490",
           "weatherOverview": "With an elevation spanning from around 2000 feet to over 8000 feet (760-2440m), the Grand Canyon area experiences a variety of weather conditions. This weather variety includes cold winters and mild pleasant summers, moderate humidity, and considerable diurnal temperature changes at the higher elevations, with hot and ",
           "numberOfSitesReservable": "300",
@@ -542,7 +550,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "8e427823113181de31916dc10cabde8243db5986e26c58118ce56a65e0a7c28a"
+      "contentHash": "68dd466b68b2e7ed743a93296a8ca1b34147c181b695a1cd03d3718dcc50aa73"
     },
     {
       "parkCode": "romo",
@@ -1038,14 +1046,6 @@
           "url": "",
           "description": "The Watchman Trail is closed pending repairs.",
           "lastIndexedDate": "2026-09-01 00:00:00.0"
-        },
-        {
-          "id": "4208C559-FDF5-4801-A903-1529A09FB54B",
-          "title": "Zion Canyon Scenic Drive closed to pedestrians and bicycles",
-          "category": "Caution",
-          "url": "https://www.nps.gov/zion/planyourvisit/zion-canyon-shuttle-system.htm",
-          "description": "The Zion Canyon Scenic Drive is temporarily closed to pedestrians and bicyclists pending cleanup. The road and its shoulders have been impacted by a recent flash flood. Visitors wishing to see the canyon should use the free shuttle system instead. The road remains open to shuttles and vehicles with valid Zion Lodge reservations.",
-          "lastIndexedDate": "2026-09-02 00:00:00.0"
         }
       ],
       "visitorCenters": [
@@ -1157,7 +1157,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "755e2e86d531bbd2fae4582f724d24f739c346c5879eb436fb1784e34612bf21"
+      "contentHash": "bd1b6884d2e8391689d230f9520cb9e7ea512f76474ee106b9e212ccf4fa0ae8"
     },
     {
       "parkCode": "yell",
@@ -1302,14 +1302,6 @@
           "url": "https://www.nps.gov/yell/images/Biscuit_Basin_Closure_Map_20250529_1.png",
           "description": "The parking lot, boardwalk, and Firehole River at Biscuit Basin, located north of Old Faithful, is closed to all travel until further notice due to the possibility of another event at the site of a hydrothermal explosion that occurred July 23, 2024.",
           "lastIndexedDate": "2026-07-01 00:00:00.0"
-        },
-        {
-          "id": "833EEC60-6E0B-4939-908C-9C1A0544514A",
-          "title": "Partial Fishing Closures on the Madison, Firehole and Gibbon Rivers",
-          "category": "Information",
-          "url": "https://www.nps.gov/yell/learn/news/26015.htm",
-          "description": "The Madison, Firehole and Gibbon (downstream of Norris Campground) rivers are closed to fishing daily between 2 p.m. and sunrise until water temperatures cool to protect the park's native and wild trout fisheries. Most other rivers and streams are open to fishing, as specified in park fishing regulations.",
-          "lastIndexedDate": "2026-08-27 00:00:00.0"
         },
         {
           "id": "67146540-50E1-44EE-8D3A-2314B0192DDB",
@@ -1702,7 +1694,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "b55e27c36501ed57bb8a91b530ef756b7df7c15ccc424b92d14acc25919c80fb"
+      "contentHash": "3ff91088a7eeec94d5505f66d8bcab90f0635436c411936e3b006f739c1fddfd"
     },
     {
       "parkCode": "acad",
