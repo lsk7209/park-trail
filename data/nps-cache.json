@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "source": "National Park Service API",
   "sourceDocs": "https://www.nps.gov/subjects/developer/api-documentation.htm",
-  "fetchedAt": "2026-09-07T15:02:58.332Z",
+  "fetchedAt": "2026-09-10T13:35:37.508Z",
   "parkCodes": [
     "yose",
     "grca",
@@ -13,8 +13,7 @@
   ],
   "changedParks": [
     "grand-canyon",
-    "zion",
-    "yellowstone"
+    "rocky-mountain"
   ],
   "parks": [
     {
@@ -454,22 +453,6 @@
           "url": "https://www.nps.gov/grca/planyourvisit/key-messages.htm",
           "description": "Beginning Sep. 6 at 10 a.m., no potable water will be available in the inner canyon, including along the Bright Angel Trail (1.5 Mile Resthouse, 3-Mile Resthouse, Havasupai Gardens day use and campground). All backpackers and hikers should carry water filtration and treatment OR carry all water with them.",
           "lastIndexedDate": "2026-09-05 00:00:00.0"
-        },
-        {
-          "id": "4CC2EC5B-2CAD-44DC-90C1-86856D021228",
-          "title": "Overnight Lodging and Stage 4 Water Restrictions take effect Aug. 31",
-          "category": "Park Closure",
-          "url": "https://www.nps.gov/grca/learn/news/grand-canyon-national-park-to-close-overnight-hotel-accommodations-beginning-august-31.htm",
-          "description": "Grand Canyon National Park will implement Stage 4 water restrictions on the South Rim beginning August 31 at noon due to extensive flash flood damage to the Transcanyon Waterline. Overnight accommodations will close, and only dry camping will be permitted. The park will remain open for day use, with food and beverage services, the Grand Canyon Clinic, and Post Office remaining open. Visitors and residents are asked to conserve water.",
-          "lastIndexedDate": "2026-08-31 00:00:00.0"
-        },
-        {
-          "id": "3396D6D3-5F44-4532-B48B-42A629991493",
-          "title": "What's Closed and What's Open: South Rim & North Rim",
-          "category": "Information",
-          "url": "https://www.nps.gov/grca/planyourvisit/grand-canyon-national-park-public-health-update.htm",
-          "description": "Visit this link for a list of the available visitor services in Grand Canyon Village, Desert View, and the North Rim.",
-          "lastIndexedDate": "2026-06-26 00:00:00.0"
         }
       ],
       "visitorCenters": [
@@ -550,7 +533,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "68dd466b68b2e7ed743a93296a8ca1b34147c181b695a1cd03d3718dcc50aa73"
+      "contentHash": "bfc87aeb5b64f3f20779b4ba79202c629502b50b924d56dddcd17aefc015ec35"
     },
     {
       "parkCode": "romo",
@@ -863,7 +846,7 @@
           "id": "6715A7CC-280C-4093-85D3-492004C2DB48",
           "name": "Glacier Basin Campground",
           "url": "https://www.nps.gov/romo/planyourvisit/gbcg.htm",
-          "description": "Glacier Basin Campground is open for the summer! Located on Bear Lake Road near Park & Ride, campsites are available for tents, RVs and groups. Campsites are available by reservation only. To make a reservation, visit www.recreation.gov online, use the Recreation.gov Mobile App or call 1-877-444-6777 and search for Rocky Mountain National Park - Glacier Basin Campground.",
+          "description": "Glacier Basin Campground is closed for the 2026 season. If planning to camp in RMNP, please see Aspenglen, Timber Creek or Moraine Park Campgrounds.",
           "reservationUrl": "https://www.recreation.gov/camping/campgrounds/232462",
           "weatherOverview": "Average High and Low Temperatures (Fahrenheit) May: 62 / 34 June: 73 / 41 July: 78 / 46 August: 77 / 45 September: 70 / 38",
           "numberOfSitesReservable": "153",
@@ -873,7 +856,7 @@
           "id": "F7CE47A2-A770-449F-8085-0DF17DD432EB",
           "name": "Longs Peak Campground",
           "url": "https://www.nps.gov/romo/planyourvisit/lpcg.htm",
-          "description": "Longs Peak Campground is open for the season. This campground is first-come, first-served and open to tents only. There is no water available. Campers will need to bring their own water. Vault toilets and trash are available. Each campsite has a picnic table, tent pad, fire ring, and food storage box. Stage 2 Fire Restrictions are in effect within Rocky Mountain National Park. This means that all campfires, including charcoal briquette fires are not permitted. Stoves with on/off switches may be ",
+          "description": "Longs Peak Campground is closed for the 2026 season. If planning to camp inside RMNP, please check availability at Aspenglen, Timber Creek, or Moraine Park Campgrounds.",
           "reservationUrl": "https://www.recreation.gov/camping/campgrounds/10317461",
           "weatherOverview": "Average High and Low Temperatures (Fahrenheit) June: 69 / 37 July: 74 / 42 August: 73 / 41 September: 66 / 34",
           "numberOfSitesReservable": "0",
@@ -900,7 +883,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "4581ef8defabb0a1dcb2ebe7a7604ea29050cc1110a2502acedd834e5aab14ca"
+      "contentHash": "7c2ffdfa358740c52089ee2c9fa648014e02cdb87c50b974551b400d9ac89e69"
     },
     {
       "parkCode": "zion",
