@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "source": "National Park Service API",
   "sourceDocs": "https://www.nps.gov/subjects/developer/api-documentation.htm",
-  "fetchedAt": "2026-09-10T13:35:37.508Z",
+  "fetchedAt": "2026-09-14T15:52:58.831Z",
   "parkCodes": [
     "yose",
     "grca",
@@ -12,8 +12,10 @@
     "acad"
   ],
   "changedParks": [
+    "yosemite",
     "grand-canyon",
-    "rocky-mountain"
+    "yellowstone",
+    "acadia"
   ],
   "parks": [
     {
@@ -118,16 +120,7 @@
           "url": "https://www.nps.gov/common/uploads/structured_data/3C84C3C0-1DD8-B71B-0BFF90B64283C3D8.jpg"
         }
       ],
-      "alerts": [
-        {
-          "id": "342A4B2B-203E-4CBC-B625-9865D9FDCC71",
-          "title": "Yosemite Traffic Updates",
-          "category": "Information",
-          "url": "",
-          "description": "When the park is very busy, you can get updates on current traffic conditions in Yosemite by texting ynptraffic to 333111.",
-          "lastIndexedDate": "2026-07-03 00:00:00.0"
-        }
-      ],
+      "alerts": [],
       "visitorCenters": [
         {
           "id": "888BB5B2-6EA6-473C-A803-ECA45A02AF57",
@@ -328,7 +321,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "cc95567f82ad21e3aaec361c0379f07b811d43eb7453bbabd37d8a487dbc2512"
+      "contentHash": "c307b8eefef40dbb1585852f5d5538bccd95ac5d6ab25432ed3c652b7157002a"
     },
     {
       "parkCode": "grca",
@@ -451,8 +444,8 @@
           "title": "INNER CANYON WATER SHUTOFFS",
           "category": "Danger",
           "url": "https://www.nps.gov/grca/planyourvisit/key-messages.htm",
-          "description": "Beginning Sep. 6 at 10 a.m., no potable water will be available in the inner canyon, including along the Bright Angel Trail (1.5 Mile Resthouse, 3-Mile Resthouse, Havasupai Gardens day use and campground). All backpackers and hikers should carry water filtration and treatment OR carry all water with them.",
-          "lastIndexedDate": "2026-09-05 00:00:00.0"
+          "description": "Beginning Sep. 6, no potable water will be available in the inner canyon, including along the Bright Angel Trail (1.5 Mile Resthouse, 3-Mile Resthouse, Havasupai Gardens day use and campground). All backpackers and hikers should carry water filtration and treatment OR carry all water with them.",
+          "lastIndexedDate": "2026-09-11 00:00:00.0"
         }
       ],
       "visitorCenters": [
@@ -533,7 +526,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "bfc87aeb5b64f3f20779b4ba79202c629502b50b924d56dddcd17aefc015ec35"
+      "contentHash": "c6c7d9f6ca294a5a78e9509175bb01960398926bf2255c513cfe0049ece8fedf"
     },
     {
       "parkCode": "romo",
@@ -1309,6 +1302,14 @@
           "url": "https://www.nps.gov/yell/planyourvisit/fees.htm",
           "description": "Although an entrance pass is required to enter Yellowstone National Park, vehicle reservations are not needed. You are encouraged to purchase an entrance pass before arriving, but you may also purchase passes at any entrance station upon arrival.",
           "lastIndexedDate": "2025-06-18 19:15:37.0"
+        },
+        {
+          "id": "00D47802-8E06-4418-80D8-69D37A885146",
+          "title": "West Thumb Geyser Basin Boardwalk - Partial Closure",
+          "category": "Information",
+          "url": "https://www.nps.gov/yell/images/WT-Desk-Ref-Map-closure.jpg",
+          "description": "A section of the West Thumb Geyser Basin boardwalk will be closed to Fishing Cone and Lakeshore Geyser through mid-October while crews replace damaged support structures along the shoreline. The remaining sections of boardwalk will remain open to visitors. Dates are subject to change without notice.",
+          "lastIndexedDate": "2026-09-14 00:00:00.0"
         }
       ],
       "visitorCenters": [
@@ -1677,7 +1678,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "3ff91088a7eeec94d5505f66d8bcab90f0635436c411936e3b006f739c1fddfd"
+      "contentHash": "ba48744ff921d8f33bd782ade8fdb0be0f3b6ca33f0f63a964562800ec88fc1f"
     },
     {
       "parkCode": "acad",
@@ -1783,6 +1784,14 @@
           "url": "",
           "description": "Bacterial levels have exceeded public health standards at Sand Beach Lagoon and a Public Health Advisory has been posted. The public is advised against swimming at this beach until bacterial levels return to healthful levels. (Not for Sand Beach.)",
           "lastIndexedDate": "2026-07-15 00:00:00.0"
+        },
+        {
+          "id": "918F444F-50D5-465A-8747-03ADA6D38AFE",
+          "title": "Saint Sauveur Parking Area Closed for Repairs on Sept 15",
+          "category": "Park Closure",
+          "url": "",
+          "description": "The Saint Sauveur parking area is scheduled to be closed for repairs for one day on Tues Sept 15 to complete essential ditch maintenance.",
+          "lastIndexedDate": "2026-08-24 00:00:00.0"
         },
         {
           "id": "96A00261-453A-467D-A1D5-24D68A59AB50",
@@ -1977,7 +1986,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "66e0186386f06bf83cb90930aeacb786a026200f8938ee9d65f0aa469f3739ba"
+      "contentHash": "33920115fecc38ea586b73f08b6bc2429bb907db204c02eec19a1590aa54f0f1"
     }
   ]
 }
