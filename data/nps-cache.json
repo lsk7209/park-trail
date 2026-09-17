@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "source": "National Park Service API",
   "sourceDocs": "https://www.nps.gov/subjects/developer/api-documentation.htm",
-  "fetchedAt": "2026-09-14T15:52:58.831Z",
+  "fetchedAt": "2026-09-17T14:17:08.263Z",
   "parkCodes": [
     "yose",
     "grca",
@@ -14,7 +14,8 @@
   "changedParks": [
     "yosemite",
     "grand-canyon",
-    "yellowstone",
+    "rocky-mountain",
+    "zion",
     "acadia"
   ],
   "parks": [
@@ -120,7 +121,16 @@
           "url": "https://www.nps.gov/common/uploads/structured_data/3C84C3C0-1DD8-B71B-0BFF90B64283C3D8.jpg"
         }
       ],
-      "alerts": [],
+      "alerts": [
+        {
+          "id": "D313BAC1-7AAA-4E74-B068-FBE04861C68D",
+          "title": "Dome Fire causing minimal impacts",
+          "category": "Information",
+          "url": "https://inciweb.wildfire.gov/incident-information/caynp-dome",
+          "description": "The Dome Fire is burning in the wilderness northeast of Wawona, resulting in a few trail closures. Smoky conditions are possible.",
+          "lastIndexedDate": "2026-09-16 00:00:00.0"
+        }
+      ],
       "visitorCenters": [
         {
           "id": "888BB5B2-6EA6-473C-A803-ECA45A02AF57",
@@ -321,7 +331,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "c307b8eefef40dbb1585852f5d5538bccd95ac5d6ab25432ed3c652b7157002a"
+      "contentHash": "230d818a4487d27c418c3066f455303df10dcb9ce3de2b402eead0c410157be2"
     },
     {
       "parkCode": "grca",
@@ -435,9 +445,9 @@
           "id": "BD6EC75E-89ED-4345-BE71-4A2EA5FF186E",
           "title": "INNER CANYON TRAIL CLOSURES",
           "category": "Danger",
-          "url": "https://www.nps.gov/grca/learn/news/grand-canyon-national-park-expands-inner-canyon-closures-following-august-29-flash-flood.htm",
-          "description": "Current trail closures: North Kaibab Trail, Cottonwood Campground, Phantom Ranch, Bright Angel Campground, Silver Bridge, Black Bridge. Additionally South Kaibab Trail below Tip-Off Point, and Bright Angel Trail below the intersection with the Tonto Trail is closed. (River exchanges may continue at Pipe Creek Beach). Please do not attempt to access the closed areas.",
-          "lastIndexedDate": "2026-09-05 00:00:00.0"
+          "url": "",
+          "description": "Current trail closures: North Kaibab Trail, Cottonwood Campground, Phantom Ranch, Bright Angel Campground, Silver Bridge, the South Kaibab Trail below Tip-Off, and the Black Bridge. Please do not attempt to access the closed areas.",
+          "lastIndexedDate": "2026-09-15 00:00:00.0"
         },
         {
           "id": "608538F9-D5D1-4AD4-BD95-6BB351146EDC",
@@ -446,6 +456,14 @@
           "url": "https://www.nps.gov/grca/planyourvisit/key-messages.htm",
           "description": "Beginning Sep. 6, no potable water will be available in the inner canyon, including along the Bright Angel Trail (1.5 Mile Resthouse, 3-Mile Resthouse, Havasupai Gardens day use and campground). All backpackers and hikers should carry water filtration and treatment OR carry all water with them.",
           "lastIndexedDate": "2026-09-11 00:00:00.0"
+        },
+        {
+          "id": "20ACF6D7-8962-4D43-81D1-EC5D6A086FC7",
+          "title": "North Rim Hwy 67 Closure - Sep. 16, 2026",
+          "category": "Park Closure",
+          "url": "",
+          "description": "As of Sep. 16 at 5:30 p.m., Hwy. 67 from Lindbergh Hill to the North Rim developed area is closed until further notice due to flooding and debris across the roadway.",
+          "lastIndexedDate": "2026-09-16 00:00:00.0"
         }
       ],
       "visitorCenters": [
@@ -526,7 +544,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "c6c7d9f6ca294a5a78e9509175bb01960398926bf2255c513cfe0049ece8fedf"
+      "contentHash": "975732277efa3db3289cd4456a46c5942ca5cbe42aa9517e19044fdacdbca1b2"
     },
     {
       "parkCode": "romo",
@@ -606,22 +624,22 @@
       ],
       "officialImages": [
         {
-          "title": "Scenic views of Tundra",
-          "altText": "Alpine wildflowers are blooming",
-          "credit": "NPS Photo/R.Williams",
-          "url": "https://www.nps.gov/common/uploads/structured_data/0772DCB5-BDCF-0571-AEE80FA1F2590755.jpg"
+          "title": "Cub Lake in fall",
+          "altText": "Cub Lake with reflections. Yellow and brown grasses line the edge of the lake.",
+          "credit": "NPS/J.Marino",
+          "url": "https://www.nps.gov/common/uploads/structured_data/8824D3C2-F84D-A622-C2DE87AC4B9A8BC9.jpg"
         },
         {
-          "title": "Trail Ridge Road at Rock Cut",
-          "altText": "Trail Ridge Road in summer",
-          "credit": "NPS Photo",
-          "url": "https://www.nps.gov/common/uploads/structured_data/0789A53A-D63E-EE37-DA2CEC07D73BFD97.jpg"
+          "title": "Hiking in fall",
+          "altText": "A man is standing on a bridge and looking up at a waterfall",
+          "credit": "NPS",
+          "url": "https://www.nps.gov/common/uploads/structured_data/883337BE-AC11-BF00-9E8B290B38A30A7F.jpeg"
         },
         {
-          "title": "Elk calves on tundra in summer",
-          "altText": "Several elk cows and calves are grazing on tundra plants",
-          "credit": "NPS Photo/P.Baker",
-          "url": "https://www.nps.gov/common/uploads/structured_data/0795D6A9-B886-96E7-AB79EFE8FA3A3891.jpg"
+          "title": "Pika with thistle",
+          "altText": "A pika has harvested a tundra thistle",
+          "credit": "NPS/A.Schonlau",
+          "url": "https://www.nps.gov/common/uploads/structured_data/88439955-DB09-4F45-62A55C2E00A2C229.jpg"
         }
       ],
       "alerts": [
@@ -876,7 +894,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "7c2ffdfa358740c52089ee2c9fa648014e02cdb87c50b974551b400d9ac89e69"
+      "contentHash": "652e9ab68e48b0e7747c665c2de2e24621a9e3f806bc2abb8ee3a847640ce54d"
     },
     {
       "parkCode": "zion",
@@ -980,40 +998,48 @@
           "title": "Angels Landing Pilot Permit Program",
           "category": "Information",
           "url": "https://www.nps.gov/zion/planyourvisit/angels-landing-hiking-permits.htm",
-          "description": "Everyone who hikes Angels Landing needs to have a permit. Learn why you need a permit and how to get one. This requirement does not affect entering the park or riding the park shuttle (when it is running).",
-          "lastIndexedDate": "2026-02-11 00:00:00.0"
+          "description": "All hikers need a permit to hike Angels Landing. Learn why you need a permit and how to get one using the link below.",
+          "lastIndexedDate": "2026-09-16 00:00:00.0"
+        },
+        {
+          "id": "4F7A97F4-90C4-44BE-A2D0-B0B6C19E6AB4",
+          "title": "Fire restrictions are in effect",
+          "category": "Information",
+          "url": "https://www.nps.gov/zion/learn/news/zion-national-park-rescinds-stage-2-fire-restrictions-resumes-year-round-fire-restrictions.htm",
+          "description": "Campfires are only allowed in designated fire rings at Watchman Campground, South Campground, and Lava Point Campground. Smoking near vegetation is not allowed. Fireworks are never allowed within the park.",
+          "lastIndexedDate": "2026-09-16 00:00:00.0"
         },
         {
           "id": "83AE2DD9-F167-445F-8B00-A4F9E5A993D8",
-          "title": "Large vehicle restrictions now in effect for Zion-Mt. Carmel Highway",
+          "title": "Large vehicle restrictions on Zion-Mt. Carmel Highway",
           "category": "Caution",
           "url": "https://www.nps.gov/zion/planyourvisit/large-vehicles.htm",
-          "description": "As of June 7, 2026, the park is enforcing size and weight limits for vehicles on the Zion-Mt. Carmel Highway. Vehicles that exceed length, width, height, or weight limits cannot travel between Canyon Junction and the park's East Entrance. See the current limits on the page linked below.",
-          "lastIndexedDate": "2026-06-06 00:00:00.0"
+          "description": "Vehicles that exceed length, width, height, or weight limits cannot travel between Canyon Junction and the park's East Entrance. See the current limits on the page linked below.",
+          "lastIndexedDate": "2026-09-16 00:00:00.0"
         },
         {
           "id": "0EA570B2-2FF0-4B33-AD3A-1313385965A0",
-          "title": "Please park legally and responsibly in Zion National Park and the Town of Springdale",
+          "title": "Please park legally and responsibly",
           "category": "Information",
-          "url": "https://www.nps.gov/zion/planyourvisit/index.htm",
-          "description": "Zion has limited parking space. Park only in designated stalls. Vehicles parked outside of designated stalls are subject to citation and may be towed. Once all designated parking stalls in Zion are full, visitors should park in Springdale.",
-          "lastIndexedDate": "2018-05-18 14:28:24.0"
+          "url": "https://www.nps.gov/zion/planyourvisit/traffic.htm#parking",
+          "description": "Zion has limited parking. Once parking spaces in Zion are full, visitors should park in Springdale. Please park only in designated spaces. Vehicles parked outside of designated spaces are subject to citation and towing.",
+          "lastIndexedDate": "2026-09-16 00:00:00.0"
         },
         {
-          "id": "DD17A94A-AD46-4DD7-8CD1-85FEB125A9B6",
-          "title": "Stage 2 fire restrictions in effect",
-          "category": "Caution",
-          "url": "https://www.nps.gov/zion/learn/news/2026-05-22-fire-restrictions.htm",
-          "description": "No setting, building, maintaining, attending, or using open fires of any kind in the park. This includes campfires and charcoal fires in Watchman Campground, South Campground, and picnic areas in Zion Canyon. Stoves fueled by petroleum or liquid propane gas are allowed. Smoking is prohibited, except within an enclosed vehicle.",
-          "lastIndexedDate": "2026-07-04 00:00:00.0"
+          "id": "11D4FE10-5EBD-40C8-A4C0-ED6EDE859C99",
+          "title": "Road Construction on Zion-Mt. Carmel Highway",
+          "category": "Information",
+          "url": "https://udotinput.utah.gov/ziontechnology",
+          "description": "Nighttime closures of the Zion-Mt. Carmel Tunnel are expected between 9/21 and 9/30. When active, closures will last from 9 pm to 6 am. Check for active delays and closures on the Utah Department of Transportation website linked below. For alternative routes, visit zionarea.udot.utah.gov.",
+          "lastIndexedDate": "2026-09-16 00:00:00.0"
         },
         {
           "id": "09699C7F-F2CD-4BE9-B8D4-5E19CC89BE7A",
-          "title": "Toxic Cyanobacteria in the Virgin River and the streams of Zion National Park",
+          "title": "Toxic cyanobacteria in rivers, streams, and pools",
           "category": "Caution",
           "url": "https://www.nps.gov/zion/planyourvisit/toxic-cyanobacteria-bloom-in-the-virgin-river-and-the-streams-of-zion-national-park.htm",
-          "description": "Do not submerge your head in or filter drinking water from still or moving water.",
-          "lastIndexedDate": "2023-03-15 20:31:23.0"
+          "description": "Do not submerge your head in or drink instream water in Zion National Park.",
+          "lastIndexedDate": "2026-09-16 00:00:00.0"
         },
         {
           "id": "CDD9D321-49B3-4C74-89AD-A186807220E6",
@@ -1133,7 +1159,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "bd1b6884d2e8391689d230f9520cb9e7ea512f76474ee106b9e212ccf4fa0ae8"
+      "contentHash": "700a44f8b5bea797b74f998c26c6bc387d38254ad046eb56c4f44867b8845a48"
     },
     {
       "parkCode": "yell",
@@ -1786,14 +1812,6 @@
           "lastIndexedDate": "2026-07-15 00:00:00.0"
         },
         {
-          "id": "918F444F-50D5-465A-8747-03ADA6D38AFE",
-          "title": "Saint Sauveur Parking Area Closed for Repairs on Sept 15",
-          "category": "Park Closure",
-          "url": "",
-          "description": "The Saint Sauveur parking area is scheduled to be closed for repairs for one day on Tues Sept 15 to complete essential ditch maintenance.",
-          "lastIndexedDate": "2026-08-24 00:00:00.0"
-        },
-        {
           "id": "96A00261-453A-467D-A1D5-24D68A59AB50",
           "title": "Schoodic Mountain Road Closed for Repairs",
           "category": "Park Closure",
@@ -1807,7 +1825,7 @@
           "category": "Park Closure",
           "url": "",
           "description": "Starting Aug 31, a section of Ocean Path will be closed for repairs from a trailhead across from the Otter Point parking lot to the trail's southern terminus.",
-          "lastIndexedDate": "2026-08-24 00:00:00.0"
+          "lastIndexedDate": "2026-09-16 00:00:00.0"
         }
       ],
       "visitorCenters": [
@@ -1986,7 +2004,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "33920115fecc38ea586b73f08b6bc2429bb907db204c02eec19a1590aa54f0f1"
+      "contentHash": "b6e3b9284ecf5fa01974fa9c8e979b778899bd0deddad5fad52f3cacf66a1c09"
     }
   ]
 }
