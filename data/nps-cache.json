@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "source": "National Park Service API",
   "sourceDocs": "https://www.nps.gov/subjects/developer/api-documentation.htm",
-  "fetchedAt": "2026-09-17T14:17:08.263Z",
+  "fetchedAt": "2026-09-21T15:53:13.382Z",
   "parkCodes": [
     "yose",
     "grca",
@@ -15,7 +15,6 @@
     "yosemite",
     "grand-canyon",
     "rocky-mountain",
-    "zion",
     "acadia"
   ],
   "parks": [
@@ -123,12 +122,12 @@
       ],
       "alerts": [
         {
-          "id": "D313BAC1-7AAA-4E74-B068-FBE04861C68D",
-          "title": "Dome Fire causing minimal impacts",
+          "id": "7FB2991F-FED2-4E87-8002-B4BADAD2749F",
+          "title": "Dome Fire causing minor operational impacts",
           "category": "Information",
-          "url": "https://inciweb.wildfire.gov/incident-information/caynp-dome",
-          "description": "The Dome Fire is burning in the wilderness northeast of Wawona, resulting in a few trail closures. Smoky conditions are possible.",
-          "lastIndexedDate": "2026-09-16 00:00:00.0"
+          "url": "",
+          "description": "The Dome Fire is burning in the wilderness northeast of Wawona, resulting in a few trail closures. Smoky conditions are possible, with unhealthy air quality in some places at some times..",
+          "lastIndexedDate": "2026-09-20 00:00:00.0"
         }
       ],
       "visitorCenters": [
@@ -331,7 +330,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "230d818a4487d27c418c3066f455303df10dcb9ce3de2b402eead0c410157be2"
+      "contentHash": "01c36cc36067c600e77fd06d0777cfb666c26f5e78edc9733756522a27f12705"
     },
     {
       "parkCode": "grca",
@@ -456,14 +455,6 @@
           "url": "https://www.nps.gov/grca/planyourvisit/key-messages.htm",
           "description": "Beginning Sep. 6, no potable water will be available in the inner canyon, including along the Bright Angel Trail (1.5 Mile Resthouse, 3-Mile Resthouse, Havasupai Gardens day use and campground). All backpackers and hikers should carry water filtration and treatment OR carry all water with them.",
           "lastIndexedDate": "2026-09-11 00:00:00.0"
-        },
-        {
-          "id": "20ACF6D7-8962-4D43-81D1-EC5D6A086FC7",
-          "title": "North Rim Hwy 67 Closure - Sep. 16, 2026",
-          "category": "Park Closure",
-          "url": "",
-          "description": "As of Sep. 16 at 5:30 p.m., Hwy. 67 from Lindbergh Hill to the North Rim developed area is closed until further notice due to flooding and debris across the roadway.",
-          "lastIndexedDate": "2026-09-16 00:00:00.0"
         }
       ],
       "visitorCenters": [
@@ -544,7 +535,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "975732277efa3db3289cd4456a46c5942ca5cbe42aa9517e19044fdacdbca1b2"
+      "contentHash": "53f82298bc5e55b47784209984d7f06abaea489ecd626eccfc1bfe7304d99528"
     },
     {
       "parkCode": "romo",
@@ -642,16 +633,7 @@
           "url": "https://www.nps.gov/common/uploads/structured_data/88439955-DB09-4F45-62A55C2E00A2C229.jpg"
         }
       ],
-      "alerts": [
-        {
-          "id": "B425BE94-DB30-48D3-8EA8-51B9B235AC2E",
-          "title": "A Fire Ban (Stage 2 Fire Restrictions) Are In Effect",
-          "category": "Park Closure",
-          "url": "https://www.nps.gov/romo/learn/fire-information-and-regulations.htm",
-          "description": "Due to very high fire danger, the extended weather forecast, and current fire activity in the State of Colorado, Stage 2 Fire Restrictions are now in effect within Rocky Mountain National Park. When Stage 2 Fire Restrictions are in effect, this means that all campfires, including charcoal briquette fires are not permitted anywhere within Rocky Mountain National Park. This ban is effective beginning today, June 29, and will remain in effect until further notice.",
-          "lastIndexedDate": "2026-06-29 00:00:00.0"
-        }
-      ],
+      "alerts": [],
       "visitorCenters": [
         {
           "id": "6024ADBB-9505-45FD-A9AE-FF50CDA658A0",
@@ -894,7 +876,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "652e9ab68e48b0e7747c665c2de2e24621a9e3f806bc2abb8ee3a847640ce54d"
+      "contentHash": "86d2267fde6a771ee97f5b27b0d03b65674cd441c47f0d68acccd634e35e412c"
     },
     {
       "parkCode": "zion",
@@ -1812,6 +1794,14 @@
           "lastIndexedDate": "2026-07-15 00:00:00.0"
         },
         {
+          "id": "F8AFCEAD-7E34-4C99-8AF6-C0B7C376C8FB",
+          "title": "Eastern Section of Beech Mountain Loop Road Closed for Repairs",
+          "category": "Park Closure",
+          "url": "",
+          "description": "Starting Sept 21, the eastern section of the Beech Mountain Loop Trail will be closed for repairs from a junction just beyond the parking lot to just below the summit at the fire tower. Three alternate routes to the summit are available: the outer loop of the Beech Mountain Loop Trail, Beech South Ridge Trail and Beech West Ridge Trail.",
+          "lastIndexedDate": "2026-08-24 00:00:00.0"
+        },
+        {
           "id": "96A00261-453A-467D-A1D5-24D68A59AB50",
           "title": "Schoodic Mountain Road Closed for Repairs",
           "category": "Park Closure",
@@ -2004,7 +1994,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "b6e3b9284ecf5fa01974fa9c8e979b778899bd0deddad5fad52f3cacf66a1c09"
+      "contentHash": "48dd14188262f3ea96ad625f5f95c63776a9d36210ce8c977ffc18c972ad4ca2"
     }
   ]
 }

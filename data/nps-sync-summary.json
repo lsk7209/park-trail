@@ -4,14 +4,13 @@
     "yosemite",
     "grand-canyon",
     "rocky-mountain",
-    "zion",
     "acadia"
   ],
   "parkCount": 6,
-  "alertCount": 21,
+  "alertCount": 20,
   "visitorCenterCount": 37,
   "campgroundCount": 43,
   "dryRun": false,
   "secretPrinted": false,
-  "generatedAt": "2026-09-17T14:17:08.263Z"
+  "generatedAt": "2026-09-21T15:53:13.382Z"
 }
