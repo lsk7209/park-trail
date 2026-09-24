@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "source": "National Park Service API",
   "sourceDocs": "https://www.nps.gov/subjects/developer/api-documentation.htm",
-  "fetchedAt": "2026-09-21T15:53:13.382Z",
+  "fetchedAt": "2026-09-24T14:12:06.238Z",
   "parkCodes": [
     "yose",
     "grca",
@@ -12,10 +12,7 @@
     "acad"
   ],
   "changedParks": [
-    "yosemite",
-    "grand-canyon",
-    "rocky-mountain",
-    "acadia"
+    "yosemite"
   ],
   "parks": [
     {
@@ -123,11 +120,11 @@
       "alerts": [
         {
           "id": "7FB2991F-FED2-4E87-8002-B4BADAD2749F",
-          "title": "Dome Fire causing minor operational impacts",
-          "category": "Information",
-          "url": "",
-          "description": "The Dome Fire is burning in the wilderness northeast of Wawona, resulting in a few trail closures. Smoky conditions are possible, with unhealthy air quality in some places at some times..",
-          "lastIndexedDate": "2026-09-20 00:00:00.0"
+          "title": "Glacier Point Road is temporarily closed due to the Dome Fire",
+          "category": "Park Closure",
+          "url": "https://inciweb.wildfire.gov/incident-information/caynp-dome-fire",
+          "description": "The Dome Fire is burning in the wilderness northeast of Wawona. Glacier Point Road is temporarily closed because of reduced visibility along the road due to smoke and to safely allow firefighting operations. Additionally, there are some trail closures south of Glacier Point Road.. Smoky conditions are possible, with unhealthy air quality in some places at some times..",
+          "lastIndexedDate": "2026-09-24 00:00:00.0"
         }
       ],
       "visitorCenters": [
@@ -330,7 +327,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "01c36cc36067c600e77fd06d0777cfb666c26f5e78edc9733756522a27f12705"
+      "contentHash": "c97e6e7c2585fce048656be40ab7b540150e4a69f6b78c16a3819cc8a7a7f65f"
     },
     {
       "parkCode": "grca",
