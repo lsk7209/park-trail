@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "source": "National Park Service API",
   "sourceDocs": "https://www.nps.gov/subjects/developer/api-documentation.htm",
-  "fetchedAt": "2026-09-24T14:12:06.238Z",
+  "fetchedAt": "2026-09-28T17:38:38.995Z",
   "parkCodes": [
     "yose",
     "grca",
@@ -12,7 +12,11 @@
     "acad"
   ],
   "changedParks": [
-    "yosemite"
+    "yosemite",
+    "grand-canyon",
+    "rocky-mountain",
+    "zion",
+    "acadia"
   ],
   "parks": [
     {
@@ -123,8 +127,8 @@
           "title": "Glacier Point Road is temporarily closed due to the Dome Fire",
           "category": "Park Closure",
           "url": "https://inciweb.wildfire.gov/incident-information/caynp-dome-fire",
-          "description": "The Dome Fire is burning in the wilderness northeast of Wawona. Glacier Point Road is temporarily closed because of reduced visibility along the road due to smoke and to safely allow firefighting operations. Additionally, there are some trail closures south of Glacier Point Road.. Smoky conditions are possible, with unhealthy air quality in some places at some times..",
-          "lastIndexedDate": "2026-09-24 00:00:00.0"
+          "description": "The Dome Fire is burning in the wilderness northeast of Wawona. Glacier Point Road is temporarily closed because of reduced visibility along the road due to smoke and to safely allow firefighting operations. Additionally, there are some trail closures south of Glacier Point Road.. Smoky conditions are possible, with brief periods of unhealthy air quality in some places at some times..",
+          "lastIndexedDate": "2026-09-28 00:00:00.0"
         }
       ],
       "visitorCenters": [
@@ -327,7 +331,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "c97e6e7c2585fce048656be40ab7b540150e4a69f6b78c16a3819cc8a7a7f65f"
+      "contentHash": "6482373e00bde608f6f4711c91c9349e251e88c0a1d3a3056a92c1be88f0adb9"
     },
     {
       "parkCode": "grca",
@@ -442,8 +446,8 @@
           "title": "INNER CANYON TRAIL CLOSURES",
           "category": "Danger",
           "url": "",
-          "description": "Current trail closures: North Kaibab Trail, Cottonwood Campground, Phantom Ranch, Bright Angel Campground, Silver Bridge, the South Kaibab Trail below Tip-Off, and the Black Bridge. Please do not attempt to access the closed areas.",
-          "lastIndexedDate": "2026-09-15 00:00:00.0"
+          "description": "Current trail closures: The entire North Kaibab Trail (including Cottonwood Campground), Phantom Ranch, Bright Angel Campground, Silver Bridge, the South Kaibab Trail below Tip-Off, the River Trail east of the River Resthouse to the South Kaibab Trail junction, and the Black Bridge. Please do not attempt to access the closed areas.",
+          "lastIndexedDate": "2026-09-24 00:00:00.0"
         },
         {
           "id": "608538F9-D5D1-4AD4-BD95-6BB351146EDC",
@@ -532,7 +536,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "53f82298bc5e55b47784209984d7f06abaea489ecd626eccfc1bfe7304d99528"
+      "contentHash": "81ab67674e32530d5cd23d82a8e9db127bf91174cfe191ccb8100a08c90d288c"
     },
     {
       "parkCode": "romo",
@@ -856,7 +860,7 @@
           "id": "D322E1E9-8058-4C42-80A3-9FBC82583190",
           "name": "Moraine Park Campground",
           "url": "https://www.nps.gov/romo/planyourvisit/mpcg.htm",
-          "description": "Moraine Park Campground is open for the summer! Campsites are available for tents and RVs. Campsites are available by reservation only. To make a reservation, visit www.recreation.gov online, use the Recreation.gov Mobile App or call 1-877-444-6777 and search for Rocky Mountain National Park - Moraine Park Campground.",
+          "description": "Moraine Park Campground is open for summer camping. Campsites are available for tents and RVs. Campsites are available by reservation only. To make a reservation, visit www.recreation.gov online, use the Recreation.gov Mobile App or call 1-877-444-6777 and search for Rocky Mountain National Park - Moraine Park Campground. Summer camping in Moraine Park Campground will end at noon on Monday, October 19, 2026. The campground will re-open for winter camping beginning at 1 pm on October 19.",
           "reservationUrl": "https://www.recreation.gov/camping/7/232463",
           "weatherOverview": "Average High and Low Temperatures (Fahrenheit) January: 39 / 16 February: 41 / 17 March: 45 / 21 April: 53 / 27 May: 62 / 34 June: 73 / 41 July: 78 / 46 August: 77 / 45 September: 70 / 38 October: 60 / 30 November: 46 / 23 December: 40 / 18",
           "numberOfSitesReservable": "244",
@@ -873,7 +877,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "86d2267fde6a771ee97f5b27b0d03b65674cd441c47f0d68acccd634e35e412c"
+      "contentHash": "f7008a2228e89d3e020cea0610c5e797a07a470798818f86fabea0948a6bf7f0"
     },
     {
       "parkCode": "zion",
@@ -1005,14 +1009,6 @@
           "lastIndexedDate": "2026-09-16 00:00:00.0"
         },
         {
-          "id": "11D4FE10-5EBD-40C8-A4C0-ED6EDE859C99",
-          "title": "Road Construction on Zion-Mt. Carmel Highway",
-          "category": "Information",
-          "url": "https://udotinput.utah.gov/ziontechnology",
-          "description": "Nighttime closures of the Zion-Mt. Carmel Tunnel are expected between 9/21 and 9/30. When active, closures will last from 9 pm to 6 am. Check for active delays and closures on the Utah Department of Transportation website linked below. For alternative routes, visit zionarea.udot.utah.gov.",
-          "lastIndexedDate": "2026-09-16 00:00:00.0"
-        },
-        {
           "id": "09699C7F-F2CD-4BE9-B8D4-5E19CC89BE7A",
           "title": "Toxic cyanobacteria in rivers, streams, and pools",
           "category": "Caution",
@@ -1138,7 +1134,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "700a44f8b5bea797b74f998c26c6bc387d38254ad046eb56c4f44867b8845a48"
+      "contentHash": "d4e29bd8947e4d75d6a70d3d2b16775c123fece4e985399bb58e651b2090a443"
     },
     {
       "parkCode": "yell",
@@ -1783,14 +1779,6 @@
       ],
       "alerts": [
         {
-          "id": "84711631-8024-4895-8EB1-D943BA5A163A",
-          "title": "Avoid Water Contact at Sand Beach Lagoon (Not for Sand Beach)",
-          "category": "Caution",
-          "url": "",
-          "description": "Bacterial levels have exceeded public health standards at Sand Beach Lagoon and a Public Health Advisory has been posted. The public is advised against swimming at this beach until bacterial levels return to healthful levels. (Not for Sand Beach.)",
-          "lastIndexedDate": "2026-07-15 00:00:00.0"
-        },
-        {
           "id": "F8AFCEAD-7E34-4C99-8AF6-C0B7C376C8FB",
           "title": "Eastern Section of Beech Mountain Loop Road Closed for Repairs",
           "category": "Park Closure",
@@ -1991,7 +1979,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "48dd14188262f3ea96ad625f5f95c63776a9d36210ce8c977ffc18c972ad4ca2"
+      "contentHash": "81b5fd190432767c47a0163776ae8c657b443e648b6f1f8ff8eedd1a6d6981e8"
     }
   ]
 }
