@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "source": "National Park Service API",
   "sourceDocs": "https://www.nps.gov/subjects/developer/api-documentation.htm",
-  "fetchedAt": "2026-09-28T17:38:38.995Z",
+  "fetchedAt": "2026-10-01T16:26:09.140Z",
   "parkCodes": [
     "yose",
     "grca",
@@ -12,10 +12,9 @@
     "acad"
   ],
   "changedParks": [
-    "yosemite",
     "grand-canyon",
-    "rocky-mountain",
     "zion",
+    "yellowstone",
     "acadia"
   ],
   "parks": [
@@ -456,6 +455,14 @@
           "url": "https://www.nps.gov/grca/planyourvisit/key-messages.htm",
           "description": "Beginning Sep. 6, no potable water will be available in the inner canyon, including along the Bright Angel Trail (1.5 Mile Resthouse, 3-Mile Resthouse, Havasupai Gardens day use and campground). All backpackers and hikers should carry water filtration and treatment OR carry all water with them.",
           "lastIndexedDate": "2026-09-11 00:00:00.0"
+        },
+        {
+          "id": "4CC2EC5B-2CAD-44DC-90C1-86856D021228",
+          "title": "Overnight Lodging Suspended and Parkwide Stage 4 Water Restrictions",
+          "category": "Caution",
+          "url": "https://www.nps.gov/grca/learn/news/grand-canyon-national-park-to-close-overnight-hotel-accommodations-beginning-august-31.htm",
+          "description": "Grand Canyon National Park has implemented Stage 4 water restrictions on the South Rim due to extensive flash flood damage to the Transcanyon Waterline. Overnight accommodations are suspended, and only dry camping is allowed. The park remains open for day use, with food and beverage services, the Grand Canyon Clinic, and Post Office remaining open. Visitors are asked to bring water with them when visiting the park.",
+          "lastIndexedDate": "2026-09-30 00:00:00.0"
         }
       ],
       "visitorCenters": [
@@ -536,7 +543,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "81ab67674e32530d5cd23d82a8e9db127bf91174cfe191ccb8100a08c90d288c"
+      "contentHash": "46c6081154527273baf83fac735a33fe242824df089bc7258e48ba6393ad52e4"
     },
     {
       "parkCode": "romo",
@@ -1018,11 +1025,19 @@
         },
         {
           "id": "CDD9D321-49B3-4C74-89AD-A186807220E6",
-          "title": "Watchman Trail Closed",
+          "title": "Watchman Trail closed",
           "category": "Park Closure",
           "url": "",
           "description": "The Watchman Trail is closed pending repairs.",
-          "lastIndexedDate": "2026-09-01 00:00:00.0"
+          "lastIndexedDate": "2026-09-29 00:00:00.0"
+        },
+        {
+          "id": "76DA8D85-4EC6-4988-A71B-6E6F6E939274",
+          "title": "Zion-Mt. Carmel Highway closed from Canyon Junction to East Entrance",
+          "category": "Park Closure",
+          "url": "",
+          "description": "The Zion-Mt. Carmel Highway is partially closed. There will be no through traffic until further notice. Zion Canyon Scenic Drive remains open to shuttles and lodge guests.",
+          "lastIndexedDate": "2026-09-30 00:00:00.0"
         }
       ],
       "visitorCenters": [
@@ -1134,7 +1149,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "d4e29bd8947e4d75d6a70d3d2b16775c123fece4e985399bb58e651b2090a443"
+      "contentHash": "126bec03efcc140311f7452dc8d834dc964ef0774ea8535698321ec6549a7ff2"
     },
     {
       "parkCode": "yell",
@@ -1642,7 +1657,7 @@
           "id": "6B63B182-983C-41D9-82F7-F879170A3517",
           "name": "Norris Campground",
           "url": "https://www.nps.gov/yell/planyourvisit/norrishscg.htm",
-          "description": "Norris has been closed to the public for five years and will remain closed for the foreseeable future. Due to Norris’ remote location, the park does not have the staffing required to effectively respond to emergency incidents (law enforcement, emergency medical services etc.) and facility maintenance and repairs. For this reason, we have removed it from Yellowstone’s website and publications.",
+          "description": "Norris Campground will remain closed for the foreseeable future.",
           "reservationUrl": "",
           "weatherOverview": "Yellowstone's weather can vary greatly within a day and throughout the park. Snow can fall every month of the year. Summer highs reach 70–80°F (25–30°C) during the day, but nights can be cool (and it may freeze at higher elevations). During spring and fall, daytime highs range from 30–60°F (0–20°C), with overnight lows",
           "numberOfSitesReservable": "112",
@@ -1679,7 +1694,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "ba48744ff921d8f33bd782ade8fdb0be0f3b6ca33f0f63a964562800ec88fc1f"
+      "contentHash": "89d5199d820104a8c622912e1fa99aa2a769de624002073bb4d04a2c6fc46c20"
     },
     {
       "parkCode": "acad",
@@ -1780,11 +1795,11 @@
       "alerts": [
         {
           "id": "F8AFCEAD-7E34-4C99-8AF6-C0B7C376C8FB",
-          "title": "Eastern Section of Beech Mountain Loop Road Closed for Repairs",
+          "title": "Eastern Section of Beech Mountain Loop Trail Closed for Repairs",
           "category": "Park Closure",
           "url": "",
           "description": "Starting Sept 21, the eastern section of the Beech Mountain Loop Trail will be closed for repairs from a junction just beyond the parking lot to just below the summit at the fire tower. Three alternate routes to the summit are available: the outer loop of the Beech Mountain Loop Trail, Beech South Ridge Trail and Beech West Ridge Trail.",
-          "lastIndexedDate": "2026-08-24 00:00:00.0"
+          "lastIndexedDate": "2026-09-30 00:00:00.0"
         },
         {
           "id": "96A00261-453A-467D-A1D5-24D68A59AB50",
@@ -1792,7 +1807,7 @@
           "category": "Park Closure",
           "url": "",
           "description": "Starting Aug 31, the Schoodic Mountain Road will be closed for repairs from Schoodic Loop Road to the summit of Schoodic Head. Workers will be operating heavy equipment for resurfacing, regrading and ditching.",
-          "lastIndexedDate": "2026-08-24 00:00:00.0"
+          "lastIndexedDate": "2026-09-30 00:00:00.0"
         },
         {
           "id": "D3E90E5C-ABED-4EDD-B17F-7D4744770978",
@@ -1979,7 +1994,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "81b5fd190432767c47a0163776ae8c657b443e648b6f1f8ff8eedd1a6d6981e8"
+      "contentHash": "d5cd5f04187ed5b24b60df72248dbf33190e94e4978735990b33ee03ad749945"
     }
   ]
 }
