@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "source": "National Park Service API",
   "sourceDocs": "https://www.nps.gov/subjects/developer/api-documentation.htm",
-  "fetchedAt": "2026-10-01T16:26:09.140Z",
+  "fetchedAt": "2026-10-05T18:26:24.217Z",
   "parkCodes": [
     "yose",
     "grca",
@@ -12,10 +12,8 @@
     "acad"
   ],
   "changedParks": [
-    "grand-canyon",
-    "zion",
-    "yellowstone",
-    "acadia"
+    "yosemite",
+    "zion"
   ],
   "parks": [
     {
@@ -127,7 +125,7 @@
           "category": "Park Closure",
           "url": "https://inciweb.wildfire.gov/incident-information/caynp-dome-fire",
           "description": "The Dome Fire is burning in the wilderness northeast of Wawona. Glacier Point Road is temporarily closed because of reduced visibility along the road due to smoke and to safely allow firefighting operations. Additionally, there are some trail closures south of Glacier Point Road.. Smoky conditions are possible, with brief periods of unhealthy air quality in some places at some times..",
-          "lastIndexedDate": "2026-09-28 00:00:00.0"
+          "lastIndexedDate": "2026-10-02 00:00:00.0"
         }
       ],
       "visitorCenters": [
@@ -330,7 +328,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "6482373e00bde608f6f4711c91c9349e251e88c0a1d3a3056a92c1be88f0adb9"
+      "contentHash": "7c6e2dedc0f0d117097b645dbcbe2d973c0562851d07d555101ee3c633023afe"
     },
     {
       "parkCode": "grca",
@@ -992,14 +990,6 @@
           "lastIndexedDate": "2026-09-16 00:00:00.0"
         },
         {
-          "id": "4F7A97F4-90C4-44BE-A2D0-B0B6C19E6AB4",
-          "title": "Fire restrictions are in effect",
-          "category": "Information",
-          "url": "https://www.nps.gov/zion/learn/news/zion-national-park-rescinds-stage-2-fire-restrictions-resumes-year-round-fire-restrictions.htm",
-          "description": "Campfires are only allowed in designated fire rings at Watchman Campground, South Campground, and Lava Point Campground. Smoking near vegetation is not allowed. Fireworks are never allowed within the park.",
-          "lastIndexedDate": "2026-09-16 00:00:00.0"
-        },
-        {
           "id": "83AE2DD9-F167-445F-8B00-A4F9E5A993D8",
           "title": "Large vehicle restrictions on Zion-Mt. Carmel Highway",
           "category": "Caution",
@@ -1036,8 +1026,8 @@
           "title": "Zion-Mt. Carmel Highway closed from Canyon Junction to East Entrance",
           "category": "Park Closure",
           "url": "",
-          "description": "The Zion-Mt. Carmel Highway is partially closed. There will be no through traffic until further notice. Zion Canyon Scenic Drive remains open to shuttles and lodge guests.",
-          "lastIndexedDate": "2026-09-30 00:00:00.0"
+          "description": "The Zion-Mt. Carmel Highway is currently closed from Canyon Junction to the East Entrance. There will be no through traffic until further notice. Zion Canyon Scenic Drive remains open to shuttles and lodge guests.",
+          "lastIndexedDate": "2026-10-04 00:00:00.0"
         }
       ],
       "visitorCenters": [
@@ -1149,7 +1139,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "126bec03efcc140311f7452dc8d834dc964ef0774ea8535698321ec6549a7ff2"
+      "contentHash": "808089d738bcf16a756f77af3d54b98582921ddb5cad7169159ffecfafc21171"
     },
     {
       "parkCode": "yell",
