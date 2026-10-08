@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "source": "National Park Service API",
   "sourceDocs": "https://www.nps.gov/subjects/developer/api-documentation.htm",
-  "fetchedAt": "2026-10-05T18:26:24.217Z",
+  "fetchedAt": "2026-10-08T16:27:19.641Z",
   "parkCodes": [
     "yose",
     "grca",
@@ -13,7 +13,8 @@
   ],
   "changedParks": [
     "yosemite",
-    "zion"
+    "zion",
+    "yellowstone"
   ],
   "parks": [
     {
@@ -124,8 +125,8 @@
           "title": "Glacier Point Road is temporarily closed due to the Dome Fire",
           "category": "Park Closure",
           "url": "https://inciweb.wildfire.gov/incident-information/caynp-dome-fire",
-          "description": "The Dome Fire is burning in the wilderness northeast of Wawona. Glacier Point Road is temporarily closed because of reduced visibility along the road due to smoke and to safely allow firefighting operations. Additionally, there are some trail closures south of Glacier Point Road.. Smoky conditions are possible, with brief periods of unhealthy air quality in some places at some times..",
-          "lastIndexedDate": "2026-10-02 00:00:00.0"
+          "description": "The Dome Fire is burning in the wilderness northeast of Wawona. Glacier Point Road is temporarily closed because of reduced visibility along the road due to smoke and to safely allow firefighting operations. Additionally, there are some trail closures south of Glacier Point Road.. Smoky conditions are possible at times.",
+          "lastIndexedDate": "2026-10-07 00:00:00.0"
         }
       ],
       "visitorCenters": [
@@ -328,7 +329,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "7c6e2dedc0f0d117097b645dbcbe2d973c0562851d07d555101ee3c633023afe"
+      "contentHash": "487865421552d39fa0c7666f0a6cd600556b896b6122fc8d03eff418799038c3"
     },
     {
       "parkCode": "grca",
@@ -1022,12 +1023,12 @@
           "lastIndexedDate": "2026-09-29 00:00:00.0"
         },
         {
-          "id": "76DA8D85-4EC6-4988-A71B-6E6F6E939274",
-          "title": "Zion-Mt. Carmel Highway closed from Canyon Junction to East Entrance",
+          "id": "FC405217-4B9B-4042-8D9C-96475F3997D0",
+          "title": "Zion-Mt. Carmel Highway closed from Canyon Junction to Great Arch Pullout",
           "category": "Park Closure",
           "url": "",
-          "description": "The Zion-Mt. Carmel Highway is currently closed from Canyon Junction to the East Entrance. There will be no through traffic until further notice. Zion Canyon Scenic Drive remains open to shuttles and lodge guests.",
-          "lastIndexedDate": "2026-10-04 00:00:00.0"
+          "description": "The Zion-Mt. Carmel Highway is currently closed from Canyon Junction to Great Arch Pullout to all pedestrian, bicycle, and vehicle traffic. Zion-Mt. Carmel Highway is open from East Entrance to Great Arch Pullout. There will be no through traffic until further notice.",
+          "lastIndexedDate": "2026-10-06 00:00:00.0"
         }
       ],
       "visitorCenters": [
@@ -1139,7 +1140,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "808089d738bcf16a756f77af3d54b98582921ddb5cad7169159ffecfafc21171"
+      "contentHash": "40ca0ced74cab60ed118edf3ea076049a49853b83971ae9d75da2c51ab237c96"
     },
     {
       "parkCode": "yell",
@@ -1277,6 +1278,14 @@
         }
       ],
       "alerts": [
+        {
+          "id": "3A28F80C-D5A9-4CA7-8169-545AEDCDA941",
+          "title": "Beartooth Highway Temporary Closure",
+          "category": "Park Closure",
+          "url": "https://www.nps.gov/yell/planyourvisit/parkroads.htm#Beartooth",
+          "description": "The Beartooth Highway (US-212) between Red Lodge and Cooke City/Silver Gate, Montana, will close temporarily at 2:30 p.m. Friday, Oct. 9 in preparation for winter weather and anticipated hazardous driving conditions. The forecast calls for ice and snow Saturday through Monday. The highway is scheduled to close for the season Monday, Oct. 12 and, depending on conditions, may not reopen until next spring.",
+          "lastIndexedDate": "2026-10-08 00:00:00.0"
+        },
         {
           "id": "75EAC129-65A2-4CDA-B29C-413502DD3A35",
           "title": "Biscuit Basin Closed Due to Hydrothermal Explosion",
@@ -1684,7 +1693,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "89d5199d820104a8c622912e1fa99aa2a769de624002073bb4d04a2c6fc46c20"
+      "contentHash": "d1fed27d2e8c4dbd2458393b9e0cd5291ac54ee83aff7ddfb9196045a0fa3590"
     },
     {
       "parkCode": "acad",

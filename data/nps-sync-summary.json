@@ -2,13 +2,14 @@
   "changed": true,
   "changedParks": [
     "yosemite",
-    "zion"
+    "zion",
+    "yellowstone"
   ],
   "parkCount": 6,
-  "alertCount": 19,
+  "alertCount": 20,
   "visitorCenterCount": 37,
   "campgroundCount": 43,
   "dryRun": false,
   "secretPrinted": false,
-  "generatedAt": "2026-10-05T18:26:24.217Z"
+  "generatedAt": "2026-10-08T16:27:19.641Z"
 }
