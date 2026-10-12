@@ -6,10 +6,10 @@
     "yellowstone"
   ],
   "parkCount": 6,
-  "alertCount": 20,
+  "alertCount": 19,
   "visitorCenterCount": 37,
   "campgroundCount": 43,
   "dryRun": false,
   "secretPrinted": false,
-  "generatedAt": "2026-10-08T16:27:19.641Z"
+  "generatedAt": "2026-10-12T19:01:48.996Z"
 }

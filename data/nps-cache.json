@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "source": "National Park Service API",
   "sourceDocs": "https://www.nps.gov/subjects/developer/api-documentation.htm",
-  "fetchedAt": "2026-10-08T16:27:19.641Z",
+  "fetchedAt": "2026-10-12T19:01:48.996Z",
   "parkCodes": [
     "yose",
     "grca",
@@ -119,16 +119,7 @@
           "url": "https://www.nps.gov/common/uploads/structured_data/3C84C3C0-1DD8-B71B-0BFF90B64283C3D8.jpg"
         }
       ],
-      "alerts": [
-        {
-          "id": "7FB2991F-FED2-4E87-8002-B4BADAD2749F",
-          "title": "Glacier Point Road is temporarily closed due to the Dome Fire",
-          "category": "Park Closure",
-          "url": "https://inciweb.wildfire.gov/incident-information/caynp-dome-fire",
-          "description": "The Dome Fire is burning in the wilderness northeast of Wawona. Glacier Point Road is temporarily closed because of reduced visibility along the road due to smoke and to safely allow firefighting operations. Additionally, there are some trail closures south of Glacier Point Road.. Smoky conditions are possible at times.",
-          "lastIndexedDate": "2026-10-07 00:00:00.0"
-        }
-      ],
+      "alerts": [],
       "visitorCenters": [
         {
           "id": "888BB5B2-6EA6-473C-A803-ECA45A02AF57",
@@ -329,7 +320,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "487865421552d39fa0c7666f0a6cd600556b896b6122fc8d03eff418799038c3"
+      "contentHash": "c307b8eefef40dbb1585852f5d5538bccd95ac5d6ab25432ed3c652b7157002a"
     },
     {
       "parkCode": "grca",
@@ -1007,6 +998,22 @@
           "lastIndexedDate": "2026-09-16 00:00:00.0"
         },
         {
+          "id": "5F001AEC-C1B1-478F-8435-0A91D78DF2FC",
+          "title": "Taylor Creek Trail Temporarily Closed",
+          "category": "Park Closure",
+          "url": "",
+          "description": "Taylor Creek Trail is temporarily closed due to flooding",
+          "lastIndexedDate": "2026-10-11 00:00:00.0"
+        },
+        {
+          "id": "CDF834D3-8986-47CF-BAF3-0092F8A5D6F7",
+          "title": "The Virgin River Narrows and all slot canyons closed",
+          "category": "Park Closure",
+          "url": "https://www.nps.gov/zion/planyourvisit/flash-flood.htm",
+          "description": "The Narrows and all slot canyons are closed at this time due to forecasted excessive rainfall with impacts including runoff or flooding.",
+          "lastIndexedDate": "2026-10-12 00:00:00.0"
+        },
+        {
           "id": "09699C7F-F2CD-4BE9-B8D4-5E19CC89BE7A",
           "title": "Toxic cyanobacteria in rivers, streams, and pools",
           "category": "Caution",
@@ -1021,14 +1028,6 @@
           "url": "",
           "description": "The Watchman Trail is closed pending repairs.",
           "lastIndexedDate": "2026-09-29 00:00:00.0"
-        },
-        {
-          "id": "FC405217-4B9B-4042-8D9C-96475F3997D0",
-          "title": "Zion-Mt. Carmel Highway closed from Canyon Junction to Great Arch Pullout",
-          "category": "Park Closure",
-          "url": "",
-          "description": "The Zion-Mt. Carmel Highway is currently closed from Canyon Junction to Great Arch Pullout to all pedestrian, bicycle, and vehicle traffic. Zion-Mt. Carmel Highway is open from East Entrance to Great Arch Pullout. There will be no through traffic until further notice.",
-          "lastIndexedDate": "2026-10-06 00:00:00.0"
         }
       ],
       "visitorCenters": [
@@ -1140,7 +1139,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "40ca0ced74cab60ed118edf3ea076049a49853b83971ae9d75da2c51ab237c96"
+      "contentHash": "ee12176433fd4794986d705b94875bbfec102441e74d46cff7e262e734d41025"
     },
     {
       "parkCode": "yell",
@@ -1278,14 +1277,6 @@
         }
       ],
       "alerts": [
-        {
-          "id": "3A28F80C-D5A9-4CA7-8169-545AEDCDA941",
-          "title": "Beartooth Highway Temporary Closure",
-          "category": "Park Closure",
-          "url": "https://www.nps.gov/yell/planyourvisit/parkroads.htm#Beartooth",
-          "description": "The Beartooth Highway (US-212) between Red Lodge and Cooke City/Silver Gate, Montana, will close temporarily at 2:30 p.m. Friday, Oct. 9 in preparation for winter weather and anticipated hazardous driving conditions. The forecast calls for ice and snow Saturday through Monday. The highway is scheduled to close for the season Monday, Oct. 12 and, depending on conditions, may not reopen until next spring.",
-          "lastIndexedDate": "2026-10-08 00:00:00.0"
-        },
         {
           "id": "75EAC129-65A2-4CDA-B29C-413502DD3A35",
           "title": "Biscuit Basin Closed Due to Hydrothermal Explosion",
@@ -1693,7 +1684,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "d1fed27d2e8c4dbd2458393b9e0cd5291ac54ee83aff7ddfb9196045a0fa3590"
+      "contentHash": "89d5199d820104a8c622912e1fa99aa2a769de624002073bb4d04a2c6fc46c20"
     },
     {
       "parkCode": "acad",
