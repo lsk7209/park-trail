@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "source": "National Park Service API",
   "sourceDocs": "https://www.nps.gov/subjects/developer/api-documentation.htm",
-  "fetchedAt": "2026-10-12T19:01:48.996Z",
+  "fetchedAt": "2026-10-15T14:09:19.773Z",
   "parkCodes": [
     "yose",
     "grca",
@@ -12,9 +12,9 @@
     "acad"
   ],
   "changedParks": [
-    "yosemite",
-    "zion",
-    "yellowstone"
+    "grand-canyon",
+    "rocky-mountain",
+    "zion"
   ],
   "parks": [
     {
@@ -435,8 +435,8 @@
           "title": "INNER CANYON TRAIL CLOSURES",
           "category": "Danger",
           "url": "",
-          "description": "Current trail closures: The entire North Kaibab Trail (including Cottonwood Campground), Phantom Ranch, Bright Angel Campground, Silver Bridge, the South Kaibab Trail below Tip-Off, the River Trail east of the River Resthouse to the South Kaibab Trail junction, and the Black Bridge. Please do not attempt to access the closed areas.",
-          "lastIndexedDate": "2026-09-24 00:00:00.0"
+          "description": "Current trail closures: Bright Angel Trail from One-and-a-Half Mile Resthouse to Havasupai Gardens, the entire North Kaibab Trail (including Cottonwood Campground), Phantom Ranch, Bright Angel Campground, Silver Bridge, the South Kaibab Trail below Tip-Off, the River Trail east of the River Resthouse to the South Kaibab Trail junction, and the Black Bridge. Please do not attempt to access the closed areas.",
+          "lastIndexedDate": "2026-10-13 00:00:00.0"
         },
         {
           "id": "608538F9-D5D1-4AD4-BD95-6BB351146EDC",
@@ -533,7 +533,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "46c6081154527273baf83fac735a33fe242824df089bc7258e48ba6393ad52e4"
+      "contentHash": "1686d527e7365d4f5f20ad495ea2ddd91dc25328b31c19cf4ef12e90bfac82b7"
     },
     {
       "parkCode": "romo",
@@ -631,13 +631,22 @@
           "url": "https://www.nps.gov/common/uploads/structured_data/88439955-DB09-4F45-62A55C2E00A2C229.jpg"
         }
       ],
-      "alerts": [],
+      "alerts": [
+        {
+          "id": "631E9CE5-E0F2-4194-8F8F-20EFE555A495",
+          "title": "Trail Ridge Road is temporarily Closed at Rainbow Curve and at Milner Pass",
+          "category": "Park Closure",
+          "url": "https://www.nps.gov/romo/planyourvisit/road_status.htm",
+          "description": "Due to ice and snow, Trail Ridge Road is temporarily closed at Rainbow Curve on the east side of the park and at Milner Pass on the west side of the park. Call the Trail Ridge Road recorded line at 970-586-1222 for the most up-to-date conditions.",
+          "lastIndexedDate": "2026-10-13 00:00:00.0"
+        }
+      ],
       "visitorCenters": [
         {
           "id": "6024ADBB-9505-45FD-A9AE-FF50CDA658A0",
           "name": "Alpine Visitor Center",
           "url": "",
-          "description": "Alpine Visitor Center is open for the 2026 summer season. Located at the top of Fall River Pass and accessed via Trail Ridge Road, Alpine Visitor Center is the highest elevation visitor center in the National Park System at 11,796 feet above sea level. Stop by and learn more about plants and wildlife that live in the land above trees - the Alpine tundra.",
+          "description": "Alpine Visitor Center is closed for the season. The visitor center will reopen in summer 2027. Located at the top of Fall River Pass and accessed via Trail Ridge Road, Alpine Visitor Center is the highest elevation visitor center in the National Park System at 11,796 feet above sea level. Stop by and learn more about plants and wildlife that live in the land above trees - the Alpine tundra.",
           "directionsInfo": "Alpine Visitor Center is located inside Rocky Mountain National Park at the top of Fall River Pass. It is accessed primarily via Trail Ridge Road. When traveling from the east side of RMNP, Alpine Visitor Center is located approximately 22 miles from Beaver Meadows Entrance. When traveling from the west, it is located ",
           "directionsUrl": "",
           "addresses": [
@@ -874,7 +883,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "f7008a2228e89d3e020cea0610c5e797a07a470798818f86fabea0948a6bf7f0"
+      "contentHash": "c3366d178d30ea346c34825ce89238d43f0a75fa249cb6b46f8d3c16b35687ad"
     },
     {
       "parkCode": "zion",
@@ -996,22 +1005,6 @@
           "url": "https://www.nps.gov/zion/planyourvisit/traffic.htm#parking",
           "description": "Zion has limited parking. Once parking spaces in Zion are full, visitors should park in Springdale. Please park only in designated spaces. Vehicles parked outside of designated spaces are subject to citation and towing.",
           "lastIndexedDate": "2026-09-16 00:00:00.0"
-        },
-        {
-          "id": "5F001AEC-C1B1-478F-8435-0A91D78DF2FC",
-          "title": "Taylor Creek Trail Temporarily Closed",
-          "category": "Park Closure",
-          "url": "",
-          "description": "Taylor Creek Trail is temporarily closed due to flooding",
-          "lastIndexedDate": "2026-10-11 00:00:00.0"
-        },
-        {
-          "id": "CDF834D3-8986-47CF-BAF3-0092F8A5D6F7",
-          "title": "The Virgin River Narrows and all slot canyons closed",
-          "category": "Park Closure",
-          "url": "https://www.nps.gov/zion/planyourvisit/flash-flood.htm",
-          "description": "The Narrows and all slot canyons are closed at this time due to forecasted excessive rainfall with impacts including runoff or flooding.",
-          "lastIndexedDate": "2026-10-12 00:00:00.0"
         },
         {
           "id": "09699C7F-F2CD-4BE9-B8D4-5E19CC89BE7A",
@@ -1139,7 +1132,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "ee12176433fd4794986d705b94875bbfec102441e74d46cff7e262e734d41025"
+      "contentHash": "cd65f5510a481cc12890164f4be285c5809603a3382ab5bf9cb6825a73d4d1ff"
     },
     {
       "parkCode": "yell",
