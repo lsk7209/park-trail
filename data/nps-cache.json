@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "source": "National Park Service API",
   "sourceDocs": "https://www.nps.gov/subjects/developer/api-documentation.htm",
-  "fetchedAt": "2026-10-15T14:09:19.773Z",
+  "fetchedAt": "2026-10-19T16:27:00.842Z",
   "parkCodes": [
     "yose",
     "grca",
@@ -12,9 +12,10 @@
     "acad"
   ],
   "changedParks": [
+    "yosemite",
     "grand-canyon",
     "rocky-mountain",
-    "zion"
+    "yellowstone"
   ],
   "parks": [
     {
@@ -119,7 +120,16 @@
           "url": "https://www.nps.gov/common/uploads/structured_data/3C84C3C0-1DD8-B71B-0BFF90B64283C3D8.jpg"
         }
       ],
-      "alerts": [],
+      "alerts": [
+        {
+          "id": "B1B8B58E-47EB-4729-8494-A201E094EBDF",
+          "title": "No overnight parking on Tioga & Glacier Point Roads",
+          "category": "Information",
+          "url": "",
+          "description": "Overnight parking is not allowed on Tioga Road and Glacier Point Road, including all parking lots reachable from these roads.",
+          "lastIndexedDate": "2026-10-16 00:00:00.0"
+        }
+      ],
       "visitorCenters": [
         {
           "id": "888BB5B2-6EA6-473C-A803-ECA45A02AF57",
@@ -320,7 +330,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "c307b8eefef40dbb1585852f5d5538bccd95ac5d6ab25432ed3c652b7157002a"
+      "contentHash": "741eb6a5a9a7806f3370c66d6d9aa642d7389762b81a344aefb0661f99bbc2c3"
     },
     {
       "parkCode": "grca",
@@ -436,7 +446,7 @@
           "category": "Danger",
           "url": "",
           "description": "Current trail closures: Bright Angel Trail from One-and-a-Half Mile Resthouse to Havasupai Gardens, the entire North Kaibab Trail (including Cottonwood Campground), Phantom Ranch, Bright Angel Campground, Silver Bridge, the South Kaibab Trail below Tip-Off, the River Trail east of the River Resthouse to the South Kaibab Trail junction, and the Black Bridge. Please do not attempt to access the closed areas.",
-          "lastIndexedDate": "2026-10-13 00:00:00.0"
+          "lastIndexedDate": "2026-10-15 00:00:00.0"
         },
         {
           "id": "608538F9-D5D1-4AD4-BD95-6BB351146EDC",
@@ -445,6 +455,14 @@
           "url": "https://www.nps.gov/grca/planyourvisit/key-messages.htm",
           "description": "Beginning Sep. 6, no potable water will be available in the inner canyon, including along the Bright Angel Trail (1.5 Mile Resthouse, 3-Mile Resthouse, Havasupai Gardens day use and campground). All backpackers and hikers should carry water filtration and treatment OR carry all water with them.",
           "lastIndexedDate": "2026-09-11 00:00:00.0"
+        },
+        {
+          "id": "7F3F5A00-0567-40F0-8283-7B0002C0EF53",
+          "title": "North Rim Scenic Road Closure: Cape Royal and Point Imperial",
+          "category": "Park Closure",
+          "url": "https://www.nps.gov/grca/northrimstatus.htm",
+          "description": "The Point Imperial Road (from the Cape Royal Road to Point Imperial) will be closed from Oct. 15 through Nov. 3, 2026. No services, fuel, and no water are available on the North Rim as of Oct. 15, 2026.",
+          "lastIndexedDate": "2026-10-15 00:00:00.0"
         },
         {
           "id": "4CC2EC5B-2CAD-44DC-90C1-86856D021228",
@@ -533,7 +551,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "1686d527e7365d4f5f20ad495ea2ddd91dc25328b31c19cf4ef12e90bfac82b7"
+      "contentHash": "cd759545108db94c428b2e1c9767d5efa93ddb54e549a1eecb2e0a318bdfde2a"
     },
     {
       "parkCode": "romo",
@@ -631,16 +649,7 @@
           "url": "https://www.nps.gov/common/uploads/structured_data/88439955-DB09-4F45-62A55C2E00A2C229.jpg"
         }
       ],
-      "alerts": [
-        {
-          "id": "631E9CE5-E0F2-4194-8F8F-20EFE555A495",
-          "title": "Trail Ridge Road is temporarily Closed at Rainbow Curve and at Milner Pass",
-          "category": "Park Closure",
-          "url": "https://www.nps.gov/romo/planyourvisit/road_status.htm",
-          "description": "Due to ice and snow, Trail Ridge Road is temporarily closed at Rainbow Curve on the east side of the park and at Milner Pass on the west side of the park. Call the Trail Ridge Road recorded line at 970-586-1222 for the most up-to-date conditions.",
-          "lastIndexedDate": "2026-10-13 00:00:00.0"
-        }
-      ],
+      "alerts": [],
       "visitorCenters": [
         {
           "id": "6024ADBB-9505-45FD-A9AE-FF50CDA658A0",
@@ -883,7 +892,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "c3366d178d30ea346c34825ce89238d43f0a75fa249cb6b46f8d3c16b35687ad"
+      "contentHash": "8e2af1b03aa0a14bf1d4fbf119b800d4b34cc1b9c863ad9ac428492643597fe7"
     },
     {
       "parkCode": "zion",
@@ -1301,14 +1310,6 @@
           "url": "https://www.nps.gov/yell/planyourvisit/fees.htm",
           "description": "Although an entrance pass is required to enter Yellowstone National Park, vehicle reservations are not needed. You are encouraged to purchase an entrance pass before arriving, but you may also purchase passes at any entrance station upon arrival.",
           "lastIndexedDate": "2025-06-18 19:15:37.0"
-        },
-        {
-          "id": "00D47802-8E06-4418-80D8-69D37A885146",
-          "title": "West Thumb Geyser Basin Boardwalk - Partial Closure",
-          "category": "Information",
-          "url": "https://www.nps.gov/yell/images/WT-Desk-Ref-Map-closure.jpg",
-          "description": "A section of the West Thumb Geyser Basin boardwalk will be closed to Fishing Cone and Lakeshore Geyser through mid-October while crews replace damaged support structures along the shoreline. The remaining sections of boardwalk will remain open to visitors. Dates are subject to change without notice.",
-          "lastIndexedDate": "2026-09-14 00:00:00.0"
         }
       ],
       "visitorCenters": [
@@ -1322,7 +1323,7 @@
           "addresses": [
             {
               "type": "Physical",
-              "line1": "Grand Loop Road",
+              "line1": "2 Officers Row",
               "city": "Yellowstone National Park",
               "stateCode": "WY"
             },
@@ -1344,7 +1345,7 @@
           "addresses": [
             {
               "type": "Physical",
-              "line1": "Grand Loop Road",
+              "line1": "35 Lupine Court",
               "city": "Yellowstone National Park",
               "stateCode": "WY"
             },
@@ -1366,7 +1367,7 @@
           "addresses": [
             {
               "type": "Physical",
-              "line1": "Grand Loop Road",
+              "line1": "43 Fishing Bridge Museum Loop",
               "city": "Yellowstone National Park",
               "stateCode": "WY"
             },
@@ -1388,7 +1389,7 @@
           "addresses": [
             {
               "type": "Physical",
-              "line1": "Grand Loop Road",
+              "line1": "620 Grant Village Road",
               "city": "Yellowstone National Park",
               "stateCode": "WY"
             },
@@ -1410,7 +1411,7 @@
           "addresses": [
             {
               "type": "Physical",
-              "line1": "Grand Loop Road",
+              "line1": "21 Madison Museum Road",
               "city": "Yellowstone National Park",
               "stateCode": "WY"
             },
@@ -1432,7 +1433,7 @@
           "addresses": [
             {
               "type": "Physical",
-              "line1": "Grand Loop Road",
+              "line1": "66 Norris Campground",
               "city": "Yellowstone National Park",
               "stateCode": "WY"
             },
@@ -1476,7 +1477,7 @@
           "addresses": [
             {
               "type": "Physical",
-              "line1": "Grand Loop Road",
+              "line1": "2081 Geyser View Avenue",
               "city": "Yellowstone National Park",
               "stateCode": "WY"
             },
@@ -1677,7 +1678,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "89d5199d820104a8c622912e1fa99aa2a769de624002073bb4d04a2c6fc46c20"
+      "contentHash": "5b02684d4cdab17b11841a162a034b1bdc2d6ad60b46d8666dd6fccc4abbe9fd"
     },
     {
       "parkCode": "acad",

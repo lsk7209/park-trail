@@ -1,9 +1,10 @@
 {
   "changed": true,
   "changedParks": [
+    "yosemite",
     "grand-canyon",
     "rocky-mountain",
-    "zion"
+    "yellowstone"
   ],
   "parkCount": 6,
   "alertCount": 18,
@@ -11,5 +12,5 @@
   "campgroundCount": 43,
   "dryRun": false,
   "secretPrinted": false,
-  "generatedAt": "2026-10-15T14:09:19.773Z"
+  "generatedAt": "2026-10-19T16:27:00.842Z"
 }
