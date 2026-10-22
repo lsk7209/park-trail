@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "source": "National Park Service API",
   "sourceDocs": "https://www.nps.gov/subjects/developer/api-documentation.htm",
-  "fetchedAt": "2026-10-19T16:27:00.842Z",
+  "fetchedAt": "2026-10-22T14:30:11.799Z",
   "parkCodes": [
     "yose",
     "grca",
@@ -14,8 +14,7 @@
   "changedParks": [
     "yosemite",
     "grand-canyon",
-    "rocky-mountain",
-    "yellowstone"
+    "zion"
   ],
   "parks": [
     {
@@ -128,6 +127,14 @@
           "url": "",
           "description": "Overnight parking is not allowed on Tioga Road and Glacier Point Road, including all parking lots reachable from these roads.",
           "lastIndexedDate": "2026-10-16 00:00:00.0"
+        },
+        {
+          "id": "865FD22E-8924-4941-8112-EB03F3FB5F39",
+          "title": "Tioga Road (Hwy 120 through the park) temporarily closing Wednesday at 5 pm",
+          "category": "Park Closure",
+          "url": "",
+          "description": "Tioga Road (continuation of Highway 120 through the park) will temporarily close on Wednesday, October 21 at 5 pm due to a forecast of snow. Call 209/372-0200 (then 1, 1) to check road conditions in the park.",
+          "lastIndexedDate": "2026-10-20 00:00:00.0"
         }
       ],
       "visitorCenters": [
@@ -330,7 +337,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "741eb6a5a9a7806f3370c66d6d9aa642d7389762b81a344aefb0661f99bbc2c3"
+      "contentHash": "7940404fbf6b004d8735ed2a73d7ac6ff5619563d3c13d921d0f3c9cbf69fdd7"
     },
     {
       "parkCode": "grca",
@@ -446,7 +453,7 @@
           "category": "Danger",
           "url": "",
           "description": "Current trail closures: Bright Angel Trail from One-and-a-Half Mile Resthouse to Havasupai Gardens, the entire North Kaibab Trail (including Cottonwood Campground), Phantom Ranch, Bright Angel Campground, Silver Bridge, the South Kaibab Trail below Tip-Off, the River Trail east of the River Resthouse to the South Kaibab Trail junction, and the Black Bridge. Please do not attempt to access the closed areas.",
-          "lastIndexedDate": "2026-10-15 00:00:00.0"
+          "lastIndexedDate": "2026-10-21 00:00:00.0"
         },
         {
           "id": "608538F9-D5D1-4AD4-BD95-6BB351146EDC",
@@ -551,7 +558,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "cd759545108db94c428b2e1c9767d5efa93ddb54e549a1eecb2e0a318bdfde2a"
+      "contentHash": "cab62b1e91bdd3281aa699f7978b568f04e26153524a16d8d325c5c6451cd7ce"
     },
     {
       "parkCode": "romo",
@@ -1016,6 +1023,14 @@
           "lastIndexedDate": "2026-09-16 00:00:00.0"
         },
         {
+          "id": "CDF834D3-8986-47CF-BAF3-0092F8A5D6F7",
+          "title": "The Virgin River Narrows and all slot canyons closed",
+          "category": "Park Closure",
+          "url": "https://www.nps.gov/zion/planyourvisit/flash-flood.htm",
+          "description": "A Flash Flood Warning has been issued by the National Weather Service for Zion National Park. All slot canyons are closed, and permits will not be issued at this time.",
+          "lastIndexedDate": "2026-10-22 00:00:00.0"
+        },
+        {
           "id": "09699C7F-F2CD-4BE9-B8D4-5E19CC89BE7A",
           "title": "Toxic cyanobacteria in rivers, streams, and pools",
           "category": "Caution",
@@ -1141,7 +1156,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "cd65f5510a481cc12890164f4be285c5809603a3382ab5bf9cb6825a73d4d1ff"
+      "contentHash": "e2d9a0a6c5ff45d341c5a70605d5873e34d622235a67a1e925f87e3baa26b273"
     },
     {
       "parkCode": "yell",
