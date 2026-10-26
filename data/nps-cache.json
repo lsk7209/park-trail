@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "source": "National Park Service API",
   "sourceDocs": "https://www.nps.gov/subjects/developer/api-documentation.htm",
-  "fetchedAt": "2026-10-22T14:30:11.799Z",
+  "fetchedAt": "2026-10-26T16:06:32.761Z",
   "parkCodes": [
     "yose",
     "grca",
@@ -14,6 +14,7 @@
   "changedParks": [
     "yosemite",
     "grand-canyon",
+    "rocky-mountain",
     "zion"
   ],
   "parks": [
@@ -127,14 +128,6 @@
           "url": "",
           "description": "Overnight parking is not allowed on Tioga Road and Glacier Point Road, including all parking lots reachable from these roads.",
           "lastIndexedDate": "2026-10-16 00:00:00.0"
-        },
-        {
-          "id": "865FD22E-8924-4941-8112-EB03F3FB5F39",
-          "title": "Tioga Road (Hwy 120 through the park) temporarily closing Wednesday at 5 pm",
-          "category": "Park Closure",
-          "url": "",
-          "description": "Tioga Road (continuation of Highway 120 through the park) will temporarily close on Wednesday, October 21 at 5 pm due to a forecast of snow. Call 209/372-0200 (then 1, 1) to check road conditions in the park.",
-          "lastIndexedDate": "2026-10-20 00:00:00.0"
         }
       ],
       "visitorCenters": [
@@ -337,7 +330,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "7940404fbf6b004d8735ed2a73d7ac6ff5619563d3c13d921d0f3c9cbf69fdd7"
+      "contentHash": "741eb6a5a9a7806f3370c66d6d9aa642d7389762b81a344aefb0661f99bbc2c3"
     },
     {
       "parkCode": "grca",
@@ -452,8 +445,8 @@
           "title": "INNER CANYON TRAIL CLOSURES",
           "category": "Danger",
           "url": "",
-          "description": "Current trail closures: Bright Angel Trail from One-and-a-Half Mile Resthouse to Havasupai Gardens, the entire North Kaibab Trail (including Cottonwood Campground), Phantom Ranch, Bright Angel Campground, Silver Bridge, the South Kaibab Trail below Tip-Off, the River Trail east of the River Resthouse to the South Kaibab Trail junction, and the Black Bridge. Please do not attempt to access the closed areas.",
-          "lastIndexedDate": "2026-10-21 00:00:00.0"
+          "description": "Current trail closures: the entire North Kaibab Trail (including Cottonwood Campground), Phantom Ranch, Bright Angel Campground, Silver Bridge, and the Black Bridge. Please do not attempt to access the closed areas.",
+          "lastIndexedDate": "2026-10-26 00:00:00.0"
         },
         {
           "id": "608538F9-D5D1-4AD4-BD95-6BB351146EDC",
@@ -468,8 +461,8 @@
           "title": "North Rim Scenic Road Closure: Cape Royal and Point Imperial",
           "category": "Park Closure",
           "url": "https://www.nps.gov/grca/northrimstatus.htm",
-          "description": "The Point Imperial Road (from the Cape Royal Road to Point Imperial) will be closed from Oct. 15 through Nov. 3, 2026. No services, fuel, and no water are available on the North Rim as of Oct. 15, 2026.",
-          "lastIndexedDate": "2026-10-15 00:00:00.0"
+          "description": "The North Rim Scenic Drives (Cape Royal Road and Point Imperial Road) are closed through sunrise Nov. 3, 2026, to accommodate critical road repair and rehabilitation work. No services, fuel, and no water are available on the North Rim as of Oct. 15, 2026.",
+          "lastIndexedDate": "2026-10-26 00:00:00.0"
         },
         {
           "id": "4CC2EC5B-2CAD-44DC-90C1-86856D021228",
@@ -558,7 +551,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "cab62b1e91bdd3281aa699f7978b568f04e26153524a16d8d325c5c6451cd7ce"
+      "contentHash": "76983d0fa0a741317e1bef9fe6f0400c3b615fb3949ee51580d220b627ba2a92"
     },
     {
       "parkCode": "romo",
@@ -656,7 +649,16 @@
           "url": "https://www.nps.gov/common/uploads/structured_data/88439955-DB09-4F45-62A55C2E00A2C229.jpg"
         }
       ],
-      "alerts": [],
+      "alerts": [
+        {
+          "id": "861414DC-48DA-496C-9110-1086D190B4FE",
+          "title": "Trail Ridge Road Status Update",
+          "category": "Park Closure",
+          "url": "https://www.nps.gov/romo/planyourvisit/road_status.htm",
+          "description": "Trail Ridge Road will be closing at 5 p.m. on Friday, October 23, due to the forecast for snow, low visibility and freezing temperatures at higher elevations. The closure points will be at Many Parks Curve on the east side and Colorado River Trailhead on the west side. For the latest information on the status of Trail Ridge Road, call 970-586-1222.",
+          "lastIndexedDate": "2026-10-23 00:00:00.0"
+        }
+      ],
       "visitorCenters": [
         {
           "id": "6024ADBB-9505-45FD-A9AE-FF50CDA658A0",
@@ -899,7 +901,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "8e2af1b03aa0a14bf1d4fbf119b800d4b34cc1b9c863ad9ac428492643597fe7"
+      "contentHash": "fbf2006d343ea1115ec131b59706cc485f15116490aaf7c59d31fac335b0910a"
     },
     {
       "parkCode": "zion",
@@ -1023,14 +1025,6 @@
           "lastIndexedDate": "2026-09-16 00:00:00.0"
         },
         {
-          "id": "CDF834D3-8986-47CF-BAF3-0092F8A5D6F7",
-          "title": "The Virgin River Narrows and all slot canyons closed",
-          "category": "Park Closure",
-          "url": "https://www.nps.gov/zion/planyourvisit/flash-flood.htm",
-          "description": "A Flash Flood Warning has been issued by the National Weather Service for Zion National Park. All slot canyons are closed, and permits will not be issued at this time.",
-          "lastIndexedDate": "2026-10-22 00:00:00.0"
-        },
-        {
           "id": "09699C7F-F2CD-4BE9-B8D4-5E19CC89BE7A",
           "title": "Toxic cyanobacteria in rivers, streams, and pools",
           "category": "Caution",
@@ -1045,6 +1039,22 @@
           "url": "",
           "description": "The Watchman Trail is closed pending repairs.",
           "lastIndexedDate": "2026-09-29 00:00:00.0"
+        },
+        {
+          "id": "318B8E3B-B571-4555-B809-A04EFF5A9007",
+          "title": "Zion Mount Carmel Highway - Nightly Road Closures",
+          "category": "Information",
+          "url": "https://udotinput.utah.gov/ziontechnology",
+          "description": "Overnight tunnel closures are set for the tunnel on the Zion–Mount Carmel Highway (SR-9) inside Zion National Park starting Monday, Oct. 26 for fiber optic installation. See Utah Department of Transportation website for more information.",
+          "lastIndexedDate": "2026-10-22 00:00:00.0"
+        },
+        {
+          "id": "F3F4CA6A-F15C-46F8-A506-96B4B8A9B1DE",
+          "title": "Zion Mount Carmel Highway - One way traffic",
+          "category": "Caution",
+          "url": "",
+          "description": "Expect one way traffic and minor delays on Zion Mount Carmel Highway, due road construction starting on October 26th.",
+          "lastIndexedDate": "2026-10-22 00:00:00.0"
         }
       ],
       "visitorCenters": [
@@ -1156,7 +1166,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "e2d9a0a6c5ff45d341c5a70605d5873e34d622235a67a1e925f87e3baa26b273"
+      "contentHash": "961745aeb3ca852f2d20cdcc99799f2fa09b8511c003cdc036a6f999a7b50cd9"
     },
     {
       "parkCode": "yell",
