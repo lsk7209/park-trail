@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "source": "National Park Service API",
   "sourceDocs": "https://www.nps.gov/subjects/developer/api-documentation.htm",
-  "fetchedAt": "2026-10-26T16:06:32.761Z",
+  "fetchedAt": "2026-10-29T16:06:40.753Z",
   "parkCodes": [
     "yose",
     "grca",
@@ -12,10 +12,8 @@
     "acad"
   ],
   "changedParks": [
-    "yosemite",
-    "grand-canyon",
-    "rocky-mountain",
-    "zion"
+    "zion",
+    "yellowstone"
   ],
   "parks": [
     {
@@ -1047,14 +1045,6 @@
           "url": "https://udotinput.utah.gov/ziontechnology",
           "description": "Overnight tunnel closures are set for the tunnel on the Zion–Mount Carmel Highway (SR-9) inside Zion National Park starting Monday, Oct. 26 for fiber optic installation. See Utah Department of Transportation website for more information.",
           "lastIndexedDate": "2026-10-22 00:00:00.0"
-        },
-        {
-          "id": "F3F4CA6A-F15C-46F8-A506-96B4B8A9B1DE",
-          "title": "Zion Mount Carmel Highway - One way traffic",
-          "category": "Caution",
-          "url": "",
-          "description": "Expect one way traffic and minor delays on Zion Mount Carmel Highway, due road construction starting on October 26th.",
-          "lastIndexedDate": "2026-10-22 00:00:00.0"
         }
       ],
       "visitorCenters": [
@@ -1166,7 +1156,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "961745aeb3ca852f2d20cdcc99799f2fa09b8511c003cdc036a6f999a7b50cd9"
+      "contentHash": "467ef648bd0a21c817d6866d482e31dea785db38df9cfed94cd39f623ccb4beb"
     },
     {
       "parkCode": "yell",
@@ -1313,20 +1303,12 @@
           "lastIndexedDate": "2026-07-01 00:00:00.0"
         },
         {
-          "id": "67146540-50E1-44EE-8D3A-2314B0192DDB",
-          "title": "Stay Away From Bull Elk",
-          "category": "Caution",
-          "url": "https://www.nps.gov/yell/planyourvisit/safety.htm#elk",
-          "description": "Bull elk are fast and unpredictable this time of year and can seriously injure people. If an elk charges, run. In addition to staying at least 25 yards (23 m) away from elk and bison, always stay at least 100 yards (91 m) away from bears and wolves.",
-          "lastIndexedDate": "2026-08-26 00:00:00.0"
-        },
-        {
           "id": "57EFE369-9186-400A-8F18-0E966993B8A3",
           "title": "Traffic Delays - Gardner River High Bridge",
           "category": "Information",
           "url": "https://www.nps.gov/yell/planyourvisit/parkroads.htm",
-          "description": "Expect a single lane of traffic with up to 15-minute delays, 24 hours a day, seven days a week, from April 1 through late October 2026. Oversized/overweight vehicles (8'6\"+ wide, 75'+ long, 80,000 lbs+ gross vehicle weight) will not be able to cross the bridge during this time.",
-          "lastIndexedDate": "2026-03-19 00:00:00.0"
+          "description": "Expect a single lane of traffic with up to 15-minute delays, 24 hours a day, seven days a week, from April 1 through November 24, 2026. Oversized/overweight vehicles (8'6\"+ wide, 75'+ long, 80,000 lbs+ gross vehicle weight) will not be able to cross the bridge during this time.",
+          "lastIndexedDate": "2026-10-29 00:00:00.0"
         },
         {
           "id": "68BF1AEF-79A0-4FE9-B11C-BDFDAD08E15E",
@@ -1586,8 +1568,8 @@
           "id": "1A5B19B8-BF1F-4803-8D87-2D4091D59A4D",
           "name": "Bridge Bay Campground",
           "url": "https://www.nps.gov/yell/planyourvisit/bridgebaycg.htm",
-          "description": "Bridge Bay Campground—elevation 7,800 feet (2377 m)—is located near Yellowstone Lake, one of the largest, high-elevation, fresh-water lakes in North America. Campers at Bridge Bay will enjoy spectacular views of the lake and the Absaroka Range rising above the lake's eastern shore. Yellowstone National Park Lodges provides reservations for this campground.",
-          "reservationUrl": "https://secure.yellowstonenationalparklodges.com/booking/lodging",
+          "description": "Bridge Bay Campground—elevation 7,800 feet (2377 m)—is located near Yellowstone Lake, one of the largest, high-elevation, fresh-water lakes in North America. Campers at Bridge Bay will enjoy spectacular views of the lake and the Absaroka Range rising above the lake's eastern shore. This campground is reservable through Recreation.gov and operated by Yellowstone National Park Lodges.",
+          "reservationUrl": "https://www.recreation.gov/search?q=Yellowstone%20National%20Park&entity_id=2988&entity_type=recarea&inventory_type=camping&inventory_type=day%20use&inventory_type=rec%20area",
           "weatherOverview": "Yellowstone's weather can vary greatly within a day and throughout the park. Snow can fall every month of the year. Summer highs reach 70–80°F (25–30°C) during the day, but nights can be cool (and it may freeze at higher elevations). During spring and fall, daytime highs range from 30–60°F (0–20°C), with overnight lows",
           "numberOfSitesReservable": "432",
           "numberOfSitesFirstComeFirstServe": "0"
@@ -1596,8 +1578,8 @@
           "id": "8C42E6D8-1819-46F3-A363-3C8107A1AFAC",
           "name": "Canyon Campground",
           "url": "https://www.nps.gov/yell/planyourvisit/canyoncg.htm",
-          "description": "Canyon Campground—elevation 7,900 feet (2408 m)—lies in a lodgepole pine forest at Canyon Village, south of the Washburn range and near the breath-taking Grand Canyon of the Yellowstone River. Canyon Village offers stores, restaurants, and lodging. Nearby hikes include Cascade Lake, Mount Washburn, and the Canyon Rim trails. Yellowstone National Park Lodges provides reservations for this campground.",
-          "reservationUrl": "https://secure.yellowstonenationalparklodges.com/booking/lodging",
+          "description": "Canyon Campground—elevation 7,900 feet (2408 m)—lies in a lodgepole pine forest at Canyon Village, south of the Washburn range and near the breath-taking Grand Canyon of the Yellowstone River. Canyon Village offers stores, restaurants, and lodging. Nearby hikes include Cascade Lake, Mount Washburn, and the Canyon Rim trails. This campground is reservable through Recreation.gov and operated by Yellowstone National Park Lodges.",
+          "reservationUrl": "https://www.recreation.gov/search?q=Yellowstone%20National%20Park&entity_id=2988&entity_type=recarea&inventory_type=camping&inventory_type=day%20use&inventory_type=rec%20area",
           "weatherOverview": "Yellowstone's weather can vary greatly within a day and throughout the park. Snow can fall every month of the year. Summer highs reach 70–80°F (25–30°C) during the day, but nights can be cool (and it may freeze at higher elevations). During spring and fall, daytime highs range from 30–60°F (0–20°C), with overnight lows",
           "numberOfSitesReservable": "273",
           "numberOfSitesFirstComeFirstServe": "0"
@@ -1606,8 +1588,8 @@
           "id": "64ABF507-2DCD-4FE4-90B9-F2C5636D4B52",
           "name": "Fishing Bridge RV Park",
           "url": "https://www.nps.gov/yell/planyourvisit/fishingbridgecg.htm",
-          "description": "Fishing Bridge RV Park—elevation 7,800 feet (2377 m)—is located near the Yellowstone River where it exits Yellowstone Lake on its way toward the Grand Canyon of the Yellowstone. Only campground in Yellowstone to offer water, sewer, and electrical hookups. Because grizzly bears frequent the area, no tents or tent campers are allowed. Yellowstone National Park Lodges provides reservations for this campground.",
-          "reservationUrl": "https://secure.yellowstonenationalparklodges.com/booking/lodging",
+          "description": "Fishing Bridge RV Park—elevation 7,800 feet (2377 m)—is located near the Yellowstone River where it exits Yellowstone Lake on its way toward the Grand Canyon of the Yellowstone. Only campground in Yellowstone to offer water, sewer, and electrical hookups. Because grizzly bears frequent the area, no tents or tent campers are allowed. This campground is reservable through Recreation.gov and operated by Yellowstone National Park Lodges.",
+          "reservationUrl": "https://www.recreation.gov/search?q=Yellowstone%20National%20Park&entity_id=2988&entity_type=recarea&inventory_type=camping&inventory_type=day%20use&inventory_type=rec%20area",
           "weatherOverview": "Yellowstone's weather can vary greatly within a day and throughout the park. Snow can fall every month of the year. Summer highs reach 70–80°F (25–30°C) during the day, but nights can be cool (and it may freeze at higher elevations). During spring and fall, daytime highs range from 30–60°F (0–20°C), with overnight lows",
           "numberOfSitesReservable": "310",
           "numberOfSitesFirstComeFirstServe": "0"
@@ -1616,8 +1598,8 @@
           "id": "E8EB610A-8BBA-490F-BC39-CBCB28909F20",
           "name": "Grant Village Campground",
           "url": "https://www.nps.gov/yell/planyourvisit/grantcg.htm",
-          "description": "Grant Campground—elevation 7,800 feet (2377 m)—is located in Grant Village, just off the Grand Loop Road at the south end of Yellowstone Lake. It is one of the larger campgrounds in the park. Group and wheel-chair accessible sites are available. Nearby there are stores, a restaurant, gas station, visitor center, and boat ramp. Yellowstone National Park Lodges provides reservations for this campground.",
-          "reservationUrl": "https://secure.yellowstonenationalparklodges.com/booking/lodging",
+          "description": "Grant Campground—elevation 7,800 feet (2377 m)—is located in Grant Village, just off the Grand Loop Road at the south end of Yellowstone Lake. It is one of the larger campgrounds in the park. Group and wheel-chair accessible sites are available. Nearby there are stores, a restaurant, gas station, visitor center, and boat ramp. This campground is reservable through Recreation.gov and operated by Yellowstone National Park Lodges.",
+          "reservationUrl": "https://www.recreation.gov/search?q=Yellowstone%20National%20Park&entity_id=2988&entity_type=recarea&inventory_type=camping&inventory_type=day%20use&inventory_type=rec%20area",
           "weatherOverview": "Yellowstone's weather can vary greatly within a day and throughout the park. Snow can fall every month of the year. Summer highs reach 70–80°F (25–30°C) during the day, but nights can be cool (and it may freeze at higher elevations). During spring and fall, daytime highs range from 30–60°F (0–20°C), with overnight lows",
           "numberOfSitesReservable": "430",
           "numberOfSitesFirstComeFirstServe": "0"
@@ -1646,8 +1628,8 @@
           "id": "66DFF49B-F1DC-49BB-A3CF-9F007330450D",
           "name": "Madison Campground",
           "url": "https://www.nps.gov/yell/planyourvisit/madisoncg.htm",
-          "description": "Madison Campground—elevation 6,800 feet (2073 m)—sits about 14 miles east from the town of West Yellowstone and 16 miles north of Old Faithful. Nearby, the Gibbon and Firehole rivers join to form the Madison River. In early summer, meadows teem with wildflowers and bison. In September and October, you can often hear bugling elk. Yellowstone National Park Lodges provides reservations for this campground.",
-          "reservationUrl": "https://secure.yellowstonenationalparklodges.com/booking/lodging",
+          "description": "Madison Campground—elevation 6,800 feet (2073 m)—sits about 14 miles east from the town of West Yellowstone and 16 miles north of Old Faithful. Nearby, the Gibbon and Firehole rivers join to form the Madison River. In early summer, meadows teem with wildflowers and bison. In September and October, you can often hear bugling elk. This campground is reservable through Recreation.gov and operated by Yellowstone National Park Lodges.",
+          "reservationUrl": "https://www.recreation.gov/search?q=Yellowstone%20National%20Park&entity_id=2988&entity_type=recarea&inventory_type=camping&inventory_type=day%20use&inventory_type=rec%20area",
           "weatherOverview": "Yellowstone's weather can vary greatly within a day and throughout the park. Snow can fall every month of the year. Summer highs reach 70–80°F (25–30°C) during the day, but nights can be cool (and it may freeze at higher elevations). During spring and fall, daytime highs range from 30–60°F (0–20°C), with overnight lows",
           "numberOfSitesReservable": "278",
           "numberOfSitesFirstComeFirstServe": "0"
@@ -1703,7 +1685,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "5b02684d4cdab17b11841a162a034b1bdc2d6ad60b46d8666dd6fccc4abbe9fd"
+      "contentHash": "b21243300f04ff4e2998c4ba186cde78382c6fc55dd8faf38de44efb69d1ba26"
     },
     {
       "parkCode": "acad",
