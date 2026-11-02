@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "source": "National Park Service API",
   "sourceDocs": "https://www.nps.gov/subjects/developer/api-documentation.htm",
-  "fetchedAt": "2026-10-29T16:06:40.753Z",
+  "fetchedAt": "2026-11-02T19:28:27.972Z",
   "parkCodes": [
     "yose",
     "grca",
@@ -12,6 +12,8 @@
     "acad"
   ],
   "changedParks": [
+    "yosemite",
+    "grand-canyon",
     "zion",
     "yellowstone"
   ],
@@ -126,6 +128,14 @@
           "url": "",
           "description": "Overnight parking is not allowed on Tioga Road and Glacier Point Road, including all parking lots reachable from these roads.",
           "lastIndexedDate": "2026-10-16 00:00:00.0"
+        },
+        {
+          "id": "B6C1F77F-564B-4A47-9894-F2CC43132775",
+          "title": "Tioga Road and Glacier Point Road are temporarily closed due to snow",
+          "category": "Park Closure",
+          "url": "",
+          "description": "Tioga Road (continuation of Highway 120 through the park) and Glacier Point Road temporarily closed due to snow. Call 209/372-0200 (then 1, 1) to check road conditions in the park.",
+          "lastIndexedDate": "2026-10-30 00:00:00.0"
         }
       ],
       "visitorCenters": [
@@ -328,7 +338,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "741eb6a5a9a7806f3370c66d6d9aa642d7389762b81a344aefb0661f99bbc2c3"
+      "contentHash": "6829da24b31e554b38c52945a826318721b3030da6095508b0d0402a7bbb2f53"
     },
     {
       "parkCode": "grca",
@@ -441,10 +451,10 @@
         {
           "id": "BD6EC75E-89ED-4345-BE71-4A2EA5FF186E",
           "title": "INNER CANYON TRAIL CLOSURES",
-          "category": "Danger",
+          "category": "Park Closure",
           "url": "",
           "description": "Current trail closures: the entire North Kaibab Trail (including Cottonwood Campground), Phantom Ranch, Bright Angel Campground, Silver Bridge, and the Black Bridge. Please do not attempt to access the closed areas.",
-          "lastIndexedDate": "2026-10-26 00:00:00.0"
+          "lastIndexedDate": "2026-11-01 00:00:00.0"
         },
         {
           "id": "608538F9-D5D1-4AD4-BD95-6BB351146EDC",
@@ -549,7 +559,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "76983d0fa0a741317e1bef9fe6f0400c3b615fb3949ee51580d220b627ba2a92"
+      "contentHash": "bce2d29eca9ea52fe4b8025259147f17afa48e6a62caadeeddc3ae681202bf24"
     },
     {
       "parkCode": "romo",
@@ -1015,6 +1025,14 @@
           "lastIndexedDate": "2026-09-16 00:00:00.0"
         },
         {
+          "id": "2868B222-11AB-46B6-B985-4019B6E7EA33",
+          "title": "Narrows and All Slot Canyons in Zion National Park Closed",
+          "category": "Park Closure",
+          "url": "",
+          "description": "The Narrows and all canyons in Zion National Park are CLOSED until further notice as a Public Safety Closure due to forecasted hazardous weather conditions about to impact the park.",
+          "lastIndexedDate": "2026-11-02 00:00:00.0"
+        },
+        {
           "id": "0EA570B2-2FF0-4B33-AD3A-1313385965A0",
           "title": "Please park legally and responsibly",
           "category": "Information",
@@ -1037,14 +1055,6 @@
           "url": "",
           "description": "The Watchman Trail is closed pending repairs.",
           "lastIndexedDate": "2026-09-29 00:00:00.0"
-        },
-        {
-          "id": "318B8E3B-B571-4555-B809-A04EFF5A9007",
-          "title": "Zion Mount Carmel Highway - Nightly Road Closures",
-          "category": "Information",
-          "url": "https://udotinput.utah.gov/ziontechnology",
-          "description": "Overnight tunnel closures are set for the tunnel on the Zion–Mount Carmel Highway (SR-9) inside Zion National Park starting Monday, Oct. 26 for fiber optic installation. See Utah Department of Transportation website for more information.",
-          "lastIndexedDate": "2026-10-22 00:00:00.0"
         }
       ],
       "visitorCenters": [
@@ -1156,7 +1166,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "467ef648bd0a21c817d6866d482e31dea785db38df9cfed94cd39f623ccb4beb"
+      "contentHash": "c68e43d53d60b314dc532de1f15f2090f685d7d26cf996af35eb0563ab0dab7c"
     },
     {
       "parkCode": "yell",
@@ -1303,20 +1313,20 @@
           "lastIndexedDate": "2026-07-01 00:00:00.0"
         },
         {
+          "id": "A14CFF34-4733-46E8-8527-B7A93B4C25CD",
+          "title": "Most Park Roads Closed to All Vehicles",
+          "category": "Park Closure",
+          "url": "https://www.nps.gov/yell/planyourvisit/parkroads.htm",
+          "description": "Most roads are closed to prepare for commercially-guided snowcoach and snowmobile travel during the winter season, which will begin December 15 (weather depending). The road between the North and Northeast entrances is the only road open year-round to regular vehicles.",
+          "lastIndexedDate": "2026-10-29 00:00:00.0"
+        },
+        {
           "id": "57EFE369-9186-400A-8F18-0E966993B8A3",
           "title": "Traffic Delays - Gardner River High Bridge",
           "category": "Information",
           "url": "https://www.nps.gov/yell/planyourvisit/parkroads.htm",
           "description": "Expect a single lane of traffic with up to 15-minute delays, 24 hours a day, seven days a week, from April 1 through November 24, 2026. Oversized/overweight vehicles (8'6\"+ wide, 75'+ long, 80,000 lbs+ gross vehicle weight) will not be able to cross the bridge during this time.",
           "lastIndexedDate": "2026-10-29 00:00:00.0"
-        },
-        {
-          "id": "68BF1AEF-79A0-4FE9-B11C-BDFDAD08E15E",
-          "title": "Vehicle Entrance Reservation Not Needed",
-          "category": "Information",
-          "url": "https://www.nps.gov/yell/planyourvisit/fees.htm",
-          "description": "Although an entrance pass is required to enter Yellowstone National Park, vehicle reservations are not needed. You are encouraged to purchase an entrance pass before arriving, but you may also purchase passes at any entrance station upon arrival.",
-          "lastIndexedDate": "2025-06-18 19:15:37.0"
         }
       ],
       "visitorCenters": [
@@ -1685,7 +1695,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "b21243300f04ff4e2998c4ba186cde78382c6fc55dd8faf38de44efb69d1ba26"
+      "contentHash": "c69503d7db9752a306e7fa5d138afbf3bfe8ac0c07ded3bdbb34f2f81a613fd8"
     },
     {
       "parkCode": "acad",
