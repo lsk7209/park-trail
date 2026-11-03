@@ -134,7 +134,7 @@ function doc({ path, title, description, active, body, noindex = false, schema }
   <link rel="alternate" type="application/rss+xml" title="Gradient Trail RSS" href="${origin}/feed.xml">
   <link rel="icon" href="${prefix}favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="${prefix}us-trails/assets/topo.css">
-  ${noindex ? "" : trackingTags({ includeAds: path.startsWith("us-trails/articles/") })}
+  ${noindex ? "" : trackingTags({ includeAds: path.startsWith("us-trails/articles/") })}${path.startsWith("blog/") || path.startsWith("us-trails/") ? '\n  <script defer src="https://multi-dashboard-one.vercel.app/fleet-widget.js" data-affiliate-fleet-bootstrap></script>' : ""}
   ${skimlinksPublisherScript}
   ${schemaTag(schema || {
     "@context": "https://schema.org",
