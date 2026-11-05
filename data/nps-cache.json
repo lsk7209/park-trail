@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "source": "National Park Service API",
   "sourceDocs": "https://www.nps.gov/subjects/developer/api-documentation.htm",
-  "fetchedAt": "2026-11-02T19:28:27.972Z",
+  "fetchedAt": "2026-11-05T17:23:06.784Z",
   "parkCodes": [
     "yose",
     "grca",
@@ -14,8 +14,9 @@
   "changedParks": [
     "yosemite",
     "grand-canyon",
+    "rocky-mountain",
     "zion",
-    "yellowstone"
+    "acadia"
   ],
   "parks": [
     {
@@ -130,12 +131,12 @@
           "lastIndexedDate": "2026-10-16 00:00:00.0"
         },
         {
-          "id": "B6C1F77F-564B-4A47-9894-F2CC43132775",
-          "title": "Tioga Road and Glacier Point Road are temporarily closed due to snow",
+          "id": "A434DF2E-B476-42EC-980A-07D786EFF84B",
+          "title": "Tioga Road is temporarily closed due to snowy and icy conditions",
           "category": "Park Closure",
           "url": "",
-          "description": "Tioga Road (continuation of Highway 120 through the park) and Glacier Point Road temporarily closed due to snow. Call 209/372-0200 (then 1, 1) to check road conditions in the park.",
-          "lastIndexedDate": "2026-10-30 00:00:00.0"
+          "description": "Tioga Road (continuation of Highway 120 through the park) is temporarily closed due to snowy and icy conditions. Call 209/372-0200 (then 1, 1) to check road conditions in the park.",
+          "lastIndexedDate": "2026-11-04 00:00:00.0"
         }
       ],
       "visitorCenters": [
@@ -338,7 +339,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "6829da24b31e554b38c52945a826318721b3030da6095508b0d0402a7bbb2f53"
+      "contentHash": "95dd857db5b22a8a9ffce225bf8ffabf4343f82fb870944216abb63378928d3a"
     },
     {
       "parkCode": "grca",
@@ -465,14 +466,6 @@
           "lastIndexedDate": "2026-09-11 00:00:00.0"
         },
         {
-          "id": "7F3F5A00-0567-40F0-8283-7B0002C0EF53",
-          "title": "North Rim Scenic Road Closure: Cape Royal and Point Imperial",
-          "category": "Park Closure",
-          "url": "https://www.nps.gov/grca/northrimstatus.htm",
-          "description": "The North Rim Scenic Drives (Cape Royal Road and Point Imperial Road) are closed through sunrise Nov. 3, 2026, to accommodate critical road repair and rehabilitation work. No services, fuel, and no water are available on the North Rim as of Oct. 15, 2026.",
-          "lastIndexedDate": "2026-10-26 00:00:00.0"
-        },
-        {
           "id": "4CC2EC5B-2CAD-44DC-90C1-86856D021228",
           "title": "Overnight Lodging Suspended and Parkwide Stage 4 Water Restrictions",
           "category": "Caution",
@@ -559,7 +552,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "bce2d29eca9ea52fe4b8025259147f17afa48e6a62caadeeddc3ae681202bf24"
+      "contentHash": "917d36d6e5c68d3f75383326222ac8c634164dc4ef6557a863d58d1dbef75b7d"
     },
     {
       "parkCode": "romo",
@@ -659,12 +652,20 @@
       ],
       "alerts": [
         {
+          "id": "C45AB71F-1FBC-4695-BECB-F360D4DB018C",
+          "title": "Prescribed Fire Operations are Underway near Beaver Meadows Visitor Center",
+          "category": "Park Closure",
+          "url": "",
+          "description": "Ignitions on today's operation on the Headquarters Unit of the Front Country Prescribed Fire have been completed. Fire personnel will continue to patrol and will remain on site overnight. U.S. Highway 36 in Rocky Mountain National Park is open. Smoke will continue to linger. As temperatures cool overnight, smoke may settle in low-lying areas in the immediate vicinity near Beaver Meadows Visitor Center.",
+          "lastIndexedDate": "2026-11-04 00:00:00.0"
+        },
+        {
           "id": "861414DC-48DA-496C-9110-1086D190B4FE",
           "title": "Trail Ridge Road Status Update",
-          "category": "Park Closure",
+          "category": "Information",
           "url": "https://www.nps.gov/romo/planyourvisit/road_status.htm",
-          "description": "Trail Ridge Road will be closing at 5 p.m. on Friday, October 23, due to the forecast for snow, low visibility and freezing temperatures at higher elevations. The closure points will be at Many Parks Curve on the east side and Colorado River Trailhead on the west side. For the latest information on the status of Trail Ridge Road, call 970-586-1222.",
-          "lastIndexedDate": "2026-10-23 00:00:00.0"
+          "description": "Trail Ridge Road is closed to through travel. The road is closed at Many Parks Curve on the east side of the park and at Colorado River Trailhead on the west side. For the latest information on the status of Trail Ridge Road, call 970-586-1222.",
+          "lastIndexedDate": "2026-11-04 00:00:00.0"
         }
       ],
       "visitorCenters": [
@@ -909,7 +910,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "fbf2006d343ea1115ec131b59706cc485f15116490aaf7c59d31fac335b0910a"
+      "contentHash": "e7d979c975ff883c33126d6cb8076d42d64dc8003e2c9c4cfac6b11ecbb1c160"
     },
     {
       "parkCode": "zion",
@@ -1026,11 +1027,11 @@
         },
         {
           "id": "2868B222-11AB-46B6-B985-4019B6E7EA33",
-          "title": "Narrows and All Slot Canyons in Zion National Park Closed",
+          "title": "Narrows and All Slot Canyons Leading into them are Closed.",
           "category": "Park Closure",
           "url": "",
-          "description": "The Narrows and all canyons in Zion National Park are CLOSED until further notice as a Public Safety Closure due to forecasted hazardous weather conditions about to impact the park.",
-          "lastIndexedDate": "2026-11-02 00:00:00.0"
+          "description": "The Narrows and all slot canyons leading into them are CLOSED until river CFS levels drop below closer limits.",
+          "lastIndexedDate": "2026-11-04 00:00:00.0"
         },
         {
           "id": "0EA570B2-2FF0-4B33-AD3A-1313385965A0",
@@ -1166,7 +1167,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "c68e43d53d60b314dc532de1f15f2090f685d7d26cf996af35eb0563ab0dab7c"
+      "contentHash": "f7b90799512451202eb79e45403d0e1a4b34744f7f5f8805fbc6653a91738691"
     },
     {
       "parkCode": "yell",
@@ -1775,25 +1776,33 @@
       ],
       "officialImages": [
         {
-          "title": "Save Our Summits Hike",
-          "altText": "A man and woman holding walking sticks hike up a mountain summit near a wooden trail sign.",
-          "credit": "Photo courtesy of Sam Mallon, Friends of Acadia",
-          "url": "https://www.nps.gov/common/uploads/structured_data/45637FDC-0A5F-0862-76C4B1418A914B5A.jpg"
+          "title": "1_Cadillac Summit",
+          "altText": "On a mountain summit with open ocean in the distance, people walk along a trail and enjoy scenery",
+          "credit": "NPS Photo by Kelsey Graczyk",
+          "url": "https://www.nps.gov/common/uploads/structured_data/5AAEED3A-FE4F-72BF-4C2F4D667A520762.jpg"
         },
         {
-          "title": "Carriage Road Bike Tour",
-          "altText": "A group of people riding bicycles travels under the arch of a large stone bridge",
-          "credit": "Photo courtesy Yehyun Kim, Friends of Acadia",
-          "url": "https://www.nps.gov/common/uploads/structured_data/D44C463F-A561-74ED-C78695D3E0D31FF3.jpg"
-        },
-        {
-          "title": "Entrance Fee Required Year-Round",
+          "title": "2_Entrance Fee Required Year-Round",
           "altText": "Two small, booth-like buildings are positioned across a roadway. Park rangers are seated at open win",
           "credit": "NPS Photo by Kent Miller",
           "url": "https://www.nps.gov/common/uploads/structured_data/D52D7489-CCF1-DC62-32BA0B2BDE814324.jpg"
+        },
+        {
+          "title": "3_Whitetail Buck",
+          "altText": "A large deer with antlers stands in snow along a road.",
+          "credit": "NPS Photo",
+          "url": "https://www.nps.gov/common/uploads/structured_data/5AF0687C-E67D-E85E-2C8E203B8611D4DE.jpg"
         }
       ],
       "alerts": [
+        {
+          "id": "390127CA-4E8A-4062-B492-CF868E70D960",
+          "title": "Cadillac Summit Road closed to all users Nov 9-25 and Dec 1-18",
+          "category": "Park Closure",
+          "url": "",
+          "description": "Starting Nov 9, construction will resume for an accessible pedestrian path between the East and West parking lots on the summit of Cadillac Mountain. Cadillac Summit Road will be closed to all users (including bicyclists and pedestrians) Nov 9-25 and Dec 1-18. Hiking trails on Cadillac Mountain will remain open. NOTE: Park Loop Road will close to motor vehicles for the season Dec 1, except for access to Jordan Pond via Jordan Pond Road in Seal Harbor, and access to Sand Beach via Schooner Head Road.",
+          "lastIndexedDate": "2026-11-04 00:00:00.0"
+        },
         {
           "id": "F8AFCEAD-7E34-4C99-8AF6-C0B7C376C8FB",
           "title": "Eastern Section of Beech Mountain Loop Trail Closed for Repairs",
@@ -1995,7 +2004,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "d5cd5f04187ed5b24b60df72248dbf33190e94e4978735990b33ee03ad749945"
+      "contentHash": "6b6c7aad4e24d259952265d24cd18ae4b0e6f897eaa14f596670bb59e422bc44"
     }
   ]
 }
