@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "source": "National Park Service API",
   "sourceDocs": "https://www.nps.gov/subjects/developer/api-documentation.htm",
-  "fetchedAt": "2026-11-05T17:23:06.784Z",
+  "fetchedAt": "2026-11-09T19:47:08.866Z",
   "parkCodes": [
     "yose",
     "grca",
@@ -13,8 +13,6 @@
   ],
   "changedParks": [
     "yosemite",
-    "grand-canyon",
-    "rocky-mountain",
     "zion",
     "acadia"
   ],
@@ -129,14 +127,6 @@
           "url": "",
           "description": "Overnight parking is not allowed on Tioga Road and Glacier Point Road, including all parking lots reachable from these roads.",
           "lastIndexedDate": "2026-10-16 00:00:00.0"
-        },
-        {
-          "id": "A434DF2E-B476-42EC-980A-07D786EFF84B",
-          "title": "Tioga Road is temporarily closed due to snowy and icy conditions",
-          "category": "Park Closure",
-          "url": "",
-          "description": "Tioga Road (continuation of Highway 120 through the park) is temporarily closed due to snowy and icy conditions. Call 209/372-0200 (then 1, 1) to check road conditions in the park.",
-          "lastIndexedDate": "2026-11-04 00:00:00.0"
         }
       ],
       "visitorCenters": [
@@ -339,7 +329,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "95dd857db5b22a8a9ffce225bf8ffabf4343f82fb870944216abb63378928d3a"
+      "contentHash": "741eb6a5a9a7806f3370c66d6d9aa642d7389762b81a344aefb0661f99bbc2c3"
     },
     {
       "parkCode": "grca",
@@ -1026,14 +1016,6 @@
           "lastIndexedDate": "2026-09-16 00:00:00.0"
         },
         {
-          "id": "2868B222-11AB-46B6-B985-4019B6E7EA33",
-          "title": "Narrows and All Slot Canyons Leading into them are Closed.",
-          "category": "Park Closure",
-          "url": "",
-          "description": "The Narrows and all slot canyons leading into them are CLOSED until river CFS levels drop below closer limits.",
-          "lastIndexedDate": "2026-11-04 00:00:00.0"
-        },
-        {
           "id": "0EA570B2-2FF0-4B33-AD3A-1313385965A0",
           "title": "Please park legally and responsibly",
           "category": "Information",
@@ -1167,7 +1149,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "f7b90799512451202eb79e45403d0e1a4b34744f7f5f8805fbc6653a91738691"
+      "contentHash": "cd65f5510a481cc12890164f4be285c5809603a3382ab5bf9cb6825a73d4d1ff"
     },
     {
       "parkCode": "yell",
@@ -1810,22 +1792,6 @@
           "url": "",
           "description": "Starting Sept 21, the eastern section of the Beech Mountain Loop Trail will be closed for repairs from a junction just beyond the parking lot to just below the summit at the fire tower. Three alternate routes to the summit are available: the outer loop of the Beech Mountain Loop Trail, Beech South Ridge Trail and Beech West Ridge Trail.",
           "lastIndexedDate": "2026-09-30 00:00:00.0"
-        },
-        {
-          "id": "96A00261-453A-467D-A1D5-24D68A59AB50",
-          "title": "Schoodic Mountain Road Closed for Repairs",
-          "category": "Park Closure",
-          "url": "",
-          "description": "Starting Aug 31, the Schoodic Mountain Road will be closed for repairs from Schoodic Loop Road to the summit of Schoodic Head. Workers will be operating heavy equipment for resurfacing, regrading and ditching.",
-          "lastIndexedDate": "2026-09-30 00:00:00.0"
-        },
-        {
-          "id": "D3E90E5C-ABED-4EDD-B17F-7D4744770978",
-          "title": "Southern Section of Ocean Path Closed for Repairs",
-          "category": "Park Closure",
-          "url": "",
-          "description": "Starting Aug 31, a section of Ocean Path will be closed for repairs from a trailhead across from the Otter Point parking lot to the trail's southern terminus.",
-          "lastIndexedDate": "2026-09-16 00:00:00.0"
         }
       ],
       "visitorCenters": [
@@ -2004,7 +1970,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "6b6c7aad4e24d259952265d24cd18ae4b0e6f897eaa14f596670bb59e422bc44"
+      "contentHash": "1b710f9e14481dae5bc09d02156570321ffb9986f6c8ff37b637eaa8d7d0d437"
     }
   ]
 }
