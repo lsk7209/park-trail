@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "source": "National Park Service API",
   "sourceDocs": "https://www.nps.gov/subjects/developer/api-documentation.htm",
-  "fetchedAt": "2026-11-09T19:47:08.866Z",
+  "fetchedAt": "2026-11-12T17:34:24.241Z",
   "parkCodes": [
     "yose",
     "grca",
@@ -12,9 +12,7 @@
     "acad"
   ],
   "changedParks": [
-    "yosemite",
-    "zion",
-    "acadia"
+    "yosemite"
   ],
   "parks": [
     {
@@ -127,6 +125,14 @@
           "url": "",
           "description": "Overnight parking is not allowed on Tioga Road and Glacier Point Road, including all parking lots reachable from these roads.",
           "lastIndexedDate": "2026-10-16 00:00:00.0"
+        },
+        {
+          "id": "865FD22E-8924-4941-8112-EB03F3FB5F39",
+          "title": "Tioga Road and Glacier Point Road will temporarily close on Nov. 12 at 5 pm",
+          "category": "Park Closure",
+          "url": "",
+          "description": "Tioga Road (continuation of Highway 120 through the park) and Glacier Point Road will temporarily close on Thursday, November 12, at 5 pm due to a forecast of snow. Call 209/372-0200 (then 1, 1) to check road conditions in the park.",
+          "lastIndexedDate": "2026-11-11 00:00:00.0"
         }
       ],
       "visitorCenters": [
@@ -329,7 +335,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "741eb6a5a9a7806f3370c66d6d9aa642d7389762b81a344aefb0661f99bbc2c3"
+      "contentHash": "1bf41e668894e98018e187b2c7102e43ccb1a3fe063eed78d64418d7c07af1c3"
     },
     {
       "parkCode": "grca",

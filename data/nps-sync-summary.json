@@ -1,15 +1,13 @@
 {
   "changed": true,
   "changedParks": [
-    "yosemite",
-    "zion",
-    "acadia"
+    "yosemite"
   ],
   "parkCount": 6,
-  "alertCount": 17,
+  "alertCount": 18,
   "visitorCenterCount": 37,
   "campgroundCount": 43,
   "dryRun": false,
   "secretPrinted": false,
-  "generatedAt": "2026-11-09T19:47:08.866Z"
+  "generatedAt": "2026-11-12T17:34:24.241Z"
 }
