@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "source": "National Park Service API",
   "sourceDocs": "https://www.nps.gov/subjects/developer/api-documentation.htm",
-  "fetchedAt": "2026-11-12T17:34:24.241Z",
+  "fetchedAt": "2026-11-16T19:34:52.562Z",
   "parkCodes": [
     "yose",
     "grca",
@@ -12,7 +12,10 @@
     "acad"
   ],
   "changedParks": [
-    "yosemite"
+    "yosemite",
+    "grand-canyon",
+    "rocky-mountain",
+    "zion"
   ],
   "parks": [
     {
@@ -128,11 +131,11 @@
         },
         {
           "id": "865FD22E-8924-4941-8112-EB03F3FB5F39",
-          "title": "Tioga Road and Glacier Point Road will temporarily close on Nov. 12 at 5 pm",
+          "title": "Tioga Road and Glacier Point Road are temporarily closed",
           "category": "Park Closure",
           "url": "",
-          "description": "Tioga Road (continuation of Highway 120 through the park) and Glacier Point Road will temporarily close on Thursday, November 12, at 5 pm due to a forecast of snow. Call 209/372-0200 (then 1, 1) to check road conditions in the park.",
-          "lastIndexedDate": "2026-11-11 00:00:00.0"
+          "description": "Tioga Road (continuation of Highway 120 through the park) and Glacier Point Road are temporarily closed due to a forecast of snow. Call 209/372-0200 (then 1, 1) to check road conditions in the park.",
+          "lastIndexedDate": "2026-11-12 00:00:00.0"
         }
       ],
       "visitorCenters": [
@@ -335,7 +338,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "1bf41e668894e98018e187b2c7102e43ccb1a3fe063eed78d64418d7c07af1c3"
+      "contentHash": "2afef1fc923bb4369ee42beafcae5a39d9e6ee9c9d50c2503bfee20a39c5a9e1"
     },
     {
       "parkCode": "grca",
@@ -450,8 +453,8 @@
           "title": "INNER CANYON TRAIL CLOSURES",
           "category": "Park Closure",
           "url": "",
-          "description": "Current trail closures: the entire North Kaibab Trail (including Cottonwood Campground), Phantom Ranch, Bright Angel Campground, Silver Bridge, and the Black Bridge. Please do not attempt to access the closed areas.",
-          "lastIndexedDate": "2026-11-01 00:00:00.0"
+          "description": "Current trail closures: the entire North Kaibab Trail (including Cottonwood Campground), Phantom Ranch, Bright Angel Campground, Silver Bridge, and the Black Bridge. Please do not attempt to access the closed areas. Beginning Nov. 18, intermittent trail delays will occur just above 3-Mile Resthouse on the Bright Angel Trail as trail crew continues rockfall mitigation work.",
+          "lastIndexedDate": "2026-11-13 00:00:00.0"
         },
         {
           "id": "608538F9-D5D1-4AD4-BD95-6BB351146EDC",
@@ -466,8 +469,8 @@
           "title": "Overnight Lodging Suspended and Parkwide Stage 4 Water Restrictions",
           "category": "Caution",
           "url": "https://www.nps.gov/grca/learn/news/grand-canyon-national-park-to-close-overnight-hotel-accommodations-beginning-august-31.htm",
-          "description": "Grand Canyon National Park has implemented Stage 4 water restrictions on the South Rim due to extensive flash flood damage to the Transcanyon Waterline. Overnight accommodations are suspended, and only dry camping is allowed. The park remains open for day use, with food and beverage services, the Grand Canyon Clinic, and Post Office remaining open. Visitors are asked to bring water with them when visiting the park.",
-          "lastIndexedDate": "2026-09-30 00:00:00.0"
+          "description": "Stage 4 water restrictions continue through Nov. 19, 2026 due to a parkwide water shortage. Overnight lodging is anticipated to resume on Friday, Nov. 20. The park remains open for day use, with food and beverage services, the Grand Canyon Clinic, and Post Office remaining open. Visitors are asked to bring water with them when visiting the park.",
+          "lastIndexedDate": "2026-11-13 00:00:00.0"
         }
       ],
       "visitorCenters": [
@@ -548,7 +551,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "917d36d6e5c68d3f75383326222ac8c634164dc4ef6557a863d58d1dbef75b7d"
+      "contentHash": "c628e2713b7ba06b8eb27d3c202446c5a142babc1a6177f7ae2d18e266805f87"
     },
     {
       "parkCode": "romo",
@@ -648,20 +651,12 @@
       ],
       "alerts": [
         {
-          "id": "C45AB71F-1FBC-4695-BECB-F360D4DB018C",
-          "title": "Prescribed Fire Operations are Underway near Beaver Meadows Visitor Center",
-          "category": "Park Closure",
-          "url": "",
-          "description": "Ignitions on today's operation on the Headquarters Unit of the Front Country Prescribed Fire have been completed. Fire personnel will continue to patrol and will remain on site overnight. U.S. Highway 36 in Rocky Mountain National Park is open. Smoke will continue to linger. As temperatures cool overnight, smoke may settle in low-lying areas in the immediate vicinity near Beaver Meadows Visitor Center.",
-          "lastIndexedDate": "2026-11-04 00:00:00.0"
-        },
-        {
           "id": "861414DC-48DA-496C-9110-1086D190B4FE",
-          "title": "Trail Ridge Road Status Update",
-          "category": "Information",
+          "title": "Trail Ridge Road is Closed to Through Travel for the Season",
+          "category": "Park Closure",
           "url": "https://www.nps.gov/romo/planyourvisit/road_status.htm",
-          "description": "Trail Ridge Road is closed to through travel. The road is closed at Many Parks Curve on the east side of the park and at Colorado River Trailhead on the west side. For the latest information on the status of Trail Ridge Road, call 970-586-1222.",
-          "lastIndexedDate": "2026-11-04 00:00:00.0"
+          "description": "Trail Ridge Road is closed on the east side of the park at Many Parks Curve and on the west side at Colorado River Trailhead. Trail Ridge Road is not designed as an all-season road. The road typically reopens to through travel during the last week of May, weather permitting. For the latest information on the status of Trail Ridge Road, call 970-586-1222.",
+          "lastIndexedDate": "2026-11-13 00:00:00.0"
         }
       ],
       "visitorCenters": [
@@ -906,7 +901,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "e7d979c975ff883c33126d6cb8076d42d64dc8003e2c9c4cfac6b11ecbb1c160"
+      "contentHash": "be16586c5d59778b49e52444e85af9d7032164a3a88875e1719088f2a426c596"
     },
     {
       "parkCode": "zion",
@@ -1030,6 +1025,14 @@
           "lastIndexedDate": "2026-09-16 00:00:00.0"
         },
         {
+          "id": "A9A62666-54C0-41A3-A682-49D721E9DEBB",
+          "title": "The Virgin River Narrows closed to top-down travel",
+          "category": "Park Closure",
+          "url": "",
+          "description": "The Virgin River Narrows is closed to top-down travel due to high water. The lower section of the Narrows from Big Spring down and canyons leading into this section are now open.",
+          "lastIndexedDate": "2026-11-15 00:00:00.0"
+        },
+        {
           "id": "09699C7F-F2CD-4BE9-B8D4-5E19CC89BE7A",
           "title": "Toxic cyanobacteria in rivers, streams, and pools",
           "category": "Caution",
@@ -1044,6 +1047,14 @@
           "url": "",
           "description": "The Watchman Trail is closed pending repairs.",
           "lastIndexedDate": "2026-09-29 00:00:00.0"
+        },
+        {
+          "id": "318B8E3B-B571-4555-B809-A04EFF5A9007",
+          "title": "Zion Mount Carmel Highway - Nightly Road Closures",
+          "category": "Information",
+          "url": "https://udotinput.utah.gov/ziontechnology",
+          "description": "Overnight tunnel closures are set for the tunnel on the Zion–Mount Carmel Highway (SR-9) inside Zion National Park starting Monday, Nov. 16 for fiber optic installation. See Utah Department of Transportation website for more information.",
+          "lastIndexedDate": "2026-11-12 00:00:00.0"
         }
       ],
       "visitorCenters": [
@@ -1155,7 +1166,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "cd65f5510a481cc12890164f4be285c5809603a3382ab5bf9cb6825a73d4d1ff"
+      "contentHash": "b267cd676ad2f6d4a6b90ea701fdee01968ec682ebd5787d226f570d4a449cb2"
     },
     {
       "parkCode": "yell",
