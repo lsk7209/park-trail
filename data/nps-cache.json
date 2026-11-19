@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "source": "National Park Service API",
   "sourceDocs": "https://www.nps.gov/subjects/developer/api-documentation.htm",
-  "fetchedAt": "2026-11-16T19:34:52.562Z",
+  "fetchedAt": "2026-11-19T18:15:33.844Z",
   "parkCodes": [
     "yose",
     "grca",
@@ -13,7 +13,6 @@
   ],
   "changedParks": [
     "yosemite",
-    "grand-canyon",
     "rocky-mountain",
     "zion"
   ],
@@ -122,20 +121,36 @@
       ],
       "alerts": [
         {
-          "id": "B1B8B58E-47EB-4729-8494-A201E094EBDF",
-          "title": "No overnight parking on Tioga & Glacier Point Roads",
-          "category": "Information",
-          "url": "",
-          "description": "Overnight parking is not allowed on Tioga Road and Glacier Point Road, including all parking lots reachable from these roads.",
-          "lastIndexedDate": "2026-10-16 00:00:00.0"
-        },
-        {
-          "id": "865FD22E-8924-4941-8112-EB03F3FB5F39",
-          "title": "Tioga Road and Glacier Point Road are temporarily closed",
+          "id": "FCEA4A95-FAA8-48DD-BCDC-A3B6FD2B458D",
+          "title": "Big Oak Flat Road (continuation of Hwy 120 from the west) is closed",
           "category": "Park Closure",
           "url": "",
-          "description": "Tioga Road (continuation of Highway 120 through the park) and Glacier Point Road are temporarily closed due to a forecast of snow. Call 209/372-0200 (then 1, 1) to check road conditions in the park.",
-          "lastIndexedDate": "2026-11-12 00:00:00.0"
+          "description": "Big Oak Flat Road (continuation of Highway 120 from the west into Yosemite Valley) is temporarily closed due to snow. We will assess the road and reopen as soon as it is safe. Yosemite is open and reachable via Highways 41 and 140. Tire chains will be required. Call 209/372-0200 (then 1, 1) for road conditions.",
+          "lastIndexedDate": "2026-11-18 00:00:00.0"
+        },
+        {
+          "id": "85079302-C389-43CF-9643-F5559D525B4E",
+          "title": "Campgrounds and Curry Village tent cabins are closed due to a winter storm",
+          "category": "Park Closure",
+          "url": "",
+          "description": "Upper Pines, Camp 4, Wawona, and Hodgdon Meadow Campgrounds, and Curry Village tent cabins, will close on Wednesday, November 18, at 8 am due to risk of high winds and falling trees. We will evaluate conditions on Friday morning.",
+          "lastIndexedDate": "2026-11-17 00:00:00.0"
+        },
+        {
+          "id": "66925B3A-390A-40B0-AEBE-D4EB6D5A0528",
+          "title": "Tioga and Glacier Point Roads are closed due snow",
+          "category": "Park Closure",
+          "url": "https://www.nps.gov/yose/planyourvisit/wroads.htm",
+          "description": "Tioga Road (continuation of Highway 120 through the park) and Glacier Point Road are closed for the season. They usually reopen in late May or June, depending on conditions.",
+          "lastIndexedDate": "2026-11-17 00:00:00.0"
+        },
+        {
+          "id": "2ED024D4-398B-4FE4-989D-7DE85F71E2D6",
+          "title": "Tire chains may be required",
+          "category": "Information",
+          "url": "https://www.nps.gov/yose/planyourvisit/tirechains.htm",
+          "description": "Carry tire chains in your car and be prepared to use them (even if your car has four-wheel drive): chains may become mandatory at any time. Drive carefully even when there are no chain requirements: you may encounter icy spots on mostly dry roads.",
+          "lastIndexedDate": "2026-11-16 00:00:00.0"
         }
       ],
       "visitorCenters": [
@@ -338,7 +353,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "2afef1fc923bb4369ee42beafcae5a39d9e6ee9c9d50c2503bfee20a39c5a9e1"
+      "contentHash": "6a052b1078e97426b8b4a5d39624e3543d783d404a9f41b3ba9b6c8bda22fae6"
     },
     {
       "parkCode": "grca",
@@ -708,7 +723,7 @@
           "id": "D27BE956-FF88-4467-B0C8-A50E8457C422",
           "name": "Fall River Visitor Center",
           "url": "",
-          "description": "The Fall River Visitor Center is located west of the town of Estes Park on U.S. Highway 34, just before the Fall River Entrance to RMNP. Find park information, learn about programs, and more. Explore Rocky Mountain Conservancy's Nature Store.",
+          "description": "Fall River Visitor Center is closed on Wed, Nov 18 and Thurs, Nov 19 for maintenance. The Fall River Visitor Center is located west of the town of Estes Park on U.S. Highway 34, just before the Fall River Entrance to RMNP. Find park information, learn about programs, and more. Explore Rocky Mountain Conservancy's Nature Store.",
           "directionsInfo": "U.S. Highway 34, five miles west of the town of Estes Park. Shares building with Gateway Store.",
           "directionsUrl": "",
           "addresses": [
@@ -901,7 +916,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "be16586c5d59778b49e52444e85af9d7032164a3a88875e1719088f2a426c596"
+      "contentHash": "421e2911d25ba8cc683f9aece2bd19225a9e75d6a0b05ea90942fb186683f0d1"
     },
     {
       "parkCode": "zion",
@@ -1017,20 +1032,20 @@
           "lastIndexedDate": "2026-09-16 00:00:00.0"
         },
         {
+          "id": "2868B222-11AB-46B6-B985-4019B6E7EA33",
+          "title": "Narrows are Closed.",
+          "category": "Park Closure",
+          "url": "",
+          "description": "The Narrows and all other slot canyons entering the Narrows are CLOSED.",
+          "lastIndexedDate": "2026-11-17 00:00:00.0"
+        },
+        {
           "id": "0EA570B2-2FF0-4B33-AD3A-1313385965A0",
           "title": "Please park legally and responsibly",
           "category": "Information",
           "url": "https://www.nps.gov/zion/planyourvisit/traffic.htm#parking",
           "description": "Zion has limited parking. Once parking spaces in Zion are full, visitors should park in Springdale. Please park only in designated spaces. Vehicles parked outside of designated spaces are subject to citation and towing.",
           "lastIndexedDate": "2026-09-16 00:00:00.0"
-        },
-        {
-          "id": "A9A62666-54C0-41A3-A682-49D721E9DEBB",
-          "title": "The Virgin River Narrows closed to top-down travel",
-          "category": "Park Closure",
-          "url": "",
-          "description": "The Virgin River Narrows is closed to top-down travel due to high water. The lower section of the Narrows from Big Spring down and canyons leading into this section are now open.",
-          "lastIndexedDate": "2026-11-15 00:00:00.0"
         },
         {
           "id": "09699C7F-F2CD-4BE9-B8D4-5E19CC89BE7A",
@@ -1166,7 +1181,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "b267cd676ad2f6d4a6b90ea701fdee01968ec682ebd5787d226f570d4a449cb2"
+      "contentHash": "9e705a379a90ebd1421c70c66b3bab6dade251dd621cc35ef5b7d55a2d6e579d"
     },
     {
       "parkCode": "yell",

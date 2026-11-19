@@ -2,15 +2,14 @@
   "changed": true,
   "changedParks": [
     "yosemite",
-    "grand-canyon",
     "rocky-mountain",
     "zion"
   ],
   "parkCount": 6,
-  "alertCount": 19,
+  "alertCount": 21,
   "visitorCenterCount": 37,
   "campgroundCount": 43,
   "dryRun": false,
   "secretPrinted": false,
-  "generatedAt": "2026-11-16T19:34:52.562Z"
+  "generatedAt": "2026-11-19T18:15:33.844Z"
 }
