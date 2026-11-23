@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "source": "National Park Service API",
   "sourceDocs": "https://www.nps.gov/subjects/developer/api-documentation.htm",
-  "fetchedAt": "2026-11-19T18:15:33.844Z",
+  "fetchedAt": "2026-11-23T21:21:00.467Z",
   "parkCodes": [
     "yose",
     "grca",
@@ -13,8 +13,9 @@
   ],
   "changedParks": [
     "yosemite",
-    "rocky-mountain",
-    "zion"
+    "grand-canyon",
+    "zion",
+    "acadia"
   ],
   "parks": [
     {
@@ -120,22 +121,6 @@
         }
       ],
       "alerts": [
-        {
-          "id": "FCEA4A95-FAA8-48DD-BCDC-A3B6FD2B458D",
-          "title": "Big Oak Flat Road (continuation of Hwy 120 from the west) is closed",
-          "category": "Park Closure",
-          "url": "",
-          "description": "Big Oak Flat Road (continuation of Highway 120 from the west into Yosemite Valley) is temporarily closed due to snow. We will assess the road and reopen as soon as it is safe. Yosemite is open and reachable via Highways 41 and 140. Tire chains will be required. Call 209/372-0200 (then 1, 1) for road conditions.",
-          "lastIndexedDate": "2026-11-18 00:00:00.0"
-        },
-        {
-          "id": "85079302-C389-43CF-9643-F5559D525B4E",
-          "title": "Campgrounds and Curry Village tent cabins are closed due to a winter storm",
-          "category": "Park Closure",
-          "url": "",
-          "description": "Upper Pines, Camp 4, Wawona, and Hodgdon Meadow Campgrounds, and Curry Village tent cabins, will close on Wednesday, November 18, at 8 am due to risk of high winds and falling trees. We will evaluate conditions on Friday morning.",
-          "lastIndexedDate": "2026-11-17 00:00:00.0"
-        },
         {
           "id": "66925B3A-390A-40B0-AEBE-D4EB6D5A0528",
           "title": "Tioga and Glacier Point Roads are closed due snow",
@@ -353,7 +338,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "6a052b1078e97426b8b4a5d39624e3543d783d404a9f41b3ba9b6c8bda22fae6"
+      "contentHash": "b43f7297426f68054c50d8e1218f2de7c067f4210ef53b297c84a42589a52c2d"
     },
     {
       "parkCode": "grca",
@@ -478,14 +463,6 @@
           "url": "https://www.nps.gov/grca/planyourvisit/key-messages.htm",
           "description": "Beginning Sep. 6, no potable water will be available in the inner canyon, including along the Bright Angel Trail (1.5 Mile Resthouse, 3-Mile Resthouse, Havasupai Gardens day use and campground). All backpackers and hikers should carry water filtration and treatment OR carry all water with them.",
           "lastIndexedDate": "2026-09-11 00:00:00.0"
-        },
-        {
-          "id": "4CC2EC5B-2CAD-44DC-90C1-86856D021228",
-          "title": "Overnight Lodging Suspended and Parkwide Stage 4 Water Restrictions",
-          "category": "Caution",
-          "url": "https://www.nps.gov/grca/learn/news/grand-canyon-national-park-to-close-overnight-hotel-accommodations-beginning-august-31.htm",
-          "description": "Stage 4 water restrictions continue through Nov. 19, 2026 due to a parkwide water shortage. Overnight lodging is anticipated to resume on Friday, Nov. 20. The park remains open for day use, with food and beverage services, the Grand Canyon Clinic, and Post Office remaining open. Visitors are asked to bring water with them when visiting the park.",
-          "lastIndexedDate": "2026-11-13 00:00:00.0"
         }
       ],
       "visitorCenters": [
@@ -566,7 +543,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "c628e2713b7ba06b8eb27d3c202446c5a142babc1a6177f7ae2d18e266805f87"
+      "contentHash": "f5436eb9ba6d399924afcb14b2a2350525bf3eec30879bd94e478ade0c658283"
     },
     {
       "parkCode": "romo",
@@ -1032,20 +1009,20 @@
           "lastIndexedDate": "2026-09-16 00:00:00.0"
         },
         {
-          "id": "2868B222-11AB-46B6-B985-4019B6E7EA33",
-          "title": "Narrows are Closed.",
-          "category": "Park Closure",
-          "url": "",
-          "description": "The Narrows and all other slot canyons entering the Narrows are CLOSED.",
-          "lastIndexedDate": "2026-11-17 00:00:00.0"
-        },
-        {
           "id": "0EA570B2-2FF0-4B33-AD3A-1313385965A0",
           "title": "Please park legally and responsibly",
           "category": "Information",
           "url": "https://www.nps.gov/zion/planyourvisit/traffic.htm#parking",
           "description": "Zion has limited parking. Once parking spaces in Zion are full, visitors should park in Springdale. Please park only in designated spaces. Vehicles parked outside of designated spaces are subject to citation and towing.",
           "lastIndexedDate": "2026-09-16 00:00:00.0"
+        },
+        {
+          "id": "E30861E4-4253-42EB-BA0C-118EE9D19D48",
+          "title": "Road to Lava Point and West Rim Trailhead closed",
+          "category": "Park Closure",
+          "url": "",
+          "description": "This is a regular, seasonal closure, and we will remove this alert when snow melts. Lava Point Overlook is also closed.",
+          "lastIndexedDate": "2026-11-21 00:00:00.0"
         },
         {
           "id": "09699C7F-F2CD-4BE9-B8D4-5E19CC89BE7A",
@@ -1062,14 +1039,6 @@
           "url": "",
           "description": "The Watchman Trail is closed pending repairs.",
           "lastIndexedDate": "2026-09-29 00:00:00.0"
-        },
-        {
-          "id": "318B8E3B-B571-4555-B809-A04EFF5A9007",
-          "title": "Zion Mount Carmel Highway - Nightly Road Closures",
-          "category": "Information",
-          "url": "https://udotinput.utah.gov/ziontechnology",
-          "description": "Overnight tunnel closures are set for the tunnel on the Zion–Mount Carmel Highway (SR-9) inside Zion National Park starting Monday, Nov. 16 for fiber optic installation. See Utah Department of Transportation website for more information.",
-          "lastIndexedDate": "2026-11-12 00:00:00.0"
         }
       ],
       "visitorCenters": [
@@ -1181,7 +1150,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "9e705a379a90ebd1421c70c66b3bab6dade251dd621cc35ef5b7d55a2d6e579d"
+      "contentHash": "6e4e404f47e3d88cc184ac15d31a1c021b2f08e96666803ad82012a4d57414a2"
     },
     {
       "parkCode": "yell",
@@ -1810,14 +1779,6 @@
       ],
       "alerts": [
         {
-          "id": "390127CA-4E8A-4062-B492-CF868E70D960",
-          "title": "Cadillac Summit Road closed to all users Nov 9-25 and Dec 1-18",
-          "category": "Park Closure",
-          "url": "",
-          "description": "Starting Nov 9, construction will resume for an accessible pedestrian path between the East and West parking lots on the summit of Cadillac Mountain. Cadillac Summit Road will be closed to all users (including bicyclists and pedestrians) Nov 9-25 and Dec 1-18. Hiking trails on Cadillac Mountain will remain open. NOTE: Park Loop Road will close to motor vehicles for the season Dec 1, except for access to Jordan Pond via Jordan Pond Road in Seal Harbor, and access to Sand Beach via Schooner Head Road.",
-          "lastIndexedDate": "2026-11-04 00:00:00.0"
-        },
-        {
           "id": "F8AFCEAD-7E34-4C99-8AF6-C0B7C376C8FB",
           "title": "Eastern Section of Beech Mountain Loop Trail Closed for Repairs",
           "category": "Park Closure",
@@ -2002,7 +1963,7 @@
           "numberOfSitesFirstComeFirstServe": "0"
         }
       ],
-      "contentHash": "1b710f9e14481dae5bc09d02156570321ffb9986f6c8ff37b637eaa8d7d0d437"
+      "contentHash": "160f402cbd3aa2369d4110706ee993c57f74668843629982046ac546dd91e569"
     }
   ]
 }
